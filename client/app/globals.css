@@ -30,6 +30,7 @@ body {
 .main-bg {
   background-image: url("../public/Images/main-bg.jpg");
   width: 100%;
+  height: 100vh;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -41,7 +42,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.568);
   pointer-events: none;
 }
@@ -51,11 +52,21 @@ body {
   color: white;
 }
 
-.btn{
+.btn {
   font-size: 17px;
   padding-left: 12px;
   padding-right: 12px;
   padding-top: 6px;
   padding-bottom: 6px;
   cursor: pointer;
+}
+
+.title1 {
+  font-family: 'basis-grotesque-arabic-pro-regular';
+  src: url('../app/fonts/basis-grotesque-arabic-pro-regular.ttf') format('truetype');
+}
+
+.title2 {
+  font-family: 'PlantinMTProLight';
+  src: url('../app/fonts/PlantinMTProLight.TTF') format('truetype');
 }
