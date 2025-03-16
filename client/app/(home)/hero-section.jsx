@@ -3,7 +3,7 @@ import React from 'react'
 function HeroSection() {
     return (
         <>
-            <div className='w-[100%] h-[85vh] px-5 lg:px-32'>
+            <div className='w-[100%] h-[84vh] px-5 lg:px-32'>
                 <div className='w-full h-[60vh] flex justify-center items-center flex-col md:px-[10vw] gap-5'>
                     <div className='w-full flex flex-col text-start'>
                         <span className='font-bold text-5xl md:text-[6vw]'>Online degrees</span>
@@ -12,32 +12,20 @@ function HeroSection() {
                         <span className='font-normal text-5xl md:text-[6vw]'>without the high fees</span>
                     </div>
                 </div>
-                <div className='flex flex-col justify-center mb-10 items-start gap-3'>
+                <div className='w-full  flex flex-col justify-center items-start gap-3'>
                     <span className='text-[13px]'>Study for a degree or MBA from UK <br /> universities for less than £6,000</span>
                     <div className='w-full flex flex-col gap-2'>
                         <div className='flex gap-2'>
-                            <button className='btn bg-[#E2231A]'>View Courses</button>
-                            <button className='btn bg-[#2E2E27]'>Top up Degrees</button>
+                            <button className='btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6]'>View Courses</button>
+                            <button className='btn bg-[#2E2E27] hover:bg-[#2c2c24] hover:shadow-md shadow-[#2e2e27ee]'>Top up Degrees</button>
                         </div>
                         <div className='flex gap-2'>
-                            <button className='btn bg-[#2E2E27]'>Try for free</button>
-                            <button className='btn bg-[#E2231A]'>Log In</button>
+                            <button className='btn bg-[#2E2E27] hover:bg-[#2c2c24] hover:shadow-md shadow-[#2e2e27ee]'>Try for free</button>
+                            <button className='btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6]'>Log In</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className='w-full pt-16 pb-16 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-between lg:gap-32 gap-5'>
-            <div className='flex items-start text-3xl lg:text-[3.6vw] justify-start flex-col'>
-                <span className='font-bold'>Fast tracking learners to a</span>
-                <span>University qualification</span>
-            </div>
-            <div className='flex items-start lg:text-[1.6vw] gap-4 font-bold flex-col'>
-                <span>IGCSE  & short  courses</span>
-                <span>A Level university entry</span>
-                <span>Masters/MBS</span>
-                <span>Graduate Level</span>
-            </div>
-        </div>
         </>
     )
 };

@@ -45,20 +45,20 @@ export default function Header() {
               : 'hidden lg:flex'
           }`}
         >
-          <a href=''>
+          <a href='' className='hover:underline'>
             Course
           </a>
-          <a href=''>
+          <a href='' className='hover:underline'>
             Individuals
           </a>
-          <a href=''>
+          <a href='' className='hover:underline'>
             About Us
           </a>
           <div className='flex gap-4'>
-            <button className='btn bg-[#E2231A] text-white px-4 py-2'>
+            <button className='btn bg-[#E2231A] text-white px-4 py-2 hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6]'>
               Enroll Now
             </button>
-            <button className='btn bg-[#2E2E27] text-white px-4 py-2'>
+            <button className='btn bg-[#2E2E27] text-white px-4 py-2 hover:bg-[#2c2c24] hover:shadow-md shadow-[#2e2e27ee]'>
               Call Us
             </button>
           </div>
