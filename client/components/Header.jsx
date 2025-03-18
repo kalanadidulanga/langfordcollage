@@ -8,6 +8,10 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const callUs = () => {
+    window.open("tel:+94773838366", "_blank");
+  }
+
   return (
     <header className='w-full p-4 md:p-10'>
       <div className='w-full h-full flex justify-between items-center px-4 md:px-24'>
@@ -39,26 +43,27 @@ export default function Header() {
 
         {/* Navigation Links */}
         <nav
-          className={`gap-3 lg:gap-16 items-center ${
-            isMenuOpen
+          className={`gap-3 lg:gap-16 items-center ${isMenuOpen
               ? 'flex flex-col absolute top-16 left-0 bg-black/90 rounded-2xl z-10 w-full p-4 md:shadow-none md:relative md:top-0 md:flex-row md:bg-transparent'
               : 'hidden lg:flex'
-          }`}
+            }`}
         >
-          <a href='' className='hover:underline'>
+          <a href='course' className='hover:underline'>
             Course
           </a>
-          <a href='' className='hover:underline'>
+          <a href='individual' className='hover:underline'>
             Individuals
           </a>
-          <a href='' className='hover:underline'>
+          <a href='about' className='hover:underline'>
             About Us
           </a>
           <div className='flex gap-4'>
             <button className='btn bg-[#E2231A] text-white px-4 py-2 hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6]'>
               Enroll Now
             </button>
-            <button className='btn bg-[#2E2E27] text-white px-4 py-2 hover:bg-[#2c2c24] hover:shadow-md shadow-[#2e2e27ee]'>
+            <button className='btn bg-[#2E2E27] text-white px-4 py-2 hover:bg-[#2c2c24] hover:shadow-md shadow-[#2e2e27ee]'
+              onClick={callUs}
+            >
               Call Us
             </button>
           </div>
