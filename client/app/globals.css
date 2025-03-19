@@ -47,6 +47,32 @@ body {
   pointer-events: none;
 }
 
+.about-bg {
+  background-image: url("../public/Images/about-bg.png");
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.about-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.699) 0%, 
+    rgba(0, 0, 0, 0.267) 30%,
+    rgba(0, 0, 0, 0.63) 70%, 
+    rgba(0, 0, 0, 0.801) 100%
+  );
+  pointer-events: none;
+}
+
 .content {
   position: relative;
   color: white;

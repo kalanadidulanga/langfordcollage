@@ -11,13 +11,16 @@ export default function Header() {
   const callUs = () => {
     window.open("tel:+94773838366", "_blank");
   }
+  const navigateHome = () => {
+    window.location.replace("/");
+  }
 
   return (
     <header className='w-full p-4 md:p-10'>
       <div className='w-full h-full flex justify-between items-center px-4 md:px-24'>
         {/* Logo */}
         <nav>
-          <span className='text-2xl font-bold'>LOGO</span>
+          <span className='text-2xl font-bold cursor-pointer' onClick={navigateHome}>LOGO</span>
         </nav>
 
         {/* Menu Icon for Small Devices */}
