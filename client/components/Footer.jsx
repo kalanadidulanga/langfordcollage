@@ -13,8 +13,8 @@ export const Footer = () => {
                         <a href='/'>Home</a>
                         <a href='about'>About</a>
                         <a href='contact_us'>Contact Us</a>
-                        <a href='course'>Course</a>
-                        <a href='individual'>Individuals</a>
+                        <a href=''>Course</a>
+                        <a href=''>Individuals</a>
                     </div>
                     <div className='w-full justify-center flex flex-col lg:flex-row gap-3 lg:gap-10 text-[16px] mt-3 mb-5'>
                         <div className='flex gap-1 items-center justify-center'>

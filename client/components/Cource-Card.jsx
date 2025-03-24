@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const CourceCard = (image, title) => {
+export const CourceCard = ({image, title}) => {
     return (
         <div>
             <div className='max-w-[370px] flex flex-col gap-3'>

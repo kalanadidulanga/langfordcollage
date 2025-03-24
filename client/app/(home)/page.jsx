@@ -12,6 +12,8 @@ import RequestACource from "./request-a-cource-section";
 import LeatestArticle from "./leatest-article-section";
 import { Footer } from "@/components/Footer";
 import { useEffect, useState } from "react";
+import GetFuture from "./get-future-section";
+import LeatestTestimonial from "./leatest-testimonial-section";
 
 export default function Home() {
 
@@ -31,6 +33,7 @@ export default function Home() {
           </div>
         </div>
         <UniQualification />
+        <GetFuture/>
         <AffordableStudy />
         <SocialLearning />
         <WillLearn />
@@ -38,6 +41,7 @@ export default function Home() {
         <LearnAnywhere />
         <MostPopular />
         <RequestACource />
+        <LeatestTestimonial/>
         <LeatestArticle />
         <Footer />
       </>

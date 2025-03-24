@@ -11,10 +11,25 @@ function LeatestArticle() {
                         Latest articles
                     </span>
                     <div className='w-full bg-white text-gray-500 flex justify-center'>
-                        <div className='bg-white pt-10 pb-8 flex flex-wrap justify-start gap-8'>
-                            <ArticleCard/>
-                            <ArticleCard/>
-                            <ArticleCard/>
+                        <div className='bg-white pt-10 pb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-start gap-8'>
+                            <ArticleCard
+                                image="/Images/article.png"
+                                title={"Celebrating Excellence: John Holden Awarded Honorary Doctorate of Business Administration"}
+                                description={"We are thrilled to announce that our Company Director, John Holden, has been awarded an Honorary Doctorate of Business..."}
+                                action={false}
+                            />
+                            <ArticleCard
+                                image="/Images/article.png"
+                                title={"Celebrating Excellence: John Holden Awarded Honorary Doctorate of Business Administration"}
+                                description={"We are thrilled to announce that our Company Director, John Holden, has been awarded an Honorary Doctorate of Business..."}
+                                action={false}
+                            />
+                            <ArticleCard
+                                image="/Images/article.png"
+                                title={"Celebrating Excellence: John Holden Awarded Honorary Doctorate of Business Administration"}
+                                description={"We are thrilled to announce that our Company Director, John Holden, has been awarded an Honorary Doctorate of Business..."}
+                                action={false}
+                            />
                         </div>
                     </div>
                 </div>

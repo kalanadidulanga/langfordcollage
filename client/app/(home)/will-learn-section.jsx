@@ -43,7 +43,7 @@ function WillLearn() {
     <>
       {/* Main Section */}
       <div className="w-full bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 learn-section">
-        
+
         {/* Left Side - Image */}
         <div className="flex items-start justify-start w-full h-[50vh] hidden lg:block learn-left">
           <img
@@ -85,7 +85,11 @@ function WillLearn() {
       {/* Button Section */}
       <div className="w-full bg-white pt-10 pb-20 px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5">
         <div className="flex items-start justify-start w-full">
-          <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6]">Find out more</button>
+          <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6]"
+            onClick={() => {
+              window.location.replace("/how_will_you_learn");
+            }}
+          >Find out more</button>
         </div>
       </div>
     </>

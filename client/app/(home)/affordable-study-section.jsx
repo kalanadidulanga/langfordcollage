@@ -42,7 +42,7 @@ function AffordableStudy() {
   return (
     <>
       {/* Main Section */}
-      <div className="w-full bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 affordable-section">
+      <div className="w-full bg-white pt-20 text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 affordable-section">
         
         {/* Image - Left Side */}
         <div className="flex items-start justify-start w-full lg:w-[60%] affordable-left">
@@ -69,7 +69,7 @@ function AffordableStudy() {
       <div className="w-full bg-white pt-10 pb-8 text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 affordable-section">
         <div className="flex items-start justify-start w-full affordable-right">
           <span className="text-[18px]">
-            Whether you are looking to enhance your skills, improve your team or pursue a professional education, the Online Business School’s learning pathways can provide you with all you need.
+            Whether you are looking to enhance your skills, improve your team or pursue a professional education, the Online Business School’s learning pathways can provide you with all you need. <br />
             The Online Business School delivers online university pathway programmers with full undergraduate and postgraduate diploma awards to learners from all corners of the world. Learners can fast track their way through to a UK university qualification on campus or by distance learning.
           </span>
         </div>
