@@ -87,7 +87,7 @@ function WillLearn() {
         <div className="flex items-start justify-start w-full">
           <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6]"
             onClick={() => {
-              window.location.replace("/how_will_you_learn");
+              window.location.replace("/individual/how_will_you_learn");
             }}
           >Find out more</button>
         </div>
