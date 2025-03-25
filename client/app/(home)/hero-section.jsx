@@ -13,12 +13,12 @@ const HeroSection = () => {
 
   return (
     <div className="w-[100%] px-5 lg:px-32 fade-in">
-      <div className="w-full h-[45vh] mb-[15vh] flex justify-center items-center flex-col md:px-[10vw] gap-5">
+      <div className="w-full h-[45vh] mb-[15vh] flex justify-center items-center flex-col md:px-[7vw] gap-10">
         <div className="w-full flex flex-col text-center lg:text-start fade-in">
-          <span className="font-bold text-5xl md:text-[6vw]">Online Degrees</span>
+          <span className="text-5xl md:text-[6vw] font-sans font-bold">Online Degrees</span>
         </div>
         <div className="w-full flex flex-col text-center lg:text-end fade-in">
-          <span className="font-normal text-5xl md:text-[6vw] title2">Without The High Fees</span>
+          <span className="text-5xl md:text-[6vw] font-mono">Without The High Fees</span>
         </div>
       </div>
       <div className="w-full flex flex-col justify-center items-start gap-3 fade-in">

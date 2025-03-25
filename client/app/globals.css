@@ -225,13 +225,3 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-
-.title1 {
-  font-family: 'basis-grotesque-arabic-pro-regular';
-  src: url('../app/fonts/basis-grotesque-arabic-pro-regular.ttf') format('truetype');
-}
-
-.title2 {
-  font-family: 'PlantinMTProLight';
-  src: url('../app/fonts/PlantinMTProLight.TTF') format('truetype');
-}

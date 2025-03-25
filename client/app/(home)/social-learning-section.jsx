@@ -14,7 +14,7 @@ function SocialLearning() {
         opacity: 1, x: 0, duration: 1, ease: "power3.out",
         scrollTrigger: {
           trigger: ".social-section",
-          start: "top 70%",
+          start: "top 80%",
           end: "bottom 20%",
           toggleActions: "play reverse play reverse",
           once: false,
@@ -46,14 +46,14 @@ function SocialLearning() {
         
         {/* Left Side - Text Content */}
         <div className="w-full flex items-start font-bold flex-col lg:h-full social-left">
-          <span className="text-[6vw] lg:text-[3vw]">
+          <span className="text-[6vw] lg:text-[3vw] font-sans font-bold">
             A social learning
           </span>
-          <span className="text-[6vw] lg:text-[3vw]">
+          <span className="text-[6vw] lg:text-[3vw] font-mono font-bold">
             experience like no other
           </span>
 
-          <div className="w-full bg-white pt-10 pb-8 text-gray-500 flex flex-col">
+          <div className="w-full bg-white pt-10 pb-8 text-[#2E2E27] flex flex-col">
             <div className="w-full flex flex-col gap-1">
               <span className="text-[18px] font-extralight">
                 Online... Anytime... On any device...
@@ -68,7 +68,7 @@ function SocialLearning() {
           </div>
 
           {/* List Section */}
-          <div className="w-full bg-white text-lg font-extralight text-gray-500 pb-16">
+          <div className="w-full bg-white text-lg font-extralight text-[#2E2E27] pb-16">
             <li>University pathway programmes</li>
             <li>Professional body membership included</li>
             <li>Free professional development resources</li>

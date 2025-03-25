@@ -40,11 +40,11 @@ export default function GetFuture() {
     }, []);
 
     return (
-        <div className="w-full pb-10 pt-10 bg-[#F7FAFF] text-black px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center lg:gap-38 gap-14 get-future-section">
+        <div className="w-full pb-10 pt-10 bg-[#F7FAFF] font-sans text-black px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center lg:gap-38 gap-5 get-future-section">
             {/* Left Side - Text Content */}
-            <div className="w-full lg:w-auto flex items-start lg:items-end text-3xl md:text-[3.6vw] justify-start flex-col get-future-left">
+            <div className="w-full lg:w-auto flex items-start lg:items-end text-3xl md:text-[3.6vw] justify-start flex-col get-future-left gap-3">
                 <span className="font-bold">Get Future</span>
-                <span className="title2">Focused</span>
+                <span className="font-mono font-bold">Focused</span>
             </div>
 
             {/* Right Side - List Items */}
@@ -53,7 +53,6 @@ export default function GetFuture() {
                     Find a course
                 </span>
                 <input type="text" className="w-full lg:w-[440px] border-b-2 border-[#000000] placeholder:font-extralight placeholder:text-base outline-none text-base" placeholder="Find a course" />
-
             </div>
         </div>
     );

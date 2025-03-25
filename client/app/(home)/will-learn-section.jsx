@@ -55,8 +55,8 @@ function WillLearn() {
 
         {/* Right Side - Text Content */}
         <div className="w-full flex lg:items-end justify-start font-bold flex-col lg:h-full learn-right">
-          <span className="text-[6.8vw] lg:text-[3.3vw]">
-            How you will learn
+          <span className="text-[6.8vw] lg:text-[3.3vw] font-sans font-bold">
+            How you will <span className="font-mono font-bold">learn</span>
           </span>
           <div className="w-full bg-white pt-10 pb-8 text-black flex flex-col lg:items-end justify-start">
             <div className="flex items-start lg:items-end justify-start w-full gap-5">
@@ -83,11 +83,11 @@ function WillLearn() {
       </div>
 
       {/* Button Section */}
-      <div className="w-full bg-white pt-10 pb-20 px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5">
+      <div className="w-full bg-white pt-5 lg:pt-10 pb-20 px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 learn-section">
         <div className="flex items-start justify-start w-full">
-          <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6]"
+          <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] learn-left"
             onClick={() => {
-              window.location.replace("/individual/how_will_you_learn");
+              window.location.replace("/how_will_you_learn");
             }}
           >Find out more</button>
         </div>

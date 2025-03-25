@@ -77,7 +77,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full p-4 md:p-10">
+    <header className="w-full p-4 md:p-10 font-sans">
       <div className="w-full h-full flex justify-between items-center px-4 md:px-24">
         {/* Logo */}
         <nav>
@@ -143,12 +143,12 @@ const Header = () => {
 
             <div
               ref={courseDropdownRef}
-              className={`lg:fixed lg:left-0 lg:w-full w-auto ${window.innerWidth >= 1024 ? 'mt-2' : 'mt-1 ml-4'} py-2 bg-white rounded-md shadow-lg z-50 overflow-hidden lg:grid lg:grid-cols-4 lg:gap-4`}
+              className={`lg:fixed lg:left-0 lg:w-full w-auto px-[9vw] ${window.innerWidth >= 1024 ? 'mt-2' : 'mt-1 ml-4'} py-2 z-50 overflow-hidden lg:grid lg:grid-cols-4 lg:gap-4`}
               style={{ display: activeDropdown === 'course' || isMenuOpen ? 'block' : 'none' }}
               onMouseEnter={cancelDropdownClose}
               onMouseLeave={() => handleMouseLeave('course')}
             >
-              <div className={`${window.innerWidth >= 1024 ? 'w-full lg:px-5' : ''}`}>
+              <div className={`${window.innerWidth >= 1024 ? 'w-full lg:px-5' : ''} bg-white rounded-md shadow-lg`}>
                 <div className={`${window.innerWidth >= 1024 ? 'w-full grid grid-cols-4 gap-4' : ''}`}>
                   {/* sec 1 */}
                   <div className='flex items-start flex-col pt-3 w-full'>

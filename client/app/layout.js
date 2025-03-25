@@ -1,15 +1,16 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
+const geistSans = localFont({
+  src: "./fonts/basis-grotesque-arabic-pro-regular.ttf",
   variable: "--font-geist-sans",
-  subsets: ["latin"],
+  weight: "100",
 });
-
-const geistMono = Geist_Mono({
+const geistMono = localFont({
+  src: "./fonts/PlantinMTProLight.ttf",
   variable: "--font-geist-mono",
-  subsets: ["latin"],
-}); 
+  weight: "100",
+});
 
 export const metadata = {
   title: "Langford College",
@@ -20,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
         {children}
       </body>

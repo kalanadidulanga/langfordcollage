@@ -51,12 +51,12 @@ function AffordableStudy() {
 
         {/* Text - Right Side */}
         <div className="w-full flex items-start text-[6vw] lg:text-[4vw] font-medium flex-col affordable-right">
-          <span>
+          <span className="font-sans font-bold">
             Affordable study <br />
             programmers with <br />
             exclusive online
           </span>
-          <span>
+          <span className="font-mono font-bold">
             modules fast tracking <br />
             learners to a university <br />
             qualification
@@ -77,7 +77,7 @@ function AffordableStudy() {
 
       {/* Button Section */}
       <div className="w-full bg-white pb-20 px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 affordable-section">
-        <div className="flex items-start justify-start w-full affordable-left">
+        <div className="flex items-start justify-start w-full lg:affordable-left affordable-right">
           <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6]">View Courses</button>
         </div>
       </div>

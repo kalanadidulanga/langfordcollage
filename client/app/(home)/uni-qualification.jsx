@@ -42,9 +42,9 @@ export default function FastTrackingSection() {
   return (
     <div className="w-full pt-16 pb-14 bg-white text-black px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between lg:gap-32 gap-5 fast-tracking-section">
       {/* Left Side - Text Content */}
-      <div className="flex items-start text-3xl md:text-[3.6vw] justify-start flex-col fast-tracking-left">
-        <span className="font-bold">Fast tracking learners to a</span>
-        <span className="title2">University qualification</span>
+      <div className="flex items-start text-3xl md:text-[3.6vw] justify-start flex-col fast-tracking-left gap-3">
+        <span className="font-bold font-sans">Fast tracking learners to a</span>
+        <span className="font-mono">University qualification</span>
       </div>
 
       {/* Right Side - List Items */}
