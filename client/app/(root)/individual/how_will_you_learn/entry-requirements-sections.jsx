@@ -1,17 +1,71 @@
-import React from 'react'
+"use client";
+import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function EntryRequirements() {
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+    
+        gsap.fromTo(
+          ".entry-left",
+          { opacity: 0, x: -50 },
+          { 
+            opacity: 1, x: 0, duration: 1, ease: "power3.out",
+            scrollTrigger: {
+              trigger: ".entry-section",
+              start: "top 80%", 
+              end: "bottom 20%",
+              toggleActions: "play reverse play reverse", // Works when scrolling up and down
+              once: false,
+            }
+          }
+        );
+    
+        gsap.fromTo(
+          ".entry-left1",
+          { opacity: 0, x: -50 },
+          { 
+            opacity: 1, x: 0, duration: 1, ease: "power3.out",
+            scrollTrigger: {
+              trigger: ".entry-section1",
+              start: "top 80%", 
+              end: "bottom 20%",
+              toggleActions: "play reverse play reverse",
+              once: false,
+            }
+          }
+        );
+
+        gsap.fromTo(
+          ".entry-left2",
+          { opacity: 0, x: -50 },
+          { 
+            opacity: 1, x: 0, duration: 1, ease: "power3.out",
+            scrollTrigger: {
+              trigger: ".entry-section2",
+              start: "top 80%", 
+              end: "bottom 20%",
+              toggleActions: "play reverse play reverse",
+              once: false,
+            }
+          }
+        );
+    
+      }, []);
+
     return (
         <>
-            <div className='w-full pb-20 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5'>
+            <div className='w-full font-sans pb-20 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 entry-section'>
                 <div className='w-full flex items-start font-bold flex-col lg:h-full'>
-                    <span className='text-[6vw] lg:text-[3vw]'>
+                    <span className='text-[6vw] lg:text-[3vw] entry-left'>
                         Entry requirements
                     </span>
 
                     <div className='w-full bg-white pt-10 pb-10 text-[#2E2E27] flex flex-col px-10 gap-10'>
 
-                        <div className='w-full bg-[#F7FAFF] flex flex-col items-start justify-start gap-3 p-5'>
+                        <div className='w-full bg-[#F7FAFF] flex flex-col items-start justify-start gap-3 p-5 entry-left'>
                             <span className='text-[24px]'>University entry level 3 programme requirements</span>
                             <div className='text-[18px] text-[#2E2E27] font-extralight flex flex-col gap-4'>
                                 <span>
@@ -27,15 +81,15 @@ function EntryRequirements() {
                                 </span>
                             </div>
                         </div>
-                        <div className='w-full bg-[#F7FAFF] flex flex-col items-start justify-start gap-3 p-5'>
-                            <span className='text-[24px]'>Graduate level 6 programme requirements</span>
-                            <span className='text-[18px] text-[#2E2E27] font-extralight'>
+                        <div className='w-full bg-[#F7FAFF] flex flex-col items-start justify-start gap-3 p-5 entry-section1'>
+                            <span className='text-[24px] entry-left1'>Graduate level 6 programme requirements</span>
+                            <span className='text-[18px] text-[#2E2E27] font-extralight entry-left1'>
                                 To enrol on the Level 6 programme, you must be 21+ years old and have at least 3 years of relevant experience. Learners will be expected to hold a level 4/5 qualification or an equivalent to the first 2 years of a degree. In certain circumstances, students with considerable experience but no formal qualifications may be considered.
                             </span>
                         </div>
-                        <div className='w-full bg-[#F7FAFF] flex flex-col items-start justify-start gap-3 p-5'>
-                            <span className='text-[24px]'>Postgraduate level 7 programme requirements</span>
-                            <span className='text-[18px] text-[#2E2E27] font-extralight'>
+                        <div className='w-full bg-[#F7FAFF] flex flex-col items-start justify-start gap-3 p-5 entry-section2'>
+                            <span className='text-[24px] entry-left2'>Postgraduate level 7 programme requirements</span>
+                            <span className='text-[18px] text-[#2E2E27] font-extralight entry-left2'>
                                 To enrol on the Level 7 programme, you must be 21+ years old and have at least 3 years of management experience. Learners will be expected to hold a level 6 qualification or a first degree. In certain circumstances, managers with considerable experience but no formal qualifications may be considered.
                             </span>
                         </div>

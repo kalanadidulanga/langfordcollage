@@ -1,24 +1,60 @@
 "use client";
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function ProgressionOptions() {
-
     const [isclickSection1, setclickSection1] = useState(false);
     const [isclickSection2, setclickSection2] = useState(false);
     const [isclickSection3, setclickSection3] = useState(false);
     const [isclickSection4, setclickSection4] = useState(false);
     const [isclickSection5, setclickSection5] = useState(false);
 
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+    
+        gsap.fromTo(
+          ".opt-left",
+          { opacity: 0, x: -50 },
+          { 
+            opacity: 1, x: 0, duration: 1, ease: "power3.out",
+            scrollTrigger: {
+              trigger: ".opt-section",
+              start: "top 80%", 
+              end: "bottom 20%",
+              toggleActions: "play reverse play reverse", // Works when scrolling up and down
+              once: false,
+            }
+          }
+        );
+    
+        gsap.fromTo(
+          ".opt-right",
+          { opacity: 0, x: 50 },
+          { 
+            opacity: 1, x: 0, duration: 1, ease: "power3.out",
+            scrollTrigger: {
+              trigger: ".opt-section",
+              start: "top 80%", 
+              end: "bottom 20%",
+              toggleActions: "play reverse play reverse",
+              once: false,
+            }
+          }
+        );
+    
+      }, []);
+
     return (
         <>
-            <div className='w-full lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5'>
-                <div className='w-full flex items-start font-bold flex-col lg:h-full'>
-                    <span className='text-[6vw] lg:text-[3vw]'>
+            <div className='w-full lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 opt-section'>
+                <div className='w-full flex items-start font-bold flex-col lg:h-full font-sans'>
+                    <span className='text-[6vw] lg:text-[3vw] opt-left'>
                         Progression Options
                     </span>
 
                     {/* section 1 */}
-                    <div className='w-full bg-white pt-5 mt-10 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection1(!isclickSection1)}>
+                    <div className='w-full bg-white pt-5 mt-10 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default opt-left' onClick={() => setclickSection1(!isclickSection1)}>
                         <span>
                             Study FULL TIME or PART TIME on campus in the UK for top-up courses or direct entry to University
                         </span>
@@ -34,7 +70,7 @@ function ProgressionOptions() {
                         </>
                     )}
                     {/* section 2 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection2(!isclickSection2)}>
+                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default opt-left' onClick={() => setclickSection2(!isclickSection2)}>
                         <span>
                             Study with UK Universities BASED OVERSEAS
                         </span>
@@ -50,7 +86,7 @@ function ProgressionOptions() {
                         </>
                     )}
                     {/* section 3 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection3(!isclickSection3)}>
+                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default opt-left' onClick={() => setclickSection3(!isclickSection3)}>
                         <span>
                             Study with NON UK UNIVERSITIES
                         </span>
@@ -67,7 +103,7 @@ function ProgressionOptions() {
                         </>
                     )}
                     {/* section 4 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection4(!isclickSection4)}>
+                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default opt-left' onClick={() => setclickSection4(!isclickSection4)}>
                         <span>
                             Study for an AMBA MBA
                         </span>
@@ -83,7 +119,7 @@ function ProgressionOptions() {
                         </>
                     )}
                     {/* section 5 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection5(!isclickSection5)}>
+                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default opt-left' onClick={() => setclickSection5(!isclickSection5)}>
                         <span>
                             Awarding body approved progression routes
                         </span>

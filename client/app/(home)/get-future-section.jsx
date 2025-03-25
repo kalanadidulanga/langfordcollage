@@ -52,7 +52,25 @@ export default function GetFuture() {
                 <span>
                     Find a course
                 </span>
-                <input type="text" className="w-full lg:w-[440px] border-b-2 border-[#000000] placeholder:font-extralight placeholder:text-base outline-none text-base" placeholder="Find a course" />
+                <div className="flex gap-2 items-center border-b-2 border-[#000000]">
+                    <input type="text" className="w-full lg:w-[440px] placeholder:font-extralight font-extralight placeholder:text-base outline-none text-base" placeholder="Find a course"
+                        onKeyUp={(e) => {
+                            if (e.key === 'Enter') {
+                                if (e.target.value != "") {
+                                    alert("ok");
+                                }
+                            }
+                        }}
+
+                    />
+                    <img src="/Icon/search.svg" alt="search" className="w-5 h-5 cursor-pointer"
+                        onClick={(e) => {
+                            if (e.target.value != "") {
+                                alert("ok");
+                            }
+                        }}
+                    />
+                </div>
             </div>
         </div>
     );

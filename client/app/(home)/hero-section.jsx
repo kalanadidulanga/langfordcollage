@@ -12,7 +12,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="w-[100%] px-5 lg:px-32 fade-in">
+    <div className="w-[100%] px-5 lg:px-32 fade-in font-sans">
       <div className="w-full h-[45vh] mb-[15vh] flex justify-center items-center flex-col md:px-[7vw] gap-10">
         <div className="w-full flex flex-col text-center lg:text-start fade-in">
           <span className="text-5xl md:text-[6vw] font-sans font-bold">Online Degrees</span>
