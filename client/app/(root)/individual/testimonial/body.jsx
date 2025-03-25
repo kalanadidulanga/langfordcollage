@@ -49,7 +49,7 @@ function Body() {
                         Latest Testimonials
                     </span>
                     <div className='w-full bg-white text-gray-500 flex justify-start testimonialView-left'>
-                        <div className='bg-white pt-10 pb-8 flex flex-col justify-start items-start gap-8'>
+                        <div className='bg-white pt-10 pb-8 flex flex-col justify-start items-start gap-8 lg:w-[75%]'>
                             <TestimonialCard />
                             <TestimonialCard />
                             <TestimonialCard />

@@ -3,7 +3,7 @@ import React from 'react'
 export const TestimonialCard = ({ image, title, descrption }) => {
     return (
         <div>
-            <div className='w-full lg:max-w-[750px] grid grid-cols-1 lg:grid-cols-2 gap-10 bg-[#F4C023] p-8'>
+            <div className='w-full lg:min-w-[750px] grid grid-cols-1 md:grid-cols-2 gap-10 bg-[#F4C023] p-8'>
                 <img src="/Images/user.png" alt="courses_image" className='w-full h-full object-cover rounded' />
                 <div className='flex h-full flex-col gap-3'>
                     <span className='text-2xl text-black'>Monde Mubalu</span>
