@@ -4,11 +4,15 @@ import Button from '@/components/ui/button/Button'
 import RichTextEditor from '@/components/ui/EditText/RichTextEdit';
 import { Modal } from '@/components/ui/modal'
 import { useModal } from '@/hooks/useModal'
-import React from 'react'
+import React, { useState } from 'react'
 import Select from 'react-select'
 
 function Pagetable() {
     const { isOpen, openModal, closeModal } = useModal();
+
+    const [isdateModalOpen, setIsdateModalOpen] = useState(false);
+
+    const [startDate, setStartDate] = useState(new Date());
 
     const options = [
         { value: 'Anytime', label: 'Any Time' },
@@ -74,8 +78,32 @@ function Pagetable() {
                                     </div>
 
                                     <div className="col-span-2 lg:col-span-1">
-                                        <Label>Start Date</Label>
-                                        <Select options={options} />
+                                        <div className={`w-full grid ${isdateModalOpen ? 'grid-cols-2' : 'grid-cols-1'} gap-3`}>
+                                            <div className='w-full'>
+                                                <Label>Start Date</Label>
+                                                <Select
+                                                    options={options}
+                                                    onChange={(e: any) => {
+                                                        if (e.value === 'SelectDate') {
+                                                            setIsdateModalOpen(true);
+                                                        }else{
+                                                            setIsdateModalOpen(false);
+                                                        }
+
+                                                    }}
+                                                />
+                                            </div>
+                                            {isdateModalOpen && (
+                                                <>
+                                                    <div className='w-full'>
+                                                        <Label>Enter Date</Label>
+                                                        <input type="date"
+                                                            className='w-full border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
+                                                        />
+                                                    </div>
+                                                </>
+                                            )}
+                                        </div>
                                     </div>
 
                                     <div className="col-span-2 lg:col-span-1">
@@ -115,7 +143,7 @@ function Pagetable() {
                                         <Label>How it works</Label>
                                         <RichTextEditor />
                                     </div>
-                                    
+
                                     <div className="col-span-2">
                                         <Label>Course Modules</Label>
                                         <RichTextEditor />
