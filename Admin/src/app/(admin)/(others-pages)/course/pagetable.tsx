@@ -32,29 +32,68 @@ function Pagetable() {
                 <div className="w-full flex justify-end">
                     <button className="bg-[#3B82F6] text-white py-2 rounded px-4" onClick={openModal}>Add New Course</button>
                 </div>
-                <table className="w-full mt-8 text-black dark:text-white">
-                    <thead>
-                        <tr>
-                            <th className="border px-1 py-2">ID</th>
-                            <th className="border px-4 py-2">Name</th>
-                            <th className="border px-4 py-2">Start Date</th>
-                            <th className="border px-4 py-2">Location</th>
-                            <th className="border px-4 py-2 w-[100px]">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td className="border px-1 text-center py-2">1</td>
-                            <td className="border px-4 py-2">Course 1</td>
-                            <td className="border px-4 py-2">Description 1</td>
-                            <td className="border px-4 py-2">Description 1</td>
-                            <td className="border px-4 py-2 flex gap-3 justify-center">
-                                <button className="bg-[#f6bb3b] text-white py-2 rounded px-4">Edit</button>
-                                <button className="bg-[#f63b3b] text-white py-2 rounded px-4">Delete</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div className='w-full grid grid-cols-1 lg:grid-cols-3 gap-5 mt-5'>
+                    <div className='w-full border-2 rounded-lg shadow-md hover:shadow-md hover:shadow-blue-200 p-5 flex flex-col gap-1'>
+                        <span className='font-bold text-[20px] dark:text-white'>COURSE_NAME</span>
+                        <div className='flex flex-row gap-2 items-center mt-2'>
+                            <span className='text-[18px] dark:text-white'>Start Date:</span>
+                            <span className='text-[18px] dark:text-white'>Anytime</span>
+                        </div>
+                        <div className='flex flex-row gap-2 items-center'>
+                            <span className='text-[18px] dark:text-white'>Location:</span>
+                            <span className='text-[18px] dark:text-white'>Online</span>
+                        </div>
+                        <div className='flex flex-row gap-2 items-center mt-2'>
+                            <button className='bg-[#f6a53b] text-white py-1 rounded px-4 w-full'>Edit</button>
+                            <button className='bg-[#f63b3b] text-white py-1 rounded px-4 w-full'>Delete</button>
+                        </div>
+                    </div>
+                    <div className='w-full border-2 rounded-lg shadow-md hover:shadow-md hover:shadow-blue-200 p-5 flex flex-col gap-1'>
+                        <span className='font-bold text-[20px] dark:text-white'>COURSE_NAME</span>
+                        <div className='flex flex-row gap-2 items-center mt-2'>
+                            <span className='text-[18px] dark:text-white'>Start Date:</span>
+                            <span className='text-[18px] dark:text-white'>Anytime</span>
+                        </div>
+                        <div className='flex flex-row gap-2 items-center'>
+                            <span className='text-[18px] dark:text-white'>Location:</span>
+                            <span className='text-[18px] dark:text-white'>Online</span>
+                        </div>
+                        <div className='flex flex-row gap-2 items-center mt-2'>
+                            <button className='bg-[#f6a53b] text-white py-1 rounded px-4 w-full'>Edit</button>
+                            <button className='bg-[#f63b3b] text-white py-1 rounded px-4 w-full'>Delete</button>
+                        </div>
+                    </div>
+                    <div className='w-full border-2 rounded-lg shadow-md hover:shadow-md hover:shadow-blue-200 p-5 flex flex-col gap-1'>
+                        <span className='font-bold text-[20px] dark:text-white'>COURSE_NAME</span>
+                        <div className='flex flex-row gap-2 items-center mt-2'>
+                            <span className='text-[18px] dark:text-white'>Start Date:</span>
+                            <span className='text-[18px] dark:text-white'>Anytime</span>
+                        </div>
+                        <div className='flex flex-row gap-2 items-center'>
+                            <span className='text-[18px] dark:text-white'>Location:</span>
+                            <span className='text-[18px] dark:text-white'>Online</span>
+                        </div>
+                        <div className='flex flex-row gap-2 items-center mt-2'>
+                            <button className='bg-[#f6a53b] text-white py-1 rounded px-4 w-full'>Edit</button>
+                            <button className='bg-[#f63b3b] text-white py-1 rounded px-4 w-full'>Delete</button>
+                        </div>
+                    </div>
+                    <div className='w-full border-2 rounded-lg shadow-md hover:shadow-md hover:shadow-blue-200 p-5 flex flex-col gap-1'>
+                        <span className='font-bold text-[20px] dark:text-white'>COURSE_NAME</span>
+                        <div className='flex flex-row gap-2 items-center mt-2'>
+                            <span className='text-[18px] dark:text-white'>Start Date:</span>
+                            <span className='text-[18px] dark:text-white'>Anytime</span>
+                        </div>
+                        <div className='flex flex-row gap-2 items-center'>
+                            <span className='text-[18px] dark:text-white'>Location:</span>
+                            <span className='text-[18px] dark:text-white'>Online</span>
+                        </div>
+                        <div className='flex flex-row gap-2 items-center mt-2'>
+                            <button className='bg-[#f6a53b] text-white py-1 rounded px-4 w-full'>Edit</button>
+                            <button className='bg-[#f63b3b] text-white py-1 rounded px-4 w-full'>Delete</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <Modal isOpen={isOpen} onClose={closeModal} className="max-w-[800px] m-4">
@@ -84,7 +123,7 @@ function Pagetable() {
                                                     onChange={(e: any) => {
                                                         if (e.value === 'SelectDate') {
                                                             setIsdateModalOpen(true);
-                                                        }else{
+                                                        } else {
                                                             setIsdateModalOpen(false);
                                                         }
 
