@@ -61,6 +61,13 @@ const AppSidebar: React.FC = () => {
   const { isExpanded, isMobileOpen, isHovered, setIsHovered } = useSidebar();
   const pathname = usePathname();
 
+  useEffect(()=>{
+      const email = localStorage.getItem("admin_email");
+      if(!email){
+        window.location.replace("/signin");
+      }
+  },[]);
+
   const renderMenuItems = (
     navItems: NavItem[],
     menuType: "main" | "others"

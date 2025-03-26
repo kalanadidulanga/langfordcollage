@@ -1,5 +1,15 @@
 @import 'tailwindcss';
 
+.editor-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.editor-output {
+  margin-top: 20px;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {
