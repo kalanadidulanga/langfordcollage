@@ -12,8 +12,6 @@ function Pagetable() {
 
     const [isdateModalOpen, setIsdateModalOpen] = useState(false);
 
-    const [startDate, setStartDate] = useState(new Date());
-
     const options = [
         { value: 'Anytime', label: 'Any Time' },
         { value: 'SelectDate', label: 'Select Date' },
@@ -34,14 +32,14 @@ function Pagetable() {
                 <div className="w-full flex justify-end">
                     <button className="bg-[#3B82F6] text-white py-2 rounded px-4" onClick={openModal}>Add New Course</button>
                 </div>
-                <table className="w-full mt-8">
+                <table className="w-full mt-8 text-black dark:text-white">
                     <thead>
                         <tr>
-                            <th className="px-1 py-2">ID</th>
-                            <th className="px-4 py-2">Name</th>
-                            <th className="px-4 py-2">Start Date</th>
-                            <th className="px-4 py-2">Location</th>
-                            <th className="px-4 py-2 w-[100px]">Action</th>
+                            <th className="border px-1 py-2">ID</th>
+                            <th className="border px-4 py-2">Name</th>
+                            <th className="border px-4 py-2">Start Date</th>
+                            <th className="border px-4 py-2">Location</th>
+                            <th className="border px-4 py-2 w-[100px]">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -73,7 +71,7 @@ function Pagetable() {
                                     <div className="col-span-2 lg:col-span-1">
                                         <Label>Course Name</Label>
                                         <input type="text"
-                                            className='w-full border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
+                                            className='w-full bg-white border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
                                         />
                                     </div>
 
@@ -98,7 +96,7 @@ function Pagetable() {
                                                     <div className='w-full'>
                                                         <Label>Enter Date</Label>
                                                         <input type="date"
-                                                            className='w-full border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
+                                                            className='w-full bg-white border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
                                                         />
                                                     </div>
                                                 </>
@@ -114,28 +112,28 @@ function Pagetable() {
                                     <div className="col-span-2 lg:col-span-1">
                                         <Label>Study Pace</Label>
                                         <input type="text"
-                                            className='w-full border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
+                                            className='w-full border bg-white p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
                                         />
                                     </div>
 
                                     <div className="col-span-2 lg:col-span-1">
                                         <Label>Qualifications</Label>
                                         <input type="text"
-                                            className='w-full border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
+                                            className='w-full border bg-white p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
                                         />
                                     </div>
 
                                     <div className="col-span-2 lg:col-span-1">
                                         <Label>Assessment</Label>
                                         <input type="text"
-                                            className='w-full border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
+                                            className='w-full border bg-white p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
                                         />
                                     </div>
 
                                     <div className="col-span-2">
                                         <Label>Includes</Label>
                                         <input type="text"
-                                            className='w-full border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
+                                            className='w-full border bg-white p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
                                         />
                                     </div>
 
@@ -177,7 +175,7 @@ function Pagetable() {
                                 Close
                             </Button>
                             <Button size="sm" onClick={handleSave}>
-                                Save Changes
+                                Add New Course
                             </Button>
                         </div>
                     </div>
