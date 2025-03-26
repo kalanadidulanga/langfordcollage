@@ -64,7 +64,7 @@ const AppSidebar: React.FC = () => {
   useEffect(()=>{
       const email = localStorage.getItem("admin_email");
       if(!email){
-        window.location.replace("/signin");
+        // window.location.replace("/signin");
       }
   },[]);
 
