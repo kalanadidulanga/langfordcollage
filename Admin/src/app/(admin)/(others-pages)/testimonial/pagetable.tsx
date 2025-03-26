@@ -30,7 +30,7 @@ function Pagetable() {
         <>
             <div className='w-full h-full flex flex-col'>
                 <div className="w-full flex justify-end">
-                    <button className="bg-[#3B82F6] text-white py-2 rounded px-4" onClick={openModal}>Add New Course</button>
+                    <button className="bg-[#3B82F6] text-white py-2 rounded px-4" onClick={openModal}>Add New Testimonial</button>
                 </div>
                 <div className='w-full grid grid-cols-1 lg:grid-cols-3 gap-5 mt-5'>
                     <div className='w-full border-2 rounded-lg shadow-md hover:shadow-md hover:shadow-blue-200 p-5 flex flex-col gap-1'>
