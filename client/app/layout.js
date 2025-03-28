@@ -7,7 +7,7 @@ const geistSans = localFont({
   weight: "100",
 });
 const geistMono = localFont({
-  src: "./fonts/PlantinMTProLight.ttf",
+  src: "./fonts/plantin-mt-pro-light.ttf",
   variable: "--font-geist-mono",
   weight: "100",
 });
