@@ -24,7 +24,7 @@ export const Footer = () => {
                         </div>
                         <div className='flex gap-1 items-center justify-center'>
                             <img src="/Icon/call.png" alt="" className='w-4 h-4' />
-                            <a href={`tel:${BASE_MOBILE}`} target='_blank'>{BASE_MOBILE.charAt(0) === '+' ? `0` + BASE_MOBILE.slice(3) : BASE_MOBILE}</a>
+                            <a href={`tel:${BASE_MOBILE}`} target='_blank'>{BASE_MOBILE?.charAt(0) === '+' ? `0` + BASE_MOBILE.slice(3) : BASE_MOBILE}</a>
                         </div>
                         <div className='flex gap-1 items-center justify-center'>
                             <img src="/Icon/email.png" alt="" className='w-4 h-4' />
