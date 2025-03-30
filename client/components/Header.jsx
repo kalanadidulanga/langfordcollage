@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
+import axios from 'axios';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,6 +10,14 @@ const Header = () => {
   const courseDropdownRef = useRef();
   const individualDropdownRef = useRef();
   const dropdownTimeoutRef = useRef();
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
+  const [level1, setLevel1] = useState([]);
+  const [level2, setLevel2] = useState([]);
+  const [level3, setLevel3] = useState([]);
+  const [level4, setLevel4] = useState([]);
+  const [level5, setLevel5] = useState([]);
+
 
   // Mobile menu animation
   useEffect(() => {
@@ -42,6 +51,53 @@ const Header = () => {
       animateDropdown(individualDropdownRef, activeDropdown === 'individual');
     }
   }, [activeDropdown]);
+
+  useEffect(() => {
+    loadCourses();
+  }, []);
+
+  const loadCourses = async () => {
+    try {
+      const res = await axios.get(`${BASE_URL}/api/getAllCources`);
+
+      if (res?.data?.status) {
+        setLevel1(
+          res?.data?.data?.filter(
+            (item) => item?.course_level === "IGCSE and short courses"
+          )
+        );
+
+        setLevel2(
+          res?.data?.data?.filter(
+            (item) => item?.course_level === "Level 3 (A level) - University entry courses"
+          )
+        );
+
+        setLevel3(
+          res?.data?.data?.filter(
+            (item) => item?.course_level === "Level 4 & 5 - University first and second year courses"
+          )
+        );
+
+        setLevel4(
+          res?.data?.data?.filter(
+            (item) => item?.course_level === "Level 6 Undergraduate / Final year"
+          )
+        );
+
+        setLevel5(
+          res?.data?.data?.filter(
+            (item) => item?.course_level === "Level 7 Diploma, Masters / MBA Advance Entry"
+          )
+        );
+
+      } else {
+
+      }
+    } catch (error) {
+
+    }
+  }
 
   const handleMouseEnter = (dropdown) => {
     if (window.innerWidth >= 1024) {
@@ -153,66 +209,48 @@ const Header = () => {
                   {/* sec 1 */}
                   <div className='flex items-start flex-col pt-3 w-full'>
                     <span className='text-black font-bold text-2xl px-4'>IGCSE and short courses</span>
-                    <a href="/course/1" className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
-                      Basic Course
-                    </a>
-                    <a href="/course/1" className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
-                      Basic Course
-                    </a>
-                    <a href="/course/1" className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
-                      Basic Course
-                    </a>
-                    <a href="/course/1" className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
-                      Basic Course
-                    </a>
+                    {level1?.map((item, index) => (
+                      <a href={`/course/${item?.slug}`} key={index} className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
+                        {item?.course_name}
+                      </a>
+                    ))}
                   </div>
                   {/* sec 2 */}
                   <div className='flex items-start flex-col pt-3 w-full'>
                     <span className='text-black font-bold text-2xl px-4'>Level 3 (A level) - University entry courses</span>
-                    <a href="/course/1" className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
-                      Basic Course
-                    </a>
-                    <a href="/course/1" className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
-                      Basic Course
-                    </a>
-                    <a href="/course/1" className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
-                      Basic Course
-                    </a>
-                    <a href="/course/1" className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
-                      Basic Course
-                    </a>
+                    {level2?.map((item, index) => (
+                      <a href={`/course/${item?.slug}`} key={index} className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
+                        {item?.course_name}
+                      </a>
+                    ))}
                   </div>
                   {/* sec 3 */}
                   <div className='flex items-start flex-col pt-3 w-full'>
                     <span className='text-black font-bold text-2xl px-4'>Level 4 & 5 - University first and second year courses</span>
-                    <a href="/course/1" className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
-                      Basic Course
-                    </a>
-                    <a href="/course/1" className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
-                      Basic Course
-                    </a>
-                    <a href="/course/1" className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
-                      Basic Course
-                    </a>
-                    <a href="/course/1" className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
-                      Basic Course
-                    </a>
+                    {level3?.map((item, index) => (
+                      <a href={`/course/${item?.slug}`} key={index} className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
+                        {item?.course_name}
+                      </a>
+                    ))}
                   </div>
                   {/* sec 4 */}
-                  <div className='flex items-start flex-col pt-3 w-full'>
-                    <span className='text-black font-bold text-2xl px-4'>Level 6 Undergraduate / Final year</span>
-                    <a href="/course/1" className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
-                      Basic Course
-                    </a>
-                    <a href="/course/1" className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
-                      Basic Course
-                    </a>
-                    <a href="/course/1" className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
-                      Basic Course
-                    </a>
-                    <a href="/course/1" className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
-                      Basic Course
-                    </a>
+                  <div className='flex items-start flex-col pt-3 w-full gap-5'>
+                    <div className='flex items-start flex-col'>
+                      <span className='text-black font-bold text-2xl px-4'>Level 6 Undergraduate / Final year</span>
+                      {level4?.map((item, index) => (
+                        <a href={`/course/${item?.slug}`} key={index} className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
+                          {item?.course_name}
+                        </a>
+                      ))}
+                    </div>
+                    <div className='flex items-start flex-col'>
+                      <span className='text-black font-bold text-2xl px-4'>Level 7 Diploma, Masters / MBA Advance Entry</span>
+                      {level5?.map((item, index) => (
+                        <a href={`/course/${item?.slug}`} key={index} className="w-full block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200">
+                          {item?.course_name}
+                        </a>
+                      ))}
+                    </div>
                   </div>
 
                 </div>
@@ -262,10 +300,22 @@ const Header = () => {
           </a>
 
           <div className="flex gap-4">
-            <button className="btn bg-[#E2231A] text-white px-4 py-2 hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] hover:scale-105 transition-all duration-200">
+            <button className="btn bg-[#E2231A] text-white px-4 py-2 hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] hover:scale-105 transition-all duration-200"
+              onClick={() => {
+                if (window.location.pathname === "/") {
+                  window.scrollTo({ top: 500, behavior: "smooth" });
+                } else {
+                  window.location.href = "/";
+                }
+              }}
+            >
               Enroll Now
             </button>
-            <button className="btn bg-[#2E2E27] text-white px-4 py-2 hover:bg-[#2c2c24] hover:shadow-md shadow-[#2e2e27ee] hover:scale-105 transition-all duration-200">
+            <button className="btn bg-[#2E2E27] text-white px-4 py-2 hover:bg-[#2c2c24] hover:shadow-md shadow-[#2e2e27ee] hover:scale-105 transition-all duration-200"
+              onClick={() => {
+                window.open("https://learn.onlinebusinessschool.com/customer/account/login/", "_blank");
+              }}
+            >
               Log In
             </button>
           </div>

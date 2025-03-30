@@ -5,9 +5,11 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useSidebar } from "../context/SidebarContext";
 import {
+  BoxIcon,
   ChevronDownIcon,
   DocsIcon,
   GridIcon,
+  GroupIcon,
   PieChartIcon,
 } from "../icons/index";
 
@@ -31,11 +33,6 @@ const navItems: NavItem[] = [
   },
   {
     icon: <DocsIcon />,
-    name: "Article",
-    path: "/article",	
-  },
-  {
-    icon: <DocsIcon />,
     name: "Blog",
     path: "/blog",	
   },
@@ -43,6 +40,16 @@ const navItems: NavItem[] = [
     icon: <DocsIcon />,
     name: "Testimonial",
     path: "/testimonial",	
+  },
+  {
+    icon: <BoxIcon />,
+    name: "Enroll Requests",
+    path: "/enroll-requests",	
+  },
+  {
+    icon: <GroupIcon />,
+    name: "Enrolled Students",
+    path: "/enrolled-students",	
   },
 ];
 
@@ -64,7 +71,7 @@ const AppSidebar: React.FC = () => {
   useEffect(()=>{
       const email = localStorage.getItem("admin_email");
       if(!email){
-        // window.location.replace("/signin");
+        window.location.replace("/signin");
       }
   },[]);
 
@@ -295,8 +302,8 @@ const AppSidebar: React.FC = () => {
                 width={150}
                 height={40}
               /> */}
-              <span className="text-[25px] uppercase font-bold dark:hidden">Logo</span>
-              <span className="text-[25px] uppercase text-white font-bold hidden dark:block">Logo</span>
+              <span className="text-[25px] uppercase font-bold dark:hidden">Langford</span>
+              <span className="text-[25px] uppercase text-white font-bold hidden dark:block">Langford</span>
             </>
           ) : (
             <Image

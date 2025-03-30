@@ -57,7 +57,7 @@ function Assesment() {
                     <div className='w-full bg-white pt-10 pb-8 text-[#2E2E27] flex flex-col'>
                         <div className='w-full flex flex-col gap-5'>
                             <span className='text-[18px] font-extralight'>
-                                Assessment at Online Business School is a very straightforward process:
+                                Assessment at Langford Collage is a very straightforward process:
                             </span>
                             <div className='text-[18px] font-extralight space-y-2'>
                                 <span className='flex'>
@@ -75,7 +75,7 @@ function Assesment() {
                                 <span className='flex'>
                                     <li></li>
                                     <span>
-                                        When the online modules have been successfully completed, you will then be able to take the final written assignments provided by Online Business School that test your knowledge and understanding of the modules. After successful completion of these assignments, you will receive your diploma from the OFQUAL awarding organization.
+                                        When the online modules have been successfully completed, you will then be able to take the final written assignments provided by Langford Collage that test your knowledge and understanding of the modules. After successful completion of these assignments, you will receive your diploma from the OFQUAL awarding organization.
                                     </span>
                                 </span>
                                 <span className='flex'>

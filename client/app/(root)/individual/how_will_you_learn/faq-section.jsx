@@ -76,7 +76,7 @@ function FAQ() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex flex-col gap-5'>
                                 <span>
-                                    Learners should first visit the <a href="https://www.onlinebusinessschool.com/#Course-services" target='_blank' className='underline'>Online Business School Course page</a> to view the range of courses on offer. It’s important you choose a subject you enjoy and will help you reach your goals. Here are some things to consider when choosing the right subject for you:
+                                    Learners should first visit the <a href="https://www.onlinebusinessschool.com/#Course-services" target='_blank' className='underline'>Langford Collage Course page</a> to view the range of courses on offer. It’s important you choose a subject you enjoy and will help you reach your goals. Here are some things to consider when choosing the right subject for you:
                                 </span>
                                 <div className='flex flex-col'>
                                     <li>Review the modules within the course: Do they interest you? Are they relevant to your chosen career path?</li>
@@ -99,7 +99,7 @@ function FAQ() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex flex-col gap-5'>
                                 <span>
-                                    You can choose your course and enrol online via the Online Business School <a href="https://www.onlinebusinessschool.com/#Course-services" target='_blank' className='underline'>course page</a>. Alternatively, you can call the OBS Enrolments Team on 0333 772 1158, and they will guide you through the Enrolment process.
+                                    You can choose your course and enrol online via the Langford Collage <a href="https://www.onlinebusinessschool.com/#Course-services" target='_blank' className='underline'>course page</a>. Alternatively, you can call the OBS Enrolments Team on 0333 772 1158, and they will guide you through the Enrolment process.
                                 </span>
                             </div>
                         </>

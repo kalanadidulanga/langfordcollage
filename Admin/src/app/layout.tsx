@@ -21,7 +21,7 @@ export default function RootLayout({
         <ThemeProvider>
           <SidebarProvider>{children}</SidebarProvider>
         </ThemeProvider>
-        <Toaster position='top-center' reverseOrder={false}/>
+        <Toaster position='bottom-right' reverseOrder={false}/>
       </body>
     </html>
   );

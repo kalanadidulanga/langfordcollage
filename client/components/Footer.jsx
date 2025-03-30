@@ -1,6 +1,7 @@
 import React from 'react'
 
 export const Footer = () => {
+    const BASE_MOBILE = process.env.NEXT_PUBLIC_BASE_MOBILE;
     return (
         <>
             <footer>
@@ -18,16 +19,16 @@ export const Footer = () => {
                     </div>
                     <div className='w-full justify-center flex flex-col lg:flex-row gap-3 lg:gap-10 text-[16px] mt-3 mb-5'>
                         <div className='flex gap-1 items-center justify-center'>
-                            <img src="/Icon/location.png" alt="" className='w-4 h-4'/>
-                            <a href=''  target='_blank'>489, Pallama Road, Chillaw, Bangadeniya</a>
+                            <img src="/Icon/location.png" alt="" className='w-4 h-4' />
+                            <a href='' target='_blank'>489, Pallama Road, Chillaw, Bangadeniya</a>
                         </div>
                         <div className='flex gap-1 items-center justify-center'>
-                            <img src="/Icon/call.png" alt="" className='w-4 h-4'/>
-                            <a href='tel:+94773838366' target='_blank'>0773838366</a>
+                            <img src="/Icon/call.png" alt="" className='w-4 h-4' />
+                            <a href={`tel:${BASE_MOBILE}`} target='_blank'>{BASE_MOBILE.charAt(0) === '+' ? `0` + BASE_MOBILE.slice(3) : BASE_MOBILE}</a>
                         </div>
                         <div className='flex gap-1 items-center justify-center'>
-                            <img src="/Icon/email.png" alt="" className='w-4 h-4'/>
-                            <a href='mailto:support@langfordcollage.com'  target='_blank'>support@langfordcollage.com</a>
+                            <img src="/Icon/email.png" alt="" className='w-4 h-4' />
+                            <a href='mailto:support@langfordcollage.com' target='_blank'>support@langfordcollage.com</a>
                         </div>
                     </div>
                     <div className='w-full justify-center flex gap-5 text-[16px] bg-black p-3 py-4'>

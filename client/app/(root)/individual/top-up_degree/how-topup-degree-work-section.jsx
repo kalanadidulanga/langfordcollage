@@ -58,7 +58,7 @@ function HowTopupDegreeWork() {
             <div className='w-full font-sans bg-white pt-10 pb-8 text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 howtopup-section'>
                 <div className='flex items-start justify-start w-full howtopup-left'>
                     <span className='text-[18px]'>
-                    Academic courses offered by Online Business School are approved by OFQUAL awarding bodies, and universities will generally accept the credits awarded to students. Students should make it clear to the university that the qualification is OFQUAL RQF validated at the stated level/credit value.
+                    Academic courses offered by Langford Collage are approved by OFQUAL awarding bodies, and universities will generally accept the credits awarded to students. Students should make it clear to the university that the qualification is OFQUAL RQF validated at the stated level/credit value.
                     </span>
                 </div>
             </div>

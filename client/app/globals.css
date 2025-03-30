@@ -63,13 +63,11 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.699) 0%, 
-    rgba(0, 0, 0, 0.267) 30%,
-    rgba(0, 0, 0, 0.63) 70%, 
-    rgba(0, 0, 0, 0.801) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.699) 0%,
+      rgba(0, 0, 0, 0.267) 30%,
+      rgba(0, 0, 0, 0.63) 70%,
+      rgba(0, 0, 0, 0.801) 100%);
   pointer-events: none;
 }
 
@@ -89,13 +87,11 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.699) 0%, 
-    rgba(0, 0, 0, 0.267) 30%,
-    rgba(0, 0, 0, 0.63) 70%, 
-    rgba(0, 0, 0, 0.801) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.699) 0%,
+      rgba(0, 0, 0, 0.267) 30%,
+      rgba(0, 0, 0, 0.63) 70%,
+      rgba(0, 0, 0, 0.801) 100%);
   pointer-events: none;
 }
 
@@ -115,13 +111,11 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.699) 0%, 
-    rgba(0, 0, 0, 0.267) 30%,
-    rgba(0, 0, 0, 0.63) 85%, 
-    rgba(0, 0, 0, 0.801) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.699) 0%,
+      rgba(0, 0, 0, 0.267) 30%,
+      rgba(0, 0, 0, 0.63) 85%,
+      rgba(0, 0, 0, 0.801) 100%);
   pointer-events: none;
 }
 
@@ -141,13 +135,11 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.699) 0%, 
-    rgba(0, 0, 0, 0.267) 30%,
-    rgba(0, 0, 0, 0.582) 85%, 
-    rgba(0, 0, 0, 0.562) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.699) 0%,
+      rgba(0, 0, 0, 0.267) 30%,
+      rgba(0, 0, 0, 0.582) 85%,
+      rgba(0, 0, 0, 0.562) 100%);
   pointer-events: none;
 }
 
@@ -167,15 +159,14 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.473) 0%, 
-    rgba(0, 0, 0, 0) 30%,
-    rgba(0, 0, 0, 0.329) 85%, 
-    rgba(0, 0, 0, 0.192) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.473) 0%,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(0, 0, 0, 0.329) 85%,
+      rgba(0, 0, 0, 0.192) 100%);
   pointer-events: none;
 }
+
 .testimonial-bg {
   background-image: url("../public/Images/testimonial-bg.jpg");
   width: 100%;
@@ -192,13 +183,35 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.274) 0%, 
-    rgba(0, 0, 0, 0.185) 30%,
-    rgba(0, 0, 0, 0.411) 85%, 
-    rgba(0, 0, 0, 0.651) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.274) 0%,
+      rgba(0, 0, 0, 0.185) 30%,
+      rgba(0, 0, 0, 0.411) 85%,
+      rgba(0, 0, 0, 0.651) 100%);
+  pointer-events: none;
+}
+
+.try-for-free {
+  background-image: url("../public/Images/try_for_free.png");
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.try-for-free::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.664) 0%,
+      rgba(0, 0, 0, 0.493) 30%,
+      rgba(0, 0, 0, 0.329) 85%,
+      rgba(0, 0, 0, 0.329) 100%);
   pointer-events: none;
 }
 
@@ -212,8 +225,10 @@ body {
 }
 
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .btn {

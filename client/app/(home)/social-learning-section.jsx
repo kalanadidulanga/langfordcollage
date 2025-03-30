@@ -46,23 +46,23 @@ function SocialLearning() {
         
         {/* Left Side - Text Content */}
         <div className="w-full flex items-start font-bold flex-col lg:h-full social-left">
-          <span className="text-[6vw] lg:text-[3vw] font-sans font-bold">
+          <span className="text-[6vw] lg:text-[3vw] font-sans font-bold capitalize">
             A social learning
           </span>
-          <span className="text-[6vw] lg:text-[3vw] font-mono font-bold">
+          <span className="text-[6vw] lg:text-[3vw] font-mono font-bold capitalize">
             experience like no other
           </span>
 
-          <div className="w-full bg-white pt-10 pb-8 text-[#2E2E27] flex flex-col">
-            <div className="w-full flex flex-col gap-1">
+          <div className="w-full bg-white pt-10 pb-5 text-[#2E2E27] flex flex-col">
+            <div className="w-full flex flex-col gap-3">
               <span className="text-[18px] font-extralight">
                 Online... Anytime... On any device...
               </span>
               <span className="text-[18px] font-extralight">
-                The 100% online undergraduate and postgraduate diploma courses at Online Business School provide students an affordable pathway to earning an undergraduate or postgraduate degree from a choice of respected UK universities.
+                The 100% online undergraduate and postgraduate diploma courses at Langford Collage provide students an affordable pathway to earning an undergraduate or postgraduate degree from a choice of respected UK universities.
               </span>
               <span className="text-[18px] font-extralight">
-                Whether you pursue a qualification in hotel and hospitality, computing, or business management, the courses offered through Online Business School will allow you the option to continue your education and pursue a top up to an undergraduate degree or MBA through one of our partner universities.
+                Whether you pursue a qualification in hotel and hospitality, computing, or business management, the courses offered through Langford Collage will allow you the option to continue your education and pursue a top up to an undergraduate degree or MBA through one of our partner universities.
               </span>
             </div>
           </div>

@@ -113,7 +113,7 @@ function ProgressionOptions() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
                                 <span>
-                                    The Association of MBAs is a membership organisation that provides accreditation and upholds the highest international standards of MBA programmes. Many UK universities are members and offer distance learning study. Although credits cannot be given, admission can be gained via the Online Business School level 6 or 7 plus the requisite additional entry requirements of your chosen university. Students should check the regulations of their chosen university first.
+                                    The Association of MBAs is a membership organisation that provides accreditation and upholds the highest international standards of MBA programmes. Many UK universities are members and offer distance learning study. Although credits cannot be given, admission can be gained via the Langford Collage level 6 or 7 plus the requisite additional entry requirements of your chosen university. Students should check the regulations of their chosen university first.
                                 </span>
                             </div>
                         </>
@@ -137,7 +137,7 @@ function ProgressionOptions() {
                                     <span>Qualifi: <a href="https://qualifi.net/university-progression/" target='_blank' className='underline'>https://qualifi.net/university-progression/</a></span>
                                 </div>
                                 <span>
-                                    If you require more information regarding specific progression routes, these are available on each course page under ‘university progression’, alternatively you can contact the Online Business School Support team on <a href="mailto:info@onlinebusinessschool.com" target='_blank' className='underline text-blue-500'>info@onlinebusinessschool.com</a> for further advice and guidance.
+                                    If you require more information regarding specific progression routes, these are available on each course page under ‘university progression’, alternatively you can contact the Langford Collage Support team on <a href="mailto:info@onlinebusinessschool.com" target='_blank' className='underline text-blue-500'>info@onlinebusinessschool.com</a> for further advice and guidance.
                                 </span>
                             </div>
                         </>

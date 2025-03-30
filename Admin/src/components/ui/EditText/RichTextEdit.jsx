@@ -1,65 +1,72 @@
-import React, { useState } from 'react';
-import { Editor, EditorState, RichUtils, convertToRaw, ContentState } from 'draft-js';
-import 'draft-js/dist/Draft.css';
+"use client";
 
-const RichTextEditor = () => {
+import React, { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
+import { Editor, EditorState, RichUtils, ContentState, convertToRaw } from "draft-js";
+import { stateToHTML } from "draft-js-export-html";
+import "draft-js/dist/Draft.css";
+
+// Dynamically import `html-to-draftjs` to prevent SSR errors
+const htmlToDraft = typeof window !== "undefined" ? require("html-to-draftjs").default : null;
+
+const RichTextEditor = ({ htmlContent, setHtmlContent }) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
 
-  // Function to handle changes in the editor's content
+  useEffect(() => {
+    if (typeof window !== "undefined" && htmlContent) {
+      const contentBlock = htmlToDraft(htmlContent);
+      if (contentBlock) {
+        const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
+        setEditorState(EditorState.createWithContent(contentState));
+      }
+    }
+  }, []);
+
+  // Handle content changes
   const handleEditorChange = (state) => {
     setEditorState(state);
+    const contentState = state.getCurrentContent();
+    const html = stateToHTML(contentState); // Convert to HTML
+    setHtmlContent(html);
   };
 
-  // Toggle inline styles (bold, italic, underline)
+  // Toggle inline styles
   const toggleInlineStyle = (style) => {
-    const newState = RichUtils.toggleInlineStyle(editorState, style);
-    setEditorState(newState);
+    setEditorState(RichUtils.toggleInlineStyle(editorState, style));
   };
 
-  // Toggle block styles (bullet, heading, text alignment)
+  // Toggle block styles
   const toggleBlockStyle = (blockType) => {
-    const newState = RichUtils.toggleBlockType(editorState, blockType);
-    setEditorState(newState);
+    setEditorState(RichUtils.toggleBlockType(editorState, blockType));
   };
 
   return (
     <div className="w-full border border-gray-300 rounded-lg px-4 py-2">
-      {/* Toolbar with Tailwind classes */}
+      {/* Toolbar */}
       <div className="flex gap-4 mb-4 justify-end">
-        <button
-          onClick={() => toggleInlineStyle('BOLD')}
-          className="p-2 w-10 bg-gray-200 hover:bg-gray-300 rounded-lg flex justify-center"
-        >
-          <img src="/images/richtextedit/bold.svg" alt="bold" className='w-3'/>
-        </button>
-        <button
-          onClick={() => toggleInlineStyle('ITALIC')}
-          className="p-2 w-10 bg-gray-200 hover:bg-gray-300 rounded-lg flex justify-center"
-        >
-          <img src="/images/richtextedit/italic.svg" alt="italic" className='w-3'/>
-        </button>
-        <button
-          onClick={() => toggleInlineStyle('UNDERLINE')}
-          className="p-2 w-10 bg-gray-200 hover:bg-gray-300 rounded-lg flex justify-center"
-        >
-          <img src="/images/richtextedit/underline.svg" alt="underline" className='w-3'/>
-        </button>
-        <button
-          onClick={() => toggleBlockStyle('unordered-list-item')}
-          className="p-2 w-10 bg-gray-200 hover:bg-gray-300 rounded-lg flex justify-center"
-        >
-          <img src="/images/richtextedit/list.svg" alt="bullet" className='w-4'/>
-        </button>
+        {[
+          { style: "BOLD", icon: "bold.svg", alt: "bold" },
+          { style: "ITALIC", icon: "italic.svg", alt: "italic" },
+          { style: "UNDERLINE", icon: "underline.svg", alt: "underline" },
+          { style: "unordered-list-item", icon: "list.svg", alt: "bullet" },
+        ].map(({ style, icon, alt }) => (
+          <button
+            key={style}
+            onClick={() =>
+              style === "unordered-list-item"
+                ? toggleBlockStyle(style)
+                : toggleInlineStyle(style)
+            }
+            className="p-2 w-10 bg-gray-200 hover:bg-gray-300 rounded-lg flex justify-center"
+          >
+            <img src={`/images/richtextedit/${icon}`} alt={alt} className="w-4" />
+          </button>
+        ))}
       </div>
 
       {/* Editor */}
-      <div className="border p-4 rounded-lg bg-white h-[200px]">
-        <Editor
-          editorState={editorState}
-          onChange={handleEditorChange}
-          placeholder="Start typing here..."
-          className="p-2 border-none focus:outline-none"
-        />
+      <div className="border p-4 rounded-lg bg-white min-h-[200px] max-h-[200px] overflow-auto">
+        <Editor editorState={editorState} onChange={handleEditorChange} placeholder="Start typing here..." />
       </div>
     </div>
   );
