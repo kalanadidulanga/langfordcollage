@@ -6,7 +6,6 @@ import { Modal } from '@/components/ui/modal'
 import { useModal } from '@/hooks/useModal'
 import React, { useEffect, useState } from 'react'
 import Select from 'react-select'
-import { X } from "lucide-react";
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import Alert from '@/components/ui/alert/Alert';
