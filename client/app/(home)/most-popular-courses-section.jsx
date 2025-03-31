@@ -59,7 +59,16 @@ function MostPopular() {
       const res = await axios.get(`${BASE_URL}/api/getAllCources`);
 
       if (res?.data?.status) {
-        setCourses(res.data.data);
+        setCourses(
+          res.data.data.sort((a, b) => {
+            const aPriority = a.listingPriority === "None" ? Infinity : Number(a.listingPriority);
+            const bPriority = b.listingPriority === "None" ? Infinity : Number(b.listingPriority);
+
+            return aPriority - bPriority;
+          })
+        );
+
+
       } else {
         setCourses([]);
       }
@@ -87,7 +96,7 @@ function MostPopular() {
                 <div className="hidden lg:grid bg-white pt-10 pb-8 grid-cols-1 lg:grid-cols-3 justify-start gap-8 w-full">
 
                   {courses?.slice(0, 3)?.map((course, index) => (
-                    <CourceCard key={index} image={course?.image_path} title={course?.course_name} slug={course?.slug}/>
+                    <CourceCard key={index} image={course?.image_path} title={course?.course_name} slug={course?.slug} />
                   ))}
 
                 </div>
@@ -103,7 +112,7 @@ function MostPopular() {
                   >
                     {courses?.slice(0, 3)?.map((course, index) => (
                       <SwiperSlide>
-                        <CourceCard key={index} image={course?.image_path} title={course?.course_name} slug={course?.slug}/>
+                        <CourceCard key={index} image={course?.image_path} title={course?.course_name} slug={course?.slug} />
                       </SwiperSlide>
                     ))}
                   </Swiper>
