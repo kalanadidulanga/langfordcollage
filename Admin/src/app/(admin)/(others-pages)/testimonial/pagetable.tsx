@@ -4,6 +4,7 @@ import Alert from '@/components/ui/alert/Alert';
 import Button from '@/components/ui/button/Button'
 import RichTextEditor from '@/components/ui/EditText/RichTextEdit';
 import { Modal } from '@/components/ui/modal'
+import { ConfirmModal } from '@/components/ui/modal/confirmAlert';
 import { useModal } from '@/hooks/useModal'
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
@@ -11,6 +12,7 @@ import toast from 'react-hot-toast';
 
 function Pagetable() {
     const { isOpen, openModal, closeModal } = useModal();
+    const { isOpen1, openModal1, closeModal1 } = useModal();
     const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
     const [loading, setLoading] = useState(false);
@@ -220,14 +222,14 @@ function Pagetable() {
         }
     }
 
-    const deleteBlog = async (testimonialId: number) => {
+    const deleteBlog = async (testimonialId: any) => {
         try {
             const res = await axios.get(`${BASE_URL}/api/deleteTestimonial?testimonialId=${testimonialId}`);
             if (res?.data?.status) {
                 toast.success("Testimonial Deleted Successfully");
-                setTimeout(() => {
-                    loadTestimonials();
-                }, 1000);
+                loadTestimonials();
+                settestimonialId("");
+                closeModal1();
             }
         } catch (error: any) {
             toast.error(error?.response?.data?.error);
@@ -268,7 +270,10 @@ function Pagetable() {
                                             setIsEdit(true);
 
                                         }}>Edit</button>
-                                        <button className='bg-[#f63b3b] text-white py-1 rounded px-4 w-full' onClick={() => deleteBlog(data?.id)}>Delete</button>
+                                        <button className='bg-[#f63b3b] text-white py-1 rounded px-4 w-full' onClick={() => {
+                                            settestimonialId(data?.id);
+                                            openModal1();
+                                        }}>Delete</button>
                                     </div>
                                 </div>
 
@@ -284,6 +289,48 @@ function Pagetable() {
 
                 </div>
             </div>
+
+            <ConfirmModal isOpen={isOpen1} onClose={() => {
+                closeModal1();
+                settestimonialId("");
+            }} className="max-w-[500px] m-4">
+                <div className="no-scrollbar relative w-full max-w-[500px] overflow-y-auto rounded-3xl bg-white p-4 dark:bg-gray-900 lg:p-11">
+                    <div className="px-2 border-b">
+                        <h4 className="mb-2 text-2xl font-semibold text-gray-800 dark:text-white/90">
+                            Delete Testimonial
+                        </h4>
+                    </div>
+                    <div className="flex flex-col">
+                        <div className="custom-scrollbar h-full overflow-y-auto px-2 pb-3">
+                            <div className="mt-7">
+                                <div className="grid grid-cols-1 gap-x-6 gap-y-5 lg:grid-cols-2">
+                                    <div className="col-span-2">
+                                        <span className='dark:text-white text-xl text-black font-bold'>Are You Want to Delete This Testimonial</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-3 px-2 mt-6 lg:justify-end">
+                            <Button size="sm" variant="outline" disabled={loading} onClick={() => {
+                                closeModal1();
+                                settestimonialId("");
+                            }}>
+                                Close
+                            </Button>
+
+                            <Button size="sm" onClick={() => {
+                                deleteBlog(testimonialId)
+                            }} disabled={loading} className='flex items-center gap-3 bg-red-500 hover:bg-red-600'>
+                                Delete
+                                {loading && (
+                                    <div className="animate-spin rounded-full h-4 w-4 border-b-3 border-white"></div>
+                                )}
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </ConfirmModal>
 
             <Modal isOpen={isOpen} onClose={() => {
                 if (!loading) {

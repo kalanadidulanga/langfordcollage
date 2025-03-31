@@ -78,6 +78,7 @@ app.post("/api/enrollNow", (req, res) => enrollNow(req, res));
 // Admin routes
 // get methods
 app.get("/api/getDashboard", (req, res) => getDashboard(req, res));
+app.get("/api/getProfile", (req, res) => getProfile(req, res));
 app.get("/api/getAllCources", (req, res) => getAllCourse(req, res));
 app.get("/api/getAllBlogs", (req, res) => getAllBlogs(req, res));
 app.get("/api/getAllTestimonials", (req, res) => getAllTestimonials(req, res));
@@ -483,13 +484,28 @@ function getDashboard(req, res) {
                 total_blogs: results2[0].total_count,
                 total_testimonials: results3[0].total_count,
                 total_courses: results4[0].total_count,
-              }
+              },
             });
             return;
           });
         });
       });
     });
+  });
+}
+function getProfile(req, res) {
+  const { email } = req.query;
+  const sql = "SELECT * FROM `admin` WHERE `email` = ?";
+  const values = [email];
+  db.query(sql, values, (err, results) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.status(201).json({
+      status: true,
+      data: results[0],
+    });
+    return;
   });
 }
 function getAllCourse(req, res) {
