@@ -77,6 +77,7 @@ app.post("/api/enrollNow", (req, res) => enrollNow(req, res));
 
 // Admin routes
 // get methods
+app.post("/api/createAdmin", (req, res) => Addadmin(req, res));
 app.get("/api/getDashboard", (req, res) => getDashboard(req, res));
 app.get("/api/getProfile", (req, res) => getProfile(req, res));
 app.get("/api/getAllCources", (req, res) => getAllCourse(req, res));
@@ -120,6 +121,48 @@ app.listen(process.env.DB_PORT, () =>
 );
 
 // functions
+function Addadmin(req, res) {
+  const sql = "INSERT INTO `admin_type`(`admin_type`) VALUES(?)";
+  const values = ["Super Admin"];
+
+  db.query(sql, values, (err, results) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+
+    const sql1 = "INSERT INTO `status`(`status`) VALUES(?)";
+    const values1 = ["true"];
+
+    db.query(sql1, values1, (err, results) => {
+      if (err) {
+        return res.status(500).json({ error: err.message });
+      }
+
+      const sql2 =
+        "INSERT INTO `admin`(`fname`,`lname`,`email`,`password`,`active`,`reg_date`,`type`) VALUES(?,?,?,?,?,?,?)";
+      const values2 = [
+        "Super",
+        "Admin",
+        "admin@langford.com",
+        "12345",
+        "1",
+        "2025-04-04 13:09:33",
+        "1",
+      ];
+
+      db.query(sql2, values2, (err, results) => {
+        if (err) {
+          return res.status(500).json({ error: err.message });
+        }
+        res.json({
+          status: true,
+          data: results[0],
+        });
+        return;
+      });
+    });
+  });
+}
 function signin(req, res) {
   const { email, password } = req.body;
 

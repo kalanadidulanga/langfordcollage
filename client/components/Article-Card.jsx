@@ -1,11 +1,19 @@
 export const ArticleCard = ({ image, title, description, slug, action }) => {
+
+    const truncateHTML = (html, limit) => {
+        const div = document.createElement("div");
+        div.innerHTML = html;
+        const text = div.innerText || div.textContent;
+        return text.length > limit ? text.substring(0, limit) + "..." : text;
+      };
+
     return (
         <div className="w-full font-sans flex flex-col gap-3">
             <img src={image} alt="courses_image" className="w-full h-[304px] object-cover" />
             <span className="text-2xl text-black font-bold font-sans">{title}</span>
             <div
                 className="text-[18px] text-black font-light line-clamp-2 lg:line-clamp-5 h-full"
-                dangerouslySetInnerHTML={{ __html: description }}
+                dangerouslySetInnerHTML={{ __html: truncateHTML(description, 250) }}
             />
             <div className="flex items-start justify-start w-full text-white">
                 <button
