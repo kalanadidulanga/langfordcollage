@@ -16,7 +16,7 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "Langford College",
-  description: "Online degrees without the high fees",
+  description: "A Smarter Route To a British Degree",
 };
 
 export default function RootLayout({ children }) {
