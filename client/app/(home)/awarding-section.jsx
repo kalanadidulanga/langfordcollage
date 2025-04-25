@@ -45,7 +45,7 @@ function Awarding() {
 
     return (
         <>
-            <div className='w-full lg:pb-10 pt-10 font-sans bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 testimonial-section'>
+            <div className='w-full lg:pb-10 pt-10 font-sans bg-white text-black px-[10vw] lg:px-0 lg:pl-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 testimonial-section'>
                 <div className='w-full flex items-start flex-col lg:h-full'>
                     <span className="text-[6vw] lg:text-[3vw] font-sans font-bold capitalize">
                         Award-winning
@@ -56,7 +56,7 @@ function Awarding() {
 
                     <div className="w-full bg-white mt-3 text-[#2E2E27] flex flex-col">
                         <div className="w-full flex flex-col gap-3">
-                            <span className="text-[18px] font-extralight">
+                            <span className="text-[18px] font-extralight capitalize">
                                 Read more about how our university's commitment to <br /> excellence has been recognised with our <a href="#" className="underline font-bold">latest <br /> awards.</a>
                             </span>
                         </div>
@@ -67,7 +67,7 @@ function Awarding() {
                         <div className="w-full bg-white hidden lg:block">
                             <div className="bg-white w-full pt-10 pb-8 flex flex-row justify-start overflow-x-auto gap-8 snap-x snap-mandatory scrollbar-hide scroll-smooth">
                                 {[...Array(6)].map((_, i) => (
-                                    <div key={i} className="w-56 h-56 bg-gray-500 snap-start shrink-0">
+                                    <div key={i} className="w-60 h-60 bg-gray-500 snap-start shrink-0">
                                         <img src="/Logo.svg" alt={`logo-${i}`} className="w-full h-full object-contain" />
                                     </div>
                                 ))}
