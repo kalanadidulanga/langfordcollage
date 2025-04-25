@@ -181,7 +181,7 @@ function CourseBody({ data }) {
                                 defaultChecked={paymentOption === 'Annual' ? true : false}
                                 onChange={(e) => setPaymentOption(e.target.checked ? e.target.value : '')}
                                 className='w-4 h-4 border-[1px] border-[#E5E4E4] p-2 outline-none bg-white font-extralight text-[18px]' />
-                            <span className='text-[16px]'>Annual payment (USD{data?.course_annual_payment ? data?.course_annual_payment : '0'})</span>
+                            <span className='text-[16px]'>Annual payment (USD{data?.annual_payment ? data?.annual_payment : '0'})</span>
                         </div>
                         <div className='flex gap-3 items-center'>
                             <input type="radio" name='payment'
@@ -189,7 +189,7 @@ function CourseBody({ data }) {
                                 defaultChecked={paymentOption === 'Monthly' ? true : false}
                                 onChange={(e) => setPaymentOption(e.target.checked ? e.target.value : '')}
                                 className='w-4 h-4 border-[1px] border-[#E5E4E4] p-2 outline-none bg-white font-extralight text-[18px]' />
-                            <span className='text-[16px]'>Monthly payment (USD{data?.course_monthly_payment ? data?.course_monthly_payment : '0'} per month)</span>
+                            <span className='text-[16px]'>Monthly payment (USD{data?.monthly_payment ? data?.monthly_payment : '0'} per month)</span>
                         </div>
                     </div>
                     <div className='w-full flex gap-4'>
