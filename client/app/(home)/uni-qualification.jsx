@@ -54,21 +54,21 @@ export default function FastTrackingSection() {
             window.location.href = "/igsce-and-short-courses";
           }}
         >
-          IGCSE & short courses
+          IGCSE & Short Courses
         </span>
         <span className="border-b-[4px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A]"
           onClick={() => {
             window.location.href = "/level-3-a-level-university-entry-courses";
           }}
         >
-          A Level university entry
+          A Level University Entry
         </span>
         <span className="border-b-[4px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A]"
           onClick={() => {
             window.location.href = "/university-first-and-second-year";
           }}
         >
-          University 1st & 2nd year
+          University 1st & 2nd Year
         </span>
         <span className="border-b-[4px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A]"
           onClick={() => {

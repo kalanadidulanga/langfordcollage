@@ -28,7 +28,7 @@ export const Footer = () => {
                         </div>
                         <div className='flex gap-1 items-center justify-center'>
                             <img src="/Icon/email.png" alt="" className='w-4 h-4' />
-                            <a href='mailto:support@langfordcollage.com' target='_blank'>support@langfordcollage.com</a>
+                            <a href='mailto:support@langfordcollage.com' target='_blank'>info@langfordcollage.com</a>
                         </div>
                     </div>
                     <div className='w-full justify-center flex gap-5 text-[16px] bg-black p-3 py-4'>

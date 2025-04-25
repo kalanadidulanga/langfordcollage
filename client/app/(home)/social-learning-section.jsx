@@ -45,11 +45,11 @@ function SocialLearning() {
       <div className="w-full lg:pb-20 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 social-section">
         
         {/* Left Side - Text Content */}
-        <div className="w-full flex items-start font-bold flex-col lg:h-full social-left">
+        <div className="w-full flex items-start flex-col lg:h-full social-left">
           <span className="text-[6vw] lg:text-[3vw] font-sans font-bold capitalize">
             A social learning
           </span>
-          <span className="text-[6vw] lg:text-[3vw] font-mono font-bold capitalize">
+          <span className="text-[6vw] lg:text-[3vw] font-mono capitalize">
             experience like no other
           </span>
 

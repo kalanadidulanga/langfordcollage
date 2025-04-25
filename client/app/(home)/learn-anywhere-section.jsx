@@ -50,7 +50,7 @@ function LearnAnywhere() {
                     <span className='text-[6vw] lg:text-[3vw] font-bold font-sans capitalize'>
                         anytime, from any
                     </span>
-                    <span className='text-[6vw] lg:text-[3vw] font-mono font-bold capitalize'>
+                    <span className='text-[6vw] lg:text-[3vw] font-mono capitalize'>
                         device
                     </span>
 

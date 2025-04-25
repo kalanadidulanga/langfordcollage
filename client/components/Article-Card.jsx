@@ -9,7 +9,7 @@ export const ArticleCard = ({ image, title, description, slug, action }) => {
 
     return (
         <div className="w-full font-sans flex flex-col gap-3">
-            <img src={image} alt="courses_image" className="w-full h-[304px] object-cover" />
+            <img src={image} alt="article_image" className="w-full h-[304px] object-cover" />
             <span className="text-2xl text-black font-bold font-sans">{title}</span>
             <div
                 className="text-[18px] text-black font-light line-clamp-2 lg:line-clamp-5 h-full"

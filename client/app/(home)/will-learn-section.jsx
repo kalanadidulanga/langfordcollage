@@ -54,9 +54,9 @@ function WillLearn() {
         </div>
 
         {/* Right Side - Text Content */}
-        <div className="w-full flex lg:items-end justify-start font-bold flex-col lg:h-full learn-right">
+        <div className="w-full flex lg:items-end justify-start flex-col lg:h-full learn-right">
           <span className="text-[6.8vw] lg:text-[3.3vw] font-sans font-bold capitalize">
-            How you will <span className="font-mono font-bold">learn</span>
+            How you will <span className="font-mono font-light">learn</span>
           </span>
           <div className="w-full bg-white pt-10 pb-8 text-black flex flex-col lg:items-end justify-start">
             <div className="flex items-start lg:items-end justify-start w-full gap-5 capitalize">

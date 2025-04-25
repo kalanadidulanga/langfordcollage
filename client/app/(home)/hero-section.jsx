@@ -13,17 +13,19 @@ const HeroSection = () => {
 
   return (
     <div className="w-[100%] px-5 lg:px-32 fade-in font-sans">
-      <div className="w-full h-[45vh] mb-[15vh] flex justify-center items-center flex-col md:px-[7vw] gap-10">
+      <div className="w-full h-[45vh] mb-[4vh] flex justify-center items-center flex-col md:px-[7vw] gap-10">
         <div className="w-full flex flex-col text-center lg:text-start fade-in">
-          <span className="text-5xl md:text-[6vw] font-sans font-bold">Online Degrees</span>
+          <span className="text-5xl md:text-[6vw] font-sans font-bold">A Smarter Route</span>
         </div>
         <div className="w-full flex flex-col text-center lg:text-end fade-in">
-          <span className="text-5xl md:text-[6vw] font-mono">Without The High Fees</span>
+          <span className="text-5xl md:text-[6vw] font-mono">To a British Degree</span>
         </div>
       </div>
       <div className="w-full flex flex-col justify-center items-start gap-3 fade-in">
         <span className="text-[13px]">
-          Study for a degree or MBA from UK <br /> universities for less than £6,000
+          Unlock UK-recognised qualifications from anywhere <br /> in the world—without the cost, complexity, or compromise<br /> of traditional university routes.
+          Supporting Hook: Accredited <br /> by Qualifi | Accepted by UK Universities | Start for <br />Under £6,000
+
         </span>
         <div className="w-full flex flex-col gap-4">
           <div className="flex gap-4">
@@ -33,14 +35,14 @@ const HeroSection = () => {
               }}
 
             >
-              View Courses
+              Explore Courses
             </button>
             <button className="btn bg-[#2E2E27] hover:bg-[#2c2c24] hover:shadow-md shadow-[#2e2e27ee] fade-in hover:scale-105 transition-all duration-200"
               onClick={() => {
                 window.location.href = "/individual/top-up_degree"
               }}
             >
-              Top up Degrees
+              Degree Pathways
             </button>
           </div>
           <div className="flex gap-2">
@@ -49,7 +51,7 @@ const HeroSection = () => {
                 window.location.href = "/try_for_free"
               }}
             >
-              Try for free
+              Try a Free Lesson
             </button>
             {/* <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] fade-in">
               Log In

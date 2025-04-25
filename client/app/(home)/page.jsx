@@ -14,6 +14,9 @@ import { Footer } from "@/components/Footer";
 import { useEffect, useState } from "react";
 import GetFuture from "./get-future-section";
 import LeatestTestimonial from "./leatest-testimonial-section";
+import NSS from "./nss-section";
+import Awarding from "./awarding-section";
+import WhatsNew from "./whats-new-section";
 
 export default function Home() {
 
@@ -32,16 +35,19 @@ export default function Home() {
             <HeroSection />
           </div>
         </div>
-        <UniQualification />
+        {/* <UniQualification /> */}
         <GetFuture/>
+        <NSS/>
+        <Awarding/>
+        <WhatsNew/>
         <AffordableStudy />
         <SocialLearning />
         <WillLearn />
         <Support />
         <LearnAnywhere />
         <MostPopular />
-        <RequestACource />
         <LeatestTestimonial/>
+        <RequestACource />
         <LeatestArticle />
         <Footer />
       </>

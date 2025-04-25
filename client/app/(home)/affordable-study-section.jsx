@@ -71,7 +71,7 @@ function AffordableStudy() {
             Programmers With <br />
             Exclusive Online
           </span>
-          <span className="font-mono font-bold capitalize">
+          <span className="font-mono capitalize">
             modules fast tracking <br />
             learners to a university <br />
             qualification

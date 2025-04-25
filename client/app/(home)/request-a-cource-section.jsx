@@ -501,7 +501,7 @@ a[x-apple-data-detectors],
                     <span className='text-[6vw] lg:text-[3vw] request-left font-sans font-bold capitalize'>
                         Request a Course
                     </span>
-                    <span className='text-[6vw] lg:text-[3vw] request-left font-mono font-bold capitalize'>
+                    <span className='text-[6vw] lg:text-[3vw] request-left font-mono capitalize'>
                         Prospectus
                     </span>
 

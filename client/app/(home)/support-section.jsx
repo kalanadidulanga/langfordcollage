@@ -50,11 +50,11 @@ function Support() {
                         className='w-full h-full object-cover'
                     />
                 </div>
-                <div className='w-full flex items-start font-bold flex-col lg:h-full sup-right'>
+                <div className='w-full flex items-start flex-col lg:h-full sup-right'>
                     <span className='text-[6vw] lg:text-[3vw] font-sans font-bold capitalize'>
                         Support beyond you
                     </span>
-                    <span className='text-[6vw] lg:text-[3vw] font-mono font-bold capitalize'>
+                    <span className='text-[6vw] lg:text-[3vw] font-mono capitalize'>
                         learning
                     </span>
 
