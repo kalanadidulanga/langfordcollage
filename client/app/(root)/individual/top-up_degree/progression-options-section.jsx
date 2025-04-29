@@ -47,7 +47,7 @@ function ProgressionOptions() {
 
     return (
         <>
-            <div className='w-full lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 opt-section'>
+            <div className='w-full lg:pb-10 bg-white text-black px-[9vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 opt-section capitalize'>
                 <div className='w-full flex items-start font-bold flex-col lg:h-full font-sans'>
                     <span className='text-[6vw] lg:text-[3vw] opt-left'>
                         Progression Options

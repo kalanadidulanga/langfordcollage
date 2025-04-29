@@ -43,47 +43,37 @@ export default function FastTrackingSection() {
     <div className="w-full pt-16 pb-14 bg-white text-black px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between lg:gap-32 gap-5 fast-tracking-section">
       {/* Left Side - Text Content */}
       <div className="flex items-start text-3xl md:text-[3.6vw] justify-start flex-col fast-tracking-left gap-3">
-        <span className="font-bold font-sans capitalize">Fast tracking learners to a</span>
-        <span className="font-mono font-semibold capitalize">University qualification</span>
+        <span className="font-bold font-sans capitalize">Why Langford </span>
+        <span className="font-mono capitalize">College?</span>
+        {/* <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] text-white mt-8"
+          onClick={() => {
+            window.location.href = "/individual/how_will_you_learn";
+          }}
+        >Your Journey</button> */}
       </div>
 
       {/* Right Side - List Items */}
       <div className="flex items-start lg:text-[1.6vw] gap-6 font-bold flex-col fast-tracking-right">
-        <span className="border-b-[4px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A]"
-          onClick={() => {
-            window.location.href = "/igsce-and-short-courses";
-          }}
-        >
-          IGCSE & Short Courses
-        </span>
-        <span className="border-b-[4px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A]"
-          onClick={() => {
-            window.location.href = "/level-3-a-level-university-entry-courses";
-          }}
-        >
-          A Level University Entry
-        </span>
-        <span className="border-b-[4px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A]"
-          onClick={() => {
-            window.location.href = "/university-first-and-second-year";
-          }}
-        >
-          University 1st & 2nd Year
-        </span>
-        <span className="border-b-[4px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A]"
-          onClick={() => {
-            window.location.href = "/level-6-courses";
-          }}
-        >
-          Graduate Level
-        </span>
-        <span className="border-b-[4px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A]"
-          onClick={() => {
-            window.location.href = "/level-7-mba-advance-entry";
-          }}
-        >
-          Masters/MBS
-        </span>
+        <div className="flex">
+          <li></li>
+          <span className="hover:underline">Globally Recognised UK Diplomas & Degrees</span>
+        </div>
+        <div className="flex">
+          <li></li>
+          <span className="hover:underline">Progress to Top UK Universities</span>
+        </div>
+        <div className="flex">
+          <li></li>
+          <span className="hover:underline">Fully Online with Personal Tutor Support</span>
+        </div>
+        <div className="flex">
+          <li></li>
+          <span className="hover:underline">Ofqual-Regulated, Qualifi-Accredited Programmes</span>
+        </div>
+        <div className="flex">
+          <li></li>
+          <span className="hover:underline">Start Anytime. Study at Your Pace</span>
+        </div>
       </div>
     </div>
   );

@@ -85,7 +85,7 @@ function WillLearn() {
       {/* Button Section */}
       <div className="w-full bg-white pt-5 lg:pt-10 pb-20 px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 learn-section">
         <div className="flex items-start justify-start w-full">
-          <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] learn-left"
+          <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] learn-left capitalize"
             onClick={() => {
               window.location.replace("/individual/how_will_you_learn");
             }}

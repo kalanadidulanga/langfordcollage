@@ -68,7 +68,7 @@ function Body() {
 
   return (
     <>
-      <div className='w-full px-[10vw] font-sans flex flex-col gap-10 pt-10 pb-20 bg-white text-black article-section'>
+      <div className='w-full px-[10vw] font-sans flex flex-col gap-10 pt-10 pb-20 bg-white text-black article-section capitalize'>
         <span className='font-bold text-[3.5vw] article-left'>Latest Articles</span>
         <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-start gap-8 space-y-5 article-right'>
           {article?.length > 0 ? (

@@ -11,7 +11,7 @@ function CourseDetailBody({ data }) {
 
     return (
         <>
-            <div className='w-full pb-20 lg:px-[10vw] bg-white'>
+            <div className='w-full pb-20 lg:px-[10vw] bg-white capitalize'>
                 <div className='w-full flex text-[17px] justify-center'>
                     <span className={`${isClickedSection1 ? `text-white bg-[#E2231A]` : `text-black bg-[#F4C023]`} px-2 py-1 cursor-pointer w-full text-center`}
                         onClick={() => {

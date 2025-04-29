@@ -42,8 +42,8 @@ function Support() {
 
     return (
         <>
-            <div className='w-full bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 sup-section'>
-                <div className='flex items-start justify-start w-full lg:w-[60%] h-[75vh]  hidden lg:block sup-left'>
+            <div className='w-full bg-white text-black px-[9vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 sup-section'>
+                <div className='flex items-start justify-start w-full lg:w-[60%] h-[80vh]  hidden lg:block sup-left'>
                     <img
                         src="/Images/work-man.png"
                         alt=""
@@ -58,11 +58,12 @@ function Support() {
                         learning
                     </span>
 
-                    <div className='w-full bg-white pt-8 pb-8 text-[#2E2E27] flex flex-col'>
+                    <div className='w-full bg-white pt-4 pb-8 text-[#2E2E27] flex flex-col'>
                         <div className='w-full flex flex-col gap-1'>
-                            <span className='text-[18px] font-extralight'>
+                            <span className='text-[18px] font-extralight capitalize'>
                                 Discover a wealth of invaluable resources to nurture your learning and overall well-being. With our 8 free support hubs, we are dedicated to empowering you in various aspects of your life. <br/> <br />
-                                Our dedicated hubs are designed to cater to your personal development, health, and well-being, as well as your employment and interpersonal skills. Explore our support hubs and gain access to an extensive array of tools, guidance, and knowledge. Whether you're seeking personal growth, looking to improve your mental and physical health, or aiming to enhance your professional skill set, our comprehensive resources are here to uplift you.<br/> <br />
+                                Our dedicated hubs are designed to cater to your personal development, health, and well-being, as well as your employment and interpersonal skills. Explore our support hubs and gain access to an extensive array of tools, guidance, and knowledge. <br /> <br />
+                                Whether you're seeking personal growth, looking to improve your mental and physical health, or aiming to enhance your professional skill set, our comprehensive resources are here to uplift you.<br/> <br />
                                 Invest in yourself and seize the opportunity to tap into your full potential. Take advantage of our diverse support hubs, carefully crafted to address your unique needs.
                             </span>
                         </div>

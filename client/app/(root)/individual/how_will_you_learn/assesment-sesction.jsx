@@ -42,8 +42,8 @@ function Assesment() {
 
     return (
         <>
-            <div className='w-full font-sans bg-white pb-20 text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 assessment-section'>
-                <div className='flex items-start justify-start w-full lg:w-[60%] h-[90vh]  hidden lg:block assessment-left'>
+            <div className='w-full font-sans bg-white pb-20 text-black px-[9vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 assessment-section capitalize'>
+                <div className='flex items-start justify-start w-full lg:w-[60%] h-[87vh]  hidden lg:block assessment-left'>
                     <img
                         src="/Images/assesment.svg"
                         alt=""

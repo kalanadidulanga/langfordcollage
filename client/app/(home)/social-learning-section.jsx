@@ -42,7 +42,7 @@ function SocialLearning() {
   return (
     <>
       {/* Main Section */}
-      <div className="w-full lg:pb-20 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 social-section">
+      <div className="w-full lg:pb-20 bg-white text-black px-[9vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 social-section">
         
         {/* Left Side - Text Content */}
         <div className="w-full flex items-start flex-col lg:h-full social-left">
@@ -53,7 +53,7 @@ function SocialLearning() {
             experience like no other
           </span>
 
-          <div className="w-full bg-white pt-10 pb-5 text-[#2E2E27] flex flex-col">
+          <div className="w-full bg-white pt-10 pb-5 text-[#2E2E27] flex flex-col capitalize">
             <div className="w-full flex flex-col gap-3">
               <span className="text-[18px] font-extralight">
                 Online... Anytime... On any device...
@@ -79,7 +79,7 @@ function SocialLearning() {
         </div>
 
         {/* Right Side - Image */}
-        <div className="flex items-start justify-start w-full lg:w-[60%] h-[90vh] hidden lg:block social-right">
+        <div className="flex items-start justify-start w-full lg:w-[60%] h-[85vh] hidden lg:block social-right">
           <img
             src="/Images/work-girl.jpg"
             alt=""

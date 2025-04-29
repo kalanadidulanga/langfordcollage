@@ -43,13 +43,11 @@ function NSS() {
     return (
         <>
             <div className='w-full bg-[#2e2e27] px-[10vh] lg:px-[20vh] py-[10vh] p-2 nss-section flex flex-col lg:flex-row justify-center items-center lg:gap-32 capitalize'>
-                <div className='w-full lg:w-[70%] flex items-center nss-left'>
-                    <span className='text-[20px] hover:underline font-sans text-center lg:text-start font-bold'>
-                        The National Student Survey (NSS) 2025: A UK-wide annual survey for final-year students to share their views and feedback on their time at University.
-                    </span>
-                </div>
-                <div className='w-full lg:w-[30%] flex justify-center items-center nss-right mt-5 lg:mt-0'>
-                    <img src="/Images/NSS-2.jpg" alt="NSS" className='w-[80%] lg:w-full' />
+                <div className='w-full flex flex-wrap lg:flex-nowrap justify-center items-center nss-left bg-white rounded-md lg:gap-5 py-5 px-5'>
+                    <img src="/logos/outhm.png" alt="logo" className='lg:w-64 w-full lg:h-64 object-contain object-center mb-3 lg:mb-0'/>
+                    <img src="/logos/iab.png" alt="logo" className='lg:w-64 w-full lg:h-64 object-contain object-center'/>
+                    <img src="/logos/CWChamber.png" alt="logo" className='lg:w-64 w-full lg:h-64 object-contain object-center'/>
+                    <img src="/logos/qualifi.png" alt="logo" className='lg:w-64 w-full lg:h-64 object-contain object-center'/>
                 </div>
             </div>
         </>

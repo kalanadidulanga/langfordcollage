@@ -72,14 +72,23 @@ function Awarding() {
 
     return (
         <>
-            <div className='w-full lg:pb-10 pt-10 font-sans bg-white text-black px-[10vw] lg:px-0 lg:pl-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 testimonial-section'>
+            <div className='w-full lg:pb-10 pt-10 font-sans bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 testimonial-section'>
                 <div className='w-full flex items-start flex-col lg:h-full'>
-                    <span className="text-[6vw] lg:text-[3vw] font-sans font-bold capitalize">
-                        Our Partner
-                    </span>
-                    <span className="text-[6vw] lg:text-[3vw] font-mono capitalize">
-                        University
-                    </span>
+                    <div className="w-full grid grid-cols-2">
+                        <div className="w-full flex items-start flex-col lg:h-full">
+                            <span className="text-[6vw] lg:text-[4vw] font-sans font-bold capitalize">
+                                Our Partner
+                            </span>
+                            <span className="text-[6vw] lg:text-[4vw] font-mono capitalize">
+                                University
+                            </span>
+                        </div>
+                        <div className="w-full h-full p-2">
+                            <div className="border-b-2 h-[70%] border-gray-400">
+
+                            </div>
+                        </div>
+                    </div>
 
                     <div className="w-full bg-white mt-3 text-[#2E2E27] flex flex-col">
                         <div className="w-full flex flex-col gap-3">
@@ -94,7 +103,7 @@ function Awarding() {
                         <div className="w-full bg-white hidden lg:block">
                             <div className="bg-white w-full pt-10 pb-8 flex flex-row justify-start overflow-x-auto gap-8 snap-x snap-mandatory scrollbar-hide scroll-smooth">
                                 {unilogos?.map((value, i) => (
-                                    <div key={i} className="w-64 h-64 border rounded-lg p-2 hover:p-1 bg-white transition-all duration-200 snap-start shrink-0">
+                                    <div key={i} className="w-60 h-60 border rounded-lg p-2 hover:p-1 bg-white transition-all duration-200 snap-start shrink-0">
                                         <img src={value?.logo} alt={`logo-${i}`} className="w-full h-full object-contain" />
                                     </div>
                                 ))}

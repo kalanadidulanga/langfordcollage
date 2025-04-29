@@ -3,7 +3,7 @@ import React from 'react'
 function AboutSecond() {
     return (
         <>
-            <div className='w-full pt-20 pb-20 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5'>
+            <div className='w-full pt-20 pb-20 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 capitalize'>
                 <div className='flex items-start justify-start w-full lg:w-[50%] h-[55vh] md:h-[80vh] lg:h-[55vh]'>
                     <img
                         src="/Images/girl.jpg"

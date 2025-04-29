@@ -58,23 +58,19 @@ function AffordableStudy() {
     <>
       {/* Main Section */}
       <div className="w-full bg-white pt-20 text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 affordable-section">
-        
+
         {/* Image - Left Side */}
         <div className="flex items-start justify-start w-full lg:w-[60%] affordable-left">
-          <img src="/Images/read_girl.jpg" alt="" className="w-full h-[400px] md:h-[550px] object-cover" />
+          <img src="/Images/read_girl.jpg" alt="" className="w-full h-[400px] md:h-[370px] object-cover" />
         </div>
 
         {/* Text - Right Side */}
         <div className="w-full flex items-start text-[6vw] lg:text-[4vw] font-medium flex-col affordable-right">
           <span className="font-sans font-bold capitalize">
-            Affordable Study <br />
-            Programmers With <br />
-            Exclusive Online
+            Affordable online programs to fast-track 
           </span>
           <span className="font-mono capitalize">
-            modules fast tracking <br />
-            learners to a university <br />
-            qualification
+            your university qualification.
           </span>
         </div>
 
@@ -94,9 +90,9 @@ function AffordableStudy() {
       <div className="w-full bg-white pb-20 px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 affordable-section1">
         <div className="flex items-start justify-start w-full lg:affordable-left affordable-right1">
           <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6]"
-          onClick={()=>{
-            window.scrollTo({ top: 450, behavior: "smooth" });
-          }}
+            onClick={() => {
+              window.scrollTo({ top: 450, behavior: "smooth" });
+            }}
           >View Courses</button>
         </div>
       </div>

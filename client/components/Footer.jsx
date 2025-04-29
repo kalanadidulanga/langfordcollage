@@ -5,7 +5,7 @@ export const Footer = () => {
     return (
         <>
             <footer>
-                <div className='w-full flex font-sans bg-[#F7FAFF] text-black flex-col gap-3 justify-center items-center pt-5'>
+                <div className='w-full hsrc flex font-sans bg-[#F7FAFF] text-black flex-col gap-3 justify-center items-center pt-5 capitalize'>
                     <span className='text-[#D80E03] text-lg font-semibold'>Langford Collage</span>
                     <div className='w-full md:w-[470px] text-center p-5'>
                         <span className='text-base text-[#000000CC]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</span>

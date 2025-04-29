@@ -35,20 +35,21 @@ export default function Home() {
             <HeroSection />
           </div>
         </div>
-        {/* <UniQualification /> */}
-        <GetFuture/>
-        <NSS/>
-        <Awarding/>
-        <WhatsNew/>
+        <GetFuture />
+        <UniQualification />
+        <NSS />
+        <Awarding />
+        <WhatsNew />
         <AffordableStudy />
         <SocialLearning />
         <WillLearn />
         <Support />
         <LearnAnywhere />
         <MostPopular />
-        <LeatestTestimonial/>
+        <LeatestTestimonial />
         <RequestACource />
         <LeatestArticle />
+        <div className='bg-white p-10'></div>
         <Footer />
       </>
     );

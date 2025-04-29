@@ -93,7 +93,7 @@ function CourseBody({ data }) {
     }
     return (
         <>
-            <div className='w-full pt-20 pb-20 bg-white grid grid-cols-1 lg:grid-cols-2 gap-10'>
+            <div className='w-full pt-20 pb-20 bg-white grid grid-cols-1 lg:grid-cols-2 gap-10 capitalize'>
                 <div className='w-full flex flex-col'>
                     <div className='w-full bg-[#1E1E1E] p-8'>
                         <span className='text-[3.6vw] font-bold'>Studies at a Glance</span>

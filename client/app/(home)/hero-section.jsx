@@ -13,7 +13,7 @@ const HeroSection = () => {
 
   return (
     <div className="w-[100%] px-5 lg:px-32 fade-in font-sans">
-      <div className="w-full h-[45vh] mb-[4vh] flex justify-center items-center flex-col md:px-[7vw] gap-10 capitalize">
+      <div className="w-full h-[50vh] mb-[vh] flex justify-center items-center flex-col md:px-[7vw] gap-10 capitalize">
         <div className="w-full flex flex-col text-center lg:text-start fade-in">
           <span className="text-5xl md:text-[6vw] font-sans font-bold">A Smarter Route</span>
         </div>
@@ -23,9 +23,7 @@ const HeroSection = () => {
       </div>
       <div className="w-full flex flex-col justify-center items-start gap-3 fade-in">
         <span className="text-[13px] capitalize">
-          Unlock UK-recognised qualifications from anywhere <br /> in the world—without the cost, complexity, or compromise<br /> of traditional university routes.
-          Supporting Hook: Accredited <br /> by Qualifi | Accepted by UK Universities | Start for <br />Under £6,000
-
+          Considering studying with us in 2025? Discover how <br /> to earn UK-recognised qualifications from anywhere <br />in the world—affordably and flexibly.
         </span>
         <div className="w-full flex flex-col gap-4">
           <div className="flex gap-4">

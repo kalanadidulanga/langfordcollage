@@ -57,7 +57,7 @@ function UnivercitiesInWorld() {
 
     return (
         <>
-            <div className='w-full lg:pb-5 font-sans bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 uni-section'>
+            <div className='w-full lg:pb-5 font-sans bg-white text-black px-[9vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 uni-section capitalize'>
                 <div className='w-full flex items-start font-bold flex-col lg:h-full uni-left'>
                     <span className='text-[6vw] lg:text-[3vw]'>
                         Study at some of the best
@@ -89,7 +89,7 @@ function UnivercitiesInWorld() {
                     />
                 </div>
             </div>
-            <div className='flex pb-20 font-sans flex-col bg-white text-[#2E2E27] text-[18px] font-extralight px-[10vw] gap-3 uni-section1'>
+            <div className='flex pb-20 font-sans flex-col bg-white text-[#2E2E27] text-[18px] font-extralight px-[9vw] gap-3 uni-section1 capitalize'>
                 <span className="uni-left1">
                     Langford Collage can provide students with the requisite OFQUAL documentation and transcript. Alternatively, students can visit the OFQUAL website <a href="https://register.ofqual.gov.uk/" className='underline cursor-pointer text-blue-500' target='_blank'>https://register.ofqual.gov.uk/</a> to confirm the qualification. Each university will consider an application on its merits subject to their own specific entry requirements.
                 </span>

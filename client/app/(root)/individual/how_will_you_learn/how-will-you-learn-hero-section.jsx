@@ -15,7 +15,7 @@ function HowWillYouLearnHero() {
     return (
         <>
             <div className='w-[100%] px-5 lg:px-32 font-sans fade-in'>
-                <div className='w-full h-[45vh] mb-[20vh] flex justify-center items-center flex-col gap-5 lg:pl-36'>
+                <div className='w-full h-[45vh] mb-[16vh] flex justify-center items-center flex-col gap-5 lg:pl-36'>
                     <div className='w-full flex flex-col text-center lg:text-start fade-in'>
                         <span className='font-bold text-5xl md:text-[6vw]'>How will</span>
                     </div>
@@ -24,7 +24,7 @@ function HowWillYouLearnHero() {
                     </div>
                 </div>
                 <div className='w-full  flex flex-col justify-center items-start gap-3 fade-in'>
-                    <span className='text-[13px]'>
+                    <span className='text-[13px] capitalize'>
                     Whether you want to improve your <br /> skills, increase your employment <br /> opportunities or further your <br /> professional qualifications, Online <br /> Business School has a variety of <br /> distance learning courses to suit you.
                     </span>
                 </div>

@@ -42,8 +42,8 @@ function LearnAnywhere() {
 
     return (
         <>
-            <div className='w-full lg:pb-20 pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 learn-anyway-section'>
-                <div className='w-full flex items-start flex-col lg:h-full learn-anyway-left'>
+            <div className='w-full lg:pb-20 pb-10 bg-white text-black px-[9vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 learn-anyway-section'>
+                <div className='w-full flex items-start flex-col lg:h-full learn-anyway-left capitalize'>
                     <span className='text-[6vw] lg:text-[3vw] font-bold font-sans capitalize'>
                         Learn anywhere,
                     </span>

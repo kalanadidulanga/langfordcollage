@@ -42,7 +42,7 @@ function SingleViewBody({data}) {
 
     return (
         <>
-            <div className='w-full font-sans flex flex-col gap-10 pt-10 pb-20 bg-white text-black'>
+            <div className='w-full font-sans flex flex-col gap-10 pt-10 pb-20 bg-white text-black capitalize'>
                 <div className='w-full bg-white pt-20 px-[10vw] text-black flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 blog-view-section'>
                     <div className='flex items-start justify-start w-full lg:w-[60%] blog-view-left'>
                         <img src={data?.image_path || "/Images/degree.png"} alt="" className='w-full h-[400px] md:h-[65vh] object-cover' />

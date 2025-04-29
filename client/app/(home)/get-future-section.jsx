@@ -81,15 +81,15 @@ export default function GetFuture() {
 
     return (
         <>
-            <div className="w-full pt-10 bg-[#F7FAFF] font-sans text-black px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center lg:gap-38 gap-5 get-future-section">
+            <div className="w-full pt-20 bg-[#F7FAFF] font-sans text-black px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center lg:gap-38 gap-5 get-future-section">
                 {/* Left Side - Text Content */}
-                <div className="w-full lg:w-auto flex items-start lg:items-end text-3xl md:text-[3.6vw] justify-start flex-col get-future-left gap-3">
+                <div className="w-full lg:w-auto flex items-start lg:items-end text-3xl md:text-[6vw] justify-start flex-col get-future-left gap-3">
                     <span className="font-bold">Get Future</span>
                     <span className="font-mono">Focused</span>
                 </div>
 
                 {/* Right Side - List Items */}
-                <div className="w-full lg:w-auto flex items-start lg:text-[1.6vw] gap-3 font-bold flex-col get-future-right">
+                <div className="w-full lg:w-auto flex items-start lg:text-[1.4vw] gap-3 font-bold flex-col get-future-right capitalize">
                     <span>
                         Find a course
                     </span>
@@ -97,7 +97,7 @@ export default function GetFuture() {
                         <div className="flex gap-2 items-center border-b-2 border-[#000000]">
                             <input
                                 type="text"
-                                className="w-full placeholder:font-extralight font-extralight placeholder:text-base outline-none text-base"
+                                className="w-full placeholder:font-extralight font-extralight placeholder:text-base outline-none text-base capitalize"
                                 placeholder="Find a course"
                                 value={searchValue}
                                 onChange={handleInputChange}
@@ -131,15 +131,15 @@ export default function GetFuture() {
                     </div>
                 </div>
             </div>
-            <div className="w-full pt-5 pb-10 bg-[#F7FAFF] font-sans text-black px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center lg:gap-38 gap-5 get-future-section">
+            <div className="w-full pt-5 pb-20 bg-[#F7FAFF] font-sans text-black px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center lg:gap-38 gap-5 get-future-section">
                 {/* Left Side - Text Content */}
-                <div className="w-full lg:w-auto flex items-start lg:items-end text-lg md:text-[1.6vw] justify-start flex-col get-future-left">
+                <div className="w-full lg:w-auto flex items-start lg:items-end text-lg md:text-[1.5vw] justify-start flex-col get-future-left capitalize">
                     <span className="font-bold">Fast tracking learners to a</span>
                     <span className="font-mono">University qualification</span>
                 </div>
 
                 {/* Right Side - List Items */}
-                <div className="w-full lg:w-[440px] flex items-start lg:text-[1.1vw] gap-3 font-bold get-future-right flex-wrap">
+                <div className="w-full lg:w-[440px] flex items-start lg:text-[1vw] gap-3 font-bold get-future-right flex-wrap">
                     <span className="border-b-[3px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A]"
                         onClick={() => {
                             window.location.href = "/igsce-and-short-courses";

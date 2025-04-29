@@ -42,7 +42,7 @@ function WayToGraduate() {
 
     return (
         <>
-            <div className='w-full font-sans pb-20 pt-5 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 way-section'>
+            <div className='w-full font-sans pb-20 pt-5 bg-white text-black px-[9vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 way-section capitalize'>
                 <div className='w-full flex items-start font-bold flex-col lg:h-full way-left'>
                     <span className='text-[6vw] lg:text-[3vw]'>
                         The most flexible and cost
@@ -62,7 +62,7 @@ function WayToGraduate() {
                     </div>
                 </div>
 
-                <div className='flex items-end justify-end w-full lg:w-[50%] h-[65vh] way-right'>
+                <div className='flex items-end justify-end w-full lg:w-[50%] h-[60vh] way-right'>
                     <img
                         src="/Images/graduate-man.jpg"
                         alt=""
