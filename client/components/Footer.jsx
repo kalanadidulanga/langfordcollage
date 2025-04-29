@@ -7,6 +7,7 @@ export const Footer = () => {
     const TIKTOK_LINK = process.env.NEXT_PUBLIC_TIKTOK_LINK;
     const INSTAGRAM_LINK = process.env.NEXT_PUBLIC_INSTAGRAM_LINK;
     const YOUTUBE_LINK = process.env.NEXT_PUBLIC_YOUTUBE_LINK;
+    const LINKDIN_LINK = process.env.NEXT_PUBLIC_LINKDIN_LINK;
 
     return (
         <footer className="bg-white text-black w-full h-[80vh] px-[10vw] capitalize">
@@ -16,11 +17,11 @@ export const Footer = () => {
                     <span className='text-3xl font-bold text-red-500'>Langford Collage</span>
                     <p className="text-[18px] mt-3">University of Chester<br />Parkgate Road<br />Chester<br />CH1 4BJ</p>
                     <div className="flex mt-4 space-x-5">
-                        <a href={`${FACEBOOK_LIKE}`}><FaFacebookF size={25} /></a>
-                        <a href={`${INSTAGRAM_LINK}`}><FaInstagram size={25} /></a>
-                        <a href={`${TIKTOK_LINK}`}><FaTiktok size={25} /></a>
-                        <a href={`${YOUTUBE_LINK}`}><FaYoutube size={25} /></a>
-                        <a href={`${FACEBOOK_LIKE}`}><FaLinkedin size={25} /></a>
+                        <a href={`${FACEBOOK_LIKE}`} target='_blank'><FaFacebookF size={25} /></a>
+                        <a href={`${INSTAGRAM_LINK}`} target='_blank'><FaInstagram size={25} /></a>
+                        <a href={`${TIKTOK_LINK}`} target='_blank'><FaTiktok size={25} /></a>
+                        <a href={`${YOUTUBE_LINK}`} target='_blank'><FaYoutube size={25} /></a>
+                        <a href={`${LINKDIN_LINK}`} target='_blank'><FaLinkedin size={25} /></a>
                     </div>
                 </div>
 

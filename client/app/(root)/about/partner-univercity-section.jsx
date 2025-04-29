@@ -20,12 +20,12 @@ function PartnerUnivercity() {
                     </span>
 
                     <div className='flex items-start justify-start w-full lg:w-[60%] h-[55vh] pt-5 block lg:hidden'>
-                    <img
-                        src="/Images/PartnerUnivercity.jpg"
-                        alt=""
-                        className='w-full h-full object-cover'
-                    />
-                </div>
+                        <img
+                            src="/Images/PartnerUnivercity.jpg"
+                            alt=""
+                            className='w-full h-full object-cover'
+                        />
+                    </div>
 
                     <div className='w-full bg-white pt-8 pb-8 text-[#2E2E27] flex flex-col'>
                         <div className='w-full flex flex-col gap-1'>
@@ -36,7 +36,9 @@ function PartnerUnivercity() {
                     </div>
                     <div className='w-full bg-white lg:pt-8 text-gray-500 flex flex-col'>
                         <div className='flex items-start justify-start w-full'>
-                            <button className='btn text-white bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6]'>Top Up Degree</button>
+                            <button className='btn text-white bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6]' onClick={() => {
+                                window.location.href = "/individual/top-up_degree";
+                            }}>Top Up Degree</button>
                         </div>
                     </div>
                 </div>
