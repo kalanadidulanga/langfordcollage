@@ -43,12 +43,39 @@ function Awarding() {
 
     }, []);
 
+    const unilogos = [
+        {
+            "logo": "/logos/coventry_university_logo-freelogovectors.net_.png"
+        },
+        {
+            "logo": "/logos/middlesex-university.png"
+        },
+        {
+            "logo": "/logos/uws-logo-uws-health-and-life-sciences.png"
+        },
+        {
+            "logo": "/logos/OIP.png"
+        },
+        {
+            "logo": "/logos/UoS_Logo_RGB.png"
+        },
+        {
+            "logo": "/logos/OIP1.png"
+        },
+        {
+            "logo": "/logos/members-bucks.png"
+        },
+        {
+            "logo": "/logos/university-of-portsmouth.png"
+        },
+    ];
+
     return (
         <>
             <div className='w-full lg:pb-10 pt-10 font-sans bg-white text-black px-[10vw] lg:px-0 lg:pl-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 testimonial-section'>
                 <div className='w-full flex items-start flex-col lg:h-full'>
                     <span className="text-[6vw] lg:text-[3vw] font-sans font-bold capitalize">
-                        Award-winning
+                        Our Partner
                     </span>
                     <span className="text-[6vw] lg:text-[3vw] font-mono capitalize">
                         University
@@ -66,9 +93,9 @@ function Awarding() {
                     <div className="w-full bg-white text-gray-500 flex justify-center lg:justify-start testimonial-right">
                         <div className="w-full bg-white hidden lg:block">
                             <div className="bg-white w-full pt-10 pb-8 flex flex-row justify-start overflow-x-auto gap-8 snap-x snap-mandatory scrollbar-hide scroll-smooth">
-                                {[...Array(6)].map((_, i) => (
-                                    <div key={i} className="w-60 h-60 bg-gray-500 snap-start shrink-0">
-                                        <img src="/Logo.svg" alt={`logo-${i}`} className="w-full h-full object-contain" />
+                                {unilogos?.map((value, i) => (
+                                    <div key={i} className="w-64 h-64 border rounded-lg p-2 hover:p-1 bg-white transition-all duration-200 snap-start shrink-0">
+                                        <img src={value?.logo} alt={`logo-${i}`} className="w-full h-full object-contain" />
                                     </div>
                                 ))}
                             </div>
@@ -76,7 +103,7 @@ function Awarding() {
 
 
                         {/* Swiper Slider for Small Screens */}
-                        <div className="lg:hidden w-full mt-3">
+                        <div className="lg:hidden w-full pt-10 pb-8">
                             <Swiper
                                 modules={[Pagination]}
                                 spaceBetween={20}
@@ -84,10 +111,10 @@ function Awarding() {
                             // pagination={{ clickable: true }}
                             >
 
-                                {[...Array(6)].map((_, i) => (
+                                {unilogos?.map((value, i) => (
                                     <SwiperSlide key={i}>
-                                        <div className="w-full h-full bg-gray-500 snap-start shrink-0">
-                                            <img src="/Logo.svg" alt={`logo-${i}`} className="w-full h-full object-contain" />
+                                        <div className="w-full h-[50vh] border rounded-lg p-2 hover:p-1 bg-white transition-all duration-200 snap-start shrink-0">
+                                            <img src={value?.logo} alt={`logo-${i}`} className="w-full h-full object-contain" />
                                         </div>
                                     </SwiperSlide>
                                 ))}
