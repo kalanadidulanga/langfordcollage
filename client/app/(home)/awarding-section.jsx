@@ -1,13 +1,16 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 function Awarding() {
+
+    const scrollContainerRef = useRef(null);
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const [showLeftArrow, setShowLeftArrow] = useState(false);
+    const [showRightArrow, setShowRightArrow] = useState(true);
+
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
@@ -70,6 +73,39 @@ function Awarding() {
         },
     ];
 
+    const scroll = (direction) => {
+        const container = scrollContainerRef.current;
+        if (!container) return;
+
+        const scrollAmount = 300; // Adjust based on your needs
+        const newScrollPosition = direction === 'left'
+            ? scrollPosition - scrollAmount
+            : scrollPosition + scrollAmount;
+
+        container.scrollTo({
+            left: newScrollPosition,
+            behavior: 'smooth'
+        });
+
+        setScrollPosition(newScrollPosition);
+
+        // Update arrow visibility after scroll
+        setTimeout(() => {
+            setShowLeftArrow(container.scrollLeft > 0);
+            setShowRightArrow(container.scrollLeft < container.scrollWidth - container.clientWidth - 10);
+        }, 300);
+    };
+
+    // Check scroll position on mount
+    const handleScroll = () => {
+        const container = scrollContainerRef.current;
+        if (container) {
+            setShowLeftArrow(container.scrollLeft > 0);
+            setShowRightArrow(container.scrollLeft < container.scrollWidth - container.clientWidth - 10);
+            setScrollPosition(container.scrollLeft);
+        }
+    };
+
     return (
         <>
             <div className='w-full lg:pb-10 pt-10 font-sans bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 testimonial-section'>
@@ -84,8 +120,45 @@ function Awarding() {
                             </span>
                         </div>
                         <div className="w-full h-full p-2">
-                            <div className="border-b-2 h-[70%] border-gray-400">
-
+                            <div className="border-b-2 h-[70%] border-gray-400 relative">
+                                {/* Left Arrow */}
+                                {showLeftArrow ? (
+                                    <button
+                                        onClick={() => scroll('left')}
+                                        className="absolute right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-[#ff0000] shadow-lg text-white cursor-pointer outline-none"
+                                        aria-label="Previous slide"
+                                    >
+                                        <ChevronLeft size={24} />
+                                    </button>
+                                ) : (
+                                    <button
+                                        onClick={() => scroll('left')}
+                                        className="absolute right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-[#ff0000] disabled:bg-[#ff00008c] shadow-lg text-white outline-none"
+                                        aria-label="Previous slide"
+                                        disabled
+                                    >
+                                        <ChevronLeft size={24} />
+                                    </button>
+                                )}
+                                {/* Right Arrow */}
+                                {showRightArrow ? (
+                                    <button
+                                        onClick={() => scroll('right')}
+                                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-[#ff0000] shadow-lg text-white cursor-pointer outline-none"
+                                        aria-label="Next slide"
+                                    >
+                                        <ChevronRight size={24} />
+                                    </button>
+                                ) : (
+                                    <button
+                                        onClick={() => scroll('right')}
+                                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-[#ff0000] disabled:bg-[#ff00008c] shadow-lg text-white outline-none"
+                                        aria-label="Next slide"
+                                        disabled
+                                    >
+                                        <ChevronRight size={24} />
+                                    </button>
+                                )}
                             </div>
                         </div>
                     </div>
@@ -100,36 +173,28 @@ function Awarding() {
 
 
                     <div className="w-full bg-white text-gray-500 flex justify-center lg:justify-start testimonial-right">
-                        <div className="w-full bg-white hidden lg:block">
-                            <div className="bg-white w-full pt-10 pb-8 flex flex-row justify-start overflow-x-auto gap-8 snap-x snap-mandatory scrollbar-hide scroll-smooth">
-                                {unilogos?.map((value, i) => (
-                                    <div key={i} className="w-60 h-60 border rounded-lg p-2 hover:p-1 bg-white transition-all duration-200 snap-start shrink-0">
-                                        <img src={value?.logo} alt={`logo-${i}`} className="w-full h-full object-contain" />
+                        <div className="w-full bg-white relative">
+
+
+                            {/* Logo Container */}
+                            <div
+                                ref={scrollContainerRef}
+                                onScroll={handleScroll}
+                                className="w-full pt-10 pb-8 flex flex-row justify-start overflow-x-auto gap-8 snap-x snap-mandatory scrollbar-hide scroll-smooth px-6"
+                            >
+                                {unilogos.map((logo, i) => (
+                                    <div
+                                        key={i}
+                                        className="w-full lg:w-60 h-60 border rounded-lg p-2 hover:p-1 bg-white transition-all duration-200 snap-start shrink-0"
+                                    >
+                                        <img
+                                            src={logo.logo || `/api/placeholder/240/240`}
+                                            alt={`logo-${i}`}
+                                            className="w-full h-full object-contain"
+                                        />
                                     </div>
                                 ))}
                             </div>
-                        </div>
-
-
-                        {/* Swiper Slider for Small Screens */}
-                        <div className="lg:hidden w-full pt-10 pb-8">
-                            <Swiper
-                                modules={[Pagination]}
-                                spaceBetween={20}
-                                slidesPerView={1}
-                            // pagination={{ clickable: true }}
-                            >
-
-                                {unilogos?.map((value, i) => (
-                                    <SwiperSlide key={i}>
-                                        <div className="w-full h-[50vh] border rounded-lg p-2 hover:p-1 bg-white transition-all duration-200 snap-start shrink-0">
-                                            <img src={value?.logo} alt={`logo-${i}`} className="w-full h-full object-contain" />
-                                        </div>
-                                    </SwiperSlide>
-                                ))}
-
-
-                            </Swiper>
                         </div>
                     </div>
 

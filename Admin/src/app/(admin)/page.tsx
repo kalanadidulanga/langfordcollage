@@ -4,7 +4,7 @@ import { EcommerceMetrics } from "@/components/ecommerce/EcommerceMetrics";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Langford Collage | Admin",
+  title: "Langford College | Admin",
   description: "Online Degrees Without The High Fees",
 };
 

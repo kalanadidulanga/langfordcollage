@@ -44,23 +44,35 @@ function WillLearn() {
       {/* Main Section */}
       <div className="w-full bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 learn-section">
 
-        {/* Left Side - Image */}
-        <div className="flex items-start justify-start w-full h-[50vh] hidden lg:block learn-left">
-          <img
-            src="/Images/work.png"
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div>
-
         {/* Right Side - Text Content */}
-        <div className="w-full flex lg:items-end justify-start flex-col lg:h-full learn-right">
-          <span className="text-[6.8vw] lg:text-[3.3vw] font-sans font-bold capitalize">
-            How you will <span className="font-mono font-light">learn</span>
-          </span>
-          <div className="w-full bg-white pt-10 pb-8 text-black flex flex-col lg:items-end justify-start">
+        <div className="w-full flex lg:items-end justify-start flex-col lg:h-full learn-left">
+          <div className="w-full flex items-start pb-5 flex-col lg:h-full">
+            <div className="w-full grid grid-cols-2">
+              <div className="w-full flex items-start flex-col lg:h-full">
+                <span className="text-[6vw] lg:text-[4vw] font-sans font-bold capitalize">
+                  How you will
+                </span>
+                <span className="text-[6vw] lg:text-[3.5vw] font-mono capitalize">
+                  learn
+                </span>
+              </div>
+              <div className="w-full h-full p-2">
+                <div className="border-b-2 h-[70%] border-gray-400 relative">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full bg-white pt-10 pb-8 text-black flex lg:items-start justify-start">
+            {/* Left Side - Image */}
+            <div className="flex items-start justify-start w-full h-[40vh] hidden lg:block learn-left">
+              <img
+                src="/Images/work.png"
+                alt=""
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div className="flex items-start lg:items-end justify-start w-full gap-5 capitalize">
-              <div className="w-full flex items-start lg:items-end lg:text-[1.6vw] gap-6 font-bold flex-col">
+              <div className="w-full flex items-start lg:items-end lg:text-[1.6vw] gap-6 lg:gap-9 flex-col">
                 <span className="border-b-[4px] border-[#E2231A] inline leading-[1]">Learner journey</span>
                 <span className="border-b-[4px] border-[#E2231A] inline leading-[1]">Assessment</span>
                 <span className="border-b-[4px] border-[#E2231A] inline leading-[1]">Levels explained</span>

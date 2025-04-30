@@ -10,7 +10,7 @@ function WhyEnroll() {
                         Why enroll with
                     </span>
                     <span className='text-[6vw] font-bold lg:text-[3vw]'>
-                        Langford Collage?
+                        Langford College?
                     </span>
 
                     <div className='w-full bg-white text-gray-500 flex justify-center'>
@@ -19,7 +19,7 @@ function WhyEnroll() {
                                 <img src="/Images/why-enroll-1.svg" alt="courses_image" className='w-full h-[250px] object-cover' />
                                 <span className='text-[18px] text-black  px-3 py-2 font-medium'>
                                     Last year 355 students graduated from Online
-                                    Langford collage
+                                    Langford College
                                 </span>
                             </div>
                             <div className='w-full flex flex-col bg-[#F4C023]'>

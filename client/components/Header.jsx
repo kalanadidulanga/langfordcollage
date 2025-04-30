@@ -141,7 +141,7 @@ const Header = () => {
       <div className="w-full h-full flex justify-between items-start px-4 md:px-24">
         {/* Logo */}
         <nav className='rounded-full w-48 h-22 bg-contain bg-center flex justify-center items-center'>
-          <img src="/icon/LOGO.png" alt="logo" className='w-full h-full p-1 object-cover cursor-pointer object-center' onClick={navigateHome} />
+          <img src="/Icon/LOGO.png" alt="logo" className='w-full h-full p-1 object-cover cursor-pointer object-center' onClick={navigateHome} />
         </nav>
 
         {/* Mobile Menu Button */}

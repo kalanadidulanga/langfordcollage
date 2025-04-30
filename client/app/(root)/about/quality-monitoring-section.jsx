@@ -15,7 +15,7 @@ function QualityMonitoring() {
                     <div className='w-full bg-white pt-10 pb-8 text-[#2E2E27] flex flex-col'>
                         <div className='w-full flex flex-col gap-1'>
                             <span className='text-[18px] font-extralight'>
-                                Langford Collage also operates a Quality Monitoring Board (QMB) to ensure that we are always delivering accredited online courses and resources to meet your learning needs. This board meets regularly to assess:
+                                Langford College also operates a Quality Monitoring Board (QMB) to ensure that we are always delivering accredited online courses and resources to meet your learning needs. This board meets regularly to assess:
                             </span>
                         </div>
                     </div>

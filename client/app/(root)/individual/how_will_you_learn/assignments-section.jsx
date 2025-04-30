@@ -46,7 +46,7 @@ function Assignments() {
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
                                 <span>
                                     Yes – all students are encouraged to arrange an initial 30 minute ‘assignment preparation’ session with one of our tutors. The session will be conducted via Zoom and cover all aspects of assignment writing, particularly key areas that students need to be aware of. <br />
-                                    In addition to this, students have access to tutors who work with Langford Collage. The tutor details are available via the dashboard and will show which areas they specialise in and when they are available. If a student wishes to arrange a session, they can do so directly from the dashboard, specify which topic they need assistance with, or contact our support team at studentsupport@onlinebusinessschool.com. Further information is available in the Student Handbook and the relevant course information packs.
+                                    In addition to this, students have access to tutors who work with Langford College. The tutor details are available via the dashboard and will show which areas they specialise in and when they are available. If a student wishes to arrange a session, they can do so directly from the dashboard, specify which topic they need assistance with, or contact our support team at studentsupport@onlinebusinessschool.com. Further information is available in the Student Handbook and the relevant course information packs.
                                 </span>
                             </div>
                         </>

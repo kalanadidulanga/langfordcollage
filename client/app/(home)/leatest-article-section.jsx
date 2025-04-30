@@ -75,9 +75,17 @@ function LeatestArticle() {
                 <>
                     <div className='w-full lg:pb-10 pt-10 lg:pt-0 font-sans bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 article-section'>
                         <div className='w-full flex items-start font-bold flex-col lg:h-full'>
-                            <span className='text-[6vw] lg:text-[3vw] article-left capitalize'>
-                                Latest articles
-                            </span>
+                            <div className="w-full lg:grid lg:grid-cols-2">
+                                <div className="w-full flex items-start flex-col lg:h-full">
+                                    <span className="text-[6vw] lg:text-[4vw] font-sans font-bold capitalize">
+                                        Latest articles
+                                    </span>
+                                </div>
+                                <div className="w-full h-full p-2">
+                                    <div className="border-b-2 h-[70%] border-gray-400 relative">
+                                    </div>
+                                </div>
+                            </div>
 
                             <div className="w-full bg-white text-gray-500 flex justify-center lg:justify-start article-right">
                                 {/* Grid Layout for Large Screens */}

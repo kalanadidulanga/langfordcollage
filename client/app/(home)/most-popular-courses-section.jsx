@@ -84,12 +84,21 @@ function MostPopular() {
         <>
           <div className='w-full lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 course-section'>
             <div className='w-full flex items-start flex-col lg:h-full'>
-              <span className='text-[6vw] lg:text-[3vw] course-left font-bold font-sans'>
-                Most Popular
-              </span>
-              <span className='text-[6vw] font-bold lg:text-[3vw] course-left font-mono'>
-                Courses
-              </span>
+              <div className="w-full lg:grid lg:grid-cols-2">
+                <div className="w-full flex items-start flex-col lg:h-full">
+                  <span className="text-[6vw] lg:text-[4vw] font-sans font-bold capitalize">
+                    Most Popular
+                  </span>
+                  <span className="text-[6vw] lg:text-[3.5vw] font-mono capitalize">
+                    Courses
+                  </span>
+                </div>
+                <div className="w-full h-full p-2">
+                  <div className="border-b-2 h-[70%] border-gray-400 relative">
+                    <span>More </span>
+                  </div>
+                </div>
+              </div>
 
               <div className="w-full bg-white text-[#2E2E27] flex justify-center lg:justify-start course-right">
                 {/* Grid Layout for Large Screens */}

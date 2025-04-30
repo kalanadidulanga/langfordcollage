@@ -40,7 +40,7 @@ export default function Home() {
         <NSS />
         <Awarding />
         <WhatsNew />
-        <AffordableStudy />
+        {/* <AffordableStudy /> */}
         <SocialLearning />
         <WillLearn />
         <Support />

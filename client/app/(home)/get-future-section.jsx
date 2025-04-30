@@ -81,7 +81,7 @@ export default function GetFuture() {
 
     return (
         <>
-            <div className="w-full pt-20 bg-[#F7FAFF] font-sans text-black px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center lg:gap-38 gap-5 get-future-section">
+            <div className="w-full pt-30 bg-[#F7FAFF] font-sans text-black px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center lg:gap-38 gap-5 get-future-section">
                 {/* Left Side - Text Content */}
                 <div className="w-full lg:w-auto flex items-start lg:items-end text-3xl md:text-[6vw] justify-start flex-col get-future-left gap-3">
                     <span className="font-bold">Get Future</span>
@@ -131,7 +131,7 @@ export default function GetFuture() {
                     </div>
                 </div>
             </div>
-            <div className="w-full pt-5 pb-20 bg-[#F7FAFF] font-sans text-black px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center lg:gap-38 gap-5 get-future-section">
+            <div className="w-full pt-5 pb-30 bg-[#F7FAFF] font-sans text-black px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center lg:gap-38 gap-5 get-future-section">
                 {/* Left Side - Text Content */}
                 <div className="w-full lg:w-auto flex items-start lg:items-end text-lg md:text-[1.5vw] justify-start flex-col get-future-left capitalize">
                     <span className="font-bold">Fast tracking learners to a</span>

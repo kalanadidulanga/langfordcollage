@@ -21,7 +21,7 @@ function OurHubsHero() {
                         <span className='font-bold text-5xl md:text-[6vw]'>Online Langford</span>
                     </div>
                     <div className='w-full flex flex-col text-center lg:text-start lg:pl-28 fade-in'>
-                        <span className='font-normal text-5xl md:text-[6vw] title2'>Collage Hubs</span>
+                        <span className='font-normal text-5xl md:text-[6vw] title2'>College Hubs</span>
                     </div>
                 </div>
                 <div className='w-full  flex flex-col justify-center items-start gap-3 fade-in'>

@@ -29,7 +29,7 @@ const HeroSection = () => {
           <div className="flex gap-4">
             <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] fade-in hover:scale-105 transition-all duration-200"
               onClick={() => {
-                window.scrollTo({ top: 500, behavior: "smooth" });
+                window.scrollTo({ top: 700, behavior: "smooth" });
               }}
 
             >

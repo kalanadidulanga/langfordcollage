@@ -25,7 +25,7 @@ function Credibility() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
                                 <span>
-                                Awarding bodies are also sometimes referred to as awarding organisations or exam boards, but they all mean the same thing. They are all terms used to describe an organisation that designs, develops, delivers and awards the recognition of learning outcomes. Langford Collage works together with ATHE, Qualifi and OTHM. These organisations must all be approved by OFQUAL, The UK Governing body for higher education.
+                                Awarding bodies are also sometimes referred to as awarding organisations or exam boards, but they all mean the same thing. They are all terms used to describe an organisation that designs, develops, delivers and awards the recognition of learning outcomes. Langford College works together with ATHE, Qualifi and OTHM. These organisations must all be approved by OFQUAL, The UK Governing body for higher education.
                                 </span>
                             </div>
                         </>

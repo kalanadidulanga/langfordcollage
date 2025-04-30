@@ -498,13 +498,20 @@ a[x-apple-data-detectors],
         <>
             <div className='w-full pb-10 pt-10 bg-[#F7FAFF] text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 request-section capitalize'>
                 <div className='w-full flex items-start flex-col lg:h-full'>
-                    <span className='text-[6vw] lg:text-[3vw] request-left font-sans font-bold capitalize'>
-                        Request a Course
-                    </span>
-                    <span className='text-[6vw] lg:text-[3vw] request-left font-mono capitalize'>
-                        Prospectus
-                    </span>
-
+                    <div className="w-full lg:grid lg:grid-cols-2">
+                        <div className="w-full flex items-start flex-col lg:h-full">
+                            <span className="text-[6vw] lg:text-[4vw] font-sans font-bold capitalize">
+                                Request a Course
+                            </span>
+                            <span className="text-[6vw] lg:text-[3.5vw] font-mono capitalize">
+                                Prospectus
+                            </span>
+                        </div>
+                        <div className="w-full h-full p-2">
+                            <div className="border-b-2 h-[70%] border-gray-400 relative">
+                            </div>
+                        </div>
+                    </div>
                     <div className='w-full flex justify-center font-sans z-10'>
                         <div className='w-full  pt-10 pb-8 grid grid-cols-1 lg:grid-cols-2 gap-5 font-normal text-lg'>
                             <div className='w-full flex flex-col gap-2 request-left'>

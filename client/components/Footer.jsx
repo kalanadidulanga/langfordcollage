@@ -1,8 +1,7 @@
 import React from 'react';
-import { FaWhatsapp, FaTiktok, FaInstagram, FaYoutube, FaFacebookF, FaLinkedin } from "react-icons/fa";
+import { FaTiktok, FaInstagram, FaYoutube, FaFacebookF, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
-
     const FACEBOOK_LIKE = process.env.NEXT_PUBLIC_FB_LINK;
     const TIKTOK_LINK = process.env.NEXT_PUBLIC_TIKTOK_LINK;
     const INSTAGRAM_LINK = process.env.NEXT_PUBLIC_INSTAGRAM_LINK;
@@ -10,44 +9,47 @@ export const Footer = () => {
     const LINKDIN_LINK = process.env.NEXT_PUBLIC_LINKDIN_LINK;
 
     return (
-        <footer className="bg-white text-black w-full h-[80vh] px-[10vw] capitalize">
-            <div className="w-full h-full mx-auto py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div className="col-span-1 gap-3 flex flex-col">
-                    {/* <img src="/Logo.svg" alt="University of Chester" className="w-40 mb-4" /> */}
-                    <span className='text-3xl font-bold text-red-500'>Langford Collage</span>
-                    <p className="text-[18px] mt-3">University of Chester<br />Parkgate Road<br />Chester<br />CH1 4BJ</p>
-                    <div className="flex mt-4 space-x-5">
-                        <a href={`${FACEBOOK_LIKE}`} target='_blank'><FaFacebookF size={25} /></a>
-                        <a href={`${INSTAGRAM_LINK}`} target='_blank'><FaInstagram size={25} /></a>
-                        <a href={`${TIKTOK_LINK}`} target='_blank'><FaTiktok size={25} /></a>
-                        <a href={`${YOUTUBE_LINK}`} target='_blank'><FaYoutube size={25} /></a>
-                        <a href={`${LINKDIN_LINK}`} target='_blank'><FaLinkedin size={25} /></a>
+        <div className="flex items-center justify-center h-screen w-full border-t">
+            <footer className="bg-white text-black w-full h-full capitalize flex flex-col">
+                <div className="flex-grow w-full grid grid-cols-1 md:grid-cols-4 gap-8 px-10 lg:px-30 py-30">
+                    <div className="col-span-1 gap-3 flex flex-col">
+                        <div className='w-[50%] lg:w-[35%] h-[20vh]'>
+                            <img src="/Logo.svg" alt="Langford Collage" className="w-full h-full" />
+                        </div>
+                        <p className="text-base mt-3 lg:mt-0">128 City Road, <br /> London, <br /> United Kingdom, <br /> EC1V 2NX</p>
+                        <div className="flex mt-4 space-x-7">
+                            <a href={`${FACEBOOK_LIKE}`} target='_blank'><FaFacebookF size={25} /></a>
+                            <a href={`${INSTAGRAM_LINK}`} target='_blank'><FaInstagram size={25} /></a>
+                            <a href={`${TIKTOK_LINK}`} target='_blank'><FaTiktok size={25} /></a>
+                            <a href={`${YOUTUBE_LINK}`} target='_blank'><FaYoutube size={25} /></a>
+                            <a href={`${LINKDIN_LINK}`} target='_blank'><FaLinkedin size={25} /></a>
+                        </div>
+                    </div>
+
+                    <div className='col-span-1 mt-5'>
+                        <h4 className="font-semibold mb-3 text-[#2e2e27]">Quick links</h4>
+                        <ul className="space-y-2 text-base">
+                            <li><a href="/individual/how_will_you_learn">How will you learn</a></li>
+                            <li><a href="/individual/our_hubs">our hubs</a></li>
+                            <li><a href="/individual/top-up_degree">top up degree</a></li>
+                            <li><a href="/individual/blog">blog</a></li>
+                            <li><a href="/individual/testimonial">testimonial</a></li>
+                            <li><a href="/about">about us</a></li>
+                        </ul>
+                    </div>
+
+                    <div className='col-span-2 w-full lg:mt-5 mb-5'>
+                        <h4 className="font-semibold mb-3 text-[#2e2e27]">About Us,</h4>
+                        <span className='text-base'>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, ea. Libero animi omnis sunt tenetur modi! Saepe aut fugiat pariatur repellendus accusamus quam tempore, eum est voluptas illo totam quod!
+                        </span>
                     </div>
                 </div>
 
-                <div>
-                    <h4 className="font-semibold mb-3">Quick links</h4>
-                    <ul className="space-y-2 text-[18px]">
-                        <li><a href="/individual/how_will_you_learn">How will you learn</a></li>
-                        <li><a href="/individual/our_hubs">our hubs</a></li>
-                        <li><a href="/individual/top-up_degree">top up degree</a></li>
-                        <li><a href="/individual/blog">blog</a></li>
-                        <li><a href="/individual/testimonial">testimonial</a></li>
-                        <li><a href="/about">about us</a></li>
-                    </ul>
+                <div className="bg-black text-white text-center py-4 text-sm mt-auto">
+                    <span>© 2025 Langford College | All Rights Reserved & Developed by Kavishka Chathumal</span>
                 </div>
-
-                <div className='col-span-2 w-full'>
-                    <h4 className="font-semibold mb-3">About Us,</h4>
-                    <span className='text-[18px]'>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, ea. Libero animi omnis sunt tenetur modi! Saepe aut fugiat pariatur repellendus accusamus quam tempore, eum est voluptas illo totam quod!
-                    </span>
-                </div>
-            </div>
-
-            <div className="bg-black text-white text-center py-4 text-sm">
-                <span>Copyright © 2025 KDsolution All Rights Reserved.</span>
-            </div>
-        </footer>
+            </footer>
+        </div>
     );
 };
