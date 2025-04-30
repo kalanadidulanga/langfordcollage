@@ -48,7 +48,7 @@ function WayToGraduate() {
                         The most flexible and cost
                     </span>
                     <span className='text-[6vw] lg:text-[3vw] font-mono'>
-                        effect way to Graduate
+                        effective way to Graduate
                     </span>
 
                     <div className='w-full bg-white pt-10 pb-8 text-[#2E2E27] flex flex-col'>

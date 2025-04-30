@@ -78,7 +78,7 @@ function LevelsExplained() {
                         <div className='w-full bg-[#F7FAFF]  flex flex-col items-start justify-start gap-3 p-5 level-left'>
                                 <span className='text-[24px]'>Level 7</span>
                                 <span className='text-[18px] text-[#2E2E27] font-extralight'>
-                                The Level 7 course carries 120 credits which gives entry onto the MBA top Up (one module or one module + dissertation). This can be completed by studying either online or on campus at a recognised UK or overseas university. Our level 7 is made up of 30 modules and 8 written assignments. <br /> For an official breakdown of what each level means, please visit What qualification levels mean
+                                The Level 7 course carries 120 credits which gives entry onto the MBA top Up (one module or one module + dissertation). This can be completed by studying either online or on campus at a recognised UK or overseas university. Our level 7 is made up of 30 modules and 8 written assignments.
                                 </span>
                             </div>
                     </div>

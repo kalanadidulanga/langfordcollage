@@ -39,7 +39,7 @@ function Support() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
                                 <span>
-                                    You need to complete all the modules detailed in your required course option plus all the associated assessments to complete the OBS course and receive the diploma. This will give you the recognized university credits. You can study the modules at your own pace and can purchase more modules at any time.
+                                    You need to complete all the modules detailed in your required course option plus all the associated assessments to complete the langford college course and receive the diploma. This will give you the recognized university credits. You can study the modules at your own pace and can purchase more modules at any time.
                                 </span>
                             </div>
                         </>
@@ -47,7 +47,7 @@ function Support() {
                     {/* section 2 */}
                     <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection2(!isclickSection2)}>
                         <span>
-                            Do I need a specific computer to study with OBS?
+                            Do I need a specific computer to study with  langford college?
                         </span>
                         <img src="/Icon/arrow.png" alt="arrow" className={`w-6 h-7 cursor-pointer ${isclickSection2 ? `duration-100 rotate-0` : `-rotate-90 duration-100`}`} onClick={() => setclickSection2(!isclickSection2)} />
                     </div>
@@ -87,7 +87,7 @@ function Support() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex flex-col gap-5'>
                                 <span>
-                                    The modules themselves are sufficient for passing the associated assessments. The modules contain additional accessible resources that learners may wish to follow through to enhance their learning and these are provided within the text. OBS also has extra learning resources like e books and webinars to aid your study, completely free of charge.
+                                    The modules themselves are sufficient for passing the associated assessments. The modules contain additional accessible resources that learners may wish to follow through to enhance their learning and these are provided within the text.  langford college also has extra learning resources like e books and webinars to aid your study, completely free of charge.
                                 </span>
                             </div>
                         </>
@@ -103,7 +103,7 @@ function Support() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex flex-col gap-5'>
                                 <span>
-                                    When you pass a module or an assessment, a certificate of completion is automatically generated which details: module content, level of study and learning outcomes achieved. It is mapped against formal UK educational quality guidelines defined by OFQUAL. Upon completing all modules, you can then complete assignments set by the awarding body to complete your diploma with OBS.
+                                    When you pass a module or an assessment, a certificate of completion is automatically generated which details: module content, level of study and learning outcomes achieved. It is mapped against formal UK educational quality guidelines defined by OFQUAL. Upon completing all modules, you can then complete assignments set by the awarding body to complete your diploma with  langford college.
                                 </span>
                             </div>
                         </>
@@ -119,7 +119,7 @@ function Support() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex flex-col gap-5'>
                                 <span>
-                                    Learners can learn at a pace that suits them. There are no module or assignment completion deadlines with OBS, apart from the overall 5 year deadline. Learners can study the modules in any order at any time.
+                                    Learners can learn at a pace that suits them. There are no module or assignment completion deadlines with  langford college, apart from the overall 5 year deadline. Learners can study the modules in any order at any time.
                                 </span>
                             </div>
                         </>
@@ -135,7 +135,7 @@ function Support() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex flex-col gap-5'>
                                 <span>
-                                    There are no exemptions or credits within the OBS system of study, and you have to study all the OBS modules to take advantage of our access route. However, if you think you may be exempt from a certain level, please contact us and we will advise you. We can also help you with your top up enquiries if you have already got the necessary qualifications.
+                                    There are no exemptions or credits within the langford college system of study, and you have to study all the langford college modules to take advantage of our access route. However, if you think you may be exempt from a certain level, please contact us and we will advise you. We can also help you with your top up enquiries if you have already got the necessary qualifications.
                                 </span>
                             </div>
                         </>
@@ -231,7 +231,7 @@ function Support() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex flex-col gap-5'>
                                 <span>
-                                    OBS has a network of overseas banks that will take payment direct or by credit /debit card. Alternatively, we have representatives in many overseas countries, and you can contact them to make payment.
+                                langford college has a network of overseas banks that will take payment direct or by credit /debit card. Alternatively, we have representatives in many overseas countries, and you can contact them to make payment.
                                 </span>
                             </div>
                         </>
@@ -239,7 +239,7 @@ function Support() {
                     {/* section 14 */}
                     <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection14(!isclickSection14)}>
                         <span>
-                            How much supportWill OBS act as my sponsor for a student visa? is available for students?
+                            How much support Will  langford college act as my sponsor for a student visa? is available for students?
                         </span>
                         <img src="/Icon/arrow.png" alt="arrow" className={`w-6 h-7 cursor-pointer ${isclickSection14 ? `duration-100 rotate-0` : `-rotate-90 duration-100`}`} onClick={() => setclickSection14(!isclickSection14)} />
                     </div>
@@ -247,7 +247,7 @@ function Support() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex flex-col gap-5'>
                                 <span>
-                                    OBS cannot act a a visa sponsor but your chosen university partner can.
+                                langford college cannot act a visa sponsor but your chosen university partner can.
                                 </span>
                             </div>
                         </>
@@ -255,7 +255,7 @@ function Support() {
                     {/* section 15 */}
                     <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection15(!isclickSection15)}>
                         <span>
-                            Do I need a visa to complete modules/course through OBS?
+                            Do I need a visa to complete modules/course through langford college?
                         </span>
                         <img src="/Icon/arrow.png" alt="arrow" className={`w-6 h-7 cursor-pointer ${isclickSection15 ? `duration-100 rotate-0` : `-rotate-90 duration-100`}`} onClick={() => setclickSection15(!isclickSection15)} />
                     </div>

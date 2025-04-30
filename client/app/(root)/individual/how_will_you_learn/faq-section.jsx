@@ -99,7 +99,7 @@ function FAQ() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex flex-col gap-5'>
                                 <span>
-                                    You can choose your course and enrol online via the Langford College <a href="https://www.onlinebusinessschool.com/#Course-services" target='_blank' className='underline'>course page</a>. Alternatively, you can call the OBS Enrolments Team on 0333 772 1158, and they will guide you through the Enrolment process.
+                                    You can choose your course and enrol online via the Langford College <a href="/" className='underline'>course page</a>. Alternatively, you can call the Langford enrolment Team on 0333 772 1158, and they will guide you through the Enrolment process.
                                 </span>
                             </div>
                         </>

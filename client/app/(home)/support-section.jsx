@@ -47,7 +47,7 @@ function Support() {
                     <div className="w-full lg:grid lg:grid-cols-2">
                         <div className="w-full flex items-start flex-col lg:h-full">
                             <span className="text-[6vw] lg:text-[4vw] font-sans font-bold capitalize">
-                                Support beyond you
+                                Support beyond your
                             </span>
                             <span className="text-[6vw] lg:text-[3.5vw] font-mono capitalize">
                                 learning

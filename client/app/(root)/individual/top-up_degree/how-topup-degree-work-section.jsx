@@ -48,7 +48,7 @@ function HowTopupDegreeWork() {
         </div>
         <div className='w-full lg:h-[70vh] gap-5 lg:gap-0 flex items-start justify-between text-[6vw] lg:text-[4vw] font-medium flex-col howtopup-right'>
           <span className="font-sans font-bold">
-            How top-up <br /> degrees work
+            How top-up <br /> degrees work.
           </span>
           <span className="font-mono font-bold">
             Complete an OBS <br /> course and university <br /> top up from £6,000

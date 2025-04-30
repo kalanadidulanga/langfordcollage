@@ -64,7 +64,7 @@ function ProgressionOptions() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
                                 <span>
-                                    Most universities will accept Ofqual credits for advanced entry. Therefore students can choose their own university to study full time for a shorter period. Many universities will also offer part time study programmes either as day release or evening study or by distance learning. Some may also offer weekend workshops. Please check this with your preferred university. (Click here to Find a University). Students should understand that these are general guidelines. Students should always check the requirements with their preferred university or local university Agent if they intend to apply. Many universities operate part time/evening provision, and students should check possibilities with their preferred universities first.
+                                    Most universities will accept Ofqual credits for advanced entry. Therefore students can choose their own university to study full time for a shorter period. Many universities will also offer part time study programmes either as day release or evening study or by distance learning. Some may also offer weekend workshops. Please check this with your preferred university. Students should understand that these are general guidelines. Students should always check the requirements with their preferred university or local university Agent if they intend to apply.
                                 </span>
                             </div>
                         </>

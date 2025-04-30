@@ -25,7 +25,7 @@ function StudentSupport() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
                                 <span>
-                                    You can seek help from dedicated forums or request tutor help. Students can interact and help each other through the course content and share interesting and relevant links with each other. We also have a dedicated tutor support team all specialising in all OBS modules.
+                                    You can seek help from dedicated forums or request tutor help. Students can interact and help each other through the course content and share interesting and relevant links with each other. We also have a dedicated tutor support team all specialising in all  langford college modules.
                                 </span>
                             </div>
                         </>

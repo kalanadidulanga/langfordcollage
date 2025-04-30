@@ -28,7 +28,7 @@ function Cost() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
                                 <span>
-                                    Yes. Once OBS has received the cleared funds your course material will be released to you immediately.
+                                    Yes. Once langford college has received the cleared funds your course material will be released to you immediately.
                                 </span>
                             </div>
                         </>
@@ -44,7 +44,7 @@ function Cost() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
                                 <span>
-                                    OBS offers an interest free payment plan so that you can pay for your course over a set number of months. Contact one of our student advisers for more information about this. UK students may also be eligible for student loans for the university top-up programme. Learners should make enquiries directly to their chosen university.
+                                langford college offers an interest free payment plan so that you can pay for your course over a set number of months. Contact one of our student advisers for more information about this. UK students may also be eligible for student loans for the university top-up programme. Learners should make enquiries directly to their chosen university.
                                 </span>
                             </div>
                         </>
@@ -60,7 +60,7 @@ function Cost() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
                                 <span>
-                                    No additional costs are levied by OBS, and all additional learning resources including tutor support, e-books and short business courses, are included in course tuition fees.
+                                    No additional costs are levied by langford college, and all additional learning resources including tutor support, e-books and short business courses, are included in course tuition fees.
                                 </span>
                             </div>
                         </>

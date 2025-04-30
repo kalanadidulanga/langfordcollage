@@ -43,7 +43,7 @@ function Assesment() {
     return (
         <>
             <div className='w-full font-sans bg-white pb-20 text-black px-[9vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 assessment-section capitalize'>
-                <div className='flex items-start justify-start w-full lg:w-[60%] h-[87vh]  hidden lg:block assessment-left'>
+                <div className='flex items-start justify-start w-full lg:w-[60%] h-[70vh]  hidden lg:block assessment-left'>
                     <img
                         src="/Images/assesment.svg"
                         alt=""
@@ -60,12 +60,6 @@ function Assesment() {
                                 Assessment at Langford College is a very straightforward process:
                             </span>
                             <div className='text-[18px] font-extralight space-y-2'>
-                                <span className='flex'>
-                                    <li></li>
-                                    <span>
-                                        After you have completed an online module, you will have an online assessment to complete. This assessment contains 30 multiple-choice questions. You will have one hour to complete these questions, which are answered in sets of five, so you will have plenty of time to review and edit your answers. After an hour, the test will automatically time out.
-                                    </span>
-                                </span>
                                 <span className='flex'>
                                     <li></li>
                                     <span>

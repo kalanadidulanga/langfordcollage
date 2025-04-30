@@ -4,8 +4,8 @@ import Header from '@/components/Header';
 import React, {useEffect, useState } from 'react'
 import Hero from './hero-section';
 import CourseSection from './course-section';
-import FAQ from './faq-section';
 import Body from './body';
+import FAQ from '../../individual/how_will_you_learn/faq-section';
 
 
 function page() {

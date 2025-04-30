@@ -41,7 +41,7 @@ function Credibility() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
                                 <span>
-                                Learners who achieve an OBS qualification are automatically mapped against a standard UK higher education qualification framework. This is a universally recognised framework of credits. Universities can therefore award credits against the OBS study to give exemptions from large parts of their formal programmes. OBS has pre agreed arrangements with certain universities to provide credits against programmes either on campus or off campus. This is termed ‘university top-up’.
+                                Learners who achieve an langford college qualification are automatically mapped against a standard UK higher education qualification framework. This is a universally recognised framework of credits. Universities can therefore award credits against the langford college study to give exemptions from large parts of their formal programmes. langford college has pre agreed arrangements with certain universities to provide credits against programmes either on campus or off campus. This is termed ‘university top-up’.
                                 </span>
                             </div>
                         </>

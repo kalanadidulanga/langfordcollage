@@ -6,6 +6,9 @@ function PersonalDetails() {
     const [isclickSection1, setclickSection1] = useState(false);
     const [isclickSection2, setclickSection2] = useState(false);
     const [isclickSection3, setclickSection3] = useState(false);
+
+    const SUPPORT_EMAIL = process.env.NEXT_PUBLIC_SUPPORT_EMAIL;
+
     return (
         <>
             <div className='w-full font-sans lg:pb-10 pt-5 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 capitalize'>
@@ -17,7 +20,7 @@ function PersonalDetails() {
                     {/* section 1 */}
                     <div className='w-full bg-white pt-5 mt-10 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection1(!isclickSection1)}>
                         <span>
-                            How do I change my personal contact details once I have given them to OBS?
+                            How do I change my personal contact details once I have given them to langford college?
                         </span>
                         <img src="/Icon/arrow.png" alt="arrow" className={`w-6 h-7 cursor-pointer ${isclickSection1 ? `duration-100 rotate-0` : `-rotate-90 duration-100`}`} onClick={() => setclickSection1(!isclickSection1)} />
                     </div>
@@ -25,7 +28,7 @@ function PersonalDetails() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
                                 <span>
-                                    You can request this by emailing student support at studentsupport@onlinebusinessschool.com.
+                                    You can request this by emailing student support at <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
                                 </span>
                             </div>
                         </>
@@ -41,7 +44,7 @@ function PersonalDetails() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
                                 <span>
-                                    Access to the OBS Dashboard is for a maximum of 5 years from date of enrolment. This can be extended if a request is made in writing to OBS student admin.
+                                    Access to the  langford college Dashboard is for a maximum of 5 years from date of enrolment. This can be extended if a request is made in writing to  langford college student admin.
                                 </span>
                             </div>
                         </>

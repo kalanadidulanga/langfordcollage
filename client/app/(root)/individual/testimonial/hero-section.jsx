@@ -22,7 +22,7 @@ function TestimonialHero() {
             </div>
             <div className='w-full  flex flex-col justify-center items-start gap-3 fade-in'>
                 <span className='text-[13px]'>
-                Below are a few words from students <br /> who have studied with Online <br /> Business School
+                Below are a few words from students <br /> who have studied with langford college
                 </span>
             </div>
         </div>
