@@ -10,7 +10,7 @@ export const Footer = () => {
 
     return (
         <div className="flex items-center justify-center h-screen w-full border-t">
-            <footer className="bg-white text-black w-full h-full capitalize flex flex-col">
+            <footer className="bg-white text-black w-full lg:h-full capitalize flex flex-col">
                 <div className="flex-grow w-full grid grid-cols-1 md:grid-cols-4 gap-8 px-10 lg:px-30 py-30">
                     <div className="col-span-1 gap-3 flex flex-col">
                         <div className='w-[50%] lg:w-[35%] h-[20vh]'>
@@ -45,11 +45,11 @@ export const Footer = () => {
                         </span>
                     </div>
                 </div>
-
                 <div className="bg-black text-white text-center py-4 text-sm mt-auto">
                     <span>© 2025 Langford College | All Rights Reserved & Developed by Kavishka Chathumal</span>
                 </div>
             </footer>
+
         </div>
     );
 };
