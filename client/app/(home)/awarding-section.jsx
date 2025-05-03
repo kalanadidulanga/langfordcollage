@@ -48,29 +48,63 @@ function Awarding() {
 
     const unilogos = [
         {
-            "logo": "/logos/coventry_university_logo-freelogovectors.net_.png"
+            "logo": "/University_Logos/Anglia_Ruskin_University_Logo.png"
         },
         {
-            "logo": "/logos/middlesex-university.png"
+            "logo": "/University_Logos/Buckinghamshire New University.png"
         },
         {
-            "logo": "/logos/uws-logo-uws-health-and-life-sciences.png"
+            "logo": "/University_Logos/coventry.png"
         },
         {
-            "logo": "/logos/OIP.png"
+            "logo": "/University_Logos/Edinburgh Napier University.png"
         },
         {
-            "logo": "/logos/UoS_Logo_RGB.png"
+            "logo": "/University_Logos/London Metropolitan University.png"
         },
         {
-            "logo": "/logos/OIP1.png"
+            "logo": "/University_Logos/Middlesex University.png"
         },
         {
-            "logo": "/logos/members-bucks.png"
+            "logo": "/University_Logos/northapton_uni.png"
         },
         {
-            "logo": "/logos/university-of-portsmouth.png"
+            "logo": "/University_Logos/Northumbria University-01.png"
         },
+        {
+            "logo": "/University_Logos/University of Bolton .png"
+        },
+        {
+            "logo": "/University_Logos/University of Central Lancashire (UCLAN).png"
+        },
+        {
+            "logo": "/University_Logos/University of Chichester.jpg"
+        },
+        {
+            "logo": "/University_Logos/University of Gloucestershire.png"
+        },
+        {
+            "logo": "/University_Logos/University of Hertfordshire.png"
+        },
+        {
+            "logo": "/University_Logos/University of Roehampton.png"
+        },
+        {
+            "logo": "/University_Logos/University of Wolverhampton.png"
+        },
+        {
+            "logo": "/University_Logos/university-of-cumbria-logo-png.png"
+        },
+        {
+            "logo": "/University_Logos/university-of-derby-.png"
+        },
+        {
+            "logo": "/University_Logos/University-of-Sunderland-Logo.png"
+        },
+        {
+            "logo": "/University_Logos/westcliff_email_logo.png"
+        },
+        
     ];
 
     const scroll = (direction) => {
@@ -163,13 +197,13 @@ function Awarding() {
                         </div>
                     </div>
 
-                    <div className="w-full bg-white mt-3 text-[#2E2E27] flex flex-col">
+                    {/* <div className="w-full bg-white mt-3 text-[#2E2E27] flex flex-col">
                         <div className="w-full flex flex-col gap-3">
                             <span className="text-[18px] font-extralight capitalize">
                                 Read more about how our university's commitment to <br /> excellence has been recognised with our <a href="#" className="underline font-bold">latest <br /> awards.</a>
                             </span>
                         </div>
-                    </div>
+                    </div> */}
 
 
                     <div className="w-full bg-white text-gray-500 flex justify-center lg:justify-start testimonial-right">
