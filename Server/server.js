@@ -64,6 +64,14 @@ const upload = multer({
   // limits: { fileSize: 5 * 1024 * 1024 }, // 5MB file limit
 });
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the server");
+});
+
+app.get("/api", (req, res) => {
+  res.send("API is working");
+});
+
 // User routes
 // get methods
 app.get("/api/serchCourse", (req, res) => GetSearchCourse(req, res));
