@@ -46,7 +46,7 @@ function Support() {
                 <div className='w-full flex items-start flex-col lg:h-full sup-left'>
                     <div className="w-full lg:grid lg:grid-cols-2">
                         <div className="w-full flex items-start flex-col lg:h-full">
-                            <span className="text-[6vw] lg:text-[4vw] font-sans font-bold capitalize">
+                            <span className="text-[6vw] lg:text-[3.5vw] font-sans font-bold capitalize">
                                 Support beyond your
                             </span>
                             <span className="text-[6vw] lg:text-[3.5vw] font-mono capitalize">
@@ -67,7 +67,7 @@ function Support() {
                             />
                         </div>
                         <div className='w-full flex flex-col gap-1'>
-                            <span className='text-[18px] font-extralight capitalize'>
+                            <span className='text-[16px] font-extralight capitalize'>
                                 Discover a wealth of invaluable resources to nurture your learning and overall well-being. With our 8 free support hubs, we are dedicated to empowering you in various aspects of your life. <br /> <br />
                                 Our dedicated hubs are designed to cater to your personal development, health, and well-being, as well as your employment and interpersonal skills. Explore our support hubs and gain access to an extensive array of tools, guidance, and knowledge. <br /> <br />
                                 Whether you're seeking personal growth, looking to improve your mental and physical health, or aiming to enhance your professional skill set, our comprehensive resources are here to uplift you.<br /> <br />

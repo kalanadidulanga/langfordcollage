@@ -52,7 +52,7 @@ function Body() {
                     </span>
                     <div className='w-full bg-white pt-10 pb-8 text-[#2E2E27] flex flex-col'>
                         <div className='w-full flex flex-col gap-3'>
-                            <span className='text-[18px] font-extralight'>
+                            <span className='text-[16px] font-extralight'>
                             Start your university journey online, on completion of level 3, we can help you progress onto a University Degree course, or onto one of our level 4/5 course courses.
                             </span>
                         </div>

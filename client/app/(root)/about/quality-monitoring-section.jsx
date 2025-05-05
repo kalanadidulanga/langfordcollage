@@ -14,12 +14,12 @@ function QualityMonitoring() {
 
                     <div className='w-full bg-white pt-10 pb-8 text-[#2E2E27] flex flex-col'>
                         <div className='w-full flex flex-col gap-1'>
-                            <span className='text-[18px] font-extralight'>
+                            <span className='text-[16px] font-extralight'>
                                 Langford College also operates a Quality Monitoring Board (QMB) to ensure that we are always delivering accredited online courses and resources to meet your learning needs. This board meets regularly to assess:
                             </span>
                         </div>
                     </div>
-                    <div className='w-full bg-white text-lg font-extralight text-[#2E2E27] pb-10 pl-4'>
+                    <div className='w-full bg-white text-[16px] font-extralight text-[#2E2E27] pb-10 pl-4'>
                         <li>Specific student issues</li>
                         <li>Any quality issues for university partners</li>
                         <li>Monitoring of assessment standards</li>
@@ -28,14 +28,14 @@ function QualityMonitoring() {
                     </div>
                     <div className='w-full bg-white pb-8 text-[#2E2E27] flex flex-col'>
                         <div className='w-full flex flex-col gap-1'>
-                            <span className='text-[18px] font-extralight'>
+                            <span className='text-[16px] font-extralight'>
                                 The Board Members include respected academic and business leaders. Outcomes of the reviews are shared online to ensure transparency and understanding amongst our partners and students. All feedback is welcomed so that issues can be formally raised via the QMB in a professional and objective manner.
                             </span>
                         </div>
                     </div>
                 </div>
 
-                <div className='flex items-start justify-start w-full lg:w-[50%] h-[80vh]'>
+                <div className='flex items-start justify-start w-full lg:w-[50%] h-[72vh]'>
                     <img
                         src="/Images/quality-monitor.jpg"
                         alt=""

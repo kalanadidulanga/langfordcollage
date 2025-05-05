@@ -500,7 +500,7 @@ a[x-apple-data-detectors],
                 <div className='w-full flex items-start flex-col lg:h-full'>
                     <div className="w-full lg:grid lg:grid-cols-2">
                         <div className="w-full flex items-start flex-col lg:h-full">
-                            <span className="text-[6vw] lg:text-[4vw] font-sans font-bold capitalize">
+                            <span className="text-[6vw] lg:text-[3.5vw] font-sans font-bold capitalize">
                                 Request a Course
                             </span>
                             <span className="text-[6vw] lg:text-[3.5vw] font-mono capitalize">
@@ -513,7 +513,7 @@ a[x-apple-data-detectors],
                         </div>
                     </div>
                     <div className='w-full flex justify-center font-sans z-10'>
-                        <div className='w-full  pt-10 pb-8 grid grid-cols-1 lg:grid-cols-2 gap-5 font-normal text-lg'>
+                        <div className='w-full  pt-10 pb-8 grid grid-cols-1 lg:grid-cols-2 gap-5 font-normal text-[16px]'>
                             <div className='w-full flex flex-col gap-2 request-left'>
                                 <span>First Name</span>
                                 <input type="text" className='w-full rounded-lg outline-0 p-2 border border-[#E5E4E4] bg-white focus:border-2 focus:border-[#E2231A] hover:border-[#E2231A]'

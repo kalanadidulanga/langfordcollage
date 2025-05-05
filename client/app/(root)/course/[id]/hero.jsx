@@ -9,7 +9,7 @@ function Hero({name}) {
                         <span className='font-bold text-5xl md:text-[6vw]'>Langford College</span>
                     </div>
                     <div className='w-full flex flex-col text-center lg:text-start lg:pl-28'>
-                        <span className='font-normal text-5xl md:text-[6vw] title2'>{name}</span>
+                        <span className='font-blod text-5xl md:text-[6vw] title2'>{name}</span>
                     </div>
                 </div>
             </div>

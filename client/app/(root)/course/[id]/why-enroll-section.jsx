@@ -17,26 +17,26 @@ function WhyEnroll() {
                         <div className='bg-white pt-10 pb-8 grid grid-cols-1 lg:grid-cols-4 justify-start gap-8'>
                             <div className='w-full flex flex-col bg-[#F4C023]'>
                                 <img src="/Images/why-enroll-1.svg" alt="courses_image" className='w-full h-[250px] object-cover' />
-                                <span className='text-[18px] text-black  px-3 py-2 font-medium'>
+                                <span className='text-[16px] text-black  px-3 py-2 font-medium'>
                                     Last year 355 students graduated from Online
                                     Langford College
                                 </span>
                             </div>
                             <div className='w-full flex flex-col bg-[#F4C023]'>
                                 <img src="/Images/why-enroll-2.svg" alt="courses_image" className='w-full h-[250px] object-cover' />
-                                <span className='text-[18px] text-black  px-3 py-2 font-medium'>
+                                <span className='text-[16px] text-black  px-3 py-2 font-medium'>
                                     13 years of educating students online
                                 </span>
                             </div>
                             <div className='w-full flex flex-col bg-[#F4C023]'>
                                 <img src="/Images/why-enroll-3.svg" alt="courses_image" className='w-full h-[250px] object-cover' />
-                                <span className='text-[18px] text-black  px-3 py-2 font-medium'>
+                                <span className='text-[16px] text-black  px-3 py-2 font-medium'>
                                     Over 15,000 students are currently enrolled at OBS
                                 </span>
                             </div>
                             <div className='w-full flex flex-col bg-[#F4C023]'>
                                 <img src="/Images/why-enroll-4.svg" alt="courses_image" className='w-full h-[250px] object-cover' />
-                                <span className='text-[18px] text-black  px-3 py-2 font-medium'>
+                                <span className='text-[16px] text-black  px-3 py-2 font-medium'>
                                     Over 25 expert tutors available to help you succeed
                                 </span>
                             </div>

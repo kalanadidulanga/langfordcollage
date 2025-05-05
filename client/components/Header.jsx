@@ -137,11 +137,11 @@ const Header = () => {
   };
 
   return (
-    <header className={`w-full p-4 md:p-10 font-sans flex flex-col relative ${activeDropdown === 'course' || isMenuOpen ? 'bg-white' : 'bg-transparent'} ${activeDropdown === 'individual' || isMenuOpen ? 'bg-white' : 'bg-transparent'}`}>
+    <header className={`w-full p-4 md:p-8 font-sans flex flex-col relative ${activeDropdown === 'course' || isMenuOpen ? 'bg-white' : 'bg-transparent'} ${activeDropdown === 'individual' || isMenuOpen ? 'bg-white' : 'bg-transparent'}`}>
       <div className="w-full h-full flex justify-between items-start px-4 md:px-24">
         {/* Logo */}
-        <nav className='rounded-full w-48 h-22 bg-contain bg-center flex justify-center items-center'>
-          <img src="/Icon/LOGO.png" alt="logo" className='w-full h-full p-1 object-cover cursor-pointer object-center' onClick={navigateHome} />
+        <nav className='rounded-full w-52 h-32 bg-contain bg-center flex justify-center items-center'>
+          <img src="/Icon/LOGO.svg" alt="logo" className='w-full h-full p-1 object-cover cursor-pointer object-center' onClick={navigateHome} />
         </nav>
 
         {/* Mobile Menu Button */}
@@ -245,6 +245,10 @@ const Header = () => {
 
           <a href="/about" className="hover:underline hover:opacity-80 transition-opacity duration-200">
             About Us
+          </a>
+
+          <a href="#" className="hover:underline hover:opacity-80 transition-opacity duration-200">
+            University Progression
           </a>
 
           <div className="flex gap-4">

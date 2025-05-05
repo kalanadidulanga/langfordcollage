@@ -20,7 +20,7 @@ function HowWillYouLearnHero() {
                         <span className='font-bold text-5xl md:text-[6vw]'>How will</span>
                     </div>
                     <div className='w-full flex flex-col text-center lg:text-start lg:pl-28 fade-in'>
-                        <span className='font-normal text-5xl md:text-[6vw] font-mono'>You Learn</span>
+                        <span className='font-bold text-5xl md:text-[6vw] font-mono'>You Learn</span>
                     </div>
                 </div>
             </div>

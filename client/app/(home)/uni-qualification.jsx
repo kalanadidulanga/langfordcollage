@@ -53,7 +53,7 @@ export default function FastTrackingSection() {
       </div>
 
       {/* Right Side - List Items */}
-      <div className="flex items-start lg:text-[1.3vw] gap-6 flex-col fast-tracking-right">
+      <div className="flex items-start lg:text-[1.1vw] gap-6 flex-col fast-tracking-right">
         <div className="flex">
           <li></li>
           <span className="hover:underline">Globally Recognised UK Diplomas & Degrees</span>

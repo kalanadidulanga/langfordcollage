@@ -46,7 +46,7 @@ function LearnAnywhere() {
         <div className='w-full flex items-start flex-col lg:h-full learn-anyway-left capitalize'>
           <div className="w-full lg:grid lg:grid-cols-2">
             <div className="w-full flex items-start flex-col lg:h-full">
-              <span className="text-[6vw] lg:text-[4vw] font-sans font-bold capitalize">
+              <span className="text-[6vw] lg:text-[3.5vw] font-sans font-bold capitalize">
                 Learn anywhere,
               </span>
               <span className="text-[6vw] lg:text-[3.5vw] font-mono capitalize">
@@ -64,7 +64,7 @@ function LearnAnywhere() {
           <div className='w-full'>
             <div className='w-full bg-white text-[#2E2E27] flex flex-col'>
               <div className='w-full flex flex-col'>
-                <span className='text-[18px] font-extralight'>
+                <span className='text-[16px] font-extralight'>
 
                   Our comprehensive web-based modules empower students to take control of their education—learning what they want, when they want, and how they want. These modules have been specifically crafted to deliver a significantly faster, more affordable, and engaging path to knowledge and qualification. Whether you're balancing work, family, or other commitments, Langford College ensures that education fits seamlessly into your lifestyle.
                   <br /><br />
@@ -77,7 +77,7 @@ function LearnAnywhere() {
               </div>
             </div>
           </div>
-          <div className='flex items-end justify-end w-full lg:w-[60%] h-[62vh] hidden lg:block learn-anyway-right'>
+          <div className='flex items-end justify-end w-full lg:w-[60%] h-[55vh] hidden lg:block learn-anyway-right'>
             <img
               src="/Images/robo-girl.png"
               alt=""

@@ -90,7 +90,7 @@ function CourseDetailBody({ data }) {
                     <>
                         <div className='w-full bg-[#F7FAFF] p-10'>
                             <div
-                                className="text-[18px] text-[#2E2E27] font-light line-clamp-2 lg:line-clamp-5 h-full"
+                                className="text-[16px] text-[#2E2E27] font-light line-clamp-2 lg:line-clamp-5 h-full"
                                 dangerouslySetInnerHTML={{ __html: data?.how_it_works ? data?.how_it_works : "N/A" }}
                             />
                         </div>
@@ -100,7 +100,7 @@ function CourseDetailBody({ data }) {
                     <>
                         <div className='w-full bg-[#F7FAFF] p-10'>
                             <div
-                                className="text-[18px] text-[#2E2E27] font-light line-clamp-2 lg:line-clamp-5 h-full"
+                                className="text-[16px] text-[#2E2E27] font-light line-clamp-2 lg:line-clamp-5 h-full"
                                 dangerouslySetInnerHTML={{ __html: data?.course_module ? data?.course_module : "N/A" }}
                             />
                         </div>
@@ -110,7 +110,7 @@ function CourseDetailBody({ data }) {
                     <>
                         <div className='w-full bg-[#F7FAFF] p-10'>
                             <div
-                                className="text-[18px] text-[#2E2E27] font-light line-clamp-2 lg:line-clamp-5 h-full"
+                                className="text-[16px] text-[#2E2E27] font-light line-clamp-2 lg:line-clamp-5 h-full"
                                 dangerouslySetInnerHTML={{ __html: data?.entry_requirements ? data?.entry_requirements : "N/A" }}
                             />
                         </div>
@@ -120,7 +120,7 @@ function CourseDetailBody({ data }) {
                     <>
                         <div className='w-full bg-[#F7FAFF] p-10'>
                             <div
-                                className="text-[18px] text-[#2E2E27] font-light line-clamp-2 lg:line-clamp-5 h-full"
+                                className="text-[16px] text-[#2E2E27] font-light line-clamp-2 lg:line-clamp-5 h-full"
                                 dangerouslySetInnerHTML={{ __html: data?.cost_and_payment ? data?.cost_and_payment : "N/A" }}
                             />
                         </div>
@@ -130,7 +130,7 @@ function CourseDetailBody({ data }) {
                     <>
                         <div className='w-full bg-[#F7FAFF] p-10'>
                             <div
-                                className="text-[18px] text-[#2E2E27] font-light line-clamp-2 lg:line-clamp-5 h-full"
+                                className="text-[16px] text-[#2E2E27] font-light line-clamp-2 lg:line-clamp-5 h-full"
                                 dangerouslySetInnerHTML={{ __html: data?.career_progression ? data?.career_progression : "N/A" }}
                             />
                         </div>
@@ -140,7 +140,7 @@ function CourseDetailBody({ data }) {
                     <>
                         <div className='w-full bg-[#F7FAFF] p-10'>
                             <div
-                                className="text-[18px] text-[#2E2E27] font-light line-clamp-2 lg:line-clamp-5 h-full"
+                                className="text-[16px] text-[#2E2E27] font-light line-clamp-2 lg:line-clamp-5 h-full"
                                 dangerouslySetInnerHTML={{ __html: data?.university_options ? data?.university_options : "N/A" }}
                             />
                         </div>

@@ -21,7 +21,7 @@ function BlogHero() {
                         <span className='font-bold text-5xl md:text-[6vw]'>Celebrating Excellence</span>
                     </div>
                     <div className='w-full flex flex-col text-center lg:text-start lg:pl-28 fade-in'>
-                        <span className='font-normal text-5xl md:text-[6vw] font-mono'>Blogs</span>
+                        <span className='font-bold text-5xl md:text-[6vw]'>Blogs</span>
                     </div>
                 </div>
             </div>

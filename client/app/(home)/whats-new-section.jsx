@@ -51,7 +51,7 @@ function WhatsNew() {
                         <span className="text-5xl md:text-[4.8vw] font-sans font-bold">Affordable fast-track</span>
                     </div>
                     <div className="w-full flex flex-col text-center lg:text-end whats-right">
-                        <span className="text-5xl md:text-[4.8vw] font-mono">university programs</span>
+                        <span className="text-5xl md:text-[4.8vw] font-bold font-mono">university programs</span>
                     </div>
                 </div>
             </div>

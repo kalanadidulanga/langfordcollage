@@ -21,7 +21,7 @@ function IndividualHero() {
                         <span className='font-bold text-5xl md:text-[6vw]'>How top-up</span>
                     </div>
                     <div className='w-full flex flex-col text-center lg:text-start lg:pl-28 fade-in'>
-                        <span className='font-normal text-5xl md:text-[6vw] font-mono'>degrees work</span>
+                        <span className='text-5xl md:text-[6vw] font-bold font-mono'>degrees work</span>
                     </div>
                 </div>
             </div>

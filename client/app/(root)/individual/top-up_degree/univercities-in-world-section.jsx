@@ -68,12 +68,12 @@ function UnivercitiesInWorld() {
 
                     <div className='w-full bg-white pt-10 pb-8 text-[#2E2E27] flex flex-col'>
                         <div className='w-full flex flex-col gap-1'>
-                            <span className='text-[18px] font-extralight'>
+                            <span className='text-[16px] font-extralight'>
                                 On completion of an OFQUAL regulated programme via Langford College, students can progress onto a range of Universities, these include:
                             </span>
                         </div>
                     </div>
-                    <div className='w-full bg-white text-lg font-extralight text-[#2E2E27] lg:pb-16 pb-5'>
+                    <div className='w-full bg-white text-[16px] font-extralight text-[#2E2E27] lg:pb-16 pb-5'>
                         <li>Anglia Ruskin University</li>
                         <li>Coventry University</li>
                         <li>University of Derby</li>
@@ -89,7 +89,7 @@ function UnivercitiesInWorld() {
                     />
                 </div>
             </div>
-            <div className='flex pb-20 font-sans flex-col bg-white text-[#2E2E27] text-[18px] font-extralight px-[9vw] gap-3 uni-section1 capitalize'>
+            <div className='flex pb-20 font-sans flex-col bg-white text-[#2E2E27] text-[16px] font-extralight px-[9vw] gap-3 uni-section1 capitalize'>
                 <span className="uni-left1">
                     Langford College can provide students with the requisite OFQUAL documentation and transcript. Alternatively, students can visit the OFQUAL website <a href="https://register.ofqual.gov.uk/" className='underline cursor-pointer text-blue-500' target='_blank'>https://register.ofqual.gov.uk/</a> to confirm the qualification. Each university will consider an application on its merits subject to their own specific entry requirements.
                 </span>

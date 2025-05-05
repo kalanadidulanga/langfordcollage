@@ -47,10 +47,10 @@ function SocialLearning() {
         <div className="w-full flex items-start pb-5 flex-col lg:h-full social-left">
           <div className="w-full lg:grid lg:grid-cols-2">
             <div className="w-full flex items-start flex-col lg:h-full">
-              <span className="text-[6vw] lg:text-[4vw] font-sans font-bold capitalize">
+              <span className="text-[6vw] lg:text-[3.5vw] font-sans font-bold capitalize">
                 A social learning
               </span>
-              <span className="text-[6vw] lg:text-[3.5vw] font-mono capitalize">
+              <span className="text-[6vw] lg:text-[3.4vw] font-mono capitalize">
                 experience like no other
               </span>
             </div>
@@ -64,20 +64,20 @@ function SocialLearning() {
           <div className="w-full">
             <div className="w-full bg-white pb-5 text-[#2E2E27] flex flex-col capitalize">
               <div className="w-full flex flex-col gap-3">
-                <span className="text-[18px] font-extralight">
+                <span className="text-[16px]">
                   Online... Anytime... On any device...
                 </span>
-                <span className="text-[18px] font-extralight">
+                <span className="text-[16px]">
                   The 100% online undergraduate and postgraduate diploma courses at Langford College provide students an affordable pathway to earning an undergraduate or postgraduate degree from a choice of respected UK universities.
                 </span>
-                <span className="text-[18px] font-extralight">
+                <span className="text-[16px]">
                   Whether you pursue a qualification in hotel and hospitality, computing, or business management, the courses offered through Langford College will allow you the option to continue your education and pursue a top up to an undergraduate degree or MBA through one of our partner universities.
                 </span>
               </div>
             </div>
 
             {/* List Section */}
-            <div className="w-full bg-white text-lg font-extralight text-[#2E2E27] pb-16">
+            <div className="w-full bg-white text-[16px] text-[#2E2E27] pb-16">
               <li>University pathway programmes</li>
               <li>Professional body membership included</li>
               <li>Free professional development resources</li>
@@ -88,7 +88,7 @@ function SocialLearning() {
           </div>
 
           {/* Right Side - Image */}
-          <div className="grid items-start justify-start w-full lg:w-[60%] h-[60vh] hidden lg:block social-right">
+          <div className="grid items-start justify-start w-full lg:w-[60%] h-[50vh] hidden lg:block social-right">
             <img
               src="/Images/work-girl.jpg"
               alt="social learning"

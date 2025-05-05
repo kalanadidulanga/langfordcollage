@@ -37,8 +37,8 @@ export default function Home() {
         </div>
         <GetFuture />
         <UniQualification />
-        <NSS />
         <Awarding />
+        <NSS />
         <WhatsNew />
         {/* <AffordableStudy /> */}
         <SocialLearning />

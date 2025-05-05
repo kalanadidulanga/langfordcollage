@@ -12,7 +12,7 @@ export const ArticleCard = ({ image, title, description, slug, action }) => {
             <img src={image} alt="article_image" className="w-full h-[304px] object-cover" />
             <span className="text-2xl text-black font-bold font-sans">{title}</span>
             <div
-                className="text-[18px] text-black font-light line-clamp-2 lg:line-clamp-5 h-full"
+                className="text-[16px] text-black font-light line-clamp-2 lg:line-clamp-5 h-full"
                 dangerouslySetInnerHTML={{ __html: truncateHTML(description, 250) }}
             />
             <div className="flex items-start justify-start w-full text-white">

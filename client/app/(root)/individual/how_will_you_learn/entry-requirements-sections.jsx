@@ -66,8 +66,8 @@ function EntryRequirements() {
                     <div className='w-full bg-white pt-10 pb-10 text-[#2E2E27] flex flex-col px-10 gap-10'>
 
                         <div className='w-full bg-[#F7FAFF] flex flex-col items-start justify-start gap-3 p-5 entry-left'>
-                            <span className='text-[24px]'>University entry level 3 programme requirements</span>
-                            <div className='text-[18px] text-[#2E2E27] font-extralight flex flex-col gap-4'>
+                            <span className='text-[22px]'>University entry level 3 programme requirements</span>
+                            <div className='text-[16px] text-[#2E2E27] font-extralight flex flex-col gap-4'>
                                 <span>
                                     For entry on the Level 3 qualification learners would generally be aged 16 or above. For learners who have recently been in education or training the entry profile is likely to include one of following:
                                 </span>
@@ -82,14 +82,14 @@ function EntryRequirements() {
                             </div>
                         </div>
                         <div className='w-full bg-[#F7FAFF] flex flex-col items-start justify-start gap-3 p-5 entry-section1'>
-                            <span className='text-[24px] entry-left1'>Graduate level 6 programme requirements</span>
-                            <span className='text-[18px] text-[#2E2E27] font-extralight entry-left1'>
+                            <span className='text-[22px] entry-left1'>Graduate level 6 programme requirements</span>
+                            <span className='text-[16px] text-[#2E2E27] font-extralight entry-left1'>
                                 To enrol on the Level 6 programme, you must be 21+ years old and have at least 3 years of relevant experience. Learners will be expected to hold a level 4/5 qualification or an equivalent to the first 2 years of a degree. In certain circumstances, students with considerable experience but no formal qualifications may be considered.
                             </span>
                         </div>
                         <div className='w-full bg-[#F7FAFF] flex flex-col items-start justify-start gap-3 p-5 entry-section2'>
-                            <span className='text-[24px] entry-left2'>Postgraduate level 7 programme requirements</span>
-                            <span className='text-[18px] text-[#2E2E27] font-extralight entry-left2'>
+                            <span className='text-[22px] entry-left2'>Postgraduate level 7 programme requirements</span>
+                            <span className='text-[16px] text-[#2E2E27] font-extralight entry-left2'>
                                 To enrol on the Level 7 programme, you must be 21+ years old and have at least 3 years of management experience. Learners will be expected to hold a level 6 qualification or a first degree. In certain circumstances, managers with considerable experience but no formal qualifications may be considered.
                             </span>
                         </div>

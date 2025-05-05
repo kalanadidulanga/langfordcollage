@@ -16,7 +16,7 @@ export const TestimonialCard = ({ image, title, descrption, slug }) => {
                 <div className='flex h-full flex-col gap-3'>
                     <span className='text-2xl text-black'>{title}</span>
                     <div
-                        className="text-[18px] text-[#2E2E27] font-light line-clamp-2 lg:line-clamp-7 h-full"
+                        className="text-[16px] text-[#2E2E27] font-light line-clamp-2 lg:line-clamp-7 h-full"
                         dangerouslySetInnerHTML={{ __html: truncateHTML(descrption, 250) }}
                     />
                     <div className='flex items-start justify-start w-full text-white'>

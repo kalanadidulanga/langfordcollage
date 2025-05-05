@@ -98,7 +98,7 @@ function CourseBody({ data }) {
                     <div className='w-full bg-[#1E1E1E] p-8'>
                         <span className='text-[3.6vw] font-bold'>Studies at a Glance</span>
                     </div>
-                    <div className='w-full grid grid-cols-1 lg:grid-cols-2 text-black px-[5vw] pt-10 gap-5'>
+                    <div className='w-full grid grid-cols-1 lg:grid-cols-2 text-[16px] text-black px-[5vw] pt-10 gap-5'>
                         <div className='w-full flex flex-col gap-2'>
                             <span className='font-bold'>Start date:</span>
                             <span>{data?.course_start_date ? data?.course_start_date : "N/A"}</span>
@@ -128,59 +128,59 @@ function CourseBody({ data }) {
                 <div className='w-full bg-[#F7FAFF] flex flex-col gap-5 text-black p-6 pr-20'>
                     <span className='font-bold text-3xl capitalize'>Start your journey today</span>
                     <div className='w-full flex flex-col gap-2 mt-5'>
-                        <span className='text-[18px] font-semibold'>First Name</span>
+                        <span className='text-[16px] font-semibold'>First Name</span>
                         <input type="text"
                             value={fname}
                             onChange={(e) => setFname(e.target.value)}
-                            className='w-full text-[18px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
+                            className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
                     </div>
                     <div className='w-full flex flex-col gap-2'>
-                        <span className='text-[18px] font-semibold'>Last Name</span>
+                        <span className='text-[16px] font-semibold'>Last Name</span>
                         <input type="text"
                             value={lname}
                             onChange={(e) => setLname(e.target.value)}
-                            className='w-full text-[18px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
+                            className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
                     </div>
                     <div className='w-full flex flex-col gap-2'>
-                        <span className='text-[18px] font-semibold'>Your Email (required)</span>
+                        <span className='text-[16px] font-semibold'>Your Email (required)</span>
                         <input type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className='w-full text-[18px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
+                            className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
                     </div>
                     <div className='w-full flex flex-col gap-2'>
-                        <span className='text-[18px] font-semibold'>Phone</span>
+                        <span className='text-[16px] font-semibold'>Phone</span>
                         <input type="tel"
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
-                            className='w-full text-[18px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
+                            className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
                     </div>
                     <div className='w-full flex flex-col gap-2'>
-                        <span className='text-[18px] font-semibold'>Your Course</span>
-                        <input type="text" className='w-full text-[18px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' disabled value={data?.course_name ? data?.course_name : ''} />
+                        <span className='text-[16px] font-semibold'>Your Course</span>
+                        <input type="text" className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' disabled value={data?.course_name ? data?.course_name : ''} />
                     </div>
                     <div className='w-full flex flex-col gap-2'>
-                        <span className='text-[18px] font-semibold'>Study Qualification</span>
+                        <span className='text-[16px] font-semibold'>Study Qualification</span>
                         <input type="text"
                             value={studyQualification}
                             onChange={(e) => setStudyQualification(e.target.value)}
-                            className='w-full text-[18px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
+                            className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
                     </div>
                     <div className='w-full flex flex-col gap-2'>
-                        <span className='text-[18px] font-semibold'>Job Title</span>
+                        <span className='text-[16px] font-semibold'>Job Title</span>
                         <input type="text"
                             value={jobTitle}
                             onChange={(e) => setJobTitle(e.target.value)}
-                            className='w-full text-[18px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
+                            className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
                     </div>
                     <div className='w-full flex flex-col gap-2'>
-                        <span className='text-[18px] font-semibold'>Payment Options</span>
+                        <span className='text-[16px] font-semibold'>Payment Options</span>
                         <div className='flex gap-3 items-center'>
                             <input type="radio" name='payment'
                                 value="Annual"
                                 defaultChecked={paymentOption === 'Annual' ? true : false}
                                 onChange={(e) => setPaymentOption(e.target.checked ? e.target.value : '')}
-                                className='w-4 h-4 border-[1px] border-[#E5E4E4] p-2 outline-none bg-white font-extralight text-[18px]' />
+                                className='w-4 h-4 border-[1px] border-[#E5E4E4] p-2 outline-none bg-white font-extralight text-[16px]' />
                             <span className='text-[16px]'>Annual payment (USD{data?.annual_payment ? data?.annual_payment : '0'})</span>
                         </div>
                         <div className='flex gap-3 items-center'>
@@ -188,7 +188,7 @@ function CourseBody({ data }) {
                                 value="Monthly"
                                 defaultChecked={paymentOption === 'Monthly' ? true : false}
                                 onChange={(e) => setPaymentOption(e.target.checked ? e.target.value : '')}
-                                className='w-4 h-4 border-[1px] border-[#E5E4E4] p-2 outline-none bg-white font-extralight text-[18px]' />
+                                className='w-4 h-4 border-[1px] border-[#E5E4E4] p-2 outline-none bg-white font-extralight text-[16px]' />
                             <span className='text-[16px]'>Monthly payment (USD{data?.monthly_payment ? data?.monthly_payment : '0'} per month)</span>
                         </div>
                     </div>

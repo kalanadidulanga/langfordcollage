@@ -53,7 +53,7 @@ function WayToGraduate() {
 
                     <div className='w-full bg-white pt-10 pb-8 text-[#2E2E27] flex flex-col'>
                         <div className='w-full flex flex-col gap-3 lg:pr-36'>
-                            <span className='text-[18px] font-extralight font-sans'>
+                            <span className='text-[16px] font-extralight font-sans'>
                                 Our degree pathways act as a direct equivalent to Year 1 and Year 2 of a bachelor’s degree, recognised by an OFQUAL awarding organisation, the pathway courses are accepted by many universities worldwide.
                                 Once you complete your pathway, you’ll go to one of our nominated universities to finish Year 3 and obtain your full bachelor’s degree. Upon completion of our level 7 pathway courses, students progress onto the final module of an MBA programme.
                                 Our pathways are the most flexible way to graduate! Being online with little restrictions, it’s possible to complete Year 1 and Year 2 while you work!

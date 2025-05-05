@@ -142,15 +142,15 @@ function Awarding() {
 
     return (
         <>
-            <div className='w-full lg:pb-10 pt-10 font-sans bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 testimonial-section'>
+            <div className='w-full lg:pb-5 font-sans bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 testimonial-section'>
                 <div className='w-full flex items-start flex-col lg:h-full'>
                     <div className="w-full grid grid-cols-2">
                         <div className="w-full flex items-start flex-col lg:h-full">
-                            <span className="text-[6vw] lg:text-[4vw] font-sans font-bold capitalize">
-                                Our Partner
+                            <span className="text-[6vw] lg:text-[3.8vw] font-sans font-bold capitalize">
+                            Continue Your
                             </span>
-                            <span className="text-[6vw] lg:text-[4vw] font-mono capitalize">
-                                University
+                            <span className="text-[6vw] lg:text-[3.8vw] font-sans capitalize">
+                            Degree Pathway
                             </span>
                         </div>
                         <div className="w-full h-full p-2">
@@ -214,15 +214,15 @@ function Awarding() {
                             <div
                                 ref={scrollContainerRef}
                                 onScroll={handleScroll}
-                                className="w-full pt-10 pb-8 flex flex-row justify-start overflow-x-auto gap-8 snap-x snap-mandatory scrollbar-hide scroll-smooth px-6"
+                                className="w-full pt-5 pb-2 flex flex-row justify-start overflow-x-auto gap-8 snap-x snap-mandatory scrollbar-hide scroll-smooth px-6"
                             >
                                 {unilogos.map((logo, i) => (
                                     <div
                                         key={i}
-                                        className="w-full lg:w-60 h-60 border rounded-lg p-2 hover:p-1 bg-white transition-all duration-200 snap-start shrink-0"
+                                        className="w-full lg:w-52 h-52 border rounded-lg p-2 hover:p-1 bg-white transition-all duration-200 snap-start shrink-0"
                                     >
                                         <img
-                                            src={logo.logo || `/api/placeholder/240/240`}
+                                            src={logo.logo}
                                             alt={`logo-${i}`}
                                             className="w-full h-full object-contain"
                                         />

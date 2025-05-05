@@ -49,13 +49,13 @@ function Body() {
                     </span>
                     <div className='w-full bg-white pt-10 pb-8 text-[#2E2E27] flex flex-col'>
                         <div className='w-full flex flex-col gap-3'>
-                            <span className='text-[18px] font-extralight'>
+                            <span className='text-[16px] font-extralight'>
                                 Giving students more options than any other international qualification.
                             </span>
-                            <span className='text-[18px] font-extralight'>
+                            <span className='text-[16px] font-extralight'>
                                 The typical age at which people choose to complete the IGCES’s is 14 to 16, but anyone over the age of 14 can enrol onto this course.
                             </span>
-                            <span className='text-[18px] font-extralight'>
+                            <span className='text-[16px] font-extralight'>
                                 You also do not need any previous qualifications to be eligible for this course.
                             </span>
                         </div>

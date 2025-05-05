@@ -50,13 +50,13 @@ function LearnerJourney() {
 
                     <div className='w-full bg-white pt-10 pb-8 text-[#2E2E27] flex flex-col journy-left'>
                         <div className='w-full flex flex-col gap-1'>
-                            <span className='text-[18px] font-extralight'>
+                            <span className='text-[16px] font-extralight'>
                                 Our online business management, hotel and hospitality, and computing courses will help you obtain a diploma, which is recognised by employers and awarded by OFQUAL, the UK government higher education regulating body. <br />
                                 These diplomas can then be used as progression onto completion of a full undergraduate or postgraduate degree course, at an accredited UK or overseas university.
                             </span>
                         </div>
                     </div>
-                    <div className='w-full bg-white text-lg font-extralight text-[#2E2E27] pb-10 pl-4 journy-left'>
+                    <div className='w-full bg-white text-[16px] font-extralight text-[#2E2E27] pb-10 pl-4 journy-left'>
                         <li>Choose a course</li>
                         <li>Study the course modules</li>
                         <li>Complete online multiple choice tests and written assignments</li>
@@ -65,14 +65,14 @@ function LearnerJourney() {
                     </div>
                     <div className='w-full bg-white pb-8 text-[#2E2E27] flex flex-col journy-left'>
                         <div className='w-full flex flex-col gap-1'>
-                            <span className='text-[18px] font-extralight'>
+                            <span className='text-[16px] font-extralight'>
                                 Your degree or MBA will be awarded to you by the university you complete your final year with. We currently partner with UK universities, who accept the OFQUAL credits awarded from studying our courses.
                             </span>
                         </div>
                     </div>
                 </div>
 
-                <div className='flex items-start justify-start w-full lg:w-[50%] h-[80vh] journy-right'>
+                <div className='flex items-start justify-start w-full lg:w-[50%] h-[70vh] journy-right'>
                     <img
                         src="/Images/learner-journey.svg"
                         alt=""

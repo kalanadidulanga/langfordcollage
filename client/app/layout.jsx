@@ -9,7 +9,7 @@ const geistSans = localFont({
   weight: "100",
 });
 const geistMono = localFont({
-  src: "./fonts/plantin-mt-pro-light.ttf",
+  src: "./fonts/basis-grotesque-arabic-pro-regular.ttf",
   variable: "--font-geist-mono",
   weight: "100",
 });

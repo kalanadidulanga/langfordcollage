@@ -18,7 +18,7 @@ const HeroSection = () => {
           <span className="text-5xl md:text-[6vw] font-sans font-bold">A Smarter Route</span>
         </div>
         <div className="w-full flex flex-col text-center lg:text-end fade-in">
-          <span className="text-5xl md:text-[6vw] font-mono">To a British Degree</span>
+          <span className="text-5xl md:text-[6vw] font-bold font-sans">To a British Degree</span>
         </div>
       </div>
       <div className="w-full flex flex-col justify-center items-start gap-3 fade-in">
@@ -51,9 +51,13 @@ const HeroSection = () => {
             >
               Try a Free Lesson
             </button>
-            {/* <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] fade-in">
-              Log In
-            </button> */}
+            <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] fade-in"
+              onClick={() => {
+                window.location.href = "/life_in_uk"
+              }}
+            >
+              Life In UK
+            </button>
           </div>
         </div>
       </div>
