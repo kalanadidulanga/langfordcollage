@@ -6,10 +6,13 @@ const cors = require("cors");
 const fs = require("fs");
 const nodemailer = require("nodemailer");
 require("dotenv").config();
+const http = require('http');
 
 // const db = require('./db');
 
 const app = express();
+const server = http.createServer(app);
+
 app.use(cors());
 app.use(express.json());
 
@@ -125,8 +128,12 @@ app.post("/api/uploadMultiImages/:type", upload.array("files"), (req, res) =>
 // Send Email
 app.post("/api/sendEmail", (req, res) => sendMail(req, res));
 
+server.keepAliveTimeout = 360000;   // ms
+server.headersTimeout = 360000;    // ms
+server.timeout = 360000; 
+
 // listen port
-app.listen(process.env.DB_PORT, () =>
+server.listen(process.env.DB_PORT, () =>
   console.log("Server is running on port 5000")
 );
 
