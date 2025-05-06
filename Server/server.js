@@ -139,31 +139,25 @@ server.listen(process.env.DB_PORT, () =>
 
 // functions
 function Addadmin(req, res) {
-  db.query(sql, values, (err, results) => {
+  const sql2 =
+    "INSERT INTO `admin`(`fname`,`lname`,`email`,`password`,`reg_date`) VALUES(?,?,?,?,?)";
+  const values2 = [
+    "Super",
+    "Admin",
+    "admin@langfordcollege.com",
+    "Langford@123",
+    "2025-04-04 13:09:33",
+  ];
+
+  db.query(sql2, values2, (err, results) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
-
-    const sql2 =
-      "INSERT INTO `admin`(`fname`,`lname`,`email`,`password`,`reg_date`) VALUES(?,?,?,?,?)";
-    const values2 = [
-      "Super",
-      "Admin",
-      "admin@langfordcollege.com",
-      "Langford@123",
-      "2025-04-04 13:09:33",
-    ];
-
-    db.query(sql2, values2, (err, results) => {
-      if (err) {
-        return res.status(500).json({ error: err.message });
-      }
-      res.json({
-        status: true,
-        data: results[0],
-      });
-      return;
+    res.json({
+      status: true,
+      data: results[0],
     });
+    return;
   });
 }
 function signin(req, res) {
