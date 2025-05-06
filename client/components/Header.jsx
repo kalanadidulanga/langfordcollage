@@ -139,10 +139,25 @@ const Header = () => {
   return (
     <header className={`w-full p-4 md:p-8 font-sans flex flex-col relative ${activeDropdown === 'course' || isMenuOpen ? 'bg-white' : 'bg-transparent'} ${activeDropdown === 'individual' || isMenuOpen ? 'bg-white' : 'bg-transparent'}`}>
       <div className="w-full h-full flex justify-between items-start px-4 md:px-24">
-        {/* Logo */}
-        <nav className='rounded-full w-52 h-32 bg-contain bg-center flex justify-center items-center'>
-          <img src="/Icon/LOGO.svg" alt="logo" className='w-full h-full p-1 object-cover cursor-pointer object-center' onClick={navigateHome} />
-        </nav>
+        {(activeDropdown === 'course' || activeDropdown === 'individual' || isMenuOpen) ? (
+          <nav className='rounded-full w-52 h-28 bg-contain bg-center flex justify-center items-center'>
+            <img
+              src="/LOGO.svg"
+              alt="logo"
+              className='w-full h-full p-1 object-contain cursor-pointer object-center'
+              onClick={navigateHome}
+            />
+          </nav>
+        ) : (
+          <nav className='rounded-full w-52 h-32 bg-contain bg-center flex justify-center items-center'>
+            <img
+              src="/Icon/LOGO.svg"
+              alt="logo"
+              className='w-full h-full p-1 object-cover cursor-pointer object-center'
+              onClick={navigateHome}
+            />
+          </nav>
+        )}
 
         {/* Mobile Menu Button */}
         <button
@@ -444,7 +459,7 @@ const Header = () => {
 
       {/* Desktop Course Dropdown Menu */}
       <div
-        className="hidden lg:block lg:absolute lg:left-0 lg:w-full border-t border-b border-gray-300 bg-white mt-24 h-[82vh] z-50 overflow-hidden lg:grid lg:grid-cols-4 lg:gap-4"
+        className="hidden lg:block lg:absolute lg:left-0 lg:w-full border-t border-b border-gray-300 bg-white mt-28 h-[82vh] z-50 overflow-hidden lg:grid lg:grid-cols-4 lg:gap-4"
         style={{ display: activeDropdown === 'course' && window.innerWidth >= 1024 ? 'block' : 'none' }}
         onMouseEnter={cancelDropdownClose}
       >
@@ -502,7 +517,7 @@ const Header = () => {
 
       {/* Desktop Individuals Dropdown Menu */}
       <div
-        className="hidden lg:block lg:absolute lg:left-0 lg:w-full border-t border-b border-gray-300 bg-white mt-24 h-[82vh] z-50 capitalize"
+        className="hidden lg:block lg:absolute lg:left-0 lg:w-full border-t border-b border-gray-300 bg-white mt-28 h-[82vh] z-50 capitalize"
         style={{ display: activeDropdown === 'individual' && window.innerWidth >= 1024 ? 'block' : 'none' }}
         onMouseEnter={cancelDropdownClose}
       >

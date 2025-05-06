@@ -22,20 +22,11 @@ function RequestACource() {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-
         gsap.fromTo(
             ".request-left",
             { opacity: 0, x: -50 },
             {
                 opacity: 1, x: 0, duration: 1, ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".request-section",
-                    start: "top 80%",
-                    end: "bottom 20%",
-                    toggleActions: "play reverse play reverse",
-                    once: false,
-                }
             }
         );
 
@@ -44,13 +35,6 @@ function RequestACource() {
             { opacity: 0, x: 50 },
             {
                 opacity: 1, x: 0, duration: 1, ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".request-section",
-                    start: "top 80%",
-                    end: "bottom 20%",
-                    toggleActions: "play reverse play reverse",
-                    once: false,
-                }
             }
         );
 

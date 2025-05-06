@@ -43,7 +43,7 @@ const HeroSection = () => {
               Degree Pathways
             </button>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-4">
             <button className="btn bg-[#2E2E27] hover:bg-[#2c2c24] hover:shadow-md shadow-[#2e2e27ee] fade-in hover:scale-105 transition-all duration-200"
               onClick={() => {
                 window.location.href = "/try_for_free"

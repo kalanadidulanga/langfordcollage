@@ -54,7 +54,7 @@ export const Footer = () => {
                     <div className='col-span-1 w-full lg:mt-5 mb-5'>
                         <h4 className="font-semibold mb-3 text-[18px] text-[#2e2e27]">About Us,</h4>
                         <span className='text-[15px]'>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, ea. Libero animi omnis sunt tenetur modi! Saepe aut fugiat pariatur repellendus accusamus quam tempore, eum est voluptas illo totam quod!
+                        Langford College offers flexible, affordable online learning pathways for students worldwide, helping them fast-track undergraduate and postgraduate qualifications with full support and interactive tools for professional success.
                         </span>
                     </div>
                 </div>
