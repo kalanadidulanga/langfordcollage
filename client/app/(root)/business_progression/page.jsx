@@ -1,14 +1,14 @@
-@ -1,39 +0,0 @@
 "use client";
 import { Footer } from '@/components/Footer';
 import Header from '@/components/Header';
 import React, { useEffect, useState } from 'react'
 import AboutHero from './about-hero-sections';
-import AboutSecond from './about-second-section';
-import OurTeam from './about-our-team';
-import QualityMonitoring from './quality-monitoring-section';
-import OFQUAL from './OFQUAL-section';
-import PartnerUnivercity from './partner-univercity-section';
+import AboutSecond from '../about/about-second-section';
+import OurTeam from '../about/about-our-team';
+import QualityMonitoring from '../about/quality-monitoring-section';
+import OFQUAL from '../about/OFQUAL-section';
+import PartnerUnivercity from '../about/partner-univercity-section';
+import Body from './body';
 
 function page() {
   const [isClient, setIsClient] = useState(false);
@@ -26,11 +26,7 @@ function page() {
             <AboutHero />
           </div>
         </div>
-        <AboutSecond/>
-        <OurTeam/>
-        <QualityMonitoring/>
-        <OFQUAL/>
-        <PartnerUnivercity/>
+        <Body/>
         <Footer />
       </>
     );

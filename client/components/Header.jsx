@@ -9,6 +9,7 @@ const Header = () => {
   const mobileMenuRef = useRef();
   const courseDropdownRef = useRef();
   const individualDropdownRef = useRef();
+  const progressionDropdownRef = useRef();
   const dropdownTimeoutRef = useRef();
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -54,6 +55,7 @@ const Header = () => {
     if (window.innerWidth < 1024) {
       animateDropdown(courseDropdownRef, activeDropdown === 'course');
       animateDropdown(individualDropdownRef, activeDropdown === 'individual');
+      animateDropdown(progressionDropdownRef, activeDropdown === 'progression');
     }
   }, [activeDropdown]);
 
@@ -137,10 +139,10 @@ const Header = () => {
   };
 
   return (
-    <header className={`w-full p-4 md:p-8 font-sans flex flex-col relative ${activeDropdown === 'course' || isMenuOpen ? 'bg-white' : 'bg-transparent'} ${activeDropdown === 'individual' || isMenuOpen ? 'bg-white' : 'bg-transparent'}`}>
+    <header className={`w-full p-4 md:p-8 font-sans flex flex-col relative ${activeDropdown === 'course' || isMenuOpen ? 'bg-white' : 'bg-transparent'} ${activeDropdown === 'individual' || isMenuOpen ? 'bg-white' : 'bg-transparent'} ${activeDropdown === 'progression' || isMenuOpen ? 'bg-white' : 'bg-transparent'}`}>
       <div className="w-full h-full flex justify-between items-start px-4 md:px-24">
-        {(activeDropdown === 'course' || activeDropdown === 'individual' || isMenuOpen) ? (
-          <nav className='rounded-full w-52 h-28 bg-contain bg-center flex justify-center items-center'>
+        {(activeDropdown === 'course' || activeDropdown === 'individual' || activeDropdown === 'progression' || isMenuOpen) ? (
+          <nav className='rounded-full w-16 h-16 md:w-52 md:h-28 bg-contain bg-center flex justify-center items-center'>
             <img
               src="/LOGO.svg"
               alt="logo"
@@ -149,11 +151,11 @@ const Header = () => {
             />
           </nav>
         ) : (
-          <nav className='rounded-full w-52 h-32 bg-contain bg-center flex justify-center items-center'>
+          <nav className='rounded-full w-16 h-16 md:w-52 md:h-28 bg-contain bg-center flex justify-center items-center'>
             <img
               src="/Icon/LOGO.svg"
               alt="logo"
-              className='w-full h-full p-1 object-cover cursor-pointer object-center'
+              className='w-full h-full p-1 object-contain cursor-pointer object-center'
               onClick={navigateHome}
             />
           </nav>
@@ -201,7 +203,7 @@ const Header = () => {
         </button>
 
         {/* Desktop Navigation Links */}
-        <div className={`hidden lg:flex gap-16 items-center ${activeDropdown === 'course' ? 'text-black' : 'bg-transparent'} ${activeDropdown === 'individual' ? 'text-black' : 'bg-transparent'}`}>
+        <div className={`hidden lg:flex gap-16 items-center ${activeDropdown === 'course' ? 'text-black' : 'bg-transparent'} ${activeDropdown === 'individual' ? 'text-black' : 'bg-transparent'} ${activeDropdown === 'progression' ? 'text-black' : 'bg-transparent'}`}>
           {/* Course Dropdown */}
           <div
             className="relative"
@@ -258,12 +260,35 @@ const Header = () => {
             </button>
           </div>
 
+          <div
+            className="relative"
+            onClick={() => {
+              if (activeDropdown == "progression") {
+                handleMouseLeave('progression')
+              } else {
+                handleMouseEnter('progression')
+              }
+            }}
+          >
+            <button
+              onClick={() => toggleDropdown('progression')}
+              className="hover:underline flex outline-none items-center w-full justify-center hover:opacity-80 transition-opacity duration-200"
+            >
+              University Progression
+              <svg
+                className={`ml-1 w-4 h-4 transition-transform duration-200 ${activeDropdown === 'progression' ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+
           <a href="/about" className="hover:underline hover:opacity-80 transition-opacity duration-200">
             About Us
-          </a>
-
-          <a href="#" className="hover:underline hover:opacity-80 transition-opacity duration-200">
-            University Progression
           </a>
 
           <div className="flex gap-4">
@@ -425,6 +450,46 @@ const Header = () => {
               </div>
             </div>
 
+
+            <div className="border-b border-gray-200 pb-2">
+              <div
+                className="flex justify-between items-center py-2"
+                onClick={() => toggleDropdown('progression')}
+              >
+                <span className="text-lg">University Progression</span>
+                <span className="text-red-600">
+                  <svg
+                    className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'progression' ? 'transform rotate-45' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <div
+                ref={progressionDropdownRef}
+                className="overflow-hidden"
+                style={{ height: 0, opacity: 0 }}
+              >
+                <div className="pl-4 py-2">
+                  <div className="flex flex-col">
+                    <a href="/business_progression" className="block py-1 text-gray-800  hover:pl-4 transition-all duration-200">Business progression courses</a>
+                    <a href="/it_progression" className="block py-1 text-gray-800  hover:pl-4 transition-all duration-200">IT progression courses</a>
+                    <a href="/hospitality_progression" className="block py-1 text-gray-800  hover:pl-4 transition-all duration-200">Hospitality progression courses</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* About Us - Mobile */}
             <div className="border-b border-gray-200 pb-2">
               <a href="/about" className="block py-2 text-lg">About Us</a>
@@ -528,6 +593,22 @@ const Header = () => {
             <a href="/individual/top-up_degree" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Top up degree</a>
             <a href="/individual/blog" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Blog</a>
             <a href="/individual/testimonial" className="block px-4 py-1 text-gray-800 hover:pl-6 transition-all duration-200">Testimonial</a>
+          </div>
+          <div className='w-[20%] h-full'>
+            <div className='main-bg2'></div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="hidden lg:block lg:absolute lg:left-0 lg:w-full border-t border-b border-gray-300 bg-white mt-28 h-[82vh] z-50 capitalize"
+        style={{ display: activeDropdown === 'progression' && window.innerWidth >= 1024 ? 'block' : 'none' }}
+        onMouseEnter={cancelDropdownClose}
+      >
+        <div className='lg:flex lg:flex-row h-full'>
+          <div className='w-[80%] flex flex-col h-full justify-center font-extrabold pl-[10vw] text-2xl'>
+            <a href="/business_progression" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Business progression courses</a>
+            <a href="/it_progression" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">IT progression courses</a>
+            <a href="/hospitality_progression" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Hospitality progression courses</a>
           </div>
           <div className='w-[20%] h-full'>
             <div className='main-bg2'></div>
