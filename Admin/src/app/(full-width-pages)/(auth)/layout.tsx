@@ -22,18 +22,11 @@ export default function AuthLayout({
               <GridShape />
               <div className="flex flex-col items-center max-w-xs">
                 <Link href="/" className="mb-4 flex flex-col justify-center text-center gap-3">
-                  <Image
-                    width={231}
-                    height={48}
-                    src="./images/logo/auth-logo.svg"
+                  <img
+                    src="/images/LOGO.svg"
                     alt="Logo"
-                    className="hidden"
                   />
-                  <span className="text-[30px] text-white">LOGO</span>
                 </Link>
-                <p className="text-center text-gray-400 dark:text-white/60">
-                Online Degrees Without The High Fees
-                </p>
               </div>
             </div>
           </div>
