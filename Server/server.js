@@ -6,7 +6,7 @@ const cors = require("cors");
 const fs = require("fs");
 const nodemailer = require("nodemailer");
 require("dotenv").config();
-const http = require('http');
+const http = require("http");
 
 // const db = require('./db');
 
@@ -128,9 +128,9 @@ app.post("/api/uploadMultiImages/:type", upload.array("files"), (req, res) =>
 // Send Email
 app.post("/api/sendEmail", (req, res) => sendMail(req, res));
 
-server.keepAliveTimeout = 360000;   // ms
-server.headersTimeout = 360000;    // ms
-server.timeout = 360000; 
+server.keepAliveTimeout = 360000; // ms
+server.headersTimeout = 360000; // ms
+server.timeout = 360000;
 
 // listen port
 server.listen(process.env.DB_PORT, () =>
@@ -139,44 +139,30 @@ server.listen(process.env.DB_PORT, () =>
 
 // functions
 function Addadmin(req, res) {
-  const sql = "INSERT INTO `admin_type`(`admin_type`) VALUES(?)";
-  const values = ["Super Admin"];
-
   db.query(sql, values, (err, results) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
 
-    const sql1 = "INSERT INTO `status`(`status`) VALUES(?)";
-    const values1 = ["true"];
+    const sql2 =
+      "INSERT INTO `admin`(`fname`,`lname`,`email`,`password`,`reg_date`) VALUES(?,?,?,?,?)";
+    const values2 = [
+      "Super",
+      "Admin",
+      "admin@langfordcollege.com",
+      "Langford@123",
+      "2025-04-04 13:09:33",
+    ];
 
-    db.query(sql1, values1, (err, results) => {
+    db.query(sql2, values2, (err, results) => {
       if (err) {
         return res.status(500).json({ error: err.message });
       }
-
-      const sql2 =
-        "INSERT INTO `admin`(`fname`,`lname`,`email`,`password`,`active`,`reg_date`,`type`) VALUES(?,?,?,?,?,?,?)";
-      const values2 = [
-        "Super",
-        "Admin",
-        "admin@langford.com",
-        "12345",
-        "1",
-        "2025-04-04 13:09:33",
-        "1",
-      ];
-
-      db.query(sql2, values2, (err, results) => {
-        if (err) {
-          return res.status(500).json({ error: err.message });
-        }
-        res.json({
-          status: true,
-          data: results[0],
-        });
-        return;
+      res.json({
+        status: true,
+        data: results[0],
       });
+      return;
     });
   });
 }
