@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaTiktok, FaInstagram, FaYoutube, FaFacebookF, FaLinkedin} from "react-icons/fa";
+import { FaTiktok, FaInstagram, FaYoutube, FaFacebookF, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
     const FACEBOOK_LIKE = process.env.NEXT_PUBLIC_FB_LINK;
@@ -14,16 +14,16 @@ export const Footer = () => {
                 <div className="flex-grow w-full grid grid-cols-1 md:grid-cols-4 gap-8 px-10 lg:px-30 py-30">
                     <div className="col-span-1 gap-3 flex flex-col">
                         <div className='w-[50%] lg:w-[35%] h-[20vh]'>
-                            <img src="/Logo.svg" alt="Langford Collage" className="w-full h-full"/>
+                            <img src="/Logo.svg" alt="Langford Collage" className="w-full h-full" />
                         </div>
-                        <p className="text-[15px] mt-3 lg:mt-0">128 City Road, <br/> London, <br/> United
-                            Kingdom, <br/> EC1V 2NX</p>
+                        <p className="text-[15px] mt-3 lg:mt-0">128 City Road, <br /> London, <br /> United
+                            Kingdom, <br /> EC1V 2NX</p>
                         <div className="flex mt-4 space-x-7">
-                            <a href={`${FACEBOOK_LIKE}`} target='_blank'><FaFacebookF size={25}/></a>
-                            <a href={`${INSTAGRAM_LINK}`} target='_blank'><FaInstagram size={25}/></a>
-                            <a href={`${TIKTOK_LINK}`} target='_blank'><FaTiktok size={25}/></a>
-                            <a href={`${YOUTUBE_LINK}`} target='_blank'><FaYoutube size={25}/></a>
-                            <a href={`${LINKDIN_LINK}`} target='_blank'><FaLinkedin size={25}/></a>
+                            <a href={`${FACEBOOK_LIKE}`} target='_blank'><FaFacebookF size={25} /></a>
+                            <a href={`${INSTAGRAM_LINK}`} target='_blank'><FaInstagram size={25} /></a>
+                            <a href={`${TIKTOK_LINK}`} target='_blank'><FaTiktok size={25} /></a>
+                            <a href={`${YOUTUBE_LINK}`} target='_blank'><FaYoutube size={25} /></a>
+                            <a href={`${LINKDIN_LINK}`} target='_blank'><FaLinkedin size={25} /></a>
                         </div>
                     </div>
 
@@ -59,7 +59,7 @@ export const Footer = () => {
                     </div>
                 </div>
                 <div className="bg-black text-white text-center py-4 text-sm mt-auto">
-                    <span>© 2025 Langford College | All Rights Reserved & Developed by Kavishka Chathumal</span>
+                    <span>Copyright © 2024 KDsolution All Rights Reserved.</span>
                 </div>
             </footer>
 
