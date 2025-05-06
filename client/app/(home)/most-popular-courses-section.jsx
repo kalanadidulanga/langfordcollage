@@ -95,7 +95,6 @@ function MostPopular() {
                 </div>
                 <div className="w-full h-full p-2">
                   <div className="border-b-2 h-[70%] border-gray-400 relative">
-                    <span>More </span>
                   </div>
                 </div>
               </div>
