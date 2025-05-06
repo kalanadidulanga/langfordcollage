@@ -142,7 +142,7 @@ const Header = () => {
     <header className={`w-full p-4 md:p-8 font-sans flex flex-col relative ${activeDropdown === 'course' || isMenuOpen ? 'bg-white' : 'bg-transparent'} ${activeDropdown === 'individual' || isMenuOpen ? 'bg-white' : 'bg-transparent'} ${activeDropdown === 'progression' || isMenuOpen ? 'bg-white' : 'bg-transparent'}`}>
       <div className="w-full h-full flex justify-between items-start px-4 md:px-24">
         {(activeDropdown === 'course' || activeDropdown === 'individual' || activeDropdown === 'progression' || isMenuOpen) ? (
-          <nav className='rounded-full w-16 h-16 md:w-52 md:h-28 bg-contain bg-center flex justify-center items-center'>
+          <nav className='rounded-full w-16 h-16 md:w-28 md:h-28 bg-contain bg-center flex justify-center items-center'>
             <img
               src="/LOGO.svg"
               alt="logo"
@@ -151,7 +151,7 @@ const Header = () => {
             />
           </nav>
         ) : (
-          <nav className='rounded-full w-16 h-16 md:w-52 md:h-28 bg-contain bg-center flex justify-center items-center'>
+          <nav className='rounded-full w-16 h-16 md:w-28 md:h-28 bg-contain bg-center flex justify-center items-center'>
             <img
               src="/Icon/LOGO.svg"
               alt="logo"
