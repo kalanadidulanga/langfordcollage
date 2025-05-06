@@ -27,7 +27,7 @@ export default function UserDropdown() {
     const email = localStorage?.getItem("admin_email");
 
     if (!email) {
-      window.location.replace("/");
+      window.location.replace("/signin");
       return;
     }
 
