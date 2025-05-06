@@ -59,7 +59,7 @@ export const Footer = () => {
                     </div>
                 </div>
                 <div className="bg-black text-white text-center py-4 text-sm mt-auto">
-                    <span>Copyright © 2024 KDsolution All Rights Reserved.</span>
+                    <span>Copyright © {new Date().getFullYear()} All Rights Reserved &nbsp;|&nbsp; Developed by KayD Solutions</span>
                 </div>
             </footer>
 
