@@ -27,14 +27,14 @@ const HeroSection = () => {
         </span>
         <div className="w-full flex flex-col gap-4">
           <div className="flex gap-4">
-            <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] fade-in hover:scale-105 transition-all duration-200"
+            {/* <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] fade-in hover:scale-105 transition-all duration-200"
               onClick={() => {
                 window.scrollTo({ top: 700, behavior: "smooth" });
               }}
 
             >
               Explore Courses
-            </button>
+            </button> */}
             <button className="btn bg-[#2E2E27] hover:bg-[#2c2c24] hover:shadow-md shadow-[#2e2e27ee] fade-in hover:scale-105 transition-all duration-200"
               onClick={() => {
                 window.location.href = "/individual/top-up_degree"

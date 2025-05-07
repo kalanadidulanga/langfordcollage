@@ -44,14 +44,14 @@ function HowTopupDegreeWork() {
     <>
       <div className='w-full font-sans bg-white pt-20 text-black px-[9vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 howtopup-section capitalize'>
         <div className='flex items-start justify-start w-full lg:w-[60%] howtopup-left'>
-          <img src="/Images/degree.png" alt="" className='w-full h-[400px] md:h-[60vh] object-cover' />
+          <img src="/Images/degree.png" alt="" className='w-full h-[400px] md:h-[70vh] object-cover' />
         </div>
         <div className='w-full lg:h-[60vh] gap-5 lg:gap-0 flex items-start justify-between text-[6vw] lg:text-[3.5vw] font-medium flex-col howtopup-right'>
           <span className="font-sans font-bold">
             How top-up <br /> degrees work.
           </span>
           <span className="font-mono font-bold">
-            Complete an Langford College <br /> course and university <br /> top up from £6,000
+            Complete A Langford College <br /> course and university <br /> top up from £6,000
           </span>
         </div>
       </div>

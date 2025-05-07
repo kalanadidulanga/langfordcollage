@@ -67,7 +67,7 @@ function page({ params }) {
           </div>
           <CourseBody data={course} />
           <CourseDetailBody data={course} />
-          <WhyEnroll />
+          {/* <WhyEnroll /> */}
           <RequestACource />
           <div className='bg-white p-5'></div>
           <Footer />
