@@ -127,7 +127,7 @@ function Support() {
                     {/* section 7 */}
                     <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection7(!isclickSection7)}>
                         <span>
-                            Does my previous study and experience count towards an OBS course?
+                            Does my previous study and experience count towards an Langford College course?
                         </span>
                         <img src="/Icon/arrow.png" alt="arrow" className={`w-6 h-7 cursor-pointer ${isclickSection7 ? `duration-100 rotate-0` : `-rotate-90 duration-100`}`} onClick={() => setclickSection7(!isclickSection7)} />
                     </div>

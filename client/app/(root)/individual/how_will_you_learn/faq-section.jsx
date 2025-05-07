@@ -44,7 +44,7 @@ function FAQ() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
                                 <span>
-                                    You will need to have an IELTS score of Level 5.5 or above on completion of the OBS course. You can study an English course alongside the OBS course. At Level 4/5, you will require a full secondary education to be eligible to enrol onto the course, and universities will require a minimum age before embarking on the university top-up programme. At level 7, you will require 5 years of managerial experience if you do not have a BA degree. This may vary for various university partners. However, we will look at every application individually and some exceptions may be made.
+                                    You will need to have an IELTS score of Level 5.5 or above on completion of the Langford College course. You can study an English course alongside the Langford College course. At Level 4/5, you will require a full secondary education to be eligible to enrol onto the course, and universities will require a minimum age before embarking on the university top-up programme. At level 7, you will require 5 years of managerial experience if you do not have a BA degree. This may vary for various university partners. However, we will look at every application individually and some exceptions may be made.
                                 </span>
                             </div>
                         </>

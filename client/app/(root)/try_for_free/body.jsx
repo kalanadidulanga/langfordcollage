@@ -45,7 +45,7 @@ function TryForFree() {
             <div className='w-full lg:pb-20 pt-10 lg:pt-20 pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 learn-anyway-section capitalize'>
                 <div className='w-full flex items-start flex-col lg:h-full learn-anyway-left'>
                     <span className='text-[6vw] lg:text-[3vw] font-bold font-sans capitalize'>
-                        Try the OBS experience
+                        Try the Langford College experience
                     </span>
                     <span className='text-[6vw] lg:text-[3vw] font-bold font-sans capitalize'>
                         for FREE!
@@ -53,7 +53,7 @@ function TryForFree() {
                     <div className='w-full bg-white pt-10 pb-8 text-[#2E2E27] flex flex-col'>
                         <div className='w-full flex flex-col gap-3'>
                             <span className='text-[18px] font-extralight'>
-                                Curious as to what an online distance learning course is like? You can try our short module to introduce you to the OBS online learning experience.
+                                Curious as to what an online distance learning course is like? You can try our short module to introduce you to the Langford College online learning experience.
                             </span>
                             <span className='text-[18px] font-extralight'>
                                 This module provides all the elements of a full course in a condensed form with interactive elements to increase engagement and categorised content for bite-sized learning.

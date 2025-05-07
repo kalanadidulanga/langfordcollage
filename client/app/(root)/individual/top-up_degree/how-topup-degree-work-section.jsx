@@ -51,7 +51,7 @@ function HowTopupDegreeWork() {
             How top-up <br /> degrees work.
           </span>
           <span className="font-mono font-bold">
-            Complete an OBS <br /> course and university <br /> top up from £6,000
+            Complete an Langford College <br /> course and university <br /> top up from £6,000
           </span>
         </div>
       </div>

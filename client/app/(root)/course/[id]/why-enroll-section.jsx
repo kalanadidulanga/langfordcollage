@@ -31,7 +31,7 @@ function WhyEnroll() {
                             <div className='w-full flex flex-col bg-[#F4C023]'>
                                 <img src="/Images/why-enroll-3.svg" alt="courses_image" className='w-full h-[250px] object-cover' />
                                 <span className='text-[16px] text-black  px-3 py-2 font-medium'>
-                                    Over 15,000 students are currently enrolled at OBS
+                                    Over 15,000 students are currently enrolled at 
                                 </span>
                             </div>
                             <div className='w-full flex flex-col bg-[#F4C023]'>

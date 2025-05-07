@@ -305,7 +305,7 @@ const Header = () => {
             </button>
             <button className="btn bg-[#2E2E27] text-white px-4 py-2 hover:bg-[#2c2c24] hover:shadow-md shadow-[#2e2e27ee] hover:scale-105 transition-all duration-200"
               onClick={() => {
-                window.open("https://learn.onlinebusinessschool.com/customer/account/login/", "_blank");
+                window.open("https://langford.classportal.online/customer/account/login", "_blank");
               }}
             >
               Log In
