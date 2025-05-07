@@ -144,7 +144,7 @@ const Header = () => {
         {(activeDropdown === 'course' || activeDropdown === 'individual' || activeDropdown === 'progression' || isMenuOpen) ? (
           <nav className='rounded-full w-16 h-16 md:w-28 md:h-28 bg-contain bg-center flex justify-center items-center'>
             <img
-              src="/LOGO.svg"
+              src="/Logo.svg"
               alt="logo"
               className='w-full h-full p-1 object-contain cursor-pointer object-center'
               onClick={navigateHome}
