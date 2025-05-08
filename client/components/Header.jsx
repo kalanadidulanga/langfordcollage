@@ -232,6 +232,33 @@ const Header = () => {
             </button>
           </div>
 
+          <div
+            className="relative"
+            onClick={() => {
+              if (activeDropdown == "progression") {
+                handleMouseLeave('progression')
+              } else {
+                handleMouseEnter('progression')
+              }
+            }}
+          >
+            <button
+              onClick={() => toggleDropdown('progression')}
+              className="hover:underline flex outline-none items-center w-full justify-center hover:opacity-80 transition-opacity duration-200"
+            >
+              University Progression
+              <svg
+                className={`ml-1 w-4 h-4 transition-transform duration-200 ${activeDropdown === 'progression' ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+
           {/* Individuals Dropdown */}
           <div
             className="relative"
@@ -260,32 +287,7 @@ const Header = () => {
             </button>
           </div>
 
-          <div
-            className="relative"
-            onClick={() => {
-              if (activeDropdown == "progression") {
-                handleMouseLeave('progression')
-              } else {
-                handleMouseEnter('progression')
-              }
-            }}
-          >
-            <button
-              onClick={() => toggleDropdown('progression')}
-              className="hover:underline flex outline-none items-center w-full justify-center hover:opacity-80 transition-opacity duration-200"
-            >
-              University Progression
-              <svg
-                className={`ml-1 w-4 h-4 transition-transform duration-200 ${activeDropdown === 'progression' ? 'rotate-180' : ''}`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-          </div>
+          
 
           <a href="/about" className="hover:underline hover:opacity-80 transition-opacity duration-200">
             About Us

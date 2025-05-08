@@ -42,10 +42,10 @@ export default function Home() {
         <WhatsNew />
         {/* <AffordableStudy /> */}
         <SocialLearning />
+        <MostPopular />
         <WillLearn />
         <Support />
         <LearnAnywhere />
-        <MostPopular />
         <LeatestTestimonial />
         <RequestACource />
         <LeatestArticle />

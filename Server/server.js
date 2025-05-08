@@ -1,17 +1,17 @@
 const express = require("express");
-const mysql = require("mysql2");
+// const mysql = require("mysql2");
 const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
 const fs = require("fs");
 const nodemailer = require("nodemailer");
 require("dotenv").config();
-const http = require("http");
+// const http = require("http");
 
-// const db = require('./db');
+const db = require("./db");
 
 const app = express();
-const server = http.createServer(app);
+// const server = http.createServer(app);
 
 app.use(cors());
 app.use(express.json());
@@ -23,19 +23,28 @@ app.use(
   express.static(path.join(__dirname, "uploads/course"))
 );
 
-const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
+// const db = mysql.createConnection({
+//   host: process.env.DB_HOST,
+//   user: process.env.DB_USER,
+//   password: process.env.DB_PASS,
+//   database: process.env.DB_NAME,
+// });
+
+// db.connect((err) => {
+//   if (err) {
+//     console.error("Database connection failed:", err);
+//   } else {
+//     console.log("Connected to MySQL");
+//   }
+// });
+
+db.on("connection", (connection) => {
+  console.log("MySQL Pool Connection ID:", connection.threadId);
+  connection.query("SET SESSION wait_timeout = 28800");
 });
 
-db.connect((err) => {
-  if (err) {
-    console.error("Database connection failed:", err);
-  } else {
-    console.log("Connected to MySQL");
-  }
+db.on("error", (err) => {
+  console.error("MySQL Pool Error:", err);
 });
 
 // Function to get the upload path dynamically
@@ -128,17 +137,17 @@ app.post("/api/uploadMultiImages/:type", upload.array("files"), (req, res) =>
 // Send Email
 app.post("/api/sendEmail", (req, res) => sendMail(req, res));
 
-server.keepAliveTimeout = 360000; // ms
-server.headersTimeout = 360000; // ms
-server.timeout = 360000;
+// server.keepAliveTimeout = 360000; // ms
+// server.headersTimeout = 360000; // ms
+// server.timeout = 360000;
 
 // listen port
-server.listen(process.env.DB_PORT, () =>
+app.listen(process.env.DB_PORT, () =>
   console.log("Server is running on port 5000")
 );
 
 // functions
-function Addadmin(req, res) {
+async function Addadmin(req, res) {
   const sql2 =
     "INSERT INTO `admin`(`fname`,`lname`,`email`,`password`,`reg_date`) VALUES(?,?,?,?,?)";
   const values2 = [
@@ -149,18 +158,17 @@ function Addadmin(req, res) {
     "2025-04-04 13:09:33",
   ];
 
-  db.query(sql2, values2, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
+  try {
+    const [res] = await db.query(sql2, values2);
     res.json({
       status: true,
       data: results[0],
     });
-    return;
-  });
+  } catch (error) {
+    return res.status(500).json({ error: err.message });
+  }
 }
-function signin(req, res) {
+async function signin(req, res) {
   const { email, password } = req.body;
 
   if (!email) {
@@ -176,27 +184,25 @@ function signin(req, res) {
   const sql = "SELECT * FROM `admin` WHERE email = ? AND password = ?";
   const values = [email, password];
 
-  db.query(sql, values, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-
-    if (results.length > 0) {
+  try {
+    const [res] = await db.query(sql, values);
+    if (res.length > 0) {
       res.json({
         status: true,
         data: results[0],
       });
-      return;
     } else {
-      return res.status(400).json({
+      res.status(400).json({
         error: "Invalied Email or Password.",
       });
     }
-  });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 }
 
 // add
-function addNewCourse(req, res) {
+async function addNewCourse(req, res) {
   const {
     course_name,
     course_start_date,
@@ -219,10 +225,9 @@ function addNewCourse(req, res) {
 
   const slugbluiddql = "SELECT id FROM `course` ORDER BY id DESC LIMIT 1";
 
-  db.query(slugbluiddql, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
+  try {
+    const [results] = await db.query(slugbluiddql);
+
     const slug = results[0]?.id
       ? `COURSE_${course_name}_${results[0]?.id + 1}`
       : `COURSE_${course_name}_${1}`;
@@ -230,16 +235,13 @@ function addNewCourse(req, res) {
     const existSql = "SELECT * FROM `course` WHERE `slug` = ?";
     const existValues = [slug];
 
-    db.query(existSql, existValues, (err, results) => {
-      if (err) {
-        return res.status(500).json({ error: err.message });
-      }
-      if (results.length > 0) {
-        return res.status(400).json({
+    try {
+      const [results1] = db.query(existSql, existValues);
+      if (results1.length > 0) {
+        res.status(400).json({
           error: "Slug Already Exists, Please Try Again.",
         });
       }
-
       const sql =
         "INSERT INTO `course`(`course_name`, `course_start_date`, `course_location`, `study_pace`, `qualification`, `assessment`, `includesData`, `how_it_works`, `course_module`, `entry_requirements`, `cost_and_payment`, `career_progression`, `university_options`, `image_path`,`course_level`,`annual_payment`,`monthly_payment`,`listingPriority`,`slug`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
       const values = [
@@ -264,109 +266,90 @@ function addNewCourse(req, res) {
         slug,
       ];
 
-      db.query(sql, values, (err, results) => {
-        if (err) {
-          return res.status(500).json({ error: err.message });
-        }
+      try {
+        const [results2] = await db.query(sql, values);
         res.status(201).json({
           status: true,
           message: "Course added successfully",
-          courseId: results.insertId,
+          courseId: results2.insertId,
         });
-        return;
-      });
-    });
-  });
-}
-function addNewBlog(req, res) {
-  const { title, description, image_path } = req.body;
-
-  const slugbluiddql = "SELECT id FROM blog ORDER BY id DESC LIMIT 1";
-
-  db.query(slugbluiddql, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    const slug = results[0]?.id
-      ? `BLOG_${title}_${results[0]?.id + 1}`
-      : `BLOG_${title}_${1}`;
-
-    const existSql = "SELECT * FROM `blog` WHERE `slug` = ?";
-    const existValues = [slug];
-
-    db.query(existSql, existValues, (err, results) => {
-      if (err) {
+      } catch (error) {
         return res.status(500).json({ error: err.message });
       }
-      if (results.length > 0) {
-        return res.status(400).json({
-          error: "Slug Already Exists, Please Try Again.",
-        });
-      }
-
-      const sql =
-        "INSERT INTO `blog`(`title`, `description`, `image_path`, `slug`) VALUES (?,?,?,?)";
-      const values = [title, description, image_path, slug];
-
-      db.query(sql, values, (err, results) => {
-        if (err) {
-          return res.status(500).json({ error: err.message });
-        }
-        res.status(201).json({
-          status: true,
-          message: "Blog added successfully",
-          blogId: results.insertId,
-        });
-        return;
-      });
-    });
-  });
-}
-function addNewTestimonial(req, res) {
-  const { title, description, image_path } = req.body;
-
-  const slugbluiddql = "SELECT id FROM testimonial ORDER BY id DESC LIMIT 1";
-
-  db.query(slugbluiddql, (err, results) => {
-    if (err) {
+    } catch (err) {
       return res.status(500).json({ error: err.message });
     }
-    const slug = results[0]?.id
-      ? `TESTIMONIAL_${title}_${results[0]?.id + 1}`
-      : `TESTIMONIAL_${title}_${1}`;
-
-    const existSql = "SELECT * FROM `testimonial` WHERE `slug` = ?";
-    const existValues = [slug];
-
-    db.query(existSql, existValues, (err, results) => {
-      if (err) {
-        return res.status(500).json({ error: err.message });
-      }
-      if (results.length > 0) {
-        return res.status(400).json({
-          error: "Slug Already Exists, Please Try Again.",
-        });
-      }
-
-      const sql =
-        "INSERT INTO `testimonial`(`title`, `description`, `image_path`, `slug`) VALUES (?,?,?,?)";
-      const values = [title, description, image_path, slug];
-
-      db.query(sql, values, (err, results) => {
-        if (err) {
-          return res.status(500).json({ error: err.message });
-        }
-        res.status(201).json({
-          status: true,
-          message: "Testimonial added successfully",
-          testimonialId: results.insertId,
-        });
-        return;
-      });
-    });
-  });
+  } catch (err) {
+    return res.status(500).json({ error: err.message });
+  }
 }
-function enrollNow(req, res) {
+async function addNewBlog(req, res) {
+  const { title, description, image_path } = req.body;
+
+  try {
+    const [results] = await db.query("SELECT id FROM blog ORDER BY id DESC LIMIT 1");
+    const slug = results[0]?.id
+      ? `BLOG_${title}_${results[0].id + 1}`
+      : `BLOG_${title}_1`;
+
+    const [exists] = await db.query("SELECT * FROM blog WHERE slug = ?", [slug]);
+    if (exists.length > 0) {
+      return res.status(400).json({ error: "Slug Already Exists, Please Try Again." });
+    }
+
+    const sql = `
+      INSERT INTO blog (title, description, image_path, slug)
+      VALUES (?, ?, ?, ?)
+    `;
+    const values = [title, description, image_path, slug];
+
+    const [insertResult] = await db.query(sql, values);
+
+    res.status(201).json({
+      status: true,
+      message: "Blog added successfully",
+      blogId: insertResult.insertId
+    });
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database error" });
+  }
+}
+async function addNewTestimonial(req, res) {
+  const { title, description, image_path } = req.body;
+
+  try {
+    const [results] = await db.query("SELECT id FROM testimonial ORDER BY id DESC LIMIT 1");
+    const slug = results[0]?.id
+      ? `TESTIMONIAL_${title}_${results[0].id + 1}`
+      : `TESTIMONIAL_${title}_1`;
+
+    const [exists] = await db.query("SELECT * FROM testimonial WHERE slug = ?", [slug]);
+    if (exists.length > 0) {
+      return res.status(400).json({ error: "Slug Already Exists, Please Try Again." });
+    }
+
+    const sql = `
+      INSERT INTO testimonial (title, description, image_path, slug)
+      VALUES (?, ?, ?, ?)
+    `;
+    const values = [title, description, image_path, slug];
+
+    const [insertResult] = await db.query(sql, values);
+
+    res.status(201).json({
+      status: true,
+      message: "Testimonial added successfully",
+      testimonialId: insertResult.insertId
+    });
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database error" });
+  }
+}
+async function enrollNow(req, res) {
   const {
     first_name,
     last_name,
@@ -376,366 +359,308 @@ function enrollNow(req, res) {
     course_level,
     study_qualification,
     job_title,
-    payment_option,
+    payment_option
   } = req.body;
 
-  const sql =
-    "INSERT INTO `course_enroll_request`(`fname` , `lname` , `email` , `phone` , `course` , `course_level` , `study_qualification` , `job_title` , `payment_option`) VALUES (?,?,?,?,?,?,?,?,?)";
+  const sql = `
+    INSERT INTO course_enroll_request (
+      fname, lname, email, phone, course, course_level, study_qualification, job_title, payment_option
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+  `;
   const values = [
-    first_name,
-    last_name,
-    email,
-    phone,
-    course,
-    course_level,
-    study_qualification,
-    job_title,
-    payment_option,
+    first_name, last_name, email, phone, course, course_level,
+    study_qualification, job_title, payment_option
   ];
 
-  db.query(sql, values, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
+  try {
+    const [result] = await db.query(sql, values);
     res.status(201).json({
       status: true,
       message: "Enroll request sent successfully",
-      courseId: results.insertId,
+      courseId: result.insertId
     });
-    return;
-  });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database error" });
+  }
 }
-function acceptEnroll(req, res) {
+async function acceptEnroll(req, res) {
   const {
-    id,
-    fname,
-    lname,
-    email,
-    phone,
-    course,
-    course_level,
-    studyQualification,
-    jobTitle,
-    paymentOption,
+    id, fname, lname, email, phone, course, course_level,
+    studyQualification, jobTitle, paymentOption
   } = req.body;
 
-  const sql =
-    "INSERT INTO `enrolled_students`(`fname` , `lname` , `email` , `phone` ,`course_level` , `course` ,  `study_qualification` , `job_title` , `payment_option` , status) VALUES (?,?,?,?,?,?,?,?,?,?)";
+  const sql = `
+    INSERT INTO enrolled_students (
+      fname, lname, email, phone, course_level, course,
+      study_qualification, job_title, payment_option, status
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  `;
   const values = [
-    fname,
-    lname,
-    email,
-    phone,
-    course_level,
-    course,
-    studyQualification,
-    jobTitle,
-    paymentOption,
-    "true",
+    fname, lname, email, phone, course_level, course,
+    studyQualification, jobTitle, paymentOption, "true"
   ];
 
-  db.query(sql, values, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-
-    db.query(
-      "DELETE FROM `course_enroll_request` WHERE `id` = ?",
-      [id],
-      (err) => {
-        if (err) {
-          return res.status(500).json({ error: err.message });
-        }
-      }
-    );
+  try {
+    const [result] = await db.query(sql, values);
+    await db.query("DELETE FROM course_enroll_request WHERE id = ?", [id]);
 
     res.status(201).json({
       status: true,
       message: "Enrolled Successfully",
-      enroledId: results.insertId,
+      enroledId: result.insertId
     });
-    return;
-  });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database error" });
+  }
 }
 
 // get
-function GetSearchCourse(req, res) {
+async function GetSearchCourse(req, res) {
   const { name } = req.query;
+  if (!name) {
+    return res.status(400).json({ error: "Course Name is Required." });
+  }
 
-  const sql = "SELECT * FROM `course` WHERE course_name LIKE ?";
-  const values = [];
+  const sql = "SELECT * FROM course WHERE course_name LIKE ?";
+  const value = [`%${name}%`];
 
-  if (name) {
-    values.push(`${name}%`);
-
-    db.query(sql, values, (err, results) => {
-      if (err) {
-        return res.status(500).json({ error: err.message });
-      }
-      if (results.length > 0) {
-        res.json({
-          status: true,
-          data: results,
-        });
-      } else {
-        return res.status(400).json({
-          error: "Course Not Found.",
-        });
-      }
-    });
-  } else {
-    return res.status(400).json({
-      error: "Course Name is Required.",
-    });
+  try {
+    const [results] = await db.query(sql, value);
+    if (results.length === 0) {
+      return res.status(400).json({ error: "Course Not Found." });
+    }
+    res.json({ status: true, data: results });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database error" });
   }
 }
-function getDashboard(req, res) {
-  const sql = "SELECT COUNT(*) AS total_count FROM `course_enroll_request`";
-  const sql1 = "SELECT COUNT(*) AS total_count FROM `enrolled_students`";
-  const sql2 = "SELECT COUNT(*) AS total_count FROM `blog`";
-  const sql3 = "SELECT COUNT(*) AS total_count FROM `testimonial`";
-  const sql4 = "SELECT COUNT(*) AS total_count FROM `course`";
+async function getDashboard(req, res) {
+  try {
+    const [[{ total_count: total_enroll_requests }]] = await db.query("SELECT COUNT(*) AS total_count FROM course_enroll_request");
+    const [[{ total_count: total_enrolled_students }]] = await db.query("SELECT COUNT(*) AS total_count FROM enrolled_students");
+    const [[{ total_count: total_blogs }]] = await db.query("SELECT COUNT(*) AS total_count FROM blog");
+    const [[{ total_count: total_testimonials }]] = await db.query("SELECT COUNT(*) AS total_count FROM testimonial");
+    const [[{ total_count: total_courses }]] = await db.query("SELECT COUNT(*) AS total_count FROM course");
 
-  db.query(sql, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    db.query(sql1, (err, results1) => {
-      if (err) {
-        return res.status(500).json({ error: err.message });
+    res.json({
+      status: true,
+      data: {
+        total_enroll_requests,
+        total_enrolled_students,
+        total_blogs,
+        total_testimonials,
+        total_courses
       }
-      db.query(sql2, (err, results2) => {
-        if (err) {
-          return res.status(500).json({ error: err.message });
-        }
-        db.query(sql3, (err, results3) => {
-          if (err) {
-            return res.status(500).json({ error: err.message });
-          }
-          db.query(sql4, (err, results4) => {
-            if (err) {
-              return res.status(500).json({ error: err.message });
-            }
-            res.status(201).json({
-              status: true,
-              data: {
-                total_enroll_requests: results[0].total_count,
-                total_enrolled_students: results1[0].total_count,
-                total_blogs: results2[0].total_count,
-                total_testimonials: results3[0].total_count,
-                total_courses: results4[0].total_count,
-              },
-            });
-            return;
-          });
-        });
-      });
     });
-  });
+  } catch (err) {
+    res.status(500).json({ error: "Database error" });
+  }
 }
-function getProfile(req, res) {
+async function getProfile(req, res) {
   const { email } = req.query;
+
+  if (!email) {
+    return res.status(400).json({ error: "Email is required." });
+  }
+
   const sql = "SELECT * FROM `admin` WHERE `email` = ?";
   const values = [email];
-  db.query(sql, values, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
+
+  try {
+    const [results] = await db.query(sql, values);
+
+    if (results.length === 0) {
+      return res.status(404).json({ error: "Admin not found." });
     }
-    res.status(201).json({
+
+    res.status(200).json({
       status: true,
       data: results[0],
     });
-    return;
-  });
+  } catch (err) {
+    console.error("Database error:", err);
+    res.status(500).json({ error: "Internal server error." });
+  }
 }
-function getAllCourse(req, res) {
-  const sql = "SELECT * FROM `course`";
-
-  db.query(sql, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.status(201).json({
+async function getAllCourse(req, res) {
+  try {
+    const [results] = await db.query("SELECT * FROM `course`");
+    res.status(200).json({
       status: true,
       data: results,
     });
-    return;
-  });
+  } catch (err) {
+    console.error("Database error:", err);
+    res.status(500).json({ error: "Failed to fetch courses." });
+  }
 }
-function getAllBlogs(req, res) {
-  const sql = "SELECT * FROM `blog`";
-
-  db.query(sql, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.status(201).json({
+async function getAllBlogs(req, res) {
+  try {
+    const [results] = await db.query("SELECT * FROM `blog`");
+    res.status(200).json({
       status: true,
       data: results,
     });
-    return;
-  });
+  } catch (err) {
+    console.error("Database error:", err);
+    res.status(500).json({ error: "Failed to fetch blogs." });
+  }
 }
-function getAllTestimonials(req, res) {
-  const sql = "SELECT * FROM `testimonial`";
-
-  db.query(sql, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.status(201).json({
+async function getAllTestimonials(req, res) {
+  try {
+    const [results] = await db.query("SELECT * FROM `testimonial`");
+    res.status(200).json({
       status: true,
       data: results,
     });
-    return;
-  });
+  } catch (err) {
+    console.error("Database error:", err);
+    res.status(500).json({ error: "Failed to fetch testimonials." });
+  }
 }
-function GetCourse(req, res) {
+async function GetCourse(req, res) {
   const { slug } = req.query;
+
+  if (!slug) {
+    return res.status(400).json({ error: "Something went wrong." });
+  }
 
   const sql = "SELECT * FROM `course` WHERE `slug` = ?";
   const values = [slug];
 
-  if (slug) {
-    db.query(sql, values, (err, results) => {
-      if (err) {
-        return res.status(500).json({ error: err.message });
-      }
-      if (results.length > 0) {
-        res.json({
-          status: true,
-          data: results[0],
-        });
-        return;
-      } else {
-        return res.status(400).json({
-          error: "Course Not Found.",
-        });
-      }
-    });
-  } else {
-    return res.status(400).json({
-      error: "Somthing went wrong.",
-    });
+  try {
+    const [results] = await db.query(sql, values);
+
+    if (results.length > 0) {
+      return res.json({
+        status: true,
+        data: results[0],
+      });
+    } else {
+      return res.status(404).json({
+        error: "Course Not Found.",
+      });
+    }
+  } catch (err) {
+    console.error("Database error:", err);
+    return res.status(500).json({ error: "Internal server error." });
   }
 }
-function GetBlog(req, res) {
+async function GetBlog(req, res) {
   const { slug } = req.query;
+
+  if (!slug) {
+    return res.status(400).json({ error: "Something went wrong." });
+  }
 
   const sql = "SELECT * FROM `blog` WHERE `slug` = ?";
   const values = [slug];
 
-  if (slug) {
-    db.query(sql, values, (err, results) => {
-      if (err) {
-        return res.status(500).json({ error: err.message });
-      }
-      if (results.length > 0) {
-        res.json({
-          status: true,
-          data: results[0],
-        });
-        return;
-      } else {
-        return res.status(400).json({
-          error: "Blog Not Found.",
-        });
-      }
-    });
-  } else {
-    return res.status(400).json({
-      error: "Somthing went wrong.",
-    });
+  try {
+    const [results] = await db.query(sql, values);
+
+    if (results.length > 0) {
+      return res.json({
+        status: true,
+        data: results[0],
+      });
+    } else {
+      return res.status(404).json({
+        error: "Blog Not Found.",
+      });
+    }
+  } catch (err) {
+    console.error("Database error:", err);
+    return res.status(500).json({ error: "Internal server error." });
   }
 }
-function getAllEnrolls(req, res) {
-  const sql = "SELECT * FROM `course_enroll_request`";
-  db.query(sql, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.status(201).json({
+async function getAllEnrolls(req, res) {
+  try {
+    const [results] = await db.query("SELECT * FROM `course_enroll_request`");
+    res.status(200).json({
       status: true,
       data: results,
     });
-    return;
-  });
+  } catch (err) {
+    console.error("Database error:", err);
+    res.status(500).json({ error: "Failed to fetch enroll requests." });
+  }
 }
-function getAllEnrollsStudents(req, res) {
-  const sql = "SELECT * FROM `enrolled_students`";
-  db.query(sql, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.status(201).json({
+async function getAllEnrollsStudents(req, res) {
+  try {
+    const [results] = await db.query("SELECT * FROM `enrolled_students`");
+    res.status(200).json({
       status: true,
       data: results,
     });
-    return;
-  });
+  } catch (err) {
+    console.error("Database error:", err);
+    res.status(500).json({ error: "Failed to fetch enrolled students." });
+  }
 }
 
-function GetTestimonial(req, res) {
+async function GetTestimonial(req, res) {
   const { slug } = req.query;
+
+  if (!slug) {
+    return res.status(400).json({ error: "Something went wrong." });
+  }
 
   const sql = "SELECT * FROM `testimonial` WHERE `slug` = ?";
   const values = [slug];
 
-  if (slug) {
-    db.query(sql, values, (err, results) => {
-      if (err) {
-        return res.status(500).json({ error: err.message });
-      }
-      if (results.length > 0) {
-        res.json({
-          status: true,
-          data: results[0],
-        });
-        return;
-      } else {
-        return res.status(400).json({
-          error: "Testimonial Not Found.",
-        });
-      }
-    });
-  } else {
-    return res.status(400).json({
-      error: "Somthing went wrong.",
-    });
+  try {
+    const [results] = await db.query(sql, values);
+
+    if (results.length > 0) {
+      return res.json({
+        status: true,
+        data: results[0],
+      });
+    } else {
+      return res.status(404).json({
+        error: "Testimonial Not Found.",
+      });
+    }
+  } catch (err) {
+    console.error("Database error:", err);
+    return res.status(500).json({ error: "Internal server error." });
   }
 }
-function GetCourseByLevel(req, res) {
+async function GetCourseByLevel(req, res) {
   const { course_level } = req.body;
+
+  if (!course_level) {
+    return res.status(400).json({ error: "Something went wrong." });
+  }
 
   const sql = "SELECT * FROM `course` WHERE `course_level` = ?";
   const values = [course_level];
 
-  if (course_level) {
-    db.query(sql, values, (err, results) => {
-      if (err) {
-        return res.status(500).json({ error: err.message });
-      }
-      if (results.length > 0) {
-        res.json({
-          status: true,
-          data: results,
-        });
-        return;
-      } else {
-        return res.status(400).json({
-          error: "Course Not Found.",
-        });
-      }
-    });
-  } else {
-    return res.status(400).json({
-      error: "Somthing went wrong.",
-    });
+  try {
+    const [results] = await db.query(sql, values);
+
+    if (results.length > 0) {
+      return res.json({
+        status: true,
+        data: results,
+      });
+    } else {
+      return res.status(404).json({
+        error: "Course Not Found.",
+      });
+    }
+  } catch (err) {
+    console.error("Database error:", err);
+    return res.status(500).json({ error: "Internal server error." });
   }
 }
 
 // edit
-function editCourse(req, res) {
+async function editCourse(req, res) {
   const {
     course_name,
     course_start_date,
@@ -757,9 +682,11 @@ function editCourse(req, res) {
     courseId,
   } = req.body;
 
-  const sql =
-    "UPDATE `course` SET `course_name` = ?, `course_start_date` = ?, `course_location` = ?, `study_pace` = ?, `qualification` = ?, `assessment` = ?, `includesData` = ?, `how_it_works` = ?, `course_module` = ?, `entry_requirements` = ?, `cost_and_payment` = ?, `career_progression` = ?, `university_options` = ?, `image_path` = ?,`course_level` = ?,`annual_payment` = ?,`monthly_payment` = ? , `slug` = ? WHERE `id` = ?;";
   const slug = `COURSE_${course_name}_${courseId}`;
+
+  const sql =
+    "UPDATE `course` SET `course_name` = ?, `course_start_date` = ?, `course_location` = ?, `study_pace` = ?, `qualification` = ?, `assessment` = ?, `includesData` = ?, `how_it_works` = ?, `course_module` = ?, `entry_requirements` = ?, `cost_and_payment` = ?, `career_progression` = ?, `university_options` = ?, `image_path` = ?, `course_level` = ?, `annual_payment` = ?, `monthly_payment` = ?, `slug` = ? WHERE `id` = ?";
+  
   const values = [
     course_name,
     course_start_date,
@@ -782,154 +709,157 @@ function editCourse(req, res) {
     courseId,
   ];
 
-  db.query(sql, values, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.status(201).json({
+  try {
+    const [results] = await db.query(sql, values);
+    res.status(200).json({
       status: true,
       message: "Course updated successfully",
       courseId: courseId,
     });
-    return;
-  });
+  } catch (err) {
+    console.error("Database error:", err);
+    return res.status(500).json({ error: "Failed to update course." });
+  }
 }
-function editBlog(req, res) {
+async function editBlog(req, res) {
   const { blogId, title, description, image_path } = req.body;
 
-  const sql =
-    "UPDATE `blog` SET `title` = ?, `description` = ?, `image_path` = ? , slug = ? WHERE `id` = ?";
   const slug = `BLOG_${title}_${blogId}`;
+  const sql =
+    "UPDATE `blog` SET `title` = ?, `description` = ?, `image_path` = ?, `slug` = ? WHERE `id` = ?";
   const values = [title, description, image_path, slug, blogId];
 
-  db.query(sql, values, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.status(201).json({
+  try {
+    const [results] = await db.query(sql, values);
+    res.status(200).json({
       status: true,
       message: "Blog updated successfully",
     });
-    return;
-  });
+  } catch (err) {
+    console.error("Database error:", err);
+    return res.status(500).json({ error: "Failed to update blog." });
+  }
 }
-function editTestimonial(req, res) {
+async function editTestimonial(req, res) {
   const { testimonialId, title, description, image_path } = req.body;
 
-  const sql =
-    "UPDATE `testimonial` SET `title` = ?, `description` = ?, `image_path` = ? , slug = ? WHERE `id` = ?";
+  if (!testimonialId || !title) {
+    return res.status(400).json({ error: "Missing required fields." });
+  }
+
   const slug = `TESTIMONIAL_${title}_${testimonialId}`;
+  const sql =
+    "UPDATE `testimonial` SET `title` = ?, `description` = ?, `image_path` = ?, `slug` = ? WHERE `id` = ?";
   const values = [title, description, image_path, slug, testimonialId];
 
-  db.query(sql, values, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.status(201).json({
+  try {
+    const [results] = await db.query(sql, values);
+    res.status(200).json({
       status: true,
       message: "Testimonial updated successfully",
     });
-    return;
-  });
+  } catch (err) {
+    console.error("Database error:", err);
+    return res.status(500).json({ error: "Failed to update testimonial." });
+  }
 }
-function updateListingPriority(req, res) {
+async function updateListingPriority(req, res) {
   const { id, listingPriority } = req.body;
 
-  const sql = "SELECT * FROM `course` WHERE `listingPriority` = ?";
-  const values = [listingPriority];
+  if (!id || !listingPriority) {
+    return res.status(400).json({ error: "Missing required fields." });
+  }
 
-  db.query(sql, values, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    if (results.length > 0) {
+  const sqlCheck = "SELECT * FROM `course` WHERE `listingPriority` = ?";
+  const valuesCheck = [listingPriority];
+
+  try {
+    const [existing] = await db.query(sqlCheck, valuesCheck);
+
+    if (existing.length > 0) {
       const secsql = "UPDATE `course` SET `listingPriority` = ? WHERE `id` = ?";
-      const secvalues = ["None", results[0].id];
-      db.query(secsql, secvalues, (err, results) => {
-        if (err) {
-          return res.status(500).json({ error: err.message });
-        }
-        const thirdsql =
-          "UPDATE `course` SET `listingPriority` = ? WHERE `id` = ?";
-        const thirdvalues = [listingPriority, id];
-        db.query(thirdsql, thirdvalues, (err, results) => {
-          if (err) {
-            return res.status(500).json({ error: err.message });
-          }
-          res.status(201).json({
-            status: true,
-            message: "Listing priority updated successfully",
-          });
-          return;
-        });
-      });
+      const secvalues = ["None", existing[0].id];
+      await db.query(secsql, secvalues);
     }
+
     const thirdsql = "UPDATE `course` SET `listingPriority` = ? WHERE `id` = ?";
     const thirdvalues = [listingPriority, id];
-    db.query(thirdsql, thirdvalues, (err, results) => {
-      if (err) {
-        return res.status(500).json({ error: err.message });
-      }
-      res.status(201).json({
-        status: true,
-        message: "Listing priority updated successfully",
-      });
-      return;
+    await db.query(thirdsql, thirdvalues);
+
+    res.status(200).json({
+      status: true,
+      message: "Listing priority updated successfully",
     });
-  });
+
+  } catch (err) {
+    console.error("Database error:", err);
+    return res.status(500).json({ error: "Failed to update listing priority." });
+  }
 }
 
 // delete
-function deleteCourse(req, res) {
+async function deleteCourse(req, res) {
   const { courseId } = req.query;
+
+  if (!courseId) {
+    return res.status(400).json({ error: "Course ID is required." });
+  }
 
   const sql = "DELETE FROM `course` WHERE `id` = ?";
   const values = [courseId];
 
-  db.query(sql, values, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.status(201).json({
+  try {
+    const [results] = await db.query(sql, values);
+    res.status(200).json({
       status: true,
       message: "Course deleted successfully",
     });
-    return;
-  });
+  } catch (err) {
+    console.error("Database error:", err);
+    return res.status(500).json({ error: "Failed to delete course." });
+  }
 }
-function deleteBlog(req, res) {
+async function deleteBlog(req, res) {
   const { blogId } = req.query;
+
+  if (!blogId) {
+    return res.status(400).json({ error: "Blog ID is required." });
+  }
 
   const sql = "DELETE FROM `blog` WHERE `id` = ?";
   const values = [blogId];
 
-  db.query(sql, values, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.status(201).json({
+  try {
+    const [results] = await db.query(sql, values);
+    res.status(200).json({
       status: true,
       message: "Blog deleted successfully",
     });
-    return;
-  });
+  } catch (err) {
+    console.error("Database error:", err);
+    return res.status(500).json({ error: "Failed to delete blog." });
+  }
 }
-function deleteTestimonial(req, res) {
+async function deleteTestimonial(req, res) {
   const { testimonialId } = req.query;
+
+  if (!testimonialId) {
+    return res.status(400).json({ error: "Testimonial ID is required." });
+  }
 
   const sql = "DELETE FROM `testimonial` WHERE `id` = ?";
   const values = [testimonialId];
 
-  db.query(sql, values, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.status(201).json({
+  try {
+    const [results] = await db.query(sql, values);
+    res.status(200).json({
       status: true,
       message: "Testimonial deleted successfully",
     });
-    return;
-  });
+  } catch (err) {
+    console.error("Database error:", err);
+    return res.status(500).json({ error: "Failed to delete testimonial." });
+  }
 }
 
 // upload
