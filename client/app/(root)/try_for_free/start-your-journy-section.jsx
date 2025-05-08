@@ -535,7 +535,7 @@ a[x-apple-data-detectors],
         <>
             <div className='w-full pb-10 pt-10 bg-[#F7FAFF] text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 request-section'>
                 <div className='w-full flex items-start flex-col lg:h-full'>
-                    <span className='text-[6vw] lg:text-[3vw] request-left font-sans font-bold capitalize'>
+                    <span className='text-[6vw] lg:text-[3vw] request-left font-sans font-bold '>
                     Start your journey today
                     </span>
 

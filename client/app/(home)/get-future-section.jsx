@@ -81,24 +81,28 @@ export default function GetFuture() {
 
     return (
         <>
-            <div className="w-full pt-30 bg-[#F7FAFF] font-sans text-black px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center lg:gap-38 gap-5 get-future-section">
+            <div className="w-full pt-50 pb-50 bg-[#F7FAFF] font-sans text-[#2e2e27] px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center lg:gap-38 gap-5 get-future-section">
                 {/* Left Side - Text Content */}
-                <div className="w-full lg:w-auto flex items-start lg:items-end text-3xl md:text-[6vw] justify-start flex-col get-future-left gap-3">
-                    <span className="font-bold">Get Future</span>
-                    <span className="font-mono">Focused</span>
+                <div className="w-full lg:w-auto flex items-start lg:items-end justify-start flex-col get-future-left gap-3">
+                    <span className="text-[clamp(3rem,7vw,7rem)] font-sans font-bold leading-none">Get Future</span>
+                    <span className="text-[clamp(3rem,7vw,7rem)] font-mono leading-[1]">Focused</span>
+                    <div className="w-full lg:w-full flex items-start text-lg md:text-[1.5vw] justify-start flex-col get-future-left">
+                        <span className="description">Discover a course that not only prepares you for work, but also fast-tracks you towards a university qualification.</span>
+                    </div>
                 </div>
 
+
                 {/* Right Side - List Items */}
-                <div className="w-full lg:w-auto flex items-start lg:text-[1.4vw] gap-3 font-bold flex-col get-future-right capitalize">
+                <div className="w-full lg:w-auto flex items-start lg:text-[1.4vw] gap-5 mt-20 flex-col get-future-right">
                     <span>
                         Find a course
                     </span>
-                    <div className="relative w-full lg:w-[440px]">
+                    <div className="relative w-full lg:w-[500px]">
                         <div className="flex gap-2 items-center border-b-2 border-[#000000]">
                             <input
                                 type="text"
-                                className="w-full placeholder:font-extralight font-extralight placeholder:text-base outline-none text-base capitalize"
-                                placeholder="Find a course"
+                                className="w-full placeholder:font-extralight font-extralight placeholder:text-base outline-none text-base "
+                                placeholder="Search by course name"
                                 value={searchValue}
                                 onChange={handleInputChange}
                                 onKeyUp={(e) => e.key === 'Enter' && handleSearch()}
@@ -129,52 +133,44 @@ export default function GetFuture() {
                             </div>
                         )}
                     </div>
-                </div>
-            </div>
-            <div className="w-full pt-5 pb-30 bg-[#F7FAFF] font-sans text-black px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center lg:gap-38 gap-5 get-future-section">
-                {/* Left Side - Text Content */}
-                <div className="w-full lg:w-auto flex items-start lg:items-end text-lg md:text-[1.5vw] justify-start flex-col get-future-left capitalize">
-                    <span className="font-bold">Fast tracking learners to a</span>
-                    <span className="font-mono">University qualification</span>
-                </div>
+                    <div className="w-full lg:w-[440px] flex items-start lg:text-[1vw] gap-5 get-future-right flex-wrap mt-10">
+                        <span className="border-b-[3px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A] text"
+                            onClick={() => {
+                                window.location.href = "/igsce-and-short-courses";
+                            }}
+                        >
+                            IGCSE & Short Courses
+                        </span>
+                        <span className="border-b-[3px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A] text"
+                            onClick={() => {
+                                window.location.href = "/level-3-a-level-university-entry-courses";
+                            }}
+                        >
+                            A Level University Entry
+                        </span>
+                        <span className="border-b-[3px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A] text"
+                            onClick={() => {
+                                window.location.href = "/university-first-and-second-year";
+                            }}
+                        >
+                            HND
+                        </span>
+                        <span className="border-b-[3px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A] text"
+                            onClick={() => {
+                                window.location.href = "/level-6-courses";
+                            }}
+                        >
+                            Graduate Level
+                        </span>
+                        <span className="border-b-[3px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A] text"
+                            onClick={() => {
+                                window.location.href = "/level-7-mba-advance-entry";
+                            }}
+                        >
+                            Masters/MBA
+                        </span>
 
-                {/* Right Side - List Items */}
-                <div className="w-full lg:w-[440px] flex items-start lg:text-[1vw] gap-3 font-bold get-future-right flex-wrap">
-                    <span className="border-b-[3px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A]"
-                        onClick={() => {
-                            window.location.href = "/igsce-and-short-courses";
-                        }}
-                    >
-                        IGCSE & Short Courses
-                    </span>
-                    <span className="border-b-[3px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A]"
-                        onClick={() => {
-                            window.location.href = "/level-3-a-level-university-entry-courses";
-                        }}
-                    >
-                        A Level University Entry
-                    </span>
-                    <span className="border-b-[3px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A]"
-                        onClick={() => {
-                            window.location.href = "/university-first-and-second-year";
-                        }}
-                    >
-                        HND
-                    </span>
-                    <span className="border-b-[3px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A]"
-                        onClick={() => {
-                            window.location.href = "/level-6-courses";
-                        }}
-                    >
-                        Graduate Level
-                    </span>
-                    <span className="border-b-[3px] border-[#E2231A] inline-block leading-[1] cursor-pointer hover:text-[#E2231A]"
-                        onClick={() => {
-                            window.location.href = "/level-7-mba-advance-entry";
-                        }}
-                    >
-                        Masters/MBA
-                    </span>
+                    </div>
 
                 </div>
             </div>

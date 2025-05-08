@@ -93,40 +93,53 @@ function CourseBody({ data }) {
     }
     return (
         <>
-            <div className='w-full pt-20 pb-20 bg-white grid grid-cols-1 lg:grid-cols-2 gap-10 capitalize'>
+            <div className='w-full pt-20 pb-20 bg-white grid grid-cols-1 lg:grid-cols-2 gap-10 px-[3vw]'>
                 <div className='w-full flex flex-col'>
-                    <div className='w-full bg-[#1E1E1E] p-8'>
-                        <span className='text-[3.6vw] font-bold'>Studies at a Glance</span>
+                    <div className='w-full bg-[#1E1E1E] p-8 flex flex-col'>
+                        <span className='text-[1.9vw] font-sans'>Book Your Course</span>
+                        <span className='text-[1.2vw] font-sans'>Discover student life at the University of Chester</span>
                     </div>
-                    <div className='w-full grid grid-cols-1 lg:grid-cols-2 text-[16px] text-black px-[5vw] pt-10 gap-5'>
+                    <div className='w-full grid grid-cols-1 lg:grid-cols-3 text-[16px] text-black pt-10 gap-8'>
                         <div className='w-full flex flex-col gap-2'>
-                            <span className='font-bold'>Start date:</span>
+                            <span className='font-sans'>Level:</span>
                             <span>{data?.course_start_date ? data?.course_start_date : "N/A"}</span>
                         </div>
                         <div className='w-full flex flex-col gap-2'>
-                            <span className='font-bold'>Location:</span>
+                            <span className='font-sans'>UCAS Code:</span>
+                            <span>{data?.course_start_date ? data?.course_start_date : "N/A"}</span>
+                        </div>
+                        <div className='w-full flex flex-col gap-2'>
+                            <span className='font-sans'>UCAS Points:</span>
                             <span>{data?.course_location ? data?.course_location : "N/A"}</span>
                         </div>
                         <div className='w-full flex flex-col gap-2'>
-                            <span className='font-bold'>Study pace:</span>
+                            <span className='font-sans'>Start Date:</span>
                             <span>{data?.study_pace ? data?.study_pace : "N/A"}</span>
                         </div>
                         <div className='w-full flex flex-col gap-2'>
-                            <span className='font-bold'>Qualifications:</span>
+                            <span className='font-sans'>Duration:</span>
                             <span>{data?.qualification ? data?.qualification : "N/A"}</span>
                         </div>
                         <div className='w-full flex flex-col gap-2'>
-                            <span className='font-bold'>Assessment:</span>
+                            <span className='font-sans'>Location:</span>
                             <span>{data?.assessment ? data?.assessment : "N/A"}</span>
                         </div>
                         <div className='w-full flex flex-col gap-2'>
-                            <span className='font-bold'>Includes:</span>
+                            <span className='font-sans'>UK fees:</span>
+                            <span>{data?.includesData ? data?.includesData : "N/A"}</span>
+                        </div>
+                        <div className='w-full flex flex-col gap-2'>
+                            <span className='font-sans'>International fees:</span>
+                            <span>{data?.includesData ? data?.includesData : "N/A"}</span>
+                        </div>
+                        <div className='w-full flex flex-col gap-2'>
+                            <span className='font-sans'>Course Leader:</span>
                             <span>{data?.includesData ? data?.includesData : "N/A"}</span>
                         </div>
                     </div>
                 </div>
                 <div className='w-full bg-[#F7FAFF] flex flex-col gap-5 text-black p-6 pr-20'>
-                    <span className='font-bold text-3xl capitalize'>Start your journey today</span>
+                    <span className='font-sans text-3xl '>Start your journey today</span>
                     <div className='w-full flex flex-col gap-2 mt-5'>
                         <span className='text-[16px] font-semibold'>First Name</span>
                         <input type="text"
@@ -181,7 +194,7 @@ function CourseBody({ data }) {
                                 defaultChecked={paymentOption === 'Annual' ? true : false}
                                 onChange={(e) => setPaymentOption(e.target.checked ? e.target.value : '')}
                                 className='w-4 h-4 border-[1px] border-[#E5E4E4] p-2 outline-none bg-white font-extralight text-[16px]' />
-                            <span className='text-[16px]'>One Time Payment (USD{data?.annual_payment ? data?.annual_payment : '0'})</span>
+                            <span className='text-[16px]'>One-Time Payment ({data?.annual_payment ? data?.annual_payment : '0'}£)</span>
                         </div>
                         <div className='flex gap-3 items-center'>
                             <input type="radio" name='payment'
@@ -189,7 +202,7 @@ function CourseBody({ data }) {
                                 defaultChecked={paymentOption === 'Monthly' ? true : false}
                                 onChange={(e) => setPaymentOption(e.target.checked ? e.target.value : '')}
                                 className='w-4 h-4 border-[1px] border-[#E5E4E4] p-2 outline-none bg-white font-extralight text-[16px]' />
-                            <span className='text-[16px]'>Instalment payment (USD{data?.monthly_payment ? data?.monthly_payment : '0'} per month)</span>
+                            <span className='text-[16px]'>Installment Payment ({data?.monthly_payment ? data?.monthly_payment : '0'}£ per month)</span>
                         </div>
                     </div>
                     <div className='w-full flex gap-4'>

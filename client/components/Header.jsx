@@ -139,9 +139,9 @@ const Header = () => {
   };
 
   return (
-    <header className={`w-full p-4 md:p-8 font-sans flex flex-col relative ${activeDropdown === 'course' || isMenuOpen ? 'bg-white' : 'bg-transparent'} ${activeDropdown === 'individual' || isMenuOpen ? 'bg-white' : 'bg-transparent'} ${activeDropdown === 'progression' || isMenuOpen ? 'bg-white' : 'bg-transparent'}`}>
-      <div className="w-full h-full flex justify-between items-start px-4 md:px-24">
-        {(activeDropdown === 'course' || activeDropdown === 'individual' || activeDropdown === 'progression' || isMenuOpen) ? (
+    <header className={`w-full p-4 md:p-8 font-sans flex flex-col relative text-[18px] ${activeDropdown === 'course' || isMenuOpen ? 'bg-white' : 'bg-transparent'}`}>
+      <div className="w-full h-full flex justify-between items-start px-2 md:px-10">
+        {(activeDropdown === 'course' || isMenuOpen) ? (
           <nav className='rounded-full w-16 h-16 md:w-28 md:h-28 bg-contain bg-center flex justify-center items-center'>
             <img
               src="/Logo.svg"
@@ -203,7 +203,7 @@ const Header = () => {
         </button>
 
         {/* Desktop Navigation Links */}
-        <div className={`hidden lg:flex gap-16 items-center ${activeDropdown === 'course' ? 'text-black' : 'bg-transparent'} ${activeDropdown === 'individual' ? 'text-black' : 'bg-transparent'} ${activeDropdown === 'progression' ? 'text-black' : 'bg-transparent'}`}>
+        <div className={`hidden lg:flex mt-3 gap-10 items-center ${activeDropdown === 'course' ? 'text-black' : 'bg-transparent'}`}>
           {/* Course Dropdown */}
           <div
             className="relative"
@@ -257,6 +257,15 @@ const Header = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
+            <div
+              className={`lg:absolute ${window.innerWidth >= 1024 ? 'mt-2' : 'mt-1 ml-4'} py-2 w-full lg:w-80 bg-white rounded-md shadow-lg z-50 overflow-hidden capitalize`}
+              style={{ display: activeDropdown === 'progression' && window.innerWidth >= 1024 ? 'block' : 'none' }}
+              onMouseEnter={cancelDropdownClose}
+            >
+              <a href="/business_progression" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Business progression courses</a>
+              <a href="/it_progression" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">IT progression courses</a>
+              <a href="/hospitality_progression" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Hospitality progression courses</a>
+            </div>
           </div>
 
           {/* Individuals Dropdown */}
@@ -285,9 +294,20 @@ const Header = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
+            <div
+              className={`lg:absolute ${window.innerWidth >= 1024 ? 'mt-2' : 'mt-1 ml-4'} py-2 w-full lg:w-56 bg-white rounded-md shadow-lg z-50 overflow-hidden capitalize`}
+              style={{ display: activeDropdown === 'individual' && window.innerWidth >= 1024 ? 'block' : 'none' }}
+              onMouseEnter={cancelDropdownClose}
+            >
+              <a href="/individual/how_will_you_learn" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">How will you learn</a>
+              <a href="/individual/our_hubs" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Our Hubs</a>
+              <a href="/individual/top-up_degree" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Top up degree</a>
+              <a href="/individual/blog" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Blog</a>
+              <a href="/individual/testimonial" className="block px-4 py-1 text-gray-800 hover:pl-6 transition-all duration-200">Testimonial</a>
+            </div>
           </div>
 
-          
+
 
           <a href="/about" className="hover:underline hover:opacity-80 transition-opacity duration-200">
             About Us
@@ -297,7 +317,7 @@ const Header = () => {
             <button className="btn bg-[#E2231A] text-white px-4 py-2 hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] hover:scale-105 transition-all duration-200"
               onClick={() => {
                 if (window.location.pathname === "/") {
-                  window.scrollTo({ top: 500, behavior: "smooth" });
+                  window.scrollTo({ top: 900, behavior: "smooth" });
                 } else {
                   window.location.href = "/";
                 }
@@ -531,7 +551,7 @@ const Header = () => {
         onMouseEnter={cancelDropdownClose}
       >
         <div className="w-full lg:px-5">
-          <div className="w-full grid grid-cols-4 gap-4 capitalize">
+          <div className="w-full grid grid-cols-4 gap-4 ">
             {/* sec 1 */}
             <div className='flex items-start flex-col pt-3 w-full'>
               <span className='text-black font-bold text-2xl px-4'>IGCSE and short courses</span>
@@ -578,42 +598,6 @@ const Header = () => {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Desktop Individuals Dropdown Menu */}
-      <div
-        className="hidden lg:block lg:absolute lg:left-0 lg:w-full border-t border-b border-gray-300 bg-white mt-28 h-[82vh] z-50 capitalize"
-        style={{ display: activeDropdown === 'individual' && window.innerWidth >= 1024 ? 'block' : 'none' }}
-        onMouseEnter={cancelDropdownClose}
-      >
-        <div className='lg:flex lg:flex-row h-full'>
-          <div className='w-[80%] flex flex-col h-full justify-center font-extrabold pl-[10vw] text-2xl'>
-            <a href="/individual/how_will_you_learn" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">How will you learn</a>
-            <a href="/individual/our_hubs" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Our Hubs</a>
-            <a href="/individual/top-up_degree" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Top up degree</a>
-            <a href="/individual/blog" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Blog</a>
-            <a href="/individual/testimonial" className="block px-4 py-1 text-gray-800 hover:pl-6 transition-all duration-200">Testimonial</a>
-          </div>
-          <div className='w-[20%] h-full'>
-            <div className='main-bg2'></div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="hidden lg:block lg:absolute lg:left-0 lg:w-full border-t border-b border-gray-300 bg-white mt-28 h-[82vh] z-50 capitalize"
-        style={{ display: activeDropdown === 'progression' && window.innerWidth >= 1024 ? 'block' : 'none' }}
-        onMouseEnter={cancelDropdownClose}
-      >
-        <div className='lg:flex lg:flex-row h-full'>
-          <div className='w-[80%] flex flex-col h-full justify-center font-extrabold pl-[10vw] text-2xl'>
-            <a href="/business_progression" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Business progression courses</a>
-            <a href="/it_progression" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">IT progression courses</a>
-            <a href="/hospitality_progression" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Hospitality progression courses</a>
-          </div>
-          <div className='w-[20%] h-full'>
-            <div className='main-bg2'></div>
           </div>
         </div>
       </div>

@@ -8,6 +8,7 @@ import RequestACource from '@/app/(home)/request-a-cource-section';
 import CourseDetailBody from './detail-body';
 import WhyEnroll from './why-enroll-section';
 import axios from 'axios';
+import NSS from '@/app/(home)/nss-section';
 
 function page({ params }) {
   // Unwrap the `params` promise using React.use()
@@ -66,8 +67,10 @@ function page({ params }) {
             </div>
           </div>
           <CourseBody data={course} />
+          <NSS/>
           <CourseDetailBody data={course} />
           {/* <WhyEnroll /> */}
+          <div className='bg-white p-10'></div>
           <RequestACource />
           <div className='bg-white p-5'></div>
           <Footer />

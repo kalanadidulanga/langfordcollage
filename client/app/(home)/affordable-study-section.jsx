@@ -66,10 +66,10 @@ function AffordableStudy() {
 
         {/* Text - Right Side */}
         <div className="w-full flex items-start text-[6vw] lg:text-[4vw] font-medium flex-col affordable-right">
-          <span className="font-sans font-bold capitalize">
+          <span className="font-sans font-bold ">
             Affordable online programs to fast-track 
           </span>
-          <span className="font-mono capitalize">
+          <span className="font-mono ">
             your university qualification.
           </span>
         </div>
@@ -79,7 +79,7 @@ function AffordableStudy() {
       {/* Description Section */}
       <div className="w-full bg-white pt-10  pb-8 text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 affordable-section1">
         <div className="flex items-start justify-start w-full affordable-right1">
-          <span className="text-[18px] capitalize">
+          <span className="text-[18px] ">
             Whether you are looking to enhance your skills, improve your team or pursue a professional education, the Langford College’s learning pathways can provide you with all you need. <br /> <br />
             The Langford College delivers online university pathway programmers with full undergraduate and postgraduate diploma awards to learners from all corners of the world. Learners can fast track their way through to a UK university qualification on campus or by distance learning.
           </span>

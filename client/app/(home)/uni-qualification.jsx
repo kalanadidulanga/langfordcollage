@@ -40,11 +40,11 @@ export default function FastTrackingSection() {
   }, []);
 
   return (
-    <div className="w-full pt-20 pb-20 bg-white text-black px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between lg:gap-32 gap-5 fast-tracking-section">
+    <div className="w-full pt-30 pb-30 bg-white text-[#2e2e27] px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between lg:gap-32 gap-5 fast-tracking-section">
       {/* Left Side - Text Content */}
       <div className="flex items-start text-3xl md:text-[3.9vw] justify-start flex-col fast-tracking-left gap-3">
-        <span className="font-bold font-sans capitalize">Why Langford </span>
-        <span className="font-mono capitalize">College</span>
+        <span className="font-sans leading-none">Why Langford </span>
+        <span className="font-mono leading-[1.1]">College</span>
         {/* <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] text-white mt-8"
           onClick={() => {
             window.location.href = "/individual/how_will_you_learn";
@@ -53,7 +53,7 @@ export default function FastTrackingSection() {
       </div>
 
       {/* Right Side - List Items */}
-      <div className="flex items-start lg:text-[1.1vw] gap-6 flex-col fast-tracking-right">
+      <div className="flex items-start lg:text-[1.1vw] gap-6 flex-col fast-tracking-right description">
         <div className="flex">
           <li></li>
           <span className="hover:underline">Globally Recognised UK Diplomas & Degrees</span>

@@ -42,12 +42,12 @@ function TryForFree() {
 
     return (
         <>
-            <div className='w-full lg:pb-20 pt-10 lg:pt-20 pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 learn-anyway-section capitalize'>
+            <div className='w-full lg:pb-20 pt-10 lg:pt-20 pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 learn-anyway-section '>
                 <div className='w-full flex items-start flex-col lg:h-full learn-anyway-left'>
-                    <span className='text-[6vw] lg:text-[3vw] font-bold font-sans capitalize'>
+                    <span className='text-[6vw] lg:text-[3vw] font-bold font-sans '>
                         Try the Langford College experience
                     </span>
-                    <span className='text-[6vw] lg:text-[3vw] font-bold font-sans capitalize'>
+                    <span className='text-[6vw] lg:text-[3vw] font-bold font-sans '>
                         for FREE!
                     </span>
                     <div className='w-full bg-white pt-10 pb-8 text-[#2E2E27] flex flex-col'>

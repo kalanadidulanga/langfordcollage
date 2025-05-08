@@ -4,56 +4,56 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function WillLearn() {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
 
-    gsap.fromTo(
-      ".learn-left",
-      { opacity: 0, x: -50 },
-      {
-        opacity: 1, x: 0, duration: 1, ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".learn-section",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play reverse play reverse",
-          once: false,
-        }
-      }
-    );
+  //   gsap.fromTo(
+  //     ".learn-left",
+  //     { opacity: 0, x: -50 },
+  //     {
+  //       opacity: 1, x: 0, duration: 1, ease: "power3.out",
+  //       scrollTrigger: {
+  //         trigger: ".learn-section",
+  //         start: "top 90%",
+  //         end: "bottom 10%",
+  //         toggleActions: "play reverse play reverse",
+  //         once: false,
+  //       }
+  //     }
+  //   );
 
-    gsap.fromTo(
-      ".learn-right",
-      { opacity: 0, x: 50 },
-      {
-        opacity: 1, x: 0, duration: 1, ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".learn-section",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play reverse play reverse",
-          once: false,
-        }
-      }
-    );
+  //   gsap.fromTo(
+  //     ".learn-right",
+  //     { opacity: 0, x: 50 },
+  //     {
+  //       opacity: 1, x: 0, duration: 1, ease: "power3.out",
+  //       scrollTrigger: {
+  //         trigger: ".learn-section",
+  //         start: "top 90%",
+  //         end: "bottom 10%",
+  //         toggleActions: "play reverse play reverse",
+  //         once: false,
+  //       }
+  //     }
+  //   );
 
-  }, []);
+  // }, []);
 
   return (
     <>
       {/* Main Section */}
-      <div className="w-full bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 learn-section">
+      <div className="w-full bg-white text-black px-[10vw] pt-[10vh] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5">
 
         {/* Right Side - Text Content */}
-        <div className="w-full flex lg:items-end justify-start flex-col lg:h-full learn-left">
+        <div className="w-full flex lg:items-end justify-start flex-col lg:h-full">
           <div className="w-full flex items-start pb-5 flex-col lg:h-full">
             <div className="w-full grid grid-cols-2">
               <div className="w-full flex items-start flex-col lg:h-full">
-                <span className="text-[6vw] lg:text-[4vw] font-sans font-bold capitalize">
+                <span className="text-[6vw] lg:text-[4vw] font-sans leading-none">
                   How you will
                 </span>
-                <span className="text-[6vw] lg:text-[3.5vw] font-mono capitalize">
-                  learn
+                <span className="text-[6vw] lg:text-[4vw] font-mono leading-[1.1]">
+                  Learn
                 </span>
               </div>
               <div className="w-full h-full p-2">
@@ -64,14 +64,14 @@ function WillLearn() {
           </div>
           <div className="w-full bg-white pt-10 pb-8 text-black flex lg:items-start justify-start">
             {/* Left Side - Image */}
-            <div className="flex items-start justify-start w-full h-[40vh] hidden lg:block learn-left">
+            <div className="flex items-start justify-start w-full h-[40vh] hidden lg:block">
               <img
                 src="/Images/work.png"
                 alt=""
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="flex items-start lg:items-end justify-start w-full gap-5 capitalize">
+            <div className="flex items-start lg:items-end justify-start w-full gap-5 ">
               <div className="w-full flex items-start lg:items-end lg:text-[1.6vw] gap-6 lg:gap-9 flex-col">
                 <span className="border-b-[4px] border-[#E2231A] inline leading-[1]">Learner journey</span>
                 <span className="border-b-[4px] border-[#E2231A] inline leading-[1]">Assessment</span>
@@ -95,9 +95,9 @@ function WillLearn() {
       </div>
 
       {/* Button Section */}
-      <div className="w-full bg-white pt-5 lg:pt-10 pb-20 px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 learn-section">
+      <div className="w-full bg-white pt-5 lg:pt-10 pb-[10vh] px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 learn-section">
         <div className="flex items-start justify-start w-full">
-          <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] learn-left capitalize"
+          <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] learn-left "
             onClick={() => {
               window.location.replace("/individual/how_will_you_learn");
             }}

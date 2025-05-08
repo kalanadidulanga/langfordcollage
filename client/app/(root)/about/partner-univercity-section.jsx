@@ -3,7 +3,7 @@ import React from 'react'
 function PartnerUnivercity() {
     return (
         <>
-            <div className='w-full capitalize bg-white pb-20 text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5'>
+            <div className='w-full  bg-white pb-20 text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5'>
                 <div className='flex items-start justify-start w-full lg:w-[60%] h-[50vh]  hidden lg:block'>
                     <img
                         src="/Images/PartnerUnivercity.jpg"

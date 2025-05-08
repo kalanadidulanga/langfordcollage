@@ -4,65 +4,65 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function SocialLearning() {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
 
-    gsap.fromTo(
-      ".social-left",
-      { opacity: 0, x: -50 },
-      {
-        opacity: 1, x: 0, duration: 1, ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".social-section",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play reverse play reverse",
-          once: false,
-        }
-      }
-    );
+  //   gsap.fromTo(
+  //     ".social-left",
+  //     { opacity: 0, x: -50 },
+  //     {
+  //       opacity: 1, x: 0, duration: 1, ease: "power3.out",
+  //       scrollTrigger: {
+  //         trigger: ".social-section",
+  //         start: "top 80%",
+  //         end: "bottom 20%",
+  //         toggleActions: "play reverse play reverse",
+  //         once: false,
+  //       }
+  //     }
+  //   );
 
-    gsap.fromTo(
-      ".social-right",
-      { opacity: 0, x: 50 },
-      {
-        opacity: 1, x: 0, duration: 1, ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".social-section",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play reverse play reverse",
-          once: false,
-        }
-      }
-    );
+  //   gsap.fromTo(
+  //     ".social-right",
+  //     { opacity: 0, x: 50 },
+  //     {
+  //       opacity: 1, x: 0, duration: 1, ease: "power3.out",
+  //       scrollTrigger: {
+  //         trigger: ".social-section",
+  //         start: "top 80%",
+  //         end: "bottom 20%",
+  //         toggleActions: "play reverse play reverse",
+  //         once: false,
+  //       }
+  //     }
+  //   );
 
-  }, []);
+  // }, []);
 
   return (
     <>
       {/* Main Section */}
-      <div className="w-full lg:pb-20 lg:pt-20 pt-10 bg-white text-black px-[9vw] flex flex-col items-start justify-start gap-5 social-section">
+      <div className="w-full lg:pb-20 lg:pt-20 pt-10 bg-white text-[#2e2e27] px-[9vw] flex flex-col items-start justify-start gap-5">
 
-        <div className="w-full flex items-start pb-5 flex-col lg:h-full social-left">
+        <div className="w-full flex items-start pb-5 flex-col lg:h-full">
           <div className="w-full lg:grid lg:grid-cols-2">
             <div className="w-full flex items-start flex-col lg:h-full">
-              <span className="text-[6vw] lg:text-[3.5vw] font-sans font-bold capitalize">
-                A social learning
+              <span className="text-[6vw] lg:text-[4vw] font-sans font-bold leading-none">
+              A Unique Social
               </span>
-              <span className="text-[6vw] lg:text-[3.4vw] font-mono capitalize">
-                experience like no other
+              <span className="text-[6vw] lg:text-[4vw] font-mono leading-[1.1]">
+              Learning Journey
               </span>
             </div>
             <div className="w-full h-full p-2">
-              <div className="border-b-2 h-[70%] border-gray-400 relative">
+              <div className="border-b-2 h-[90%] border-gray-400 relative">
               </div>
             </div>
           </div>
         </div>
         <div className="w-full flex items-start flex-col lg:flex-row lg:h-full social-left gap-10">
           <div className="w-full">
-            <div className="w-full bg-white pb-5 text-[#2E2E27] flex flex-col capitalize">
+            <div className="w-full bg-white pb-5 text-[#2e2e27] flex flex-col">
               <div className="w-full flex flex-col gap-3">
                 <span className="text-[16px]">
                   Online... Anytime... On any device...
@@ -88,7 +88,7 @@ function SocialLearning() {
           </div>
 
           {/* Right Side - Image */}
-          <div className="grid items-start justify-start w-full lg:w-[60%] h-[50vh] hidden lg:block social-right">
+          <div className="grid items-start justify-start w-full lg:w-[60%] h-[50vh] hidden lg:block">
             <img
               src="/Images/work-girl.jpg"
               alt="social learning"

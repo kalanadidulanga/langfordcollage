@@ -46,12 +46,12 @@ function WhatsNew() {
     return (
         <>
             <div className="w-[100%] h-screen px-5 lg:px-32 whats-section font-sans whats-new-bg">
-                <div className="w-full h-full flex justify-center items-center flex-col md:px-[15vw] gap-10 capitalize text-white">
+                <div className="w-full h-full flex justify-center items-center flex-col md:px-[15vw] gap-3  text-white">
                     <div className="w-full flex flex-col text-center lg:text-start whats-left">
-                        <span className="text-5xl md:text-[4.8vw] font-sans font-bold">Affordable fast-track</span>
+                        <span className="text-5xl md:text-[5vw] font-sans font-bold">Affordable Fast-track</span>
                     </div>
                     <div className="w-full flex flex-col text-center lg:text-end whats-right">
-                        <span className="text-5xl md:text-[4.8vw] font-bold font-mono">university programs</span>
+                        <span className="text-5xl md:text-[5vw] font-bold font-mono">University Programs</span>
                     </div>
                 </div>
             </div>

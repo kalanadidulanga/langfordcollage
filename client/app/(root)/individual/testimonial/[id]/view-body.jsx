@@ -5,52 +5,52 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function ViewBody({ data }) {
 
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
+    // useEffect(() => {
+    //     gsap.registerPlugin(ScrollTrigger);
 
-        gsap.fromTo(
-            ".testi-left",
-            { opacity: 0, x: -50 },
-            {
-                opacity: 1, x: 0, duration: 1, ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".testi-section",
-                    start: "top 80%",
-                    end: "bottom 20%",
-                    once: false,
-                }
-            }
-        );
+    //     gsap.fromTo(
+    //         ".testi-left",
+    //         { opacity: 0, x: -50 },
+    //         {
+    //             opacity: 1, x: 0, duration: 1, ease: "power3.out",
+    //             scrollTrigger: {
+    //                 trigger: ".testi-section",
+    //                 start: "top 80%",
+    //                 end: "bottom 20%",
+    //                 once: false,
+    //             }
+    //         }
+    //     );
 
-        gsap.fromTo(
-            ".testi-left1",
-            { opacity: 0, x: -50 },
-            {
-                opacity: 1, x: 0, duration: 1, ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".testi-section1",
-                    start: "top 80%",
-                    end: "bottom 20%",
-                    once: false,
-                }
-            }
-        );
+    //     gsap.fromTo(
+    //         ".testi-left1",
+    //         { opacity: 0, x: -50 },
+    //         {
+    //             opacity: 1, x: 0, duration: 1, ease: "power3.out",
+    //             scrollTrigger: {
+    //                 trigger: ".testi-section1",
+    //                 start: "top 80%",
+    //                 end: "bottom 20%",
+    //                 once: false,
+    //             }
+    //         }
+    //     );
 
-        gsap.fromTo(
-            ".testi-right",
-            { opacity: 0, x: 50 },
-            {
-                opacity: 1, x: 0, duration: 1, ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".testi-section",
-                    start: "top 80%",
-                    end: "bottom 20%",
-                    once: false,
-                }
-            }
-        );
+    //     gsap.fromTo(
+    //         ".testi-right",
+    //         { opacity: 0, x: 50 },
+    //         {
+    //             opacity: 1, x: 0, duration: 1, ease: "power3.out",
+    //             scrollTrigger: {
+    //                 trigger: ".testi-section",
+    //                 start: "top 80%",
+    //                 end: "bottom 20%",
+    //                 once: false,
+    //             }
+    //         }
+    //     );
 
-    }, []);
+    // }, []);
 
     return (
         <>

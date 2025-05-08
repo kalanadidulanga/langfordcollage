@@ -19,18 +19,32 @@
   }
 }
 
+@font-face {
+  font-family: 'BasisGrotesqueBlack';
+  src: url('./fonts/BasisGrotesqueArabicPro-Black.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BasisGrotesque';
+  src: url('./fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
 body {
   width: 100%;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'BasisGrotesque', sans-serif;
   font-size: 16px;
 }
 
 .main-bg {
   background-image: url("../public/Images/main-bg.jpg");
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -51,7 +65,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.459);
   pointer-events: none;
 }
@@ -294,11 +308,30 @@ body {
 }
 
 .btn {
-  font-size: 15px;
+  font-size: 16px;
   padding-left: 12px;
   padding-right: 12px;
   padding-top: 6px;
   padding-bottom: 6px;
   cursor: pointer;
+  color: white;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text {
+  font-family: 'BasisGrotesqueBlack', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.text1 {
+  font-family: 'BasisGrotesqueBlack', sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.description {
+  font-family: 'BasisGrotesque', sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
 }

@@ -2,18 +2,18 @@ import React from 'react'
 
 export default function Body() {
     return (
-        <div className='w-full capitalize'>
+        <div className='w-full '>
             <div
-                className='w-full font-sans lg:pt-10 lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 capitalize'>
+                className='w-full font-sans lg:pt-10 lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
                 <div className='w-full flex items-start flex-col lg:h-full'>
                     <div className="w-full lg:grid lg:grid-cols-2">
-                        <div className="w-full flex items-start flex-col font-bold lg:h-full">
+                        <div className="w-full flex items-start flex-col font-sans lg:h-full">
                             <span className='text-[6vw] lg:text-[3vw]'>
                                 IT and Computing
                             </span>
                         </div>
                         <div className="w-full h-full p-2">
-                            <div className="border-b-2 h-[70%] border-gray-400 relative">
+                            <div className="border-b-2 h-[90%] border-gray-400 relative">
                             </div>
                         </div>
                     </div>
@@ -31,32 +31,32 @@ export default function Body() {
                             If you decide to pursue a full undergraduate degree through an accredited UK university, the costs are as follows.
                         </span>
                         <div className='pl-5'>
-                            <li className='font-bold'>Middlesex University</li>
+                            <li className='description'>Middlesex University</li>
                             <div className='pl-5 mt-2'>
                                 <li>BSc Information Systems (Top-up)</li>
                                 <li>BSc (Hons) Information Technology and Business Information Systems (Top-up)</li>
                             </div>
                         </div>
                         <div className='pl-5'>
-                            <li className='font-bold'>University of Gloucestershire</li>
+                            <li className='description'>University of Gloucestershire</li>
                             <div className='pl-5 mt-2'>
                                 <li>BSc (Hons) Computing</li>
                             </div>
                         </div>
                         <div className='pl-5'>
-                            <li className='font-bold'>University of Derby</li>
+                            <li className='description'>University of Derby</li>
                             <div className='pl-5 mt-2'>
                                 <li>BSc (Hons) Computing and Information Technology</li>
                             </div>
                         </div>
                         <div className='pl-5'>
-                            <li className='font-bold'>University of Hertfordshire</li>
+                            <li className='description'>University of Hertfordshire</li>
                             <div className='pl-5 mt-2'>
                                 <li>BSc Honours Information Technology top up</li>
                             </div>
                         </div>
                         <div className='pl-5'>
-                            <li className='font-bold'>University of Hertfordshire</li>
+                            <li className='description'>University of Hertfordshire</li>
                             <div className='pl-5 mt-2'>
                                 <li>BSc (Hons) Information Technology (Top-up)</li>
                             </div>
@@ -65,16 +65,16 @@ export default function Body() {
                 </div>
             </div>
             <div
-                className='w-full font-sans lg:pt-10 lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 capitalize'>
+                className='w-full font-sans lg:pt-10 lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
                 <div className='w-full flex items-start flex-col lg:h-full'>
                     <div className="w-full lg:grid lg:grid-cols-2">
-                        <div className="w-full flex items-start flex-col font-bold lg:h-full">
+                        <div className="w-full flex items-start flex-col font-sans lg:h-full">
                             <span className='text-[6vw] lg:text-[3vw]'>
                                 IT and E-commerce
                             </span>
                         </div>
                         <div className="w-full h-full p-2">
-                            <div className="border-b-2 h-[70%] border-gray-400 relative">
+                            <div className="border-b-2 h-[90%] border-gray-400 relative">
                             </div>
                         </div>
                     </div>
@@ -92,20 +92,20 @@ export default function Body() {
                             If you decide to top up to a full undergraduate degree through an accredited UK university, the costs are as follows.
                         </span>
                         <div className='pl-5'>
-                            <li className='font-bold'>Middlesex University</li>
+                            <li className='description'>Middlesex University</li>
                             <div className='pl-5 mt-2'>
                                 <li>BSc Information Systems (Top-up)</li>
                                 <li>BSc (Hons) Information Technology and Business Information Systems (Top-up)</li>
                             </div>
                         </div>
                         <div className='pl-5'>
-                            <li className='font-bold'>University of Derby</li>
+                            <li className='description'>University of Derby</li>
                             <div className='pl-5 mt-2'>
                                 <li>BSc (Hons) Computing and Information Technology</li>
                             </div>
                         </div>
                         <div className='pl-5'>
-                            <li className='font-bold'>University of Hertfordshire</li>
+                            <li className='description'>University of Hertfordshire</li>
                             <div className='pl-5 mt-2'>
                                 <li>BSc (Hons) Information Technology (Top-up)</li>
                             </div>
@@ -114,16 +114,16 @@ export default function Body() {
                 </div>
             </div>
             <div
-                className='w-full font-sans lg:pt-10 lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 capitalize'>
+                className='w-full font-sans lg:pt-10 lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
                 <div className='w-full flex items-start flex-col lg:h-full'>
                     <div className="w-full lg:grid lg:grid-cols-2">
-                        <div className="w-full flex items-start flex-col font-bold lg:h-full">
+                        <div className="w-full flex items-start flex-col font-sans lg:h-full">
                             <span className='text-[6vw] lg:text-[3vw]'>
                                 IT and Networking
                             </span>
                         </div>
                         <div className="w-full h-full p-2">
-                            <div className="border-b-2 h-[70%] border-gray-400 relative">
+                            <div className="border-b-2 h-[90%] border-gray-400 relative">
                             </div>
                         </div>
                     </div>
@@ -141,20 +141,20 @@ export default function Body() {
                             If you decide to top up to a full undergraduate degree through an accredited UK university, the costs are as follows.
                         </span>
                         <div className='pl-5'>
-                            <li className='font-bold'>Middlesex University</li>
+                            <li className='description'>Middlesex University</li>
                             <div className='pl-5 mt-2'>
                                 <li>BSc Information Systems (Top-up)</li>
                                 <li>BSc (Hons) Information Technology and Business Information Systems (Top-up)</li>
                             </div>
                         </div>
                         <div className='pl-5'>
-                            <li className='font-bold'>University of Derby</li>
+                            <li className='description'>University of Derby</li>
                             <div className='pl-5 mt-2'>
                                 <li>BSc (Hons) Computing and Information Technology</li>
                             </div>
                         </div>
                         <div className='pl-5'>
-                            <li className='font-bold'>University of Hertfordshire</li>
+                            <li className='description'>University of Hertfordshire</li>
                             <div className='pl-5 mt-2'>
                                 <li>BSc (Hons) Information Technology (Top-up)</li>
                             </div>
@@ -163,16 +163,16 @@ export default function Body() {
                 </div>
             </div>
             <div
-                className='w-full font-sans lg:pt-10 lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 capitalize'>
+                className='w-full font-sans lg:pt-10 lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
                 <div className='w-full flex items-start flex-col lg:h-full'>
                     <div className="w-full lg:grid lg:grid-cols-2">
-                        <div className="w-full flex items-start flex-col font-bold lg:h-full">
+                        <div className="w-full flex items-start flex-col font-sans lg:h-full">
                             <span className='text-[6vw] lg:text-[3vw]'>
                                 IT and Web design
                             </span>
                         </div>
                         <div className="w-full h-full p-2">
-                            <div className="border-b-2 h-[70%] border-gray-400 relative">
+                            <div className="border-b-2 h-[90%] border-gray-400 relative">
                             </div>
                         </div>
                     </div>
@@ -190,26 +190,26 @@ export default function Body() {
                             If you decide to top up to a full undergraduate degree through an accredited UK university, the costs are as follows.
                         </span>
                         <div className='pl-5'>
-                            <li className='font-bold'>Middlesex University</li>
+                            <li className='description'>Middlesex University</li>
                             <div className='pl-5 mt-2'>
                                 <li>BSc Information Systems (Top-up)</li>
                                 <li>BSc (Hons) Information Technology and Business Information Systems (Top-up)</li>
                             </div>
                         </div>
                         <div className='pl-5'>
-                            <li className='font-bold'>University of Derby</li>
+                            <li className='description'>University of Derby</li>
                             <div className='pl-5 mt-2'>
                                 <li>BSc (Hons) Computing and Information Technology</li>
                             </div>
                         </div>
                         <div className='pl-5'>
-                            <li className='font-bold'>University of Roehampton</li>
+                            <li className='description'>University of Roehampton</li>
                             <div className='pl-5 mt-2'>
                                 <li>o	BSc Honours Web Design and Development (top up)</li>
                             </div>
                         </div>
                         <div className='pl-5'>
-                            <li className='font-bold'>University of Hertfordshire</li>
+                            <li className='description'>University of Hertfordshire</li>
                             <div className='pl-5 mt-2'>
                                 <li>BSc (Hons) Information Technology (Top-up)</li>
                             </div>

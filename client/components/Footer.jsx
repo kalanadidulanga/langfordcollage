@@ -10,7 +10,7 @@ export const Footer = () => {
 
     return (
         <div className="flex items-center justify-center lg:h-screen w-full border-t lg:mt-0">
-            <footer className="bg-white text-black w-full lg:h-full capitalize flex flex-col">
+            <footer className="bg-white text-black w-full lg:h-full  flex flex-col">
                 <div className="flex-grow w-full grid grid-cols-1 md:grid-cols-4 gap-8 px-10 lg:px-30 py-5 lg:py-30">
                     <div className="col-span-1 gap-3 flex flex-col">
                         <div className='w-[50%] lg:w-[35%] h-[20vh]'>
@@ -28,7 +28,7 @@ export const Footer = () => {
                     </div>
 
                     <div className='col-span-1 mt-5'>
-                        <h4 className="font-semibold mb-3 text-[18px] text-[#2e2e27]">Quick links</h4>
+                        <h4 className="font-semibold mb-3 text-[#2e2e27] text1">Quick links</h4>
                         <ul className="space-y-2 text-[15px]">
                             <li><a href="/individual/how_will_you_learn" className={`hover:underline`}>How will you learn</a></li>
                             <li><a href="/individual/our_hubs" className={`hover:underline`}>our hubs</a></li>
@@ -40,18 +40,18 @@ export const Footer = () => {
                     </div>
 
                     <div className='col-span-1 mt-5'>
-                        <h4 className="font-semibold mb-3 text-[18px] text-[#2e2e27]">General enquiries</h4>
+                        <h4 className="font-bold mb-3 text1 text-[#2e2e27]">General enquiries</h4>
                         <ul className="space-y-2 text-[15px]">
                             <li className='flex gap-3 items-center'>
                                 <img src="/Icon/email.png" alt="email" className='w-4 h-4' />
-                                <a href="mailto:enquiries@wbs.ac.uk" target="_blank" className={`hover:underline`}>enquiries@wbs.ac.uk</a>
+                                <a href="mailto:info@langfordcollege.com" target="_blank" className={`hover:underline`}>info@langfordcollege.com</a>
                             </li>
                             <li className='flex gap-3 items-center'>
                                 <img src="/Icon/call.png" alt="call" className='w-4 h-4' />
-                                <a href="tel:+442476524306" target="_blank" className={`hover:underline`}>+442476524306</a>
+                                <a href="tel:+447849537739" target="_blank" className={`hover:underline`}>(+44) 7849 537739</a>
                             </li>
                         </ul>
-                        <h4 className="font-semibold mb-3 text-[18px] mt-5 text-[#2e2e27]">Press Office</h4>
+                        {/* <h4 className="font-semibold mb-3 text-[18px] mt-5 text-[#2e2e27]">Press Office</h4>
                         <ul className="space-y-2 text-[15px]">
                             <li className='flex gap-3 items-center'>
                                 <img src="/Icon/email.png" alt="email" className='w-4 h-4' />
@@ -61,10 +61,10 @@ export const Footer = () => {
                                 <img src="/Icon/call.png" alt="call" className='w-4 h-4' />
                                 <a href="tel:+442476573967" target="_blank" className={`hover:underline`}>+442476573967</a>
                             </li>
-                        </ul>
+                        </ul> */}
                     </div>
                     <div className='col-span-1 w-full lg:mt-5 mb-5'>
-                        <h4 className="font-semibold mb-3 text-[18px] text-[#2e2e27]">About Us,</h4>
+                        <h4 className="font-semibold mb-3 text1 text-[#2e2e27]">About Us,</h4>
                         <span className='text-[15px]'>
                             Langford College offers flexible, affordable online learning pathways for students worldwide, helping them fast-track undergraduate and postgraduate qualifications with full support and interactive tools for professional success.
                         </span>

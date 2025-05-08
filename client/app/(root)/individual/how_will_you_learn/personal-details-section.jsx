@@ -11,7 +11,7 @@ function PersonalDetails() {
 
     return (
         <>
-            <div className='w-full font-sans lg:pb-10 pt-5 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 capitalize'>
+            <div className='w-full font-sans lg:pb-10 pt-5 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
                 <div className='w-full flex items-start font-bold flex-col lg:h-full'>
                     <span className='text-[6vw] lg:text-[3vw]'>
                         Personal details
@@ -26,7 +26,7 @@ function PersonalDetails() {
                     </div>
                     {isclickSection1 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
                                 <span>
                                     You can request this by emailing student support at <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
                                 </span>
@@ -42,7 +42,7 @@ function PersonalDetails() {
                     </div>
                     {isclickSection2 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
                                 <span>
                                     Access to the  langford college Dashboard is for a maximum of 5 years from date of enrolment. This can be extended if a request is made in writing to  langford college student admin.
                                 </span>
@@ -58,9 +58,9 @@ function PersonalDetails() {
                     </div>
                     {isclickSection3 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
                                 <span>
-                                    If learners have lost or forgotten their login details, they can request a new password on provision of their email address. Email admin@onlinebusinessschool.com for more assistance.
+                                    If learners have lost or forgotten their login details, they can request a new password on provision of their email address. Email admin@langfordcollege.com for more assistance.
                                 </span>
                             </div>
                         </>

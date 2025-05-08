@@ -11,7 +11,7 @@ function FAQ() {
 
     return (
         <>
-            <div className='w-full font-sans lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 capitalize'>
+            <div className='w-full font-sans lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
                 <div className='w-full flex items-start font-bold flex-col lg:h-full'>
                     <span className='text-[6vw] lg:text-[3vw]'>
                         FAQs Application
@@ -26,7 +26,7 @@ function FAQ() {
                     </div>
                     {isclickSection1 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
                                 <span>
                                     For students who do not live or come from an English language speaking country, we recommend taking an IELTS course to improve your language to level 5.5 or higher. This can be done alongside our courses. Your minimum level of English may vary depending upon which university you decide to complete your top up qualification from.
                                 </span>
@@ -42,7 +42,7 @@ function FAQ() {
                     </div>
                     {isclickSection2 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
                                 <span>
                                     You will need to have an IELTS score of Level 5.5 or above on completion of the Langford College course. You can study an English course alongside the Langford College course. At Level 4/5, you will require a full secondary education to be eligible to enrol onto the course, and universities will require a minimum age before embarking on the university top-up programme. At level 7, you will require 5 years of managerial experience if you do not have a BA degree. This may vary for various university partners. However, we will look at every application individually and some exceptions may be made.
                                 </span>
@@ -58,7 +58,7 @@ function FAQ() {
                     </div>
                     {isclickSection3 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
                                 <span>
                                     There is no interview process. You will have to fill out a short application form to make sure you meet the criteria.
                                 </span>
@@ -74,9 +74,9 @@ function FAQ() {
                     </div>
                     {isclickSection4 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
                                 <span>
-                                    Learners should first visit the <a href="https://www.onlinebusinessschool.com/#Course-services" target='_blank' className='underline'>Langford College Course page</a> to view the range of courses on offer. It’s important you choose a subject you enjoy and will help you reach your goals. Here are some things to consider when choosing the right subject for you:
+                                    Learners should first visit the <a href="/" className='underline'>Langford College Course page</a> to view the range of courses on offer. It’s important you choose a subject you enjoy and will help you reach your goals. Here are some things to consider when choosing the right subject for you:
                                 </span>
                                 <div className='flex flex-col'>
                                     <li>Review the modules within the course: Do they interest you? Are they relevant to your chosen career path?</li>
@@ -97,7 +97,7 @@ function FAQ() {
                     </div>
                     {isclickSection5 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
                                 <span>
                                     You can choose your course and enrol online via the Langford College <a href="/" className='underline'>course page</a>. Alternatively, you can call the Langford enrolment Team on 0333 772 1158, and they will guide you through the Enrolment process.
                                 </span>

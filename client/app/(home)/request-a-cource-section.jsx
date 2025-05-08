@@ -480,19 +480,19 @@ a[x-apple-data-detectors],
 
     return (
         <>
-            <div className='w-full pb-10 pt-10 bg-[#F7FAFF] text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 request-section capitalize'>
+            <div className='w-full pb-10 pt-10 bg-[#F7FAFF] text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 request-section '>
                 <div className='w-full flex items-start flex-col lg:h-full'>
                     <div className="w-full lg:grid lg:grid-cols-2">
                         <div className="w-full flex items-start flex-col lg:h-full">
-                            <span className="text-[6vw] lg:text-[3.5vw] font-sans font-bold capitalize">
+                            <span className="text-[6vw] lg:text-[4vw] font-sans font-bold leading-none">
                                 Request a Course
                             </span>
-                            <span className="text-[6vw] lg:text-[3.5vw] font-mono capitalize">
+                            <span className="text-[6vw] lg:text-[4vw] font-mono leading-[1.1]">
                                 Prospectus
                             </span>
                         </div>
                         <div className="w-full h-full p-2">
-                            <div className="border-b-2 h-[70%] border-gray-400 relative">
+                            <div className="border-b-2 h-[90%] border-gray-400 relative">
                             </div>
                         </div>
                     </div>

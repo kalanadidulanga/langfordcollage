@@ -12,40 +12,40 @@ function CourseSection() {
 
   const [courses, setCourses] = useState([]);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
 
-    gsap.fromTo(
-      ".course-left",
-      { opacity: 0, x: -50 },
-      {
-        opacity: 1, x: 0, duration: 1, ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".course-section",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play reverse play reverse",
-          once: false,
-        }
-      }
-    );
+  //   gsap.fromTo(
+  //     ".course-left",
+  //     { opacity: 0, x: -50 },
+  //     {
+  //       opacity: 1, x: 0, duration: 1, ease: "power3.out",
+  //       scrollTrigger: {
+  //         trigger: ".course-section",
+  //         start: "top 80%",
+  //         end: "bottom 20%",
+  //         toggleActions: "play reverse play reverse",
+  //         once: false,
+  //       }
+  //     }
+  //   );
 
-    gsap.fromTo(
-      ".course-right",
-      { opacity: 0, x: 50 },
-      {
-        opacity: 1, x: 0, duration: 1, ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".course-section",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play reverse play reverse",
-          once: false,
-        }
-      }
-    );
+  //   gsap.fromTo(
+  //     ".course-right",
+  //     { opacity: 0, x: 50 },
+  //     {
+  //       opacity: 1, x: 0, duration: 1, ease: "power3.out",
+  //       scrollTrigger: {
+  //         trigger: ".course-section",
+  //         start: "top 80%",
+  //         end: "bottom 20%",
+  //         toggleActions: "play reverse play reverse",
+  //         once: false,
+  //       }
+  //     }
+  //   );
 
-  }, []);
+  // }, []);
 
   useEffect(() => {
     loadCourses();
@@ -73,7 +73,7 @@ function CourseSection() {
     <>
       {courses?.length > 0 ? (
         <>
-          <div className='w-full capitalize lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 course-section'>
+          <div className='w-full  lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 course-section'>
             <div className='w-full flex items-start flex-col lg:h-full'>
               <span className='text-[6vw] lg:text-[3vw] course-left font-bold font-sans'>
                 Our Level 4 & 5
@@ -96,7 +96,7 @@ function CourseSection() {
         </>
       ) : (
         <>
-          <div className='w-full capitalize lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 course-section'>
+          <div className='w-full  lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 course-section'>
             <div className='w-full flex items-start flex-col lg:h-full'>
               <span className='text-[6vw] lg:text-[3vw] course-left font-bold font-sans'>
                 Our Level 4 & 5

@@ -5,62 +5,61 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function LearnAnywhere() {
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
 
-    gsap.fromTo(
-      ".learn-anyway-left",
-      { opacity: 0, x: -50 },
-      {
-        opacity: 1, x: 0, duration: 1, ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".learn-anyway-section",
-          start: "top 75%",
-          end: "bottom 25%",
-          toggleActions: "play reverse play reverse",
-          once: false,
-        }
-      }
-    );
+  //   gsap.fromTo(
+  //     ".learn-anyway-left",
+  //     { opacity: 0, x: -50 },
+  //     {
+  //       opacity: 1, x: 0, duration: 1, ease: "power3.out",
+  //       scrollTrigger: {
+  //         trigger: ".learn-anyway-section",
+  //         start: "top 75%",
+  //         end: "bottom 25%",
+  //         toggleActions: "play reverse play reverse",
+  //         once: false,
+  //       }
+  //     }
+  //   );
 
-    gsap.fromTo(
-      ".learn-anyway-right",
-      { opacity: 0, x: 50 },
-      {
-        opacity: 1, x: 0, duration: 1, ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".learn-anyway-section",
-          start: "top 75%",
-          end: "bottom 25%",
-          toggleActions: "play reverse play reverse",
-          once: false,
-        }
-      }
-    );
+  //   gsap.fromTo(
+  //     ".learn-anyway-right",
+  //     { opacity: 0, x: 50 },
+  //     {
+  //       opacity: 1, x: 0, duration: 1, ease: "power3.out",
+  //       scrollTrigger: {
+  //         trigger: ".learn-anyway-section",
+  //         start: "top 75%",
+  //         end: "bottom 25%",
+  //         toggleActions: "play reverse play reverse",
+  //         once: false,
+  //       }
+  //     }
+  //   );
 
-  }, []);
+  // }, []);
 
   return (
     <>
-      <div className='w-full lg:pb-20 pb-10 bg-white text-black px-[9vw] flex flex-col items-start justify-start gap-5 learn-anyway-section'>
-        <div className='w-full flex items-start flex-col lg:h-full learn-anyway-left capitalize'>
+      <div className='w-full lg:pb-20 pb-10 bg-white text-black px-[9vw] flex flex-col items-start justify-start gap-5'>
+        <div className='w-full flex items-start flex-col lg:h-full '>
           <div className="w-full lg:grid lg:grid-cols-2">
             <div className="w-full flex items-start flex-col lg:h-full">
-              <span className="text-[6vw] lg:text-[3.5vw] font-sans font-bold capitalize">
+              <span className="text-[6vw] lg:text-[4vw] font-sans font-bold leading-none">
                 Learn anywhere,
               </span>
-              <span className="text-[6vw] lg:text-[3.5vw] font-mono capitalize">
+              <span className="text-[6vw] lg:text-[4vw] font-mono leading-[1.1]">
                 Anytime, any device
               </span>
             </div>
             <div className="w-full h-full p-2">
-              <div className="border-b-2 h-[70%] border-gray-400 relative">
+              <div className="border-b-2 h-[90%] border-gray-400 relative">
               </div>
             </div>
           </div>
-
         </div>
-        <div className='w-full flex items-start flex-col lg:flex-row lg:h-full learn-anyway-left capitalize gap-10'>
+        <div className='w-full flex items-start flex-col lg:flex-row lg:h-full gap-10'>
           <div className='w-full'>
             <div className='w-full bg-white text-[#2E2E27] flex flex-col'>
               <div className='w-full flex flex-col'>
@@ -77,7 +76,7 @@ function LearnAnywhere() {
               </div>
             </div>
           </div>
-          <div className='flex items-end justify-end w-full lg:w-[60%] h-[55vh] hidden lg:block learn-anyway-right'>
+          <div className='flex items-end justify-end w-full lg:w-[60%] h-[55vh] hidden lg:block'>
             <img
               src="/Images/robo-girl.png"
               alt=""
@@ -85,9 +84,6 @@ function LearnAnywhere() {
             />
           </div>
         </div>
-
-
-
       </div>
     </>
   )

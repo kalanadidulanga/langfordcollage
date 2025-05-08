@@ -16,40 +16,40 @@ function LeatestTestimonial() {
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
 
-    gsap.fromTo(
-      ".testimonial-left",
-      { opacity: 0, x: -50 },
-      {
-        opacity: 1, x: 0, duration: 1, ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".testimonial-section",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play reverse play reverse",
-          once: false,
-        }
-      }
-    );
+  //   gsap.fromTo(
+  //     ".testimonial-left",
+  //     { opacity: 0, x: -50 },
+  //     {
+  //       opacity: 1, x: 0, duration: 1, ease: "power3.out",
+  //       scrollTrigger: {
+  //         trigger: ".testimonial-section",
+  //         start: "top 80%",
+  //         end: "bottom 20%",
+  //         toggleActions: "play reverse play reverse",
+  //         once: false,
+  //       }
+  //     }
+  //   );
 
-    gsap.fromTo(
-      ".testimonial-right",
-      { opacity: 0, x: 50 },
-      {
-        opacity: 1, x: 0, duration: 1, ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".testimonial-section",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play reverse play reverse",
-          once: false,
-        }
-      }
-    );
+  //   gsap.fromTo(
+  //     ".testimonial-right",
+  //     { opacity: 0, x: 50 },
+  //     {
+  //       opacity: 1, x: 0, duration: 1, ease: "power3.out",
+  //       scrollTrigger: {
+  //         trigger: ".testimonial-section",
+  //         start: "top 80%",
+  //         end: "bottom 20%",
+  //         toggleActions: "play reverse play reverse",
+  //         once: false,
+  //       }
+  //     }
+  //   );
 
-  }, []);
+  // }, []);
 
   useEffect(() => {
     loadTestimonail();
@@ -113,7 +113,7 @@ function LeatestTestimonial() {
             <div className='w-full flex items-start font-bold flex-col lg:h-full'>
               <div className="w-full lg:grid lg:grid-cols-2">
                 <div className="w-full flex items-start flex-col lg:h-full">
-                  <span className="text-[6vw] lg:text-[4vw] font-sans font-bold capitalize pb-5">
+                  <span className="text-[6vw] lg:text-[4vw] font-sans font-bold  pb-5">
                     Latest Testimonials
                   </span>
                 </div>

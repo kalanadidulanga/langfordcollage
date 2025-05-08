@@ -11,7 +11,7 @@ function Cost() {
 
     return (
         <>
-            <div className='w-full font-sans lg:pb-10 pt-5 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 capitalize'>
+            <div className='w-full font-sans lg:pb-10 pt-5 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
                 <div className='w-full flex items-start font-bold flex-col lg:h-full'>
                     <span className='text-[6vw] lg:text-[3vw]'>
                         Costs
@@ -26,7 +26,7 @@ function Cost() {
                     </div>
                     {isclickSection1 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
                                 <span>
                                     Yes. Once langford college has received the cleared funds your course material will be released to you immediately.
                                 </span>
@@ -42,7 +42,7 @@ function Cost() {
                     </div>
                     {isclickSection2 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
                                 <span>
                                 langford college offers an interest free payment plan so that you can pay for your course over a set number of months. Contact one of our student advisers for more information about this. UK students may also be eligible for student loans for the university top-up programme. Learners should make enquiries directly to their chosen university.
                                 </span>
@@ -58,7 +58,7 @@ function Cost() {
                     </div>
                     {isclickSection3 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
                                 <span>
                                     No additional costs are levied by langford college, and all additional learning resources including tutor support, e-books and short business courses, are included in course tuition fees.
                                 </span>
@@ -74,7 +74,7 @@ function Cost() {
                     </div>
                     {isclickSection4 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
                                 <span>
                                     Payment can be made online through credit/debit card, bank transfer or PayPal, Western Union, as well as through an e-mail payment link sent by one of our advisors.
                                 </span>
@@ -90,7 +90,7 @@ function Cost() {
                     </div>
                     {isclickSection5 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] font-extralight text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
                                 <span>
                                     Assessments are included with the course purchases.
                                 </span>

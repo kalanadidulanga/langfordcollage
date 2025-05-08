@@ -4,14 +4,14 @@ import { Toaster } from "react-hot-toast";
 import { FaWhatsapp, FaTiktok, FaInstagram, FaYoutube, FaFacebookF } from "react-icons/fa";
 
 const geistSans = localFont({
-  src: "./fonts/basis-grotesque-arabic-pro-regular.ttf",
+  src: "./fonts/BasisGrotesqueArabicPro-Bold.ttf",
   variable: "--font-geist-sans",
-  weight: "100",
+  weight: "400",
 });
 const geistMono = localFont({
   src: "./fonts/plantin-mt-pro-light.ttf",
   variable: "--font-geist-mono",
-  weight: "100",
+  weight: "300",
 });
 
 export const metadata = {
