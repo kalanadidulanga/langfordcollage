@@ -30,10 +30,10 @@ function Pagetable() {
     const [courseStartDate, setCourseStartDate] = useState("");
     const [courseStartDate1, setCourseStartDate1] = useState("");
     const [courseLocation, setCourseLocation] = useState("");
-    const [studyPace, setStudyPace] = useState("");
-    const [qualification, setQualification] = useState("");
-    const [assessment, setAssessment] = useState("");
-    const [includes, setIncludes] = useState("");
+    // const [studyPace, setStudyPace] = useState("");
+    // const [qualification, setQualification] = useState("");
+    // const [assessment, setAssessment] = useState("");
+    // const [includes, setIncludes] = useState("");
     const [courseLevel, setCourseLevel] = useState("");
     const [annualPayment, setAnnualPayment] = useState("");
     const [monthlyPayment, setMonthlyPayment] = useState("");
@@ -594,10 +594,10 @@ function Pagetable() {
         setCourseName("");
         setCourseStartDate("");
         setCourseLocation("");
-        setStudyPace("");
-        setQualification("");
-        setAssessment("");
-        setIncludes("");
+        // setStudyPace("");
+        // setQualification("");
+        // setAssessment("");
+        // setIncludes("");
         setCourseLevel("");
         setAnnualPayment("");
         setMonthlyPayment("");
@@ -658,10 +658,10 @@ function Pagetable() {
                                             }
 
                                             setCourseLocation(item?.course_location);
-                                            setStudyPace(item?.study_pace);
-                                            setQualification(item?.qualification);
-                                            setAssessment(item?.assessment);
-                                            setIncludes(item?.includesData);
+                                            // setStudyPace(item?.study_pace);
+                                            // setQualification(item?.qualification);
+                                            // setAssessment(item?.assessment);
+                                            // setIncludes(item?.includesData);
                                             setCourseLevel(item?.course_level);
                                             setAnnualPayment(item?.annual_payment);
                                             setMonthlyPayment(item?.monthly_payment);
