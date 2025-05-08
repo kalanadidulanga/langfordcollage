@@ -142,10 +142,10 @@ function Awarding() {
 
     return (
         <>
-            <div className='w-full lg:pb-20 lg:pt-20 font-sans bg-[#f7faff] text-[#2e2e27] px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 testimonial-section'>
+            <div className='w-full lg:pb-20 lg:pt-20 font-sans bg-[#2f3029] px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 testimonial-section'>
                 <div className='w-full flex items-start flex-col lg:h-full'>
                     <div className="w-full grid grid-cols-2">
-                        <div className="w-full flex items-start flex-col lg:h-full">
+                        <div className="w-full flex items-start flex-col lg:h-full text-white">
                             <span className="text-[6vw] lg:text-[4vw] leading-none font-sans">
                             Continue Your
                             </span>
@@ -206,8 +206,8 @@ function Awarding() {
                     </div> */}
 
 
-                    <div className="w-full bg-[#f7faff] text-gray-500 flex justify-center lg:justify-start testimonial-right">
-                        <div className="w-full bg-[#f7faff] relative">
+                    <div className="w-full bg-[#2f3029] text-gray-500 flex justify-center lg:justify-start testimonial-right">
+                        <div className="w-full bg-[#2f3029] relative">
 
 
                             {/* Logo Container */}
