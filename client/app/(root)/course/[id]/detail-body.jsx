@@ -13,18 +13,18 @@ function CourseDetailBody({ data }) {
     return (
         <>
             <div className='w-full px-[10vw] py-[3vh] grid grid-cols-2 text-[#2e2e27] bg-white border-t border-b border-gray-300'>
-                <div className='w-full flex flex-col lg:flex-row gap-10 items-center'>
-                    <span className='font-sans text-[20px]'>You are viewing</span>
+                <div className='w-full flex flex-col lg:flex-row lg:gap-10 items-start lg:items-center'>
+                    <span className='font-sans text-[22px]'>You are viewing</span>
                     <span className='font-sans text-[18px] description'>Course Summery</span>
                 </div>
-                <div className='w-full flex flex-col lg:flex-row gap-10 items-center justify-end'>
+                <div className='w-full flex flex-col lg:flex-row gap-10 items-center justify-center lg:justify-end'>
                     <span className='font-sans text-[18px] flex items-center justify-center gap-3 cursor-pointer' onClick={() => setClickSection(!isClickedSection)}>Course Contents <span className={`text-[25px] text-red-500 ${isClickedSection ? `duration-100 rotate-0` : `-rotate-90 duration-100`}`}>+</span></span>
                 </div>
             </div>
             {isClickedSection && (
                 <>
-                    <div className='w-full lg:px-[10vw] py-[5vh] bg-[#F7FAFF] flex'>
-                        <div className='w-[40%] flex flex-col items-start text-[17px] justify-start text-black font-sans gap-3 border-e mr-5'>
+                    <div className='w-full lg:px-[10vw] py-[5vh] bg-[#F7FAFF] flex flex-col lg:flex-row'>
+                        <div className='w-full lg:w-[40%] flex flex-col items-start text-[17px] justify-start text-black font-sans gap-3 px-[10vw] lg:px-0 lg:border-e mr-5'>
                             <span className={`${isClickedSection1 ? `pl-3 underline text-[24px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
                                 onClick={() => {
                                     setClickSection1(true);
@@ -98,7 +98,7 @@ function CourseDetailBody({ data }) {
                                 University Options
                             </span>
                         </div>
-                        <div className='w-full flex flex-col items-start text-[17px] justify-start text-black font-sans gap-3'>
+                        <div className='w-full flex flex-col items-start text-[17px] justify-start text-black font-sans gap-3 px-[10vw] lg:px-0 border-t lg:border-0 mt-5 lg:mt-0 pt-5 lg:pt-0'>
                             {isClickedSection1 && (
                                 <>
                                     <div className='w-full bg-[#F7FAFF]'>
