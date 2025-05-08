@@ -649,13 +649,14 @@ function Pagetable() {
                                             openModal();
                                             setCourseName(item?.course_name);
 
-                                            if (item?.course_start_date == "Anytime") {
-                                                setCourseStartDate("Anytime");
-                                                setIsdateModalOpen(false);
-                                            } else {
-                                                setCourseStartDate(item?.course_start_date);
-                                                setIsdateModalOpen(true);
-                                            }
+                                            // if (item?.course_start_date == "Anytime") {
+                                            //     setCourseStartDate("Anytime");
+                                            //     setIsdateModalOpen(false);
+                                            // } else {
+                                                setCourseStartDate(item?.course_start_date?.split("/")?.[0]);
+                                                setCourseStartDate1(item?.course_start_date?.split("/")?.[1]);
+                                                // setIsdateModalOpen(true);
+                                            // }
 
                                             setCourseLocation(item?.course_location);
                                             // setStudyPace(item?.study_pace);
