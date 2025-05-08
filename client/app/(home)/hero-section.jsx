@@ -58,7 +58,14 @@ const HeroSection = () => {
             >
               Try a Free Lesson
             </button>
-            
+            <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] fade-in hover:scale-105 transition-all duration-200"
+              onClick={() => {
+                window.scrollTo({ top: 4500, behavior: "smooth" });
+              }}
+            >
+              Most Popular Courses
+            </button>
+
           </div>
         </div>
       </div>
