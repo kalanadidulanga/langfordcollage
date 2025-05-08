@@ -47,7 +47,7 @@ const HeroSection = () => {
                 window.location.href = "/life_in_uk"
               }}
             >
-              Life In UK
+              Life In The UK
             </button>
           </div>
           <div className="flex gap-4">
