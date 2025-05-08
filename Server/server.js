@@ -601,7 +601,6 @@ async function getAllEnrollsStudents(req, res) {
     res.status(500).json({ error: "Failed to fetch enrolled students." });
   }
 }
-
 async function GetTestimonial(req, res) {
   const { slug } = req.query;
 
