@@ -28,6 +28,7 @@ function Pagetable() {
 
     const [courseName, setCourseName] = useState("");
     const [courseStartDate, setCourseStartDate] = useState("");
+    const [courseStartDate1, setCourseStartDate1] = useState("");
     const [courseLocation, setCourseLocation] = useState("");
     const [studyPace, setStudyPace] = useState("");
     const [qualification, setQualification] = useState("");
@@ -44,6 +45,12 @@ function Pagetable() {
     const [univercityOptions, setUnivercityOptions] = useState("");
     const [image, setImage] = useState("");
     const [courseImage, setCourseImage] = useState("");
+    const [ucsa_code, setUcsaCode] = useState("");
+    const [ucsa_point, setUcsaPoint] = useState("");
+    const [duration, setDuration] = useState("");
+    const [ukFee, setUkFee] = useState("");
+    const [internationalFee, setInternationalFee] = useState("");
+    const [courseLeader, setCourseLeader] = useState("");
     const [listingPriority, setListingPriority] = useState("None");
 
     const options = [
@@ -108,7 +115,12 @@ function Pagetable() {
             }
 
             if (!courseStartDate) {
-                setError("Please Select Course Start Date");
+                setError("Please Enter Course Start Month");
+                setLoading(false);
+                return;
+            }
+            if (!courseStartDate1) {
+                setError("Please Enter Course Start Year");
                 setLoading(false);
                 return;
             }
@@ -119,29 +131,29 @@ function Pagetable() {
                 return;
             }
 
-            if (!studyPace) {
-                setError("Please Enter Study Pace");
-                setLoading(false);
-                return;
-            }
+            // if (!studyPace) {
+            //     setError("Please Enter Study Pace");
+            //     setLoading(false);
+            //     return;
+            // }
 
-            if (!qualification) {
-                setError("Please Enter Qualification");
-                setLoading(false);
-                return;
-            }
+            // if (!qualification) {
+            //     setError("Please Enter Qualification");
+            //     setLoading(false);
+            //     return;
+            // }
 
-            if (!assessment) {
-                setError("Please Enter Assessment");
-                setLoading(false);
-                return;
-            }
+            // if (!assessment) {
+            //     setError("Please Enter Assessment");
+            //     setLoading(false);
+            //     return;
+            // }
 
-            if (!includes) {
-                setError("Please Enter Includes");
-                setLoading(false);
-                return;
-            }
+            // if (!includes) {
+            //     setError("Please Enter Includes");
+            //     setLoading(false);
+            //     return;
+            // }
 
             if (!courseLevel) {
                 setError("Please Enter Course Level");
@@ -169,6 +181,38 @@ function Pagetable() {
 
             if (monthlyPayment == "0") {
                 setError("Please Enter Monthly Payment");
+                setLoading(false);
+                return;
+            }
+
+            if (!ucsa_code) {
+                setError("Please Enter UCAS Code");
+                setLoading(false);
+                return;
+            }
+            if (!ucsa_point) {
+                setError("Please Enter UCAS Points");
+                setLoading(false);
+                return;
+            }
+            if (!ukFee) {
+                setError("Please Enter UK Fee");
+                setLoading(false);
+                return;
+            }
+            if (!internationalFee) {
+                setError("Please Enter International Fee");
+                setLoading(false);
+                return;
+            }
+
+            if (!duration) {
+                setError("Please Enter Duration");
+                setLoading(false);
+                return;
+            }
+            if (!courseLeader) {
+                setError("Please Enter Course Leader");
                 setLoading(false);
                 return;
             }
@@ -231,12 +275,8 @@ function Pagetable() {
 
                 const response = await axios.post(`${BASE_URL}/api/addNewCourse`, {
                     course_name: courseName,
-                    course_start_date: courseStartDate,
+                    course_start_date: courseStartDate + "/" + courseStartDate1,
                     course_location: courseLocation,
-                    study_pace: studyPace,
-                    qualification: qualification,
-                    assessment: assessment,
-                    includes: includes,
                     course_level: courseLevel,
                     annual_payment: annualPayment,
                     monthly_payment: monthlyPayment,
@@ -247,6 +287,12 @@ function Pagetable() {
                     career_progression: careerProgression,
                     university_options: univercityOptions,
                     image_path: res?.data?.fileUrl,
+                    ucas_code: ucsa_code,
+                    ucas_points: ucsa_point,
+                    duration: duration,
+                    uk_fee: ukFee,
+                    international_fee: internationalFee,
+                    course_leader: courseLeader,
                 });
 
                 if (response.data.status) {
@@ -298,38 +344,76 @@ function Pagetable() {
                 return;
             }
 
+            if (!courseStartDate1) {
+                setError("Please Enter Course Start Year");
+                setLoading(false);
+                return;
+            }
+
             if (!courseLocation) {
                 setError("Please Select Course Location");
                 setLoading(false);
                 return;
             }
 
-            if (!studyPace) {
-                setError("Please Enter Study Pace");
-                setLoading(false);
-                return;
-            }
+            // if (!studyPace) {
+            //     setError("Please Enter Study Pace");
+            //     setLoading(false);
+            //     return;
+            // }
 
-            if (!qualification) {
-                setError("Please Enter Qualification");
-                setLoading(false);
-                return;
-            }
+            // if (!qualification) {
+            //     setError("Please Enter Qualification");
+            //     setLoading(false);
+            //     return;
+            // }
 
-            if (!assessment) {
-                setError("Please Enter Assessment");
-                setLoading(false);
-                return;
-            }
+            // if (!assessment) {
+            //     setError("Please Enter Assessment");
+            //     setLoading(false);
+            //     return;
+            // }
 
-            if (!includes) {
-                setError("Please Enter Includes");
-                setLoading(false);
-                return;
-            }
+            // if (!includes) {
+            //     setError("Please Enter Includes");
+            //     setLoading(false);
+            //     return;
+            // }
 
             if (!courseLevel) {
                 setError("Please Enter Course Level");
+                setLoading(false);
+                return;
+            }
+
+            if (!ucsa_code) {
+                setError("Please Enter UCAS Code");
+                setLoading(false);
+                return;
+            }
+            if (!ucsa_point) {
+                setError("Please Enter UCAS Points");
+                setLoading(false);
+                return;
+            }
+            if (!ukFee) {
+                setError("Please Enter UK Fee");
+                setLoading(false);
+                return;
+            }
+            if (!internationalFee) {
+                setError("Please Enter International Fee");
+                setLoading(false);
+                return;
+            }
+
+            if (!duration) {
+                setError("Please Enter Duration");
+                setLoading(false);
+                return;
+            }
+            if (!courseLeader) {
+                setError("Please Enter Course Leader");
                 setLoading(false);
                 return;
             }
@@ -387,12 +471,8 @@ function Pagetable() {
                 if (res?.data?.status) {
                     const response = await axios.post(`${BASE_URL}/api/editCourse`, {
                         course_name: courseName,
-                        course_start_date: courseStartDate,
+                        course_start_date: courseStartDate + "/" + courseStartDate1,
                         course_location: courseLocation,
-                        study_pace: studyPace,
-                        qualification: qualification,
-                        assessment: assessment,
-                        includes: includes,
                         course_level: courseLevel,
                         annual_payment: annualPayment,
                         monthly_payment: monthlyPayment,
@@ -403,6 +483,12 @@ function Pagetable() {
                         career_progression: careerProgression,
                         university_options: univercityOptions,
                         image_path: res?.data?.fileUrl,
+                        ucas_code: ucsa_code,
+                        ucas_points: ucsa_point,
+                        duration: duration,
+                        uk_fee: ukFee,
+                        international_fee: internationalFee,
+                        course_leader: courseLeader,
                         courseId: courseId
                     });
 
@@ -434,12 +520,8 @@ function Pagetable() {
 
                 const response = await axios.post(`${BASE_URL}/api/editCourse`, {
                     course_name: courseName,
-                    course_start_date: courseStartDate,
+                    course_start_date: courseStartDate + "/" + courseStartDate1,
                     course_location: courseLocation,
-                    study_pace: studyPace,
-                    qualification: qualification,
-                    assessment: assessment,
-                    includes: includes,
                     course_level: courseLevel,
                     annual_payment: annualPayment,
                     monthly_payment: monthlyPayment,
@@ -450,6 +532,12 @@ function Pagetable() {
                     career_progression: careerProgression,
                     university_options: univercityOptions,
                     image_path: image,
+                    ucas_code: ucsa_code,
+                    ucas_points: ucsa_point,
+                    duration: duration,
+                    uk_fee: ukFee,
+                    international_fee: internationalFee,
+                    course_leader: courseLeader,
                     courseId: courseId
                 });
 
@@ -524,6 +612,13 @@ function Pagetable() {
         setImage("");
         setCourseStartDate("");
         setListingPriority("None");
+        setUcsaCode("");
+        setUcsaPoint("");
+        setDuration("");
+        setUkFee("");
+        setInternationalFee("");
+        setCourseLeader("");
+        setCourseStartDate1("");
         setIsdateModalOpen(false);
         setIsEdit(false);
     }
@@ -577,6 +672,12 @@ function Pagetable() {
                                             setCareerProgression(item?.career_progression);
                                             setUnivercityOptions(item?.university_options);
                                             setImage(item?.image_path);
+                                            setUkFee(item?.uk_fee);
+                                            setUcsaCode(item?.ucas_code);
+                                            setUcsaPoint(item?.ucas_points);
+                                            setDuration(item?.duration);
+                                            setInternationalFee(item?.international_fee);
+                                            setCourseLeader(item?.course_leader);
                                             setListingPriority(item?.listingPriority);
                                             setCourseId(item?.id);
                                             setIsEdit(true);
@@ -599,7 +700,7 @@ function Pagetable() {
                 </div>
             </div>
 
-            <ConfirmModal isOpen={isOpen1} onClose={()=>{
+            <ConfirmModal isOpen={isOpen1} onClose={() => {
                 closeModal1();
                 setCourseId("");
             }} className="max-w-[500px] m-4">
@@ -668,7 +769,7 @@ function Pagetable() {
 
                                     <div className="col-span-2 lg:col-span-1">
                                         <div className={`w-full grid ${isdateModalOpen ? 'grid-cols-2' : 'grid-cols-1'} gap-3`}>
-                                            <div className='w-full'>
+                                            {/* <div className='w-full'>
                                                 <Label>Start Date</Label>
                                                 <Select
                                                     options={options}
@@ -683,22 +784,28 @@ function Pagetable() {
 
                                                     }}
                                                 />
+                                            </div> */}
+                                            {/* {isdateModalOpen && (
+                                                <> */}
+                                            <div className='w-full'>
+                                                <Label>Enter Date</Label>
+                                                <div className='flex gap-5'>
+                                                    <input type="text"
+                                                        placeholder='MM'
+                                                        value={courseStartDate ? courseStartDate : ""}
+                                                        className='w-full bg-white border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
+                                                        onChange={(e) => setCourseStartDate(e.target.value)}
+                                                    />
+                                                    <input type="text"
+                                                        placeholder='YYYY'
+                                                        value={courseStartDate1 ? courseStartDate1 : ""}
+                                                        className='w-full bg-white border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
+                                                        onChange={(e) => setCourseStartDate1(e.target.value)}
+                                                    />
+                                                </div>
                                             </div>
-                                            {isdateModalOpen && (
-                                                <>
-                                                    <div className='w-full'>
-                                                        <Label>Enter Date</Label>
-                                                        <input type="date"
-                                                            value={courseStartDate ? (() => {
-                                                                const [m, d, y] = courseStartDate.split("/");
-                                                                return `${y}-${m.padStart(2, "0")}-${d.padStart(2, "0")}`;
-                                                            })() : ""}
-                                                            className='w-full bg-white border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
-                                                            onChange={(e) => setCourseStartDate(new Date(e.target.value)?.toLocaleDateString())}
-                                                        />
-                                                    </div>
-                                                </>
-                                            )}
+                                            {/* </>
+                                            )} */}
                                         </div>
                                     </div>
 
@@ -707,7 +814,7 @@ function Pagetable() {
                                         <Select options={options1} value={{ value: courseLocation, label: courseLocation }} onChange={(e: any) => setCourseLocation(e.value)} />
                                     </div>
 
-                                    <div className="col-span-2 lg:col-span-1">
+                                    {/* <div className="col-span-2 lg:col-span-1">
                                         <Label>Study Pace</Label>
                                         <input type="text"
                                             value={studyPace}
@@ -741,7 +848,7 @@ function Pagetable() {
                                             onChange={(e) => setIncludes(e.target.value)}
                                             className='w-full border bg-white p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
                                         />
-                                    </div>
+                                    </div> */}
                                     <div className="col-span-2 lg:col-span-1">
                                         <Label>Course Level</Label>
                                         <Select
@@ -755,28 +862,97 @@ function Pagetable() {
                                     <div className="col-span-2 lg:col-span-1">
                                         <Label>Anual Payment</Label>
                                         <div className='flex gap-2 bg-white p-2 h-[40px] rounded border border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'>
-                                            <span>USD</span>
                                             <input
                                                 type="number"
                                                 value={annualPayment}
                                                 onChange={(e) => setAnnualPayment(e.target.value)}
                                                 className='w-full border outline-none border-none h-full'
-                                                placeholder='|'
                                                 min={0}
                                             />
+                                            <span>£</span>
                                         </div>
                                     </div>
                                     <div className="col-span-2 lg:col-span-1">
                                         <Label>Monthly Payment</Label>
                                         <div className='flex gap-2 bg-white p-2 h-[40px] rounded border border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'>
-                                            <span>USD</span>
                                             <input
                                                 type="number"
                                                 value={monthlyPayment}
                                                 onChange={(e) => setMonthlyPayment(e.target.value)}
                                                 className='w-full border outline-none border-none h-full'
-                                                placeholder='|'
                                                 min={0}
+                                            />
+                                            <span>£</span>
+                                        </div>
+                                    </div>
+                                    <div className="col-span-2 lg:col-span-1">
+                                        <Label>UCAS Code</Label>
+                                        <div className='flex gap-2 bg-white p-2 h-[40px] rounded border border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'>
+                                            <input
+                                                type="text"
+                                                value={ucsa_code}
+                                                onChange={(e) => setUcsaCode(e.target.value)}
+                                                className='w-full border outline-none border-none h-full'
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="col-span-2 lg:col-span-1">
+                                        <Label>UCSA Points</Label>
+                                        <div className='flex gap-2 bg-white p-2 h-[40px] rounded border border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'>
+                                            <input
+                                                type="number"
+                                                value={ucsa_point}
+                                                onChange={(e) => setUcsaPoint(e.target.value)}
+                                                className='w-full border outline-none border-none h-full'
+                                                min={0}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="col-span-2 lg:col-span-1">
+                                        <Label>UK Fee</Label>
+                                        <div className='flex gap-2 bg-white p-2 h-[40px] rounded border border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'>
+                                            <input
+                                                type="number"
+                                                value={ukFee}
+                                                min={0}
+                                                onChange={(e) => setUkFee(e.target.value)}
+                                                className='w-full border outline-none border-none h-full'
+                                            />
+                                            <span>£</span>
+                                        </div>
+                                    </div>
+                                    <div className="col-span-2 lg:col-span-1">
+                                        <Label>International Fee</Label>
+                                        <div className='flex gap-2 bg-white p-2 h-[40px] rounded border border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'>
+                                            <input
+                                                type="number"
+                                                value={internationalFee}
+                                                min={0}
+                                                onChange={(e) => setInternationalFee(e.target.value)}
+                                                className='w-full border outline-none border-none h-full'
+                                            />
+                                            <span>£</span>
+                                        </div>
+                                    </div>
+                                    <div className="col-span-2 lg:col-span-1">
+                                        <Label>Duration</Label>
+                                        <div className='flex gap-2 bg-white p-2 h-[40px] rounded border border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'>
+                                            <input
+                                                type="text"
+                                                value={duration}
+                                                onChange={(e) => setDuration(e.target.value)}
+                                                className='w-full border outline-none border-none h-full'
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="col-span-2 lg:col-span-1">
+                                        <Label>Course Leader</Label>
+                                        <div className='flex gap-2 bg-white p-2 h-[40px] rounded border border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'>
+                                            <input
+                                                type="text"
+                                                value={courseLeader}
+                                                onChange={(e) => setCourseLeader(e.target.value)}
+                                                className='w-full border outline-none border-none h-full'
                                             />
                                         </div>
                                     </div>

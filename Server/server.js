@@ -207,10 +207,6 @@ async function addNewCourse(req, res) {
     course_name,
     course_start_date,
     course_location,
-    study_pace,
-    qualification,
-    assessment,
-    includes,
     course_level,
     annual_payment,
     monthly_payment,
@@ -221,6 +217,12 @@ async function addNewCourse(req, res) {
     career_progression,
     university_options,
     image_path,
+    ucas_code,
+    ucas_points,
+    duration,
+    uk_fee,
+    international_fee,
+    course_leader,
   } = req.body;
 
   const slugbluiddql = "SELECT id FROM `course` ORDER BY id DESC LIMIT 1";
@@ -243,15 +245,11 @@ async function addNewCourse(req, res) {
         });
       }
       const sql =
-        "INSERT INTO `course`(`course_name`, `course_start_date`, `course_location`, `study_pace`, `qualification`, `assessment`, `includesData`, `how_it_works`, `course_module`, `entry_requirements`, `cost_and_payment`, `career_progression`, `university_options`, `image_path`,`course_level`,`annual_payment`,`monthly_payment`,`listingPriority`,`slug`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        "INSERT INTO `course`(`course_name`, `course_start_date`, `course_location`, `how_it_works`, `course_module`, `entry_requirements`, `cost_and_payment`, `career_progression`, `university_options`, `image_path`,`course_level`,`annual_payment`,`monthly_payment`,`ucas_code`,`ucas_points`,`duration`,`uk_fee`,`international_fee`,`course_leader`,`listingPriority`,`slug`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,)";
       const values = [
         course_name,
         course_start_date,
         course_location,
-        study_pace,
-        qualification,
-        assessment,
-        includes,
         how_it_works,
         course_module,
         entry_requirements,
@@ -262,6 +260,12 @@ async function addNewCourse(req, res) {
         course_level,
         annual_payment,
         monthly_payment,
+        ucas_code,
+        ucas_points,
+        duration,
+        uk_fee,
+        international_fee,
+        course_leader,
         "None",
         slug,
       ];
@@ -287,14 +291,20 @@ async function addNewBlog(req, res) {
   const { title, description, image_path } = req.body;
 
   try {
-    const [results] = await db.query("SELECT id FROM blog ORDER BY id DESC LIMIT 1");
+    const [results] = await db.query(
+      "SELECT id FROM blog ORDER BY id DESC LIMIT 1"
+    );
     const slug = results[0]?.id
       ? `BLOG_${title}_${results[0].id + 1}`
       : `BLOG_${title}_1`;
 
-    const [exists] = await db.query("SELECT * FROM blog WHERE slug = ?", [slug]);
+    const [exists] = await db.query("SELECT * FROM blog WHERE slug = ?", [
+      slug,
+    ]);
     if (exists.length > 0) {
-      return res.status(400).json({ error: "Slug Already Exists, Please Try Again." });
+      return res
+        .status(400)
+        .json({ error: "Slug Already Exists, Please Try Again." });
     }
 
     const sql = `
@@ -308,9 +318,8 @@ async function addNewBlog(req, res) {
     res.status(201).json({
       status: true,
       message: "Blog added successfully",
-      blogId: insertResult.insertId
+      blogId: insertResult.insertId,
     });
-
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Database error" });
@@ -320,14 +329,21 @@ async function addNewTestimonial(req, res) {
   const { title, description, image_path } = req.body;
 
   try {
-    const [results] = await db.query("SELECT id FROM testimonial ORDER BY id DESC LIMIT 1");
+    const [results] = await db.query(
+      "SELECT id FROM testimonial ORDER BY id DESC LIMIT 1"
+    );
     const slug = results[0]?.id
       ? `TESTIMONIAL_${title}_${results[0].id + 1}`
       : `TESTIMONIAL_${title}_1`;
 
-    const [exists] = await db.query("SELECT * FROM testimonial WHERE slug = ?", [slug]);
+    const [exists] = await db.query(
+      "SELECT * FROM testimonial WHERE slug = ?",
+      [slug]
+    );
     if (exists.length > 0) {
-      return res.status(400).json({ error: "Slug Already Exists, Please Try Again." });
+      return res
+        .status(400)
+        .json({ error: "Slug Already Exists, Please Try Again." });
     }
 
     const sql = `
@@ -341,9 +357,8 @@ async function addNewTestimonial(req, res) {
     res.status(201).json({
       status: true,
       message: "Testimonial added successfully",
-      testimonialId: insertResult.insertId
+      testimonialId: insertResult.insertId,
     });
-
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Database error" });
@@ -359,7 +374,7 @@ async function enrollNow(req, res) {
     course_level,
     study_qualification,
     job_title,
-    payment_option
+    payment_option,
   } = req.body;
 
   const sql = `
@@ -368,8 +383,15 @@ async function enrollNow(req, res) {
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
   `;
   const values = [
-    first_name, last_name, email, phone, course, course_level,
-    study_qualification, job_title, payment_option
+    first_name,
+    last_name,
+    email,
+    phone,
+    course,
+    course_level,
+    study_qualification,
+    job_title,
+    payment_option,
   ];
 
   try {
@@ -377,7 +399,7 @@ async function enrollNow(req, res) {
     res.status(201).json({
       status: true,
       message: "Enroll request sent successfully",
-      courseId: result.insertId
+      courseId: result.insertId,
     });
   } catch (err) {
     console.error(err);
@@ -386,8 +408,16 @@ async function enrollNow(req, res) {
 }
 async function acceptEnroll(req, res) {
   const {
-    id, fname, lname, email, phone, course, course_level,
-    studyQualification, jobTitle, paymentOption
+    id,
+    fname,
+    lname,
+    email,
+    phone,
+    course,
+    course_level,
+    studyQualification,
+    jobTitle,
+    paymentOption,
   } = req.body;
 
   const sql = `
@@ -397,8 +427,16 @@ async function acceptEnroll(req, res) {
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `;
   const values = [
-    fname, lname, email, phone, course_level, course,
-    studyQualification, jobTitle, paymentOption, "true"
+    fname,
+    lname,
+    email,
+    phone,
+    course_level,
+    course,
+    studyQualification,
+    jobTitle,
+    paymentOption,
+    "true",
   ];
 
   try {
@@ -408,7 +446,7 @@ async function acceptEnroll(req, res) {
     res.status(201).json({
       status: true,
       message: "Enrolled Successfully",
-      enroledId: result.insertId
+      enroledId: result.insertId,
     });
   } catch (err) {
     console.error(err);
@@ -439,11 +477,21 @@ async function GetSearchCourse(req, res) {
 }
 async function getDashboard(req, res) {
   try {
-    const [[{ total_count: total_enroll_requests }]] = await db.query("SELECT COUNT(*) AS total_count FROM course_enroll_request");
-    const [[{ total_count: total_enrolled_students }]] = await db.query("SELECT COUNT(*) AS total_count FROM enrolled_students");
-    const [[{ total_count: total_blogs }]] = await db.query("SELECT COUNT(*) AS total_count FROM blog");
-    const [[{ total_count: total_testimonials }]] = await db.query("SELECT COUNT(*) AS total_count FROM testimonial");
-    const [[{ total_count: total_courses }]] = await db.query("SELECT COUNT(*) AS total_count FROM course");
+    const [[{ total_count: total_enroll_requests }]] = await db.query(
+      "SELECT COUNT(*) AS total_count FROM course_enroll_request"
+    );
+    const [[{ total_count: total_enrolled_students }]] = await db.query(
+      "SELECT COUNT(*) AS total_count FROM enrolled_students"
+    );
+    const [[{ total_count: total_blogs }]] = await db.query(
+      "SELECT COUNT(*) AS total_count FROM blog"
+    );
+    const [[{ total_count: total_testimonials }]] = await db.query(
+      "SELECT COUNT(*) AS total_count FROM testimonial"
+    );
+    const [[{ total_count: total_courses }]] = await db.query(
+      "SELECT COUNT(*) AS total_count FROM course"
+    );
 
     res.json({
       status: true,
@@ -452,8 +500,8 @@ async function getDashboard(req, res) {
         total_enrolled_students,
         total_blogs,
         total_testimonials,
-        total_courses
-      }
+        total_courses,
+      },
     });
   } catch (err) {
     res.status(500).json({ error: "Database error" });
@@ -664,10 +712,6 @@ async function editCourse(req, res) {
     course_name,
     course_start_date,
     course_location,
-    study_pace,
-    qualification,
-    assessment,
-    includes,
     course_level,
     annual_payment,
     monthly_payment,
@@ -678,22 +722,24 @@ async function editCourse(req, res) {
     career_progression,
     university_options,
     image_path,
+    ucas_code,
+    ucas_points,
+    duration,
+    uk_fee,
+    international_fee,
+    course_leader,
     courseId,
   } = req.body;
 
   const slug = `COURSE_${course_name}_${courseId}`;
 
   const sql =
-    "UPDATE `course` SET `course_name` = ?, `course_start_date` = ?, `course_location` = ?, `study_pace` = ?, `qualification` = ?, `assessment` = ?, `includesData` = ?, `how_it_works` = ?, `course_module` = ?, `entry_requirements` = ?, `cost_and_payment` = ?, `career_progression` = ?, `university_options` = ?, `image_path` = ?, `course_level` = ?, `annual_payment` = ?, `monthly_payment` = ?, `slug` = ? WHERE `id` = ?";
-  
+    "UPDATE `course` SET `course_name` = ?, `course_start_date` = ?, `course_location` = ?, `how_it_works` = ?, `course_module` = ?, `entry_requirements` = ?, `cost_and_payment` = ?, `career_progression` = ?, `university_options` = ?, `image_path` = ?, `course_level` = ?, `annual_payment` = ?, `monthly_payment` = ?, `ucas_code` = ?,`ucas_points` = ?, `duration` = ?, `uk_fee` = ?, `international_fee`= ?, `course_leader`= ?, `slug` = ? WHERE `id` = ?";
+
   const values = [
     course_name,
     course_start_date,
     course_location,
-    study_pace,
-    qualification,
-    assessment,
-    includes,
     how_it_works,
     course_module,
     entry_requirements,
@@ -704,6 +750,12 @@ async function editCourse(req, res) {
     course_level,
     annual_payment,
     monthly_payment,
+    ucas_code,
+    ucas_points,
+    duration,
+    uk_fee,
+    international_fee,
+    course_leader,
     slug,
     courseId,
   ];
@@ -789,10 +841,11 @@ async function updateListingPriority(req, res) {
       status: true,
       message: "Listing priority updated successfully",
     });
-
   } catch (err) {
     console.error("Database error:", err);
-    return res.status(500).json({ error: "Failed to update listing priority." });
+    return res
+      .status(500)
+      .json({ error: "Failed to update listing priority." });
   }
 }
 

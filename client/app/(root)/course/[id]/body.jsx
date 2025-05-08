@@ -102,39 +102,39 @@ function CourseBody({ data }) {
                     <div className='w-full grid grid-cols-1 lg:grid-cols-3 text-[16px] text-black pt-10 gap-8'>
                         <div className='w-full flex flex-col gap-2'>
                             <span className='font-sans'>Level:</span>
-                            <span>{data?.course_start_date ? data?.course_start_date : "N/A"}</span>
+                            <span>{data?.course_level ? data?.course_level : "N/A"}</span>
                         </div>
                         <div className='w-full flex flex-col gap-2'>
                             <span className='font-sans'>UCAS Code:</span>
-                            <span>{data?.course_start_date ? data?.course_start_date : "N/A"}</span>
+                            <span>{data?.ucas_code ? data?.ucas_code : "N/A"}</span>
                         </div>
                         <div className='w-full flex flex-col gap-2'>
                             <span className='font-sans'>UCAS Points:</span>
-                            <span>{data?.course_location ? data?.course_location : "N/A"}</span>
+                            <span>{data?.ucas_points ? data?.ucas_points : "N/A"}</span>
                         </div>
                         <div className='w-full flex flex-col gap-2'>
                             <span className='font-sans'>Start Date:</span>
-                            <span>{data?.study_pace ? data?.study_pace : "N/A"}</span>
+                            <span>{data?.course_start_date ? data?.course_start_date : "N/A"}</span>
                         </div>
                         <div className='w-full flex flex-col gap-2'>
                             <span className='font-sans'>Duration:</span>
-                            <span>{data?.qualification ? data?.qualification : "N/A"}</span>
+                            <span>{data?.duration ? data?.duration : "N/A"}</span>
                         </div>
                         <div className='w-full flex flex-col gap-2'>
                             <span className='font-sans'>Location:</span>
-                            <span>{data?.assessment ? data?.assessment : "N/A"}</span>
+                            <span>{data?.course_location ? data?.course_location : "N/A"}</span>
                         </div>
                         <div className='w-full flex flex-col gap-2'>
                             <span className='font-sans'>UK fees:</span>
-                            <span>{data?.includesData ? data?.includesData : "N/A"}</span>
+                            <span>{data?.uk_fee ? data?.uk_fee : "N/A"}</span>
                         </div>
                         <div className='w-full flex flex-col gap-2'>
                             <span className='font-sans'>International fees:</span>
-                            <span>{data?.includesData ? data?.includesData : "N/A"}</span>
+                            <span>{data?.international_fee ? data?.international_fee : "N/A"}</span>
                         </div>
                         <div className='w-full flex flex-col gap-2'>
                             <span className='font-sans'>Course Leader:</span>
-                            <span>{data?.includesData ? data?.includesData : "N/A"}</span>
+                            <span>{data?.course_leader ? data?.course_leader : "N/A"}</span>
                         </div>
                     </div>
                 </div>
