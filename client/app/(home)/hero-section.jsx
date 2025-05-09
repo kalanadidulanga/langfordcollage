@@ -59,7 +59,7 @@ const HeroSection = () => {
             </button>
             <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] fade-in hover:scale-105 transition-all duration-200"
               onClick={() => {
-                window.scrollTo({ top: 4500, behavior: "smooth" });
+                window.scrollTo({ top: 5200, behavior: "smooth" });
               }}
             >
               Most Popular Courses
