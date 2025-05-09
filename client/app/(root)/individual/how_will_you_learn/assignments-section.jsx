@@ -19,7 +19,7 @@ function Assignments() {
                     </span>
 
                     {/* section 1 */}
-                    <div className='w-full bg-white pt-5 mt-10 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection1(!isclickSection1)}>
+                    <div className='w-full capitalize bg-white pt-5 mt-10 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection1(!isclickSection1)}>
                         <span>
                             Do I have to pay for my assignments?
                         </span>
@@ -35,7 +35,7 @@ function Assignments() {
                         </>
                     )}
                     {/* section 2 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection2(!isclickSection2)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection2(!isclickSection2)}>
                         <span>
                             Do I receive help and guidance while writing assignments?
                         </span>
@@ -52,7 +52,7 @@ function Assignments() {
                         </>
                     )}
                     {/* section 3 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection3(!isclickSection3)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection3(!isclickSection3)}>
                         <span>
                             How do I submit my assignments?
                         </span>
@@ -68,7 +68,7 @@ function Assignments() {
                         </>
                     )}
                     {/* section 4 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection4(!isclickSection4)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection4(!isclickSection4)}>
                         <span>
                             How many words do I have to write for my assignments?
                         </span>
@@ -84,7 +84,7 @@ function Assignments() {
                         </>
                     )}
                     {/* section 5 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection5(!isclickSection5)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection5(!isclickSection5)}>
                         <span>
                             When do I receive the assignments?
                         </span>
@@ -100,7 +100,7 @@ function Assignments() {
                         </>
                     )}
                     {/* section 6 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection6(!isclickSection6)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection6(!isclickSection6)}>
                         <span>
                             How long does the marking process take?
                         </span>

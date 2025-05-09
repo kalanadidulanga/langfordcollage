@@ -14,40 +14,40 @@ function LeatestArticle() {
 
     const [article, setArticle] = useState([]);
 
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
+    // useEffect(() => {
+    //     gsap.registerPlugin(ScrollTrigger);
 
-        gsap.fromTo(
-            ".article-left",
-            { opacity: 0, x: -50 },
-            {
-                opacity: 1, x: 0, duration: 1, ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".article-section",
-                    start: "top 80%",
-                    end: "bottom 20%",
-                    toggleActions: "play reverse play reverse",
-                    once: false,
-                }
-            }
-        );
+    //     gsap.fromTo(
+    //         ".article-left",
+    //         { opacity: 0, x: -50 },
+    //         {
+    //             opacity: 1, x: 0, duration: 1, ease: "power3.out",
+    //             scrollTrigger: {
+    //                 trigger: ".article-section",
+    //                 start: "top 80%",
+    //                 end: "bottom 20%",
+    //                 toggleActions: "play reverse play reverse",
+    //                 once: false,
+    //             }
+    //         }
+    //     );
 
-        gsap.fromTo(
-            ".article-right",
-            { opacity: 0, x: 50 },
-            {
-                opacity: 1, x: 0, duration: 1, ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".article-section",
-                    start: "top 80%",
-                    end: "bottom 20%",
-                    toggleActions: "play reverse play reverse",
-                    once: false,
-                }
-            }
-        );
+    //     gsap.fromTo(
+    //         ".article-right",
+    //         { opacity: 0, x: 50 },
+    //         {
+    //             opacity: 1, x: 0, duration: 1, ease: "power3.out",
+    //             scrollTrigger: {
+    //                 trigger: ".article-section",
+    //                 start: "top 80%",
+    //                 end: "bottom 20%",
+    //                 toggleActions: "play reverse play reverse",
+    //                 once: false,
+    //             }
+    //         }
+    //     );
 
-    }, []);
+    // }, []);
 
     useEffect(() => {
         loadBlog();
@@ -73,11 +73,11 @@ function LeatestArticle() {
         <>
             {article?.length > 0 && (
                 <>
-                    <div className='w-full lg:pb-10 pt-10 lg:pt-0 font-sans bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 article-section'>
+                    <div className='w-full lg:pb-10 pt-10 h-screen lg:pt-20 font-sans bg-[#2f3029] text-white px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 article-section'>
                         <div className='w-full flex items-start font-bold flex-col lg:h-full'>
                             <div className="w-full lg:grid lg:grid-cols-2">
                                 <div className="w-full flex items-start flex-col lg:h-full">
-                                    <span className="text-[6vw] lg:text-[4vw] font-sans font-bold ">
+                                    <span className="text-[6vw] lg:text-[4vw] font-sans font-bold text-white capitalize">
                                         Latest articles
                                     </span>
                                 </div>
@@ -87,9 +87,9 @@ function LeatestArticle() {
                                 </div>
                             </div>
 
-                            <div className="w-full bg-white text-gray-500 flex justify-center lg:justify-start article-right">
+                            <div className="w-full bg-[#2f3029] text-gray-500 flex justify-center lg:justify-start article-right">
                                 {/* Grid Layout for Large Screens */}
-                                <div className="hidden lg:grid bg-white pt-10 pb-8 grid-cols-1 lg:grid-cols-3 justify-start gap-8">
+                                <div className="hidden lg:grid bg-[#2f3029] pt-10 pb-8 grid-cols-1 lg:grid-cols-3 justify-start gap-8">
                                     {article?.slice(0, 3)?.map((item, index) => (
                                         <ArticleCard
                                             key={index}

@@ -14,7 +14,7 @@ function Progression() {
                     </span>
 
                     {/* section 1 */}
-                    <div className='w-full bg-white pt-5 mt-10 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection1(!isclickSection1)}>
+                    <div className='w-full capitalize bg-white pt-5 mt-10 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection1(!isclickSection1)}>
                         <span>
                         Will I be able to get through to higher education through  langford college?
                         </span>
@@ -30,7 +30,7 @@ function Progression() {
                         </>
                     )}
                     {/* section 2 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection2(!isclickSection2)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection2(!isclickSection2)}>
                         <span>
                         What potential job opportunities are there after I finish the course?
                         </span>

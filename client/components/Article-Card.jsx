@@ -8,7 +8,7 @@ export const ArticleCard = ({ image, title, description, slug, action }) => {
       };
 
     return (
-        <div className="w-full font-sans flex flex-col gap-3">
+        <div className="w-full font-sans flex flex-col gap-3 bg-white p-2 border border-[#2f3029]">
             <img src={image} alt="article_image" className="w-full h-[304px] object-cover" />
             <span className="text-2xl text-black font-bold font-sans">{title}</span>
             <div

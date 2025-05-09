@@ -29,7 +29,7 @@ function Support() {
                     </span>
 
                     {/* section 1 */}
-                    <div className='w-full bg-white pt-5 mt-10 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection1(!isclickSection1)}>
+                    <div className='w-full capitalize bg-white pt-5 mt-10 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection1(!isclickSection1)}>
                         <span>
                             What modules do I need to achieve a qualification?
                         </span>
@@ -45,7 +45,7 @@ function Support() {
                         </>
                     )}
                     {/* section 2 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection2(!isclickSection2)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection2(!isclickSection2)}>
                         <span>
                             Do I need a specific computer to study with  langford college?
                         </span>
@@ -61,7 +61,7 @@ function Support() {
                         </>
                     )}
                     {/* section 3 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection3(!isclickSection3)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection3(!isclickSection3)}>
                         <span>
                             Can I access my dashboard and study on my mobile and tablet?
                         </span>
@@ -77,7 +77,7 @@ function Support() {
                         </>
                     )}
                     {/* section 4 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection4(!isclickSection4)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection4(!isclickSection4)}>
                         <span>
                             What study materials do I need?
                         </span>
@@ -93,7 +93,7 @@ function Support() {
                         </>
                     )}
                     {/* section 5 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection5(!isclickSection5)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection5(!isclickSection5)}>
                         <span>
                             What is a certificate of completion?
                         </span>
@@ -109,7 +109,7 @@ function Support() {
                         </>
                     )}
                     {/* section 6 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection6(!isclickSection6)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection6(!isclickSection6)}>
                         <span>
                             How long will it take?
                         </span>
@@ -125,7 +125,7 @@ function Support() {
                         </>
                     )}
                     {/* section 7 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection7(!isclickSection7)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection7(!isclickSection7)}>
                         <span>
                             Does my previous study and experience count towards an Langford College course?
                         </span>
@@ -141,7 +141,7 @@ function Support() {
                         </>
                     )}
                     {/* section 8 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection8(!isclickSection8)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection8(!isclickSection8)}>
                         <span>
                             Can I personalize my study?
                         </span>
@@ -157,7 +157,7 @@ function Support() {
                         </>
                     )}
                     {/* section 9 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection9(!isclickSection9)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection9(!isclickSection9)}>
                         <span>
                             What do I get when all the modules and assessments are completed?
                         </span>
@@ -173,7 +173,7 @@ function Support() {
                         </>
                     )}
                     {/* section 10 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection10(!isclickSection10)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection10(!isclickSection10)}>
                         <span>
                             Do all modules have an exam?
                         </span>
@@ -189,7 +189,7 @@ function Support() {
                         </>
                     )}
                     {/* section 11 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection11(!isclickSection11)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection11(!isclickSection11)}>
                         <span>
                             How do assessments work?
                         </span>
@@ -205,7 +205,7 @@ function Support() {
                         </>
                     )}
                     {/* section 12 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection12(!isclickSection12)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection12(!isclickSection12)}>
                         <span>
                             What is an interactive learning module?
                         </span>
@@ -221,7 +221,7 @@ function Support() {
                         </>
                     )}
                     {/* section 13 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection13(!isclickSection13)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection13(!isclickSection13)}>
                         <span>
                             How can I pay for my fees as an overseas student?
                         </span>
@@ -237,7 +237,7 @@ function Support() {
                         </>
                     )}
                     {/* section 14 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection14(!isclickSection14)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection14(!isclickSection14)}>
                         <span>
                             How much support Will  langford college act as my sponsor for a student visa? is available for students?
                         </span>
@@ -253,7 +253,7 @@ function Support() {
                         </>
                     )}
                     {/* section 15 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection15(!isclickSection15)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection15(!isclickSection15)}>
                         <span>
                             Do I need a visa to complete modules/course through langford college?
                         </span>
@@ -269,7 +269,7 @@ function Support() {
                         </>
                     )}
                     {/* section 16 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection16(!isclickSection16)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection16(!isclickSection16)}>
                         <span>
                             Can I study anywhere in the world?
                         </span>

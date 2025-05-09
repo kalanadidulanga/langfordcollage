@@ -42,13 +42,13 @@ function WillLearn() {
   return (
     <>
       {/* Main Section */}
-      <div className="w-full bg-white text-black px-[10vw] pt-[10vh] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5">
+      <div className="w-full bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-center lg:gap-32 gap-5">
 
         {/* Right Side - Text Content */}
         <div className="w-full flex lg:items-end justify-start flex-col lg:h-full">
           <div className="w-full flex items-start pb-5 flex-col lg:h-full">
             <div className="w-full grid grid-cols-2">
-              <div className="w-full flex items-start flex-col lg:h-full">
+              <div className="w-full flex items-start flex-col lg:h-full capitalize">
                 <span className="text-[6vw] lg:text-[4vw] font-sans leading-none">
                   How you will
                 </span>
@@ -64,14 +64,14 @@ function WillLearn() {
           </div>
           <div className="w-full bg-white pt-10 pb-8 text-black flex lg:items-start justify-start">
             {/* Left Side - Image */}
-            <div className="flex items-start justify-start w-full h-[40vh] hidden lg:block">
+            <div className="w-full flex items-start justify-start h-[40vh] hidden lg:block">
               <img
-                src="/Images/work.png"
+                src="/Images/english-book.jpg"
                 alt=""
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="flex items-start lg:items-end justify-start w-full gap-5 ">
+            <div className="flex items-start lg:items-end justify-start w-[40%] gap-5 ">
               <div className="w-full flex items-start lg:items-end lg:text-[1.6vw] gap-6 lg:gap-9 flex-col">
                 <span className="border-b-[4px] border-[#E2231A] inline leading-[1]">Learner journey</span>
                 <span className="border-b-[4px] border-[#E2231A] inline leading-[1]">Assessment</span>
@@ -95,7 +95,7 @@ function WillLearn() {
       </div>
 
       {/* Button Section */}
-      <div className="w-full bg-white pt-5 lg:pt-10 pb-[10vh] px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 learn-section">
+      <div className="w-full bg-white pt-5 lg:pt-10 pb-[13vh] px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 learn-section">
         <div className="flex items-start justify-start w-full">
           <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] learn-left "
             onClick={() => {

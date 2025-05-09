@@ -28,8 +28,8 @@ export const Footer = () => {
                     </div>
 
                     <div className='col-span-1 mt-5'>
-                        <h4 className="font-semibold mb-3 text-[#2e2e27] text1">Quick links</h4>
-                        <ul className="space-y-2 text-[15px]">
+                        <h4 className="font-semibold mb-3 text-[#2e2e27] text1">Quick Links</h4>
+                        <ul className="space-y-2 text-[15px] capitalize">
                             <li><a href="/individual/how_will_you_learn" className={`hover:underline`}>How will you learn</a></li>
                             <li><a href="/individual/our_hubs" className={`hover:underline`}>our hubs</a></li>
                             <li><a href="/individual/top-up_degree" className={`hover:underline`}>top up degree</a></li>
@@ -40,7 +40,7 @@ export const Footer = () => {
                     </div>
 
                     <div className='col-span-1 mt-5'>
-                        <h4 className="font-bold mb-3 text1 text-[#2e2e27]">General enquiries</h4>
+                        <h4 className="font-bold mb-3 text1 text-[#2e2e27]">General Enquiries</h4>
                         <ul className="space-y-2 text-[15px]">
                             <li className='flex gap-3 items-center'>
                                 <img src="/Icon/email.png" alt="email" className='w-4 h-4' />

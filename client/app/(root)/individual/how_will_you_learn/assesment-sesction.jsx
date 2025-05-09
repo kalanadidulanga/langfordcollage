@@ -57,10 +57,10 @@ function Assesment() {
                     </div>
                     <div className='w-full bg-white pt-10 pb-8 text-[#2E2E27] flex gap-10'>
                         <div className='w-full flex flex-col gap-5'>
-                            <span className='text-[16px] font-extralight'>
+                            <span className='text-[16px] description'>
                                 Assessment at Langford College is a very straightforward process:
                             </span>
-                            <div className='text-[16px] font-extralight space-y-2'>
+                            <div className='text-[16px] description space-y-2'>
                                 <span className='flex'>
                                     <li></li>
                                     <span>

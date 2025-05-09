@@ -42,14 +42,14 @@ function LearnAnywhere() {
 
   return (
     <>
-      <div className='w-full lg:pb-20 pb-10 bg-white text-black px-[9vw] flex flex-col items-start justify-start gap-5'>
+      <div className='w-full lg:pb-30 pb-10 bg-white text-black px-[10vw] flex flex-col items-start justify-start gap-5'>
         <div className='w-full flex items-start flex-col lg:h-full '>
           <div className="w-full lg:grid lg:grid-cols-2">
-            <div className="w-full flex items-start flex-col lg:h-full">
+            <div className="w-full flex items-start flex-col lg:h-full capitalize">
               <span className="text-[6vw] lg:text-[4vw] font-sans font-bold leading-none">
                 Learn anywhere,
               </span>
-              <span className="text-[6vw] lg:text-[4vw] font-mono leading-[1.1]">
+              <span className="text-[6vw] lg:text-[4vw] font-mono leading-[1.3]">
                 Anytime, any device
               </span>
             </div>

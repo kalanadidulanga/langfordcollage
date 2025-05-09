@@ -11,7 +11,8 @@ export const TestimonialCard = ({ image, title, descrption, slug }) => {
     
     return (
         <div>
-            <div className='w-full lg:min-w-[750px] lg:max-w-[750px] grid grid-cols-1 md:grid-cols-2 gap-10 bg-[#F4C023] p-8'>
+            {/* bg-[#F4C023] */}
+            <div className='w-full lg:min-w-[750px] lg:max-w-[750px] grid grid-cols-1 md:grid-cols-2 gap-10 bg-white p-8 border border-[#2f3029]'>
                 <img src={image || "/Images/user.png"} alt="testimonial_image" className='w-full h-[40vh] object-cover rounded' />
                 <div className='flex h-full flex-col gap-3'>
                     <span className='text-2xl text-black'>{title}</span>

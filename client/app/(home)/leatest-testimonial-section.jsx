@@ -109,11 +109,11 @@ function LeatestTestimonial() {
     <>
       {testimonials?.length > 0 && (
         <>
-          <div className='w-full lg:pb-10 pt-10 font-sans bg-white text-black px-[10vw] lg:px-0 lg:pl-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 testimonial-section'>
-            <div className='w-full flex items-start font-bold flex-col lg:h-full'>
+          <div className='w-full lg:pb-10 lg:h-screen font-sans bg-[#2f3029] text-black px-[10vw] lg:px-0 lg:pl-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 testimonial-section'>
+            <div className='w-full flex items-center justify-center font-bold flex-col lg:h-full'>
               <div className="w-full lg:grid lg:grid-cols-2">
                 <div className="w-full flex items-start flex-col lg:h-full">
-                  <span className="text-[6vw] lg:text-[4vw] font-sans font-bold  pb-5">
+                  <span className="text-[6vw] lg:text-[4vw] font-sans font-bold  pb-5 text-white">
                     Latest Testimonials
                   </span>
                 </div>
@@ -162,9 +162,9 @@ function LeatestTestimonial() {
               </div>
 
 
-              <div className="w-full bg-white text-gray-500 flex justify-center lg:justify-start testimonial-right">
+              <div className="w-full bg-[#2f3029] text-gray-500 flex justify-center lg:justify-start testimonial-right">
                 {/* Grid Layout for Large Screens */}
-                <div className='bg-white hidden lg:block justify-start overflow-x-scroll gap-8 scrollbar-hide snap-x snap-mandatory'>
+                <div className='bg-[#2f3029] hidden lg:block justify-start overflow-x-scroll gap-8 scrollbar-hide snap-x snap-mandatory'>
                   {/* Logo Container */}
                   <div
                     ref={scrollContainerRef}

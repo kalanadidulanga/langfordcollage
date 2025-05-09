@@ -480,10 +480,10 @@ a[x-apple-data-detectors],
 
     return (
         <>
-            <div className='w-full pb-10 pt-10 bg-[#F7FAFF] text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 request-section '>
-                <div className='w-full flex items-start flex-col lg:h-full'>
+            <div className='w-full pb-10 lg:h-screen pt-10 bg-[#F7FAFF] text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 request-section '>
+                <div className='w-full flex items-center justify-center flex-col lg:h-full'>
                     <div className="w-full lg:grid lg:grid-cols-2">
-                        <div className="w-full flex items-start flex-col lg:h-full">
+                        <div className="w-full flex items-start flex-col lg:h-full capitalize">
                             <span className="text-[6vw] lg:text-[4vw] font-sans font-bold leading-none">
                                 Request a Course
                             </span>

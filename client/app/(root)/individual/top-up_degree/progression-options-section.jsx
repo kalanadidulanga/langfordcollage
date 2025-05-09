@@ -54,7 +54,7 @@ function ProgressionOptions() {
                     </span>
 
                     {/* section 1 */}
-                    <div className='w-full bg-white pt-5 mt-10 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection1(!isclickSection1)}>
+                    <div className='w-full bg-white pt-5 mt-10 pb-4 capitalize text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection1(!isclickSection1)}>
                         <span>
                             Study FULL TIME or PART TIME on campus in the UK for top-up courses or direct entry to University
                         </span>
@@ -70,7 +70,7 @@ function ProgressionOptions() {
                         </>
                     )}
                     {/* section 2 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection2(!isclickSection2)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection2(!isclickSection2)}>
                         <span>
                             Study with UK Universities BASED OVERSEAS
                         </span>
@@ -86,7 +86,7 @@ function ProgressionOptions() {
                         </>
                     )}
                     {/* section 3 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection3(!isclickSection3)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection3(!isclickSection3)}>
                         <span>
                             Study with NON UK UNIVERSITIES
                         </span>
@@ -103,7 +103,7 @@ function ProgressionOptions() {
                         </>
                     )}
                     {/* section 4 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection4(!isclickSection4)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection4(!isclickSection4)}>
                         <span>
                             Study for an AMBA MBA
                         </span>
@@ -119,7 +119,7 @@ function ProgressionOptions() {
                         </>
                     )}
                     {/* section 5 */}
-                    <div className='w-full bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection5(!isclickSection5)}>
+                    <div className='w-full capitalize bg-white pt-5 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection5(!isclickSection5)}>
                         <span>
                             Awarding body approved progression routes
                         </span>

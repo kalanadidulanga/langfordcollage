@@ -46,7 +46,7 @@ function LearnerJourney() {
                 <div className='w-full flex items-start font-bold flex-col lg:h-full'>
                     <div className="w-full lg:grid lg:grid-cols-2">
                         <div className="w-full flex items-start flex-col lg:h-full">
-                            <span className="text-[6vw] lg:text-[4vw] font-sans font-bold">
+                            <span className="text-[6vw] lg:text-[4vw] font-sans font-bold capitalize">
                                 Learner journey
                             </span>
                         </div>
@@ -60,13 +60,13 @@ function LearnerJourney() {
                         <div className="flex flex-col">
                             <div className='w-full bg-white text-[#2E2E27] flex flex-col journy-left'>
                                 <div className='w-full flex flex-col gap-1'>
-                                    <span className='text-[16px] font-extralight'>
+                                    <span className='text-[16px] description'>
                                         Our online business management, hotel and hospitality, and computing courses will help you obtain a diploma, which is recognised by employers and awarded by OFQUAL, the UK government higher education regulating body. <br />
                                         These diplomas can then be used as progression onto completion of a full undergraduate or postgraduate degree course, at an accredited UK or overseas university.
                                     </span>
                                 </div>
                             </div>
-                            <div className='w-full bg-white text-[16px] font-extralight text-[#2E2E27] pb-10 pl-4 journy-left'>
+                            <div className='w-full bg-white text-[16px] description text-[#2E2E27] pb-10 pl-4 journy-left'>
                                 <li>Choose a course</li>
                                 <li>Study the course modules</li>
                                 <li>Complete online multiple choice tests and written assignments</li>
@@ -75,7 +75,7 @@ function LearnerJourney() {
                             </div>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] flex flex-col journy-left'>
                                 <div className='w-full flex flex-col gap-1'>
-                                    <span className='text-[16px] font-extralight'>
+                                    <span className='text-[16px] description'>
                                         Your degree or MBA will be awarded to you by the university you complete your final year with. We currently partner with UK universities, who accept the OFQUAL credits awarded from studying our courses.
                                     </span>
                                 </div>

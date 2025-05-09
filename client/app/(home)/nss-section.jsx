@@ -5,40 +5,40 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function NSS() {
 
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
+    // useEffect(() => {
+    //     gsap.registerPlugin(ScrollTrigger);
 
-        gsap.fromTo(
-            ".nss-left",
-            { opacity: 0, x: -50 },
-            {
-                opacity: 1, x: 0, duration: 1, ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".nss-section",
-                    start: "top 80%",
-                    end: "bottom 20%",
-                    toggleActions: "play reverse play reverse",
-                    once: false,
-                }
-            }
-        );
+    //     gsap.fromTo(
+    //         ".nss-left",
+    //         { opacity: 0, x: -50 },
+    //         {
+    //             opacity: 1, x: 0, duration: 1, ease: "power3.out",
+    //             scrollTrigger: {
+    //                 trigger: ".nss-section",
+    //                 start: "top 80%",
+    //                 end: "bottom 20%",
+    //                 toggleActions: "play reverse play reverse",
+    //                 once: false,
+    //             }
+    //         }
+    //     );
 
-        gsap.fromTo(
-            ".nss-right",
-            { opacity: 0, x: 50 },
-            {
-                opacity: 1, x: 0, duration: 1, ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".nss-section",
-                    start: "top 80%",
-                    end: "bottom 20%",
-                    toggleActions: "play reverse play reverse",
-                    once: false,
-                }
-            }
-        );
+    //     gsap.fromTo(
+    //         ".nss-right",
+    //         { opacity: 0, x: 50 },
+    //         {
+    //             opacity: 1, x: 0, duration: 1, ease: "power3.out",
+    //             scrollTrigger: {
+    //                 trigger: ".nss-section",
+    //                 start: "top 80%",
+    //                 end: "bottom 20%",
+    //                 toggleActions: "play reverse play reverse",
+    //                 once: false,
+    //             }
+    //         }
+    //     );
 
-    }, []);
+    // }, []);
 
     return (
         <>

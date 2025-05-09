@@ -11,11 +11,11 @@ function OFQUAL() {
                         className='w-full h-full object-cover'
                     />
                 </div>
-                <div className='w-full flex items-start font-bold flex-col lg:h-full'>
-                    <span className='text-[6vw] lg:text-[3vw]'>
+                <div className='w-full flex items-start flex-col lg:h-full'>
+                    <span className='text-[6vw] lg:text-[3.5vw] font-sans capitalize leading-none'>
                         OFQUAL recognised
                     </span>
-                    <span className='text-[6vw] lg:text-[3vw]'>
+                    <span className='text-[6vw] lg:text-[3.5vw] font-mono capitalize leading-[1.1]'>
                         partnerships
                     </span>
 

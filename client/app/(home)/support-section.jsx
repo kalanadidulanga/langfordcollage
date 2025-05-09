@@ -42,14 +42,14 @@ function Support() {
 
     return (
         <>
-            <div className='w-full bg-white text-black px-[10vw] pt-[5vh] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5'>
+            <div className='w-full bg-white lg:h-screen text-black px-[10vw] pt-[5vh] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5'>
                 <div className='w-full flex items-start flex-col lg:h-full'>
                     <div className="w-full lg:grid lg:grid-cols-2">
-                        <div className="w-full flex items-start flex-col lg:h-full">
-                            <span className="text-[6vw] lg:text-[3.5vw] font-sans leading-none">
+                        <div className="w-full flex items-start flex-col lg:h-full capitalize">
+                            <span className="text-[6vw] lg:text-[3.8vw] font-sans leading-none">
                                 Support beyond your
                             </span>
-                            <span className="text-[6vw] lg:text-[3.5vw] font-mono leading-[1.1]">
+                            <span className="text-[6vw] lg:text-[3.8vw] font-mono leading-[1.1]">
                                 Learning
                             </span>
                         </div>

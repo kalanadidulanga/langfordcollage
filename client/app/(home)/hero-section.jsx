@@ -31,7 +31,6 @@ const HeroSection = () => {
               onClick={() => {
                 window.scrollTo({ top: 700, behavior: "smooth" });
               }}
-
             >
               Explore Courses
             </button> */}

@@ -139,9 +139,9 @@ const Header = () => {
   };
 
   return (
-    <header className={`w-full p-4 md:p-8 font-sans flex flex-col relative text-[18px] ${activeDropdown === 'course' || isMenuOpen ? 'bg-white' : 'bg-transparent'}`}>
+    <header className={`w-full p-4 md:p-8 font-sans flex flex-col relative text-[18px] capitalize`}>
       <div className="w-full h-full flex justify-between items-start px-2 md:px-10">
-        {(activeDropdown === 'course' || isMenuOpen) ? (
+        {/* {(activeDropdown === 'course' || isMenuOpen) ? (
           <nav className='rounded-full w-16 h-16 md:w-28 md:h-28 bg-contain bg-center flex justify-center items-center'>
             <img
               src="/Logo.svg"
@@ -150,16 +150,16 @@ const Header = () => {
               onClick={navigateHome}
             />
           </nav>
-        ) : (
-          <nav className='rounded-full w-16 h-16 md:w-28 md:h-28 bg-contain bg-center flex justify-center items-center'>
-            <img
-              src="/Icon/LOGO.svg"
-              alt="logo"
-              className='w-full h-full p-1 object-contain cursor-pointer object-center'
-              onClick={navigateHome}
-            />
-          </nav>
-        )}
+        ) : ( */}
+        <nav className='rounded-full w-16 h-16 md:w-28 md:h-28 bg-contain bg-center flex justify-center items-center'>
+          <img
+            src="/Icon/LOGO.svg"
+            alt="logo"
+            className='w-full h-full p-1 object-contain cursor-pointer object-center'
+            onClick={navigateHome}
+          />
+        </nav>
+        {/* )} */}
 
         {/* Mobile Menu Button */}
         <button
@@ -203,7 +203,7 @@ const Header = () => {
         </button>
 
         {/* Desktop Navigation Links */}
-        <div className={`hidden lg:flex mt-3 gap-10 items-center ${activeDropdown === 'course' ? 'text-black' : 'bg-transparent'}`}>
+        <div className={`hidden lg:flex mt-3 gap-10 items-center`}>
           {/* Course Dropdown */}
           <div
             className="relative"
@@ -230,9 +230,65 @@ const Header = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
+            <div
+              className={`lg:absolute left-1/2 -translate-x-1/2 ${window.innerWidth >= 1024 ? 'mt-2' : 'mt-1 ml-4'} py-2 w-full lg:w-[1000px] bg-white rounded-md shadow-lg z-50 overflow-hidden capitalize`}
+              style={{ display: activeDropdown === 'course' && window.innerWidth >= 1024 ? 'block' : 'none' }}
+              onMouseEnter={cancelDropdownClose}
+            >
+              <div className="w-full lg:px-5">
+                <div className="w-full grid grid-cols-4 gap-4 ">
+
+                  <div className='flex items-start flex-col pt-3 w-full'>
+                    <span className='text-black font-bold text-[18px] px-4 font-sans'>IGCSE and short courses</span>
+                    {level1?.map((item, index) => (
+                      <a href={`/course/${item?.slug}`} key={index} className="w-full block px-4 py-1 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all duration-200 text-[18px] description">
+                        {item?.course_name}
+                      </a>
+                    ))}
+                  </div>
+
+                  <div className='flex items-start flex-col pt-3 w-full'>
+                    <span className='text-black font-bold text-[18px] px-4 font-sans'>Level 3 (A level) - University entry courses</span>
+                    {level2?.map((item, index) => (
+                      <a href={`/course/${item?.slug}`} key={index} className="w-full block px-4 py-1 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all description text-[18px] duration-200">
+                        {item?.course_name}
+                      </a>
+                    ))}
+                  </div>
+
+                  <div className='flex items-start flex-col pt-3 w-full'>
+                    <span className='text-black font-bold text-[18px] px-4 font-sans'>Level 4 & 5 - University first and second year courses</span>
+                    {level3?.map((item, index) => (
+                      <a href={`/course/${item?.slug}`} key={index} className="w-full block px-4 py-1 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all description text-[18px] duration-200">
+                        {item?.course_name}
+                      </a>
+                    ))}
+                  </div>
+
+                  <div className='flex items-start flex-col pt-3 w-full gap-5'>
+                    <div className='flex items-start flex-col'>
+                      <span className='text-black font-bold text-[18px] px-4 font-sans'>Level 6 Undergraduate / Final year</span>
+                      {level4?.map((item, index) => (
+                        <a href={`/course/${item?.slug}`} key={index} className="w-full block px-4 py-1 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all description text-[18px] duration-200">
+                          {item?.course_name}
+                        </a>
+                      ))}
+                    </div>
+                    <div className='flex items-start flex-col'>
+                      <span className='text-black font-bold text-[18px] px-4 font-sans'>Level 7 Diploma, Masters / MBA Advance Entry</span>
+                      {level5?.map((item, index) => (
+                        <a href={`/course/${item?.slug}`} key={index} className="w-full block px-4 py-1 text-gray-800 hover:bg-gray-100 hover:pl-6 transition-all description text-[18px] duration-200">
+                          {item?.course_name}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div
+          {/* <div
             className="relative"
             onClick={() => {
               if (activeDropdown == "progression") {
@@ -266,7 +322,7 @@ const Header = () => {
               <a href="/it_progression" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">IT progression courses</a>
               <a href="/hospitality_progression" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Hospitality progression courses</a>
             </div>
-          </div>
+          </div> */}
 
           {/* Individuals Dropdown */}
           <div
@@ -295,15 +351,25 @@ const Header = () => {
               </svg>
             </button>
             <div
-              className={`lg:absolute ${window.innerWidth >= 1024 ? 'mt-2' : 'mt-1 ml-4'} py-2 w-full lg:w-56 bg-white rounded-md shadow-lg z-50 overflow-hidden capitalize`}
+              className={`lg:absolute left-1/2 -translate-x-1/2 ${window.innerWidth >= 1024 ? 'mt-2' : 'mt-1 ml-4'} py-2 w-full lg:w-[700px] bg-white rounded-md shadow-lg z-50 overflow-hidden capitalize`}
               style={{ display: activeDropdown === 'individual' && window.innerWidth >= 1024 ? 'block' : 'none' }}
               onMouseEnter={cancelDropdownClose}
             >
-              <a href="/individual/how_will_you_learn" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">How will you learn</a>
-              <a href="/individual/our_hubs" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Our Hubs</a>
-              <a href="/individual/top-up_degree" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Top up degree</a>
-              <a href="/individual/blog" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Blog</a>
-              <a href="/individual/testimonial" className="block px-4 py-1 text-gray-800 hover:pl-6 transition-all duration-200">Testimonial</a>
+              <div className='w-full lg:px-5'>
+                <div className='w-full grid grid-cols-2 p-3'>
+                  <div className='w-full flex flex-col border-e border-gray-500'>
+                    <a href="/individual/how_will_you_learn" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">How will you learn</a>
+                    <a href="/individual/our_hubs" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Our Hubs</a>
+                    <a href="/individual/top-up_degree" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Top up degree</a>
+                    <a href="/individual/blog" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Blog</a>
+                    <a href="/individual/testimonial" className="block px-4 py-1 text-gray-800 hover:pl-6 transition-all duration-200">Testimonial</a>
+                  </div>
+                  <div className='flex flex-col gap-5 ml-5'>
+                    <img src="/Images/header_Image_1.jpg" alt="langford" className='w-full h-full' />
+                    <span className='text-black text-[16px]'>At Langford College, learn your way with flexible programs, modern hubs, top-up degrees, insightful blogs, and real student success stories.</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -317,7 +383,7 @@ const Header = () => {
             <button className="btn bg-[#E2231A] text-white px-4 py-2 hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] hover:scale-105 transition-all duration-200"
               onClick={() => {
                 if (window.location.pathname === "/") {
-                  window.scrollTo({ top: 900, behavior: "smooth" });
+                  window.scrollTo({ top: 8850, behavior: "smooth" });
                 } else {
                   window.location.href = "/";
                 }
@@ -473,7 +539,7 @@ const Header = () => {
             </div>
 
 
-            <div className="border-b border-gray-200 pb-2">
+            {/* <div className="border-b border-gray-200 pb-2">
               <div
                 className="flex justify-between items-center py-2"
                 onClick={() => toggleDropdown('progression')}
@@ -510,7 +576,7 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* About Us - Mobile */}
             <div className="border-b border-gray-200 pb-2">
@@ -545,14 +611,14 @@ const Header = () => {
       </div>
 
       {/* Desktop Course Dropdown Menu */}
-      <div
+      {/* <div
         className="hidden lg:block lg:absolute lg:left-0 lg:w-full border-t border-b border-gray-300 bg-white mt-28 h-[82vh] z-50 overflow-hidden lg:grid lg:grid-cols-4 lg:gap-4"
         style={{ display: activeDropdown === 'course' && window.innerWidth >= 1024 ? 'block' : 'none' }}
         onMouseEnter={cancelDropdownClose}
       >
         <div className="w-full lg:px-5">
           <div className="w-full grid grid-cols-4 gap-4 ">
-            {/* sec 1 */}
+
             <div className='flex items-start flex-col pt-3 w-full'>
               <span className='text-black font-bold text-2xl px-4'>IGCSE and short courses</span>
               {level1?.map((item, index) => (
@@ -561,7 +627,7 @@ const Header = () => {
                 </a>
               ))}
             </div>
-            {/* sec 2 */}
+
             <div className='flex items-start flex-col pt-3 w-full'>
               <span className='text-black font-bold text-2xl px-4'>Level 3 (A level) - University entry courses</span>
               {level2?.map((item, index) => (
@@ -570,7 +636,7 @@ const Header = () => {
                 </a>
               ))}
             </div>
-            {/* sec 3 */}
+
             <div className='flex items-start flex-col pt-3 w-full'>
               <span className='text-black font-bold text-2xl px-4'>Level 4 & 5 - University first and second year courses</span>
               {level3?.map((item, index) => (
@@ -579,7 +645,7 @@ const Header = () => {
                 </a>
               ))}
             </div>
-            {/* sec 4 */}
+
             <div className='flex items-start flex-col pt-3 w-full gap-5'>
               <div className='flex items-start flex-col'>
                 <span className='text-black font-bold text-2xl px-4'>Level 6 Undergraduate / Final year</span>
@@ -600,7 +666,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </header>
   );
 };

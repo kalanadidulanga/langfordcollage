@@ -17,6 +17,7 @@ import LeatestTestimonial from "./leatest-testimonial-section";
 import NSS from "./nss-section";
 import Awarding from "./awarding-section";
 import WhatsNew from "./whats-new-section";
+import UniProgession from "./university_progrssion";
 
 export default function Home() {
 
@@ -42,6 +43,7 @@ export default function Home() {
         <WhatsNew />
         {/* <AffordableStudy /> */}
         <SocialLearning />
+        <UniProgession/>
         <MostPopular />
         <WillLearn />
         <Support />

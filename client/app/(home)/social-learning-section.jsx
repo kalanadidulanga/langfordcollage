@@ -42,9 +42,9 @@ function SocialLearning() {
   return (
     <>
       {/* Main Section */}
-      <div className="w-full lg:pb-20 lg:pt-20 pt-10 bg-white text-[#2e2e27] px-[9vw] flex flex-col items-start justify-start gap-5">
+      <div className="w-full lg:h-screen lg:pb-10 lg:pt-10 pt-10 bg-white text-[#2e2e27] px-[9vw] flex flex-col items-start justify-start gap-5">
 
-        <div className="w-full flex items-start pb-5 flex-col lg:h-full">
+        <div className="w-full flex items-center justify-center pb-5 flex-col lg:h-full">
           <div className="w-full lg:grid lg:grid-cols-2">
             <div className="w-full flex items-start flex-col lg:h-full">
               <span className="text-[6vw] lg:text-[4vw] font-sans font-bold leading-none">

@@ -5,7 +5,7 @@ function OurTeam() {
         <>
             <div className='w-full  pb-20 pt-5 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5'>
                 <div className='w-full flex items-start font-bold flex-col lg:h-full'>
-                    <span className='text-[6vw] lg:text-[3vw]'>
+                    <span className='text-[6vw] lg:text-[3.5vw] font-sans'>
                         Our Team
                     </span>
 
