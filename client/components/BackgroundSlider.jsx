@@ -12,7 +12,7 @@ const BackgroundSlider = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentImageIndex((prev) => (prev + 1) % images.length);
-        }, 5000);
+        }, 10000);
 
         return () => clearInterval(interval);
     }, []);
