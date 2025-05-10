@@ -137,6 +137,17 @@ function CourseBody({ data }) {
                             <span>{data?.course_leader ? data?.course_leader : "N/A"}</span>
                         </div>
                     </div>
+                    <div>
+                        <div className='w-full bg-white nss-section flex flex-col pt-10 lg:flex-row justify-center items-center lg:gap-32 '>
+                            <div className='w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 nss-left bg-white rounded-md gap-2 lg:gap-5 pt-5 text-center'>
+                                <img src="/logos/outhm.png" alt="logo" className='w-full lg:h-58 object-contain object-center lg:mb-0 border border-gray-400 p-2 rounded-lg' />
+                                <img src="/logos/iab.png" alt="logo" className='w-full lg:h-58 object-contain object-center border border-gray-400 p-2 rounded-lg' />
+                                <img src="/logos/CWChamber.png" alt="logo" className='w-full lg:h-58 object-contain object-center border border-gray-400 p-2 rounded-lg' />
+                                <img src="/logos/qualifi.png" alt="logo" className='w-full lg:h-58 object-contain object-center border border-gray-400 p-2 rounded-lg' />
+                                <img src="/logos/council.png" alt="logo" className='w-full lg:h-58 object-contain object-center border border-gray-400 p-2 rounded-lg' />
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className='w-full bg-[#F7FAFF] flex flex-col gap-5 text-black p-6 pr-20'>
                     <span className='font-sans text-3xl '>Start your journey today</span>

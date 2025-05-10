@@ -25,7 +25,7 @@ function CourseDetailBody({ data }) {
                 <>
                     <div className='w-full lg:px-[10vw] py-[5vh] bg-[#F7FAFF] flex flex-col lg:flex-row'>
                         <div className='w-full lg:w-[40%] flex flex-col items-start text-[17px] justify-start text-black font-sans gap-3 px-[10vw] lg:px-0 lg:border-e mr-5'>
-                            <span className={`${isClickedSection1 ? `pl-3 underline text-[24px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
+                            <span className={`${isClickedSection1 ? `pl-3 underline text-[28px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
                                 onClick={() => {
                                     setClickSection1(true);
                                     setClickSection2(false);
@@ -37,7 +37,7 @@ function CourseDetailBody({ data }) {
                             >
                                 How it works
                             </span>
-                            <span className={`${isClickedSection2 ? `pl-3 underline text-[24px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
+                            <span className={`${isClickedSection2 ? `pl-3 underline text-[28px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
                                 onClick={() => {
                                     setClickSection1(false);
                                     setClickSection2(true);
@@ -49,7 +49,7 @@ function CourseDetailBody({ data }) {
                             >
                                 Course Modules
                             </span>
-                            <span className={`${isClickedSection3 ? `pl-3 underline text-[24px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
+                            <span className={`${isClickedSection3 ? `pl-3 underline text-[28px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
                                 onClick={() => {
                                     setClickSection1(false);
                                     setClickSection2(false);
@@ -61,7 +61,7 @@ function CourseDetailBody({ data }) {
                             >
                                 Entry Requirements
                             </span>
-                            <span className={`${isClickedSection4 ? `pl-3 underline text-[24px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
+                            <span className={`${isClickedSection4 ? `pl-3 underline text-[28px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
                                 onClick={() => {
                                     setClickSection1(false);
                                     setClickSection2(false);
@@ -73,7 +73,7 @@ function CourseDetailBody({ data }) {
                             >
                                 Cost & Payment
                             </span>
-                            <span className={`${isClickedSection5 ? `pl-3 underline text-[24px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
+                            <span className={`${isClickedSection5 ? `pl-3 underline text-[28px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
                                 onClick={() => {
                                     setClickSection1(false);
                                     setClickSection2(false);
@@ -85,7 +85,7 @@ function CourseDetailBody({ data }) {
                             >
                                 Career Progression
                             </span>
-                            <span className={`${isClickedSection6 ? `pl-3 underline text-[24px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
+                            <span className={`${isClickedSection6 ? `pl-3 underline text-[28px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
                                 onClick={() => {
                                     setClickSection1(false);
                                     setClickSection2(false);

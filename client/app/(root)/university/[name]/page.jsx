@@ -3,43 +3,38 @@ import { Footer } from '@/components/Footer';
 import Header from '@/components/Header';
 import React, { use, useEffect, useState } from 'react'
 import Hero from './hero';
-import CourseBody from './body';
-import RequestACource from '@/app/(home)/request-a-cource-section';
-import CourseDetailBody from './detail-body';
-import WhyEnroll from './why-enroll-section';
 import axios from 'axios';
-import NSS from '@/app/(home)/nss-section';
 
 function page({ params }) {
   // Unwrap the `params` promise using React.use()
   const unwrappedParams = use(params);
-  const id = unwrappedParams?.id;
+  const id = unwrappedParams?.name;
   const [isClient, setIsClient] = useState(false);
-  const [isClientLoading, setIsClientLoading] = useState(true);
+  const [isClientLoading, setIsClientLoading] = useState(false);
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
   const [course, setCourse] = useState([]);
 
   useEffect(() => {
     setIsClient(true);
-    loadData();
+    // loadData();
   }, []);
 
-  const loadData = async () => {
-    try {
-      const res = await axios.get(`${BASE_URL}/api/serchCourseBySlug?slug=${id}`);
-      if (res?.data?.status) {
-        setCourse(res.data.data);
-        setIsClientLoading(false);
-      } else {
-        setCourse([]);
-        setIsClientLoading(false);
-      }
-    } catch (error) {
-      setIsClientLoading(false);
-      window.location.replace("/");
-    }
-  }
+//   const loadData = async () => {
+//     try {
+//       const res = await axios.get(`${BASE_URL}/api/serchCourseBySlug?slug=${id}`);
+//       if (res?.data?.status) {
+//         setCourse(res.data.data);
+//         setIsClientLoading(false);
+//       } else {
+//         setCourse([]);
+//         setIsClientLoading(false);
+//       }
+//     } catch (error) {
+//       setIsClientLoading(false);
+//       window.location.replace("/");
+//     }
+//   }
 
   if (isClient) {
     if (isClientLoading) {
@@ -63,16 +58,9 @@ function page({ params }) {
           <div className='blog-bg'>
             <div className="content">
               <Header />
-              <Hero name={course?.course_name} />
+              <Hero name={id} />
             </div>
           </div>
-          <CourseBody data={course} />
-          {/* <NSS/> */}
-          <CourseDetailBody data={course} />
-          {/* <WhyEnroll /> */}
-          <div className='bg-white p-10'></div>
-          <RequestACource />
-          <div className='bg-white p-5'></div>
           <Footer />
         </>
       );
