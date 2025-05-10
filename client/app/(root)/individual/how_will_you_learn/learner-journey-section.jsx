@@ -42,7 +42,7 @@ function LearnerJourney() {
 
     return (
         <>
-            <div className='w-full pb-20 pt-20 font-sans bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 journy-section '>
+            <div className='w-full pb-20 pt-20 font-sans bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 journy-section ' id="learner_journey">
                 <div className='w-full flex items-start font-bold flex-col lg:h-full'>
                     <div className="w-full lg:grid lg:grid-cols-2">
                         <div className="w-full flex items-start flex-col lg:h-full">

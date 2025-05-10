@@ -97,7 +97,7 @@ function CourseBody({ data }) {
                 <div className='w-full flex flex-col'>
                     <div className='w-full bg-[#1E1E1E] p-8 flex flex-col'>
                         <span className='text-[1.9vw] font-sans'>Book Your Course</span>
-                        <span className='text-[1.2vw] font-sans'>Discover student life at the University of Chester</span>
+                        <span className='text-[1.2vw] font-sans capitalize'>Book your course now and get a guaranteed scholarship!</span>
                     </div>
                     <div className='w-full grid grid-cols-1 lg:grid-cols-3 text-[16px] text-black pt-10 gap-8'>
                         <div className='w-full flex flex-col gap-2'>
@@ -125,13 +125,13 @@ function CourseBody({ data }) {
                             <span>{data?.course_location ? data?.course_location : "N/A"}</span>
                         </div>
                         <div className='w-full flex flex-col gap-2'>
-                            <span className='font-sans'>UK fees:</span>
+                            <span className='font-sans'>Fees:</span>
                             <span>{data?.uk_fee ? data?.uk_fee : "N/A"}</span>
                         </div>
-                        <div className='w-full flex flex-col gap-2'>
+                        {/* <div className='w-full flex flex-col gap-2'>
                             <span className='font-sans'>International fees:</span>
                             <span>{data?.international_fee ? data?.international_fee : "N/A"}</span>
-                        </div>
+                        </div> */}
                         <div className='w-full flex flex-col gap-2'>
                             <span className='font-sans'>Course Leader:</span>
                             <span>{data?.course_leader ? data?.course_leader : "N/A"}</span>

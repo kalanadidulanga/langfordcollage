@@ -9,6 +9,7 @@ const Header = () => {
   const mobileMenuRef = useRef();
   const courseDropdownRef = useRef();
   const individualDropdownRef = useRef();
+  const aboutDropdownRef = useRef();
   const progressionDropdownRef = useRef();
   const dropdownTimeoutRef = useRef();
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
@@ -56,6 +57,7 @@ const Header = () => {
       animateDropdown(courseDropdownRef, activeDropdown === 'course');
       animateDropdown(individualDropdownRef, activeDropdown === 'individual');
       animateDropdown(progressionDropdownRef, activeDropdown === 'progression');
+      animateDropdown(aboutDropdownRef, activeDropdown === 'about');
     }
   }, [activeDropdown]);
 
@@ -288,7 +290,7 @@ const Header = () => {
             </div>
           </div>
 
-          {/* <div
+          <div
             className="relative"
             onClick={() => {
               if (activeDropdown == "progression") {
@@ -314,15 +316,26 @@ const Header = () => {
               </svg>
             </button>
             <div
-              className={`lg:absolute ${window.innerWidth >= 1024 ? 'mt-2' : 'mt-1 ml-4'} py-2 w-full lg:w-80 bg-white rounded-md shadow-lg z-50 overflow-hidden capitalize`}
+              className={`lg:absolute left-1/2 -translate-x-1/2 ${window.innerWidth >= 1024 ? 'mt-2' : 'mt-1 ml-4'} py-2 w-full lg:w-[700px] bg-white rounded-md shadow-lg z-50 overflow-hidden capitalize`}
               style={{ display: activeDropdown === 'progression' && window.innerWidth >= 1024 ? 'block' : 'none' }}
               onMouseEnter={cancelDropdownClose}
             >
-              <a href="/business_progression" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Business progression courses</a>
-              <a href="/it_progression" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">IT progression courses</a>
-              <a href="/hospitality_progression" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Hospitality progression courses</a>
+              <div className='w-full lg:px-5'>
+                <div className='w-full grid grid-cols-2 p-3'>
+                  <div className='w-full flex flex-col border-e border-gray-500'>
+                    <a href="/business_progression" className="block px-2 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Business progression courses</a>
+                    <a href="/it_progression" className="block px-2 py-1 text-gray-800  hover:pl-6 transition-all duration-200">IT progression courses</a>
+                    <a href="/hospitality_progression" className="block px-2 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Hospitality progression courses</a>
+                  </div>
+                  <div className='flex flex-col gap-5 ml-5'>
+                    <img src="/Images/uni_progession.jpg" alt="langford" className='w-full h-full' />
+                    <span className='text-black text-[16px]'>Upon completing your pathway degree at Langford College, you can seamlessly progress to a prestigious UK university, enhancing your education and career prospects with globally recognized qualifications.</span>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div> */}
+
+          </div>
 
           {/* Individuals Dropdown */}
           <div
@@ -373,19 +386,61 @@ const Header = () => {
             </div>
           </div>
 
-
-
-          <a href="/about" className="hover:underline hover:opacity-80 transition-opacity duration-200">
+          <div
+            className="relative"
+            onClick={() => {
+              if (activeDropdown == "about") {
+                handleMouseLeave('about')
+              } else {
+                handleMouseEnter('about')
+              }
+            }}
+          >
+            <button
+              onClick={() => toggleDropdown('about')}
+              className="hover:underline flex outline-none items-center w-full justify-center hover:opacity-80 transition-opacity duration-200"
+            >
+              About Us
+              <svg
+                className={`ml-1 w-4 h-4 transition-transform duration-200 ${activeDropdown === 'about' ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div
+              className={`lg:absolute left-1/2 -translate-x-1/2 ${window.innerWidth >= 1024 ? 'mt-2' : 'mt-1 ml-4'} py-2 w-full lg:w-[600px] bg-white rounded-md shadow-lg z-50 overflow-hidden capitalize`}
+              style={{ display: activeDropdown === 'about' && window.innerWidth >= 1024 ? 'block' : 'none' }}
+              onMouseEnter={cancelDropdownClose}
+            >
+              <div className='w-full lg:px-5'>
+                <div className='w-full grid grid-cols-2 p-3'>
+                  <div className='w-full flex flex-col border-e border-gray-500'>
+                    <a href="/about" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">About Us - Home</a>
+                    <a href="/why_langford_college" className="block px-4 py-1 text-gray-800  hover:pl-6 transition-all duration-200">Why Langford College</a>
+                  </div>
+                  <div className='flex flex-col gap-5 ml-5'>
+                    <img src="/Images/header_Image_1.jpg" alt="langford" className='w-full h-full' />
+                    <span className='text-black text-[16px]'>At Langford College, learn your way with flexible programs, modern hubs, top-up degrees, insightful blogs, and real student success stories.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <a href="/about" className="hover:underline hover:opacity-80 transition-opacity duration-200">
             About Us
-          </a>
+          </a> */}
 
           <div className="flex gap-4">
             <button className="btn bg-[#E2231A] text-white px-4 py-2 hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] hover:scale-105 transition-all duration-200"
               onClick={() => {
                 if (window.location.pathname === "/") {
-                  window.scrollTo({ top: 8850, behavior: "smooth" });
+                  window.scrollTo({ top: 8950, behavior: "smooth" });
                 } else {
-                  window.location.href = "/";
+                  window.location.href = "/?section=enroll_now";
                 }
               }}
             >
@@ -404,7 +459,7 @@ const Header = () => {
         {/* Mobile Navigation Menu */}
         <div
           ref={mobileMenuRef}
-          className={`lg:hidden absolute top-24 left-0 w-full h-[90vh] bg-white text-black z-50 overflow-y-auto transform -translate-x-full ${isMenuOpen ? 'block' : 'hidden'}`}
+          className={`lg:hidden absolute top-24 left-0 w-full bg-white max-h-[77vh] text-black z-50 overflow-y-auto transform -translate-x-full ${isMenuOpen ? 'block' : 'hidden'}`}
         >
           <div className="flex flex-col p-4 space-y-2">
             {/* Course Dropdown - Mobile */}
@@ -496,6 +551,45 @@ const Header = () => {
               </div>
             </div>
 
+            <div className="border-b border-gray-200 pb-2">
+              <div
+                className="flex justify-between items-center py-2"
+                onClick={() => toggleDropdown('progression')}
+              >
+                <span className="text-lg">University Progression</span>
+                <span className="text-red-600">
+                  <svg
+                    className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'progression' ? 'transform rotate-45' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                    />
+                  </svg>
+                </span>
+              </div>
+
+              <div
+                ref={progressionDropdownRef}
+                className="overflow-hidden"
+                style={{ height: 0, opacity: 0 }}
+              >
+                <div className="pl-4 py-2">
+                  <div className="flex flex-col">
+                    <a href="/business_progression" className="block py-1 text-gray-800  hover:pl-4 transition-all duration-200">Business progression courses</a>
+                    <a href="/it_progression" className="block py-1 text-gray-800  hover:pl-4 transition-all duration-200">IT progression courses</a>
+                    <a href="/hospitality_progression" className="block py-1 text-gray-800  hover:pl-4 transition-all duration-200">Hospitality progression courses</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Individuals Dropdown - Mobile */}
             <div className="border-b border-gray-200 pb-2">
               <div
@@ -537,17 +631,15 @@ const Header = () => {
                 </div>
               </div>
             </div>
-
-
-            {/* <div className="border-b border-gray-200 pb-2">
+            <div className="border-b border-gray-200 pb-2">
               <div
                 className="flex justify-between items-center py-2"
-                onClick={() => toggleDropdown('progression')}
+                onClick={() => toggleDropdown('about')}
               >
-                <span className="text-lg">University Progression</span>
+                <span className="text-lg">About Us</span>
                 <span className="text-red-600">
                   <svg
-                    className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'progression' ? 'transform rotate-45' : ''}`}
+                    className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'about' ? 'transform rotate-45' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -564,24 +656,23 @@ const Header = () => {
               </div>
 
               <div
-                ref={progressionDropdownRef}
+                ref={aboutDropdownRef}
                 className="overflow-hidden"
                 style={{ height: 0, opacity: 0 }}
               >
                 <div className="pl-4 py-2">
                   <div className="flex flex-col">
-                    <a href="/business_progression" className="block py-1 text-gray-800  hover:pl-4 transition-all duration-200">Business progression courses</a>
-                    <a href="/it_progression" className="block py-1 text-gray-800  hover:pl-4 transition-all duration-200">IT progression courses</a>
-                    <a href="/hospitality_progression" className="block py-1 text-gray-800  hover:pl-4 transition-all duration-200">Hospitality progression courses</a>
+                    <a href="/about" className="block py-1 text-gray-800  hover:pl-4 transition-all duration-200">About Us - Home</a>
+                    <a href="/why_langford_college" className="block py-1 text-gray-800  hover:pl-4 transition-all duration-200">Why Langford College</a>
                   </div>
                 </div>
               </div>
-            </div> */}
+            </div>
 
             {/* About Us - Mobile */}
-            <div className="border-b border-gray-200 pb-2">
+            {/* <div className="border-b border-gray-200 pb-2">
               <a href="/about" className="block py-2 text-lg">About Us</a>
-            </div>
+            </div> */}
 
             {/* Action Buttons - Mobile */}
             <div className="flex flex-col space-y-3 pt-4">

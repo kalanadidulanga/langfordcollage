@@ -18,6 +18,7 @@ import NSS from "./nss-section";
 import Awarding from "./awarding-section";
 import WhatsNew from "./whats-new-section";
 import UniProgession from "./university_progrssion";
+import BackgroundSlider from "@/components/BackgroundSlider";
 
 export default function Home() {
 
@@ -25,12 +26,33 @@ export default function Home() {
 
   useEffect(() => {
     setIsClient(true);
+
+    const urlParam = new URLSearchParams(window.location.search);
+    const section_name = urlParam.get('section');
+
+    if (section_name === "enroll_now") {
+      const scrollToSection = () => {
+        const element = document.getElementById('enroll_now');
+        if (element) {
+          window.scrollTo({
+            top: 8950,
+            behavior: 'smooth',
+          });
+        } else {
+          setTimeout(scrollToSection, 1000);
+        }
+      };
+
+      setTimeout(scrollToSection, 1000);
+    }
+
   }, []);
 
   if (isClient) {
     return (
       <>
-        <div className='main-bg'>
+        <div className='relative w-full h-full overflow-hidden'>
+          <BackgroundSlider />
           <div className="content">
             <Header />
             <HeroSection />
@@ -42,9 +64,10 @@ export default function Home() {
         <NSS />
         <WhatsNew />
         {/* <AffordableStudy /> */}
-        <SocialLearning />
-        <UniProgession/>
+
+        <UniProgession />
         <MostPopular />
+        <SocialLearning />
         <WillLearn />
         <Support />
         <LearnAnywhere />

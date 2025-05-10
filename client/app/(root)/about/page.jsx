@@ -8,6 +8,7 @@ import OurTeam from './about-our-team';
 import QualityMonitoring from './quality-monitoring-section';
 import OFQUAL from './OFQUAL-section';
 import PartnerUnivercity from './partner-univercity-section';
+import BackgroundSlider from '@/components/BackgroundSlider';
 
 function page() {
   const [isClient, setIsClient] = useState(false);
@@ -19,7 +20,8 @@ function page() {
   if (isClient) {
     return (
       <>
-        <div className='about-bg'>
+        <div className='relative w-full h-full overflow-hidden'>
+          <BackgroundSlider />
           <div className="content">
             <Header />
             <AboutHero />

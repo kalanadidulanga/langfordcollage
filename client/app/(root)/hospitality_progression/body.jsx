@@ -34,8 +34,7 @@ export default function Body() {
                     <div
                         className='w-full bg-white pt-5 mt-5 pb-4 flex flex-col gap-3 justify-between  cursor-default'>
                         <span className={`text-[16px] description`}>
-                            Upon successfully completing your pathway degree with Langford College, you will be granted the opportunity to advance to the final year of your degree program at one of our prestigious partner universities in the UK. This seamless transition allows you to experience the renowned academic environment and global recognition that these institutions offer, further enhancing your qualifications and career prospects. With a wide range of options available, you can choose from top-tier universities known for their excellence in various fields, ensuring that your education reaches its full potential.
-                        </span>
+                            Upon successfully completing your pathway degree with Langford College, you will be granted the opportunity to progress to your degree program at one of our prestigious partner universities in the UK. This seamless transition allows you to experience the renowned academic environment and global recognition that these institutions offer, further enhancing your qualifications and career prospects. With a wide range of options available, you can choose from top-tier universities known for their excellence in various fields, ensuring that your education reaches its full potential.                        </span>
                         <span className={`text-[2.2vw] font-sans mt-10`}>
                             Level 4 & 5 (HND)
                         </span>
