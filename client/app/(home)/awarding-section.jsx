@@ -222,7 +222,7 @@ function Awarding() {
                                         onClick={()=>{
                                             window.location.href = `/university/java`;
                                         }}
-                                        className="w-full lg:w-64 h-64 border rounded-lg p-2 hover:p-1 bg-white transition-all duration-200 snap-start shrink-0"
+                                        className="w-full lg:w-64 h-64 border rounded-lg p-2 hover:p-1 cursor-pointer bg-white transition-all duration-200 snap-start shrink-0"
                                     >
                                         <img
                                             src={logo.logo}
