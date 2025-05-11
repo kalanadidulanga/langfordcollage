@@ -1,11 +1,11 @@
 'use client';
 import { useState, useEffect } from 'react';
 
-const BackgroundSlider = () => {
-    const images = [
-        '/Images/main-bg.jpg',
-        '/Images/about-bg.png',
-    ];
+const BackgroundSlider = ({images}) => {
+    // const images = [
+    //     '/Images/main-bg.jpg',
+    //     '/Images/about-bg.png',
+    // ];
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 

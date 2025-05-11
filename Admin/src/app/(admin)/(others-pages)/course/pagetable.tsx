@@ -200,11 +200,11 @@ function Pagetable() {
                 setLoading(false);
                 return;
             }
-            if (!internationalFee) {
-                setError("Please Enter International Fee");
-                setLoading(false);
-                return;
-            }
+            // if (!internationalFee) {
+            //     setError("Please Enter International Fee");
+            //     setLoading(false);
+            //     return;
+            // }
 
             if (!duration) {
                 setError("Please Enter Duration");
@@ -290,8 +290,7 @@ function Pagetable() {
                     ucas_code: ucsa_code,
                     ucas_points: ucsa_point,
                     duration: duration,
-                    uk_fee: ukFee,
-                    international_fee: internationalFee,
+                    fee: ukFee,
                     course_leader: courseLeader,
                 });
 
@@ -401,11 +400,11 @@ function Pagetable() {
                 setLoading(false);
                 return;
             }
-            if (!internationalFee) {
-                setError("Please Enter International Fee");
-                setLoading(false);
-                return;
-            }
+            // if (!internationalFee) {
+            //     setError("Please Enter International Fee");
+            //     setLoading(false);
+            //     return;
+            // }
 
             if (!duration) {
                 setError("Please Enter Duration");
@@ -486,8 +485,7 @@ function Pagetable() {
                         ucas_code: ucsa_code,
                         ucas_points: ucsa_point,
                         duration: duration,
-                        uk_fee: ukFee,
-                        international_fee: internationalFee,
+                        fee: ukFee,
                         course_leader: courseLeader,
                         courseId: courseId
                     });
@@ -535,8 +533,7 @@ function Pagetable() {
                     ucas_code: ucsa_code,
                     ucas_points: ucsa_point,
                     duration: duration,
-                    uk_fee: ukFee,
-                    international_fee: internationalFee,
+                    fee: ukFee,
                     course_leader: courseLeader,
                     courseId: courseId
                 });
@@ -673,11 +670,10 @@ function Pagetable() {
                                             setCareerProgression(item?.career_progression);
                                             setUnivercityOptions(item?.university_options);
                                             setImage(item?.image_path);
-                                            setUkFee(item?.uk_fee);
+                                            setUkFee(item?.fee);
                                             setUcsaCode(item?.ucas_code);
                                             setUcsaPoint(item?.ucas_points);
                                             setDuration(item?.duration);
-                                            setInternationalFee(item?.international_fee);
                                             setCourseLeader(item?.course_leader);
                                             setListingPriority(item?.listingPriority);
                                             setCourseId(item?.id);
@@ -910,7 +906,7 @@ function Pagetable() {
                                         </div>
                                     </div>
                                     <div className="col-span-2 lg:col-span-1">
-                                        <Label>UK Fee</Label>
+                                        <Label>Fee</Label>
                                         <div className='flex gap-2 bg-white p-2 h-[40px] rounded border border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'>
                                             <input
                                                 type="number"
@@ -922,19 +918,19 @@ function Pagetable() {
                                             <span>£</span>
                                         </div>
                                     </div>
-                                    <div className="col-span-2 lg:col-span-1">
-                                        <Label>International Fee</Label>
-                                        <div className='flex gap-2 bg-white p-2 h-[40px] rounded border border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'>
-                                            <input
-                                                type="number"
-                                                value={internationalFee}
-                                                min={0}
-                                                onChange={(e) => setInternationalFee(e.target.value)}
-                                                className='w-full border outline-none border-none h-full'
-                                            />
-                                            <span>£</span>
-                                        </div>
-                                    </div>
+                                    {/*<div className="col-span-2 lg:col-span-1">*/}
+                                    {/*    <Label>International Fee</Label>*/}
+                                    {/*    <div className='flex gap-2 bg-white p-2 h-[40px] rounded border border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'>*/}
+                                    {/*        <input*/}
+                                    {/*            type="number"*/}
+                                    {/*            value={internationalFee}*/}
+                                    {/*            min={0}*/}
+                                    {/*            onChange={(e) => setInternationalFee(e.target.value)}*/}
+                                    {/*            className='w-full border outline-none border-none h-full'*/}
+                                    {/*        />*/}
+                                    {/*        <span>£</span>*/}
+                                    {/*    </div>*/}
+                                    {/*</div>*/}
                                     <div className="col-span-2 lg:col-span-1">
                                         <Label>Duration</Label>
                                         <div className='flex gap-2 bg-white p-2 h-[40px] rounded border border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'>

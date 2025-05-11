@@ -3,16 +3,16 @@ import Label from '@/components/form/Label'
 import Alert from '@/components/ui/alert/Alert';
 import Button from '@/components/ui/button/Button'
 import RichTextEditor from '@/components/ui/EditText/RichTextEdit';
-import { Modal } from '@/components/ui/modal'
-import { ConfirmModal } from '@/components/ui/modal/confirmAlert';
-import { useModal } from '@/hooks/useModal'
+import {Modal} from '@/components/ui/modal'
+import {ConfirmModal} from '@/components/ui/modal/confirmAlert';
+import {useModal} from '@/hooks/useModal'
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useState} from 'react'
 import toast from 'react-hot-toast';
 
 function Pagetable() {
-    const { isOpen, openModal, closeModal } = useModal();
-    const { isOpen1, openModal1, closeModal1 } = useModal();
+    const {isOpen, openModal, closeModal} = useModal();
+    const {isOpen1, openModal1, closeModal1} = useModal();
     const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
     const [loading, setLoading] = useState(false);
@@ -27,6 +27,7 @@ function Pagetable() {
     const [Universityimage2, setUniversityImage2] = useState("");
     const [title, settitle] = useState("");
     const [description, setDescription] = useState("");
+    const [link, setLink] = useState("");
 
     useEffect(() => {
         loadUniversitys();
@@ -34,7 +35,7 @@ function Pagetable() {
 
     const loadUniversitys = async () => {
         try {
-            const response = await axios.get(`${BASE_URL}/api/getAllUniversitys`);
+            const response = await axios.get(`${BASE_URL}/api/getAllUnis`);
 
             if (response?.data?.status) {
                 setUniversitys(response?.data?.data);
@@ -72,8 +73,20 @@ function Pagetable() {
             const form = new FormData();
             form.append("file", Universityimage);
 
-            const res = await axios.post(`${BASE_URL}/api/uploadImage/University`,
+            const res = await axios.post(`${BASE_URL}/api/uploadImage/university`,
                 form,
+                {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                }
+            );
+
+            const form1 = new FormData();
+            form1.append("file", Universityimage2);
+
+            const res1 = await axios.post(`${BASE_URL}/api/uploadImage/university`,
+                form1,
                 {
                     headers: {
                         "Content-Type": "multipart/form-data",
@@ -85,22 +98,26 @@ function Pagetable() {
 
             if (res?.data?.status) {
 
-                const response = await axios.post(`${BASE_URL}/api/addNewUniversity`, {
-                    title: title,
-                    description: description,
-                    image_path: res?.data?.fileUrl
-                });
+                if (res1?.data?.status) {
+                    const response = await axios.post(`${BASE_URL}/api/addNewUni`, {
+                        title: title,
+                        description: description,
+                        image_path: res1?.data?.fileUrl,
+                        banner_path: res.data?.fileUrl,
+                        link: link,
+                    });
 
-                // console.log(response);
+                    // console.log(response);
 
-                if (response?.data?.status) {
-                    setLoading(false);
-                    toast.success("University Added Successfully");
-                    setTimeout(() => {
-                        closeModal();
-                        loadUniversitys();
-                        clear();
-                    }, 1000);
+                    if (response?.data?.status) {
+                        setLoading(false);
+                        toast.success("University Added Successfully");
+                        setTimeout(() => {
+                            closeModal();
+                            loadUniversitys();
+                            clear();
+                        }, 1000);
+                    }
                 }
 
             }
@@ -116,9 +133,12 @@ function Pagetable() {
     const clear = () => {
         setUniversityId("");
         setImage("");
+        setImage2("");
         setUniversityImage("");
+        setUniversityImage2("");
         settitle("");
         setDescription("");
+        setLink("");
         setIsEdit(false);
         setError("");
     }
@@ -169,27 +189,145 @@ function Pagetable() {
             }
 
             if (Universityimage) {
-                const form = new FormData();
-                form.append("file", Universityimage);
+                if (Universityimage2) {
+                    const form = new FormData();
+                    form.append("file", Universityimage);
 
-                const res = await axios.post(`${BASE_URL}/api/uploadImage/University`,
-                    form,
-                    {
-                        headers: {
-                            "Content-Type": "multipart/form-data",
-                        },
+                    const res = await axios.post(`${BASE_URL}/api/uploadImage/university`,
+                        form,
+                        {
+                            headers: {
+                                "Content-Type": "multipart/form-data",
+                            },
+                        }
+                    );
+
+                    const form1 = new FormData();
+                    form1.append("file", Universityimage2);
+
+                    const res1 = await axios.post(`${BASE_URL}/api/uploadImage/university`,
+                        form1,
+                        {
+                            headers: {
+                                "Content-Type": "multipart/form-data",
+                            },
+                        }
+                    );
+
+                    // console.log(res);
+
+                    if (res?.data?.status) {
+
+                        const response = await axios.post(`${BASE_URL}/api/editUni`, {
+                            uniId: UniversityId,
+                            title: title,
+                            description: description,
+                            image_path: res1?.data?.fileUrl,
+                            banner_path: res.data?.fileUrl,
+                            link: link,
+                        });
+
+                        console.log(response);
+
+                        if (response?.data?.status) {
+                            setLoading(false);
+                            closeModal();
+                            // setTimeout(() => {
+                            toast.success("University Updated Successfully");
+                            loadUniversitys();
+                            clear();
+                            // }, 1000);
+                        }
+
                     }
-                );
+                } else {
+                    const form = new FormData();
+                    form.append("file", Universityimage);
 
-                // console.log(res);
+                    const res = await axios.post(`${BASE_URL}/api/uploadImage/university`,
+                        form,
+                        {
+                            headers: {
+                                "Content-Type": "multipart/form-data",
+                            },
+                        }
+                    );
 
-                if (res?.data?.status) {
+                    // console.log(res);
 
-                    const response = await axios.post(`${BASE_URL}/api/editUniversity`, {
-                        UniversityId: UniversityId,
+                    if (res?.data?.status) {
+
+                        const response = await axios.post(`${BASE_URL}/api/editUni`, {
+                            uniId: UniversityId,
+                            title: title,
+                            description: description,
+                            image_path: image2,
+                            banner_path: res?.data?.fileUrl,
+                            link: link,
+                        });
+
+                        console.log(response);
+
+                        if (response?.data?.status) {
+                            setLoading(false);
+                            closeModal();
+                            // setTimeout(() => {
+                            toast.success("University Updated Successfully");
+                            loadUniversitys();
+                            clear();
+                            // }, 1000);
+                        }
+
+                    }
+                }
+            } else {
+                if (Universityimage2) {
+                    const form1 = new FormData();
+                    form1.append("file", Universityimage2);
+
+                    const res1 = await axios.post(`${BASE_URL}/api/uploadImage/university`,
+                        form1,
+                        {
+                            headers: {
+                                "Content-Type": "multipart/form-data",
+                            },
+                        }
+                    );
+
+                    // console.log(res);
+
+                    if (res1?.data?.status) {
+
+                        const response = await axios.post(`${BASE_URL}/api/editUni`, {
+                            uniId: UniversityId,
+                            title: title,
+                            description: description,
+                            image_path: res1.data?.fileUrl,
+                            banner_path: image,
+                            link: link,
+                        });
+
+                        console.log(response);
+
+                        if (response?.data?.status) {
+                            setLoading(false);
+                            closeModal();
+                            // setTimeout(() => {
+                            toast.success("University Updated Successfully");
+                            loadUniversitys();
+                            clear();
+                            // }, 1000);
+                        }
+
+                    }
+                } else {
+                    const response = await axios.post(`${BASE_URL}/api/editUni`, {
+                        uniId: UniversityId,
                         title: title,
                         description: description,
-                        image_path: res?.data?.fileUrl
+                        image_path: image2,
+                        banner_path: image,
+                        link: link,
                     });
 
                     console.log(response);
@@ -203,26 +341,6 @@ function Pagetable() {
                         clear();
                         // }, 1000);
                     }
-
-                }
-            } else {
-                const response = await axios.post(`${BASE_URL}/api/editUniversity`, {
-                    UniversityId: UniversityId,
-                    title: title,
-                    description: description,
-                    image_path: image
-                });
-
-                console.log(response);
-
-                if (response?.data?.status) {
-                    setLoading(false);
-                    closeModal();
-                    // setTimeout(() => {
-                    toast.success("University Updated Successfully");
-                    loadUniversitys();
-                    clear();
-                    // }, 1000);
                 }
             }
 
@@ -234,7 +352,7 @@ function Pagetable() {
 
     const deleteUniversity = async (UniversityId: any) => {
         try {
-            const res = await axios.get(`${BASE_URL}/api/deleteUniversity?UniversityId=${UniversityId}`);
+            const res = await axios.get(`${BASE_URL}/api/deleteUni?uniId=${UniversityId}`);
             if (res?.data?.status) {
                 setLoading(false);
                 closeModal1();
@@ -251,7 +369,9 @@ function Pagetable() {
         <>
             <div className='w-full h-full flex flex-col'>
                 <div className="w-full flex justify-end">
-                    <button className="bg-[#3B82F6] text-white py-2 rounded px-4" onClick={openModal}>Add New University</button>
+                    <button className="bg-[#3B82F6] text-white py-2 rounded px-4" onClick={openModal}>Add New
+                        University
+                    </button>
                 </div>
                 <div className='w-full grid grid-cols-1 lg:grid-cols-3 gap-5 mt-5'>
 
@@ -259,32 +379,34 @@ function Pagetable() {
                         <>
                             {Universitys?.map((data: any, index) => (
 
-                                <div className='w-full border-2 rounded-lg shadow-md hover:shadow-md hover:shadow-blue-200  p-5 flex flex-col gap-1' key={index}>
-                                    <img src={data?.image_path} alt={`${data?.title}_Image`} className='w-full h-[41vh] object-cover rounded' />
+                                <div
+                                    className='w-full border-2 rounded-lg shadow-md hover:shadow-md hover:shadow-blue-200  p-5 flex flex-col gap-1'
+                                    key={index}>
+                                    <img src={data?.image_path} alt={`${data?.title}_Image`}
+                                         className='w-full h-[20vh] object-contain rounded'/>
                                     <span className='font-bold text-[20px] dark:text-white'>{data?.title}</span>
-                                    <hr className='border-[1px] border-gray-300' />
-                                    <div className='flex flex-col gap-2 mt-2'>
-                                        <div
-                                            className="text-[18px] dark:text-white line-clamp-3 "
-                                            dangerouslySetInnerHTML={{ __html: data?.description }}
-                                        />
-
-                                    </div>
+                                    <hr className='border-[1px] border-gray-300'/>
                                     <div className='flex flex-row gap-2 items-center mt-2'>
-                                        <button className='bg-[#f6a53b] text-white py-1 rounded px-4 w-full' onClick={() => {
+                                        <button className='bg-[#f6a53b] text-white py-1 rounded px-4 w-full'
+                                                onClick={() => {
 
-                                            setUniversityId(data?.id);
-                                            settitle(data?.title);
-                                            setDescription(data?.description);
-                                            setImage(data?.image_path);
-                                            openModal();
-                                            setIsEdit(true);
+                                                    setUniversityId(data?.id);
+                                                    settitle(data?.title);
+                                                    setDescription(data?.description);
+                                                    setImage(data?.banner_path);
+                                                    setImage2(data?.image_path)
+                                                    openModal();
+                                                    setLink(data?.link);
+                                                    setIsEdit(true);
 
-                                        }}>Edit</button>
-                                        <button className='bg-[#f63b3b] text-white py-1 rounded px-4 w-full' onClick={() => {
-                                            setUniversityId(data?.id);
-                                            openModal1();
-                                        }}>Delete</button>
+                                                }}>Edit
+                                        </button>
+                                        <button className='bg-[#f63b3b] text-white py-1 rounded px-4 w-full'
+                                                onClick={() => {
+                                                    setUniversityId(data?.id);
+                                                    openModal1();
+                                                }}>Delete
+                                        </button>
                                     </div>
                                 </div>
 
@@ -305,7 +427,8 @@ function Pagetable() {
                 closeModal1();
                 setUniversityId("");
             }} className="max-w-[500px] m-4">
-                <div className="no-scrollbar relative w-full max-w-[500px] overflow-y-auto rounded-3xl bg-white p-4 dark:bg-gray-900 lg:p-11">
+                <div
+                    className="no-scrollbar relative w-full max-w-[500px] overflow-y-auto rounded-3xl border-2 border-gray-600 bg-white p-4 dark:bg-gray-900 lg:p-11">
                     <div className="px-2 border-b">
                         <h4 className="mb-2 text-2xl font-semibold text-gray-800 dark:text-white/90">
                             Delete University
@@ -349,7 +472,8 @@ function Pagetable() {
                     clear();
                 }
             }} className="max-w-[900px] m-4">
-                <div className="no-scrollbar relative w-full max-w-[900px] max-h-[90vh] overflow-y-auto rounded-3xl bg-white p-4 dark:bg-gray-900 lg:p-11">
+                <div
+                    className="no-scrollbar relative w-full max-w-[900px] max-h-[90vh] overflow-y-auto rounded-3xl bg-white p-4 dark:bg-gray-900 lg:p-11">
                     <div className="px-2">
                         <h4 className="mb-2 text-2xl font-semibold text-gray-800 dark:text-white/90">
                             {isEdit ? "Edit University" : "Add New University"}
@@ -359,7 +483,7 @@ function Pagetable() {
                         {error && (
                             <>
                                 <div className='w-full'>
-                                    <Alert variant={'error'} title={'Oops'} message={error} />
+                                    <Alert variant={'error'} title={'Oops'} message={error}/>
                                 </div>
                             </>
                         )}
@@ -378,7 +502,8 @@ function Pagetable() {
                                             </>
                                         ) : (
                                             <>
-                                                <div className='w-full h-[30vh] border rounded border-gray-300 object-cover flex justify-center items-center'>
+                                                <div
+                                                    className='w-full h-[30vh] border rounded border-gray-300 object-cover flex justify-center items-center'>
                                                     <span className='text-[18px] text-gray-300 cursor-default'>Image Preview</span>
                                                 </div>
                                             </>
@@ -390,7 +515,8 @@ function Pagetable() {
                                             id="imageUpload"
                                             onChange={handleImageChange}
                                         />
-                                        <Button size="sm" className="mt-2" onClick={() => document.getElementById("imageUpload")?.click()}>
+                                        <Button size="sm" className="mt-2"
+                                                onClick={() => document.getElementById("imageUpload")?.click()}>
                                             Upload Banner
                                         </Button>
                                     </div>
@@ -421,21 +547,21 @@ function Pagetable() {
                                         />
                                         <Button size="sm" className="mt-2"
                                                 onClick={() => document.getElementById("imageUpload1")?.click()}>
-                                            Upload Image
+                                            Upload LOGO
                                         </Button>
                                     </div>
                                     <div className="lg:col-span-5 grid col-span-8 grid-cols-1 gap-x-6 gap-y-5">
                                         <div className="col-span-1">
                                             <Label>Name</Label>
                                             <input type="text"
-                                                className='w-full bg-white border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
-                                                onChange={(e) => settitle(e.target.value)}
-                                                value={title}
+                                                   className='w-full bg-white border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
+                                                   onChange={(e) => settitle(e.target.value)}
+                                                   value={title}
                                             />
                                         </div>
                                         <div className="col-span-1">
                                             <Label>Description</Label>
-                                            <RichTextEditor setHtmlContent={setDescription} htmlContent={description} />
+                                            <RichTextEditor setHtmlContent={setDescription} htmlContent={description}/>
                                         </div>
                                     </div>
                                     <div className="grid col-span-8 grid-cols-1 gap-x-6 gap-y-5">
@@ -443,8 +569,8 @@ function Pagetable() {
                                             <Label>University Link</Label>
                                             <input type="text"
                                                    className='w-full bg-white border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
-                                                   onChange={(e) => settitle(e.target.value)}
-                                                   value={title}
+                                                   onChange={(e) => setLink(e.target.value)}
+                                                   value={link}
                                             />
                                         </div>
                                     </div>
@@ -460,19 +586,23 @@ function Pagetable() {
                             </Button>
                             {isEdit ? (
                                 <>
-                                    <Button size="sm" onClick={handleEdit} disabled={loading} className='flex items-center gap-3'>
+                                    <Button size="sm" onClick={handleEdit} disabled={loading}
+                                            className='flex items-center gap-3'>
                                         Update University
                                         {loading && (
-                                            <div className="animate-spin rounded-full h-4 w-4 border-b-3 border-white"></div>
+                                            <div
+                                                className="animate-spin rounded-full h-4 w-4 border-b-3 border-white"></div>
                                         )}
                                     </Button>
                                 </>
                             ) : (
                                 <>
-                                    <Button size="sm" onClick={handleSave} disabled={loading} className='flex items-center gap-3'>
+                                    <Button size="sm" onClick={handleSave} disabled={loading}
+                                            className='flex items-center gap-3'>
                                         Add New University
                                         {loading && (
-                                            <div className="animate-spin rounded-full h-4 w-4 border-b-3 border-white"></div>
+                                            <div
+                                                className="animate-spin rounded-full h-4 w-4 border-b-3 border-white"></div>
                                         )}
                                     </Button>
                                 </>

@@ -1,22 +1,25 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, {useEffect, useRef, useState} from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {ChevronLeft, ChevronRight} from 'lucide-react';
+import axios from "axios";
 
 function Awarding() {
-
+    const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
     const scrollContainerRef = useRef(null);
     const [scrollPosition, setScrollPosition] = useState(0);
     const [showLeftArrow, setShowLeftArrow] = useState(false);
     const [showRightArrow, setShowRightArrow] = useState(true);
+
+    const [unilogos, setUnilogos] = useState([]);
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
         gsap.fromTo(
             ".award-left",
-            { opacity: 0, x: -50 },
+            {opacity: 0, x: -50},
             {
                 opacity: 1, x: 0, duration: 1, ease: "power3.out",
                 scrollTrigger: {
@@ -31,7 +34,7 @@ function Awarding() {
 
         gsap.fromTo(
             ".award-right",
-            { opacity: 0, x: 50 },
+            {opacity: 0, x: 50},
             {
                 opacity: 1, x: 0, duration: 1, ease: "power3.out",
                 scrollTrigger: {
@@ -46,66 +49,78 @@ function Awarding() {
 
     }, []);
 
-    const unilogos = [
-        {
-            "logo": "/University_Logos/Anglia_Ruskin_University_Logo.png"
-        },
-        {
-            "logo": "/University_Logos/Buckinghamshire New University.png"
-        },
-        {
-            "logo": "/University_Logos/coventry.png"
-        },
-        {
-            "logo": "/University_Logos/Edinburgh Napier University.png"
-        },
-        {
-            "logo": "/University_Logos/London Metropolitan University.png"
-        },
-        {
-            "logo": "/University_Logos/Middlesex University.png"
-        },
-        {
-            "logo": "/University_Logos/northapton_uni.png"
-        },
-        {
-            "logo": "/University_Logos/Northumbria University-01.png"
-        },
-        {
-            "logo": "/University_Logos/University of Bolton .png"
-        },
-        {
-            "logo": "/University_Logos/University of Central Lancashire (UCLAN).png"
-        },
-        {
-            "logo": "/University_Logos/University of Chichester.jpg"
-        },
-        {
-            "logo": "/University_Logos/University of Gloucestershire.png"
-        },
-        {
-            "logo": "/University_Logos/University of Hertfordshire.png"
-        },
-        {
-            "logo": "/University_Logos/University of Roehampton.png"
-        },
-        {
-            "logo": "/University_Logos/University of Wolverhampton.png"
-        },
-        {
-            "logo": "/University_Logos/university-of-cumbria-logo-png.png"
-        },
-        {
-            "logo": "/University_Logos/university-of-derby-.png"
-        },
-        {
-            "logo": "/University_Logos/University-of-Sunderland-Logo.png"
-        },
-        {
-            "logo": "/University_Logos/westcliff_email_logo.png"
-        },
-        
-    ];
+    useEffect(() => {
+
+        const loadData = async () => {
+            const res = await axios.get(`${BASE_URL}/api/getAllUnis`);
+
+            setUnilogos(res?.data?.data)
+        }
+
+        loadData();
+
+    }, [])
+
+    // const unilogos = [
+    //     {
+    //         "logo": "/University_Logos/Anglia_Ruskin_University_Logo.png"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/Buckinghamshire New University.png"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/coventry.png"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/Edinburgh Napier University.png"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/London Metropolitan University.png"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/Middlesex University.png"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/northapton_uni.png"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/Northumbria University-01.png"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/University of Bolton .png"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/University of Central Lancashire (UCLAN).png"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/University of Chichester.jpg"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/University of Gloucestershire.png"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/University of Hertfordshire.png"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/University of Roehampton.png"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/University of Wolverhampton.png"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/university-of-cumbria-logo-png.png"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/university-of-derby-.png"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/University-of-Sunderland-Logo.png"
+    //     },
+    //     {
+    //         "logo": "/University_Logos/westcliff_email_logo.png"
+    //     },
+    //
+    // ];
 
     const scroll = (direction) => {
         const container = scrollContainerRef.current;
@@ -142,7 +157,8 @@ function Awarding() {
 
     return (
         <>
-            <div className='w-full h-screen font-sans bg-[#2f3029] px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 testimonial-section'>
+            <div
+                className='w-full h-screen font-sans bg-[#2f3029] px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 testimonial-section'>
                 <div className='w-full flex items-center justify-center flex-col lg:h-full'>
                     <div className="w-full grid grid-cols-2">
                         <div className="w-full flex items-start flex-col lg:h-full text-white">
@@ -162,7 +178,7 @@ function Awarding() {
                                         className="absolute right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-[#ff0000] shadow-lg text-white cursor-pointer outline-none"
                                         aria-label="Previous slide"
                                     >
-                                        <ChevronLeft size={24} />
+                                        <ChevronLeft size={24}/>
                                     </button>
                                 ) : (
                                     <button
@@ -171,7 +187,7 @@ function Awarding() {
                                         aria-label="Previous slide"
                                         disabled
                                     >
-                                        <ChevronLeft size={24} />
+                                        <ChevronLeft size={24}/>
                                     </button>
                                 )}
                                 {/* Right Arrow */}
@@ -181,7 +197,7 @@ function Awarding() {
                                         className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-[#ff0000] shadow-lg text-white cursor-pointer outline-none"
                                         aria-label="Next slide"
                                     >
-                                        <ChevronRight size={24} />
+                                        <ChevronRight size={24}/>
                                     </button>
                                 ) : (
                                     <button
@@ -190,7 +206,7 @@ function Awarding() {
                                         aria-label="Next slide"
                                         disabled
                                     >
-                                        <ChevronRight size={24} />
+                                        <ChevronRight size={24}/>
                                     </button>
                                 )}
                             </div>
@@ -206,7 +222,8 @@ function Awarding() {
                     </div> */}
 
 
-                    <div className="w-full bg-[#2f3029] text-gray-500 flex justify-center lg:justify-start testimonial-right">
+                    <div
+                        className="w-full bg-[#2f3029] text-gray-500 flex justify-center lg:justify-start testimonial-right">
                         <div className="w-full bg-[#2f3029] relative">
 
 
@@ -219,13 +236,13 @@ function Awarding() {
                                 {unilogos.map((logo, i) => (
                                     <div
                                         key={i}
-                                        onClick={()=>{
-                                            window.location.href = `/university/java`;
+                                        onClick={() => {
+                                            window.location.href = `/university/${logo?.title}`;
                                         }}
                                         className="w-full lg:w-64 h-64 border rounded-lg p-2 hover:p-1 cursor-pointer bg-white transition-all duration-200 snap-start shrink-0"
                                     >
                                         <img
-                                            src={logo.logo}
+                                            src={logo.image_path}
                                             alt={`logo-${i}`}
                                             className="w-full h-full object-contain"
                                         />

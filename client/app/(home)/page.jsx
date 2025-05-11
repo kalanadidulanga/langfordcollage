@@ -24,6 +24,11 @@ export default function Home() {
 
   const [isClient, setIsClient] = useState(false);
 
+    const images = [
+        '/Images/main-bg.jpg',
+        '/Images/about-bg.png',
+    ];
+
   useEffect(() => {
     setIsClient(true);
 
@@ -52,7 +57,7 @@ export default function Home() {
     return (
       <>
         <div className='relative w-full h-full overflow-hidden'>
-          <BackgroundSlider />
+          <BackgroundSlider images={images}/>
           <div className="content">
             <Header />
             <HeroSection />
