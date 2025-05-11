@@ -117,6 +117,7 @@ app.get("/api/deleteTestimonial", (req, res) => deleteTestimonial(req, res));
 app.post("/api/signin", (req, res) => signin(req, res));
 app.post("/api/addNewCourse", (req, res) => addNewCourse(req, res));
 app.post("/api/addNewBlog", (req, res) => addNewBlog(req, res));
+app.post("/api/addNewUni", (req, res) => addNewUni(req, res));
 app.post("/api/addNewTestimonial", (req, res) => addNewTestimonial(req, res));
 app.post("/api/acceptEnroll", (req, res) => acceptEnroll(req, res));
 app.post("/api/editCourse", (req, res) => editCourse(req, res));
