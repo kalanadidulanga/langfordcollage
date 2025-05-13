@@ -25,8 +25,10 @@ export default function Home() {
   const [isClient, setIsClient] = useState(false);
 
     const images = [
-        '/Images/main-bg.jpg',
-        '/Images/about-bg.png',
+        // '/Images/main-bg.jpg',
+        '/Images/home.jpg',
+        '/Images/home2.jpg',
+        '/Images/home3.jpg',
     ];
 
   useEffect(() => {
