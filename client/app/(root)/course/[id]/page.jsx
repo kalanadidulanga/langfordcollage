@@ -9,6 +9,7 @@ import CourseDetailBody from './detail-body';
 import WhyEnroll from './why-enroll-section';
 import axios from 'axios';
 import NSS from '@/app/(home)/nss-section';
+import BackgroundSlider from "@/components/BackgroundSlider";
 
 function page({ params }) {
   // Unwrap the `params` promise using React.use()
@@ -60,7 +61,8 @@ function page({ params }) {
     } else {
       return (
         <>
-          <div className='blog-bg'>
+          <div className='relative w-full min-h-screen overflow-hidden'>
+            <BackgroundSlider images={[course?.banner_path]}/>
             <div className="content">
               <Header />
               <Hero name={course?.course_name} />
