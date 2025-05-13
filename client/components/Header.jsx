@@ -233,7 +233,7 @@ const Header = () => {
               </svg>
             </button>
             <div
-              className={`lg:absolute left-1/2 -translate-x-1/2 ${window.innerWidth >= 1024 ? 'mt-2' : 'mt-1 ml-4'} py-2 w-full lg:w-[1000px] bg-white rounded-md shadow-lg z-50 overflow-hidden capitalize`}
+              className={`lg:absolute left-1/2 -translate-x-1/3 ${window.innerWidth >= 1024 ? 'mt-2' : 'mt-1 ml-4'} py-2 w-full lg:w-[1000px] bg-white rounded-md shadow-lg z-50 overflow-hidden capitalize`}
               style={{ display: activeDropdown === 'course' && window.innerWidth >= 1024 ? 'block' : 'none' }}
               onMouseEnter={cancelDropdownClose}
             >
