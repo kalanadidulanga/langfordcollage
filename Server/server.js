@@ -34,7 +34,7 @@ db.connect((err) => {
 
 // Function to get the upload path dynamically
 const getUploadPath = (type) => {
-    const allowedPaths = ["testimonial", "course", "blog" , "university"];
+    const allowedPaths = ["testimonial", "course", "blog", "university"];
     if (!allowedPaths.includes(type)) return null;
     const uploadPath = path.join(__dirname, "uploads", type);
     // Ensure the directory exists
@@ -180,10 +180,6 @@ function addNewCourse(req, res) {
         course_name,
         course_start_date,
         course_location,
-        study_pace,
-        qualification,
-        assessment,
-        includes,
         course_level,
         annual_payment,
         monthly_payment,
@@ -194,6 +190,7 @@ function addNewCourse(req, res) {
         career_progression,
         university_options,
         image_path,
+        banner_path,
         ucas_code,
         ucas_points,
         duration,
@@ -222,8 +219,8 @@ function addNewCourse(req, res) {
                 });
             }
 
-            const sql = "INSERT INTO `course`(`course_name`, `course_start_date`, `course_location`, `how_it_works`, `course_module`, `entry_requirements`, `cost_and_payment`, `career_progression`, `university_options`, `image_path`,`course_level`,`annual_payment`,`monthly_payment`,`ucas_code`, `ucas_points` , `duration`,`fee`,`course_leader`,`listingPriority`,`slug`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-            const values = [course_name, course_start_date, course_location, how_it_works, course_module, entry_requirements, cost_and_payment, career_progression, university_options, image_path, course_level, annual_payment, monthly_payment, ucas_code, ucas_points, duration, fee, course_leader, "None", slug,];
+            const sql = "INSERT INTO `course`(`course_name`, `course_start_date`, `course_location`, `how_it_works`, `course_module`, `entry_requirements`, `cost_and_payment`, `career_progression`, `university_options`, `image_path`,`banner_path`,`course_level`,`annual_payment`,`monthly_payment`,`ucas_code`, `ucas_points` , `duration`,`fee`,`course_leader`,`listingPriority`,`slug`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            const values = [course_name, course_start_date, course_location, how_it_works, course_module, entry_requirements, cost_and_payment, career_progression, university_options, image_path, banner_path, course_level, annual_payment, monthly_payment, ucas_code, ucas_points, duration, fee, course_leader, "None", slug,];
 
             db.query(sql, values, (err, results) => {
                 if (err) {
@@ -727,6 +724,7 @@ function editCourse(req, res) {
         career_progression,
         university_options,
         image_path,
+        banner_path,
         ucas_code,
         ucas_points,
         duration,
@@ -735,9 +733,9 @@ function editCourse(req, res) {
         courseId,
     } = req.body;
 
-    const sql = "UPDATE `course` SET `course_name` = ?, `course_start_date` = ?, `course_location` = ?, `how_it_works` = ?, `course_module` = ?, `entry_requirements` = ?, `cost_and_payment` = ?, `career_progression` = ?, `university_options` = ?, `image_path` = ?,`course_level` = ?,`annual_payment` = ?,`monthly_payment` = ? ,`ucas_code` = ? , `ucas_points` = ? ,`duration` = ? , `fee` = ? , `course_leader` = ?, `slug` = ? WHERE `id` = ?;";
+    const sql = "UPDATE `course` SET `course_name` = ?, `course_start_date` = ?, `course_location` = ?, `how_it_works` = ?, `course_module` = ?, `entry_requirements` = ?, `cost_and_payment` = ?, `career_progression` = ?, `university_options` = ?, `image_path` = ?, `banner_path` = ?,`course_level` = ?,`annual_payment` = ?,`monthly_payment` = ? ,`ucas_code` = ? , `ucas_points` = ? ,`duration` = ? , `fee` = ? , `course_leader` = ?, `slug` = ? WHERE `id` = ?;";
     const slug = `COURSE_${course_name}_${courseId}`;
-    const values = [course_name, course_start_date, course_location, how_it_works, course_module, entry_requirements, cost_and_payment, career_progression, university_options, image_path, course_level, annual_payment, monthly_payment, ucas_code, ucas_points, duration, fee, course_leader, slug, courseId,];
+    const values = [course_name, course_start_date, course_location, how_it_works, course_module, entry_requirements, cost_and_payment, career_progression, university_options, image_path, banner_path, course_level, annual_payment, monthly_payment, ucas_code, ucas_points, duration, fee, course_leader, slug, courseId,];
 
     db.query(sql, values, (err, results) => {
         if (err) {
