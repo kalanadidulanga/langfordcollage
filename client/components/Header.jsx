@@ -750,7 +750,7 @@ const Header = () => {
                 .split('/')
                 .filter(segment => segment)
                 .map((segment, index, array) => {
-                    const resetList = ["course", "individual"];
+                    const resetList = ["course", "individual" , "university"];
                     const decodedSegment = decodeURIComponent(segment); // ✅ Decode %20 to space
                     const label = decodedSegment.charAt(0).toUpperCase() + decodedSegment.slice(1);
                     const href = resetList.includes(segment)
