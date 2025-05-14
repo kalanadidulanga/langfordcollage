@@ -39,5 +39,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-/public/University_Logos/
-/public/Universities/
+University_Logos/
+Universies/
+
