@@ -752,7 +752,7 @@ const Header = () => {
                 .map((segment, index, array) => {
                     const resetList = ["course", "individual"];
                     const label = segment.charAt(0).toUpperCase() + segment.slice(1);
-                    
+
                     const href = resetList.includes(segment)
                         ? '/'
                         : '/' + array.slice(0, index + 1).join('/');
