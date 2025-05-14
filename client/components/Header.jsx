@@ -745,12 +745,19 @@ const Header = () => {
 
         {/* navigation bar */}
         <div className="w-full flex items-center lg:px-[10vw] text-[14px] p-2 mt-4 text-white">
-            <a href="/" className="hover:underline">Home</a>
+            {window.location.pathname
+                .split('/')
+                .filter(segment => segment)
+                .length > 0 && (
+                <>
+                    <a href="/" className="hover:underline">Home</a>
+                </>
+            )}
             {window.location.pathname
                 .split('/')
                 .filter(segment => segment)
                 .map((segment, index, array) => {
-                    const resetList = ["course", "individual" , "university"];
+                    const resetList = ["course", "individual", "university"];
                     const decodedSegment = decodeURIComponent(segment); // ✅ Decode %20 to space
                     const label = decodedSegment.charAt(0).toUpperCase() + decodedSegment.slice(1);
                     const href = resetList.includes(segment)
