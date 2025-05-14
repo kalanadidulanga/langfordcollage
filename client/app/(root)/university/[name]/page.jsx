@@ -42,17 +42,16 @@ function page({params}) {
         if (isClientLoading) {
             return (
                 <>
-                    <div className='blog-bg'>
+                    <div className='bg-gray-400 animate-pulse'>
                         <div className="content">
                             <Header/>
-                            <div className='w-full h-[60vh] p-5 flex flex-col justify-center items-center gap-3'>
+                            <div className='w-full h-[75vh] p-5 flex flex-col justify-center items-center gap-3'>
                                 <div
                                     className="w-28 h-28 border-6 border-blue-200 border-t-[#ff0000] rounded-full animate-spin"></div>
                                 <span className='text-2xl'>Loading...</span>
                             </div>
                         </div>
                     </div>
-                    <Footer/>
                 </>
             );
         } else {
