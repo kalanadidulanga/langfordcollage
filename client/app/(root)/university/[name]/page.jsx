@@ -62,7 +62,7 @@ function page({params}) {
                         <BackgroundSlider images={[course?.banner_path]}/>
                         <div className="content">
                             <Header/>
-                            <Hero name={id}/>
+                            <Hero name={course?.title}/>
                         </div>
                     </div>
                     <UniBody data={course}/>

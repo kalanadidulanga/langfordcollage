@@ -22,10 +22,13 @@ function UniBody({data}) {
                     </div>
                     <div className='w-full flex flex-col description2 text-[14px] lg:text-[16px] lg:description text-black mt-3'
                          dangerouslySetInnerHTML={{__html: data?.description}}/>
-                    <div className='w-full flex items-center gap-3 mt-3'>
-                        <span className={`description2 text-[14px] lg:text-[18px] lg:description  font-sans text-black`}>URl -</span>
-                        <a className='text-[16px] text-black font-sans underline' href={data?.link} target={`_blank`}>
-                            {data?.link}
+                    <div className='w-full flex items-center justify-start gap-3 mt-5'>
+                        {/*<span className={`description2 text-[14px] lg:text-[18px] lg:description  font-sans text-black w-[10%] lg:w-[4%]`}>URl -</span>*/}
+                        {/*<a className='text-[16px] text-blue-500 underline w-full hidden lg:block' href={data?.link} target={`_blank`}>*/}
+                        {/*    {data?.link}*/}
+                        {/*</a>*/}
+                        <a className='description2 text-[14px] lg:text-[16px] lg:description text-blue-500 underline w-full' href={data?.link} target={`_blank`}>
+                            Visit University
                         </a>
                     </div>
                 </div>
