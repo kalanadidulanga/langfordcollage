@@ -42,11 +42,11 @@ function Assesment() {
 
     return (
         <>
-            <div className='w-full font-sans bg-white pb-20 text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 assessment-section ' id="assessment">
+            <div className='w-full font-sans bg-white pb-10 text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 assessment-section ' id="assessment">
                 <div className='w-full flex items-start font-bold flex-col lg:h-full assessment-right'>
                     <div className="w-full lg:grid lg:grid-cols-2">
                         <div className="w-full flex items-start flex-col lg:h-full">
-                            <span className="text-[6vw] lg:text-[4vw] font-sans font-bold">
+                            <span className="text-[9vw] lg:text-[4vw] font-sans font-bold">
                                 Assessment
                             </span>
                         </div>
@@ -57,10 +57,10 @@ function Assesment() {
                     </div>
                     <div className='w-full bg-white pt-10 pb-8 text-[#2E2E27] flex gap-10'>
                         <div className='w-full flex flex-col gap-5'>
-                            <span className='text-[16px] description'>
+                            <span className='description2 text-[14px] lg:text-[16px] lg:description'>
                                 Assessment at Langford College is a very straightforward process:
                             </span>
-                            <div className='text-[16px] description space-y-2'>
+                            <div className='description2 text-[14px] lg:text-[16px] lg:description space-y-2'>
                                 <span className='flex'>
                                     <li></li>
                                     <span>

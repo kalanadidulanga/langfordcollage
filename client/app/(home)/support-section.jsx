@@ -46,10 +46,10 @@ function Support() {
                 <div className='w-full flex items-start flex-col lg:h-full'>
                     <div className="w-full lg:grid lg:grid-cols-2">
                         <div className="w-full flex items-start flex-col lg:h-full capitalize">
-                            <span className="text-[6vw] lg:text-[3.8vw] font-sans leading-none">
+                            <span className="text-[9vw] lg:text-[3.8vw] font-sans leading-none">
                                 Support beyond your
                             </span>
-                            <span className="text-[6vw] lg:text-[3.8vw] font-mono leading-[1.1]">
+                            <span className="text-[9vw] lg:text-[3.8vw] font-mono leading-[1.1]">
                                 Learning
                             </span>
                         </div>
@@ -69,13 +69,13 @@ function Support() {
                             </div>
                         </div>
                         <div className='w-full flex flex-col gap-1'>
-                            <span className='text-[16px] font-extralight '>
+                            <span className='description2 text-[14px] lg:text-[16px] lg:description'>
                                 Discover a wealth of invaluable resources to nurture your learning and overall well-being. With our 8 free support hubs, we are dedicated to empowering you in various aspects of your life. <br /> <br />
                                 Our dedicated hubs are designed to cater to your personal development, health, and well-being, as well as your employment and interpersonal skills. Explore our support hubs and gain access to an extensive array of tools, guidance, and knowledge. <br /> <br />
                                 Whether you're seeking personal growth, looking to improve your mental and physical health, or aiming to enhance your professional skill set, our comprehensive resources are here to uplift you.<br /> <br />
                                 Invest in yourself and seize the opportunity to tap into your full potential. Take advantage of our diverse support hubs, carefully crafted to address your unique needs.
                             </span>
-                            <div className='flex items-end justify-start w-full h-full'>
+                            <div className='flex items-end justify-start w-full h-full mt-8 lg:mt-0'>
                                 <button className='btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6]'
                                     onClick={() => {
                                         window.location.href = "/individual/our_hubs"

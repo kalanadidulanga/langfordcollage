@@ -52,7 +52,7 @@ function Body() {
                     </span>
                     <div className='w-full bg-white pt-10 pb-8 text-[#2E2E27] flex flex-col'>
                         <div className='w-full flex flex-col gap-3'>
-                            <span className='text-[16px] font-extralight'>
+                            <span className='description2 text-[14px] lg:text-[16px] lg:description'>
                                 The Level 7 courses carry 120 credits which gives entry onto a University MBA Top Up, Online or On Campus.
                             </span>
                         </div>

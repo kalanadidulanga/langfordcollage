@@ -22,9 +22,9 @@ function Support() {
 
     return (
         <>
-            <div className='w-full font-sans lg:pb-10 pt-5 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
+            <div className='w-full font-sans pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
                 <div className='w-full flex items-start font-bold flex-col lg:h-full'>
-                    <span className='text-[6vw] lg:text-[3vw]'>
+                    <span className='text-[9vw] lg:text-[3vw]'>
                         Support
                     </span>
 
@@ -37,7 +37,7 @@ function Support() {
                     </div>
                     {isclickSection1 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex justify-between'>
                                 <span>
                                     You need to complete all the modules detailed in your required course option plus all the associated assessments to complete the langford college course and receive the diploma. This will give you the recognized university credits. You can study the modules at your own pace and can purchase more modules at any time.
                                 </span>
@@ -53,7 +53,7 @@ function Support() {
                     </div>
                     {isclickSection2 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex justify-between'>
                                 <span>
                                     As long as you have internet access any computer or tablet can be used to complete online modules and courses. You can also study on your phone with our mobile friendly content.
                                 </span>
@@ -69,7 +69,7 @@ function Support() {
                     </div>
                     {isclickSection3 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex justify-between'>
                                 <span>
                                     Yes, but this will only be accessible with an internet connection. All digital interactivity has been coded for compatibility on touch screens. You can also learn the material by printing it off.
                                 </span>
@@ -85,7 +85,7 @@ function Support() {
                     </div>
                     {isclickSection4 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
                                     The modules themselves are sufficient for passing the associated assessments. The modules contain additional accessible resources that learners may wish to follow through to enhance their learning and these are provided within the text.  langford college also has extra learning resources like e books and webinars to aid your study, completely free of charge.
                                 </span>
@@ -101,7 +101,7 @@ function Support() {
                     </div>
                     {isclickSection5 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
                                     When you pass a module or an assessment, a certificate of completion is automatically generated which details: module content, level of study and learning outcomes achieved. It is mapped against formal UK educational quality guidelines defined by OFQUAL. Upon completing all modules, you can then complete assignments set by the awarding body to complete your diploma with  langford college.
                                 </span>
@@ -117,7 +117,7 @@ function Support() {
                     </div>
                     {isclickSection6 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
                                     Learners can learn at a pace that suits them. There are no module or assignment completion deadlines with  langford college, apart from the overall 5 year deadline. Learners can study the modules in any order at any time.
                                 </span>
@@ -133,7 +133,7 @@ function Support() {
                     </div>
                     {isclickSection7 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
                                     There are no exemptions or credits within the langford college system of study, and you have to study all the langford college modules to take advantage of our access route. However, if you think you may be exempt from a certain level, please contact us and we will advise you. We can also help you with your top up enquiries if you have already got the necessary qualifications.
                                 </span>
@@ -149,7 +149,7 @@ function Support() {
                     </div>
                     {isclickSection8 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
                                     Students can study the modules in any order and at any pace. To qualify for the university top-up, all of the modules and assignments must be completed.
                                 </span>
@@ -165,7 +165,7 @@ function Support() {
                     </div>
                     {isclickSection9 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
                                     Learners who complete the full programme are awarded a certificate and official credits. This qualification is recognised by UK higher education authorities and by the university sector. The student can then apply to one of our university partners to complete their degree.
                                 </span>
@@ -181,7 +181,7 @@ function Support() {
                     </div>
                     {isclickSection10 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
                                     All modules have an online assessment. Completion of the requisite number of assessments and written assignments will give the participant a qualification recognised by many top line universities.
                                 </span>
@@ -197,7 +197,7 @@ function Support() {
                     </div>
                     {isclickSection11 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
                                     Assessments are made up of 30 multiple choice questions and last for one hour. There is an assessment at the end of each module. Questions are answered in sets of five to allow for review and editing if required. If a session times out or an issue occurs throughout, the assessment will time out at the point of the previous five questions. Consequently, you will not lose your previous answers. Results are given immediately upon completion. Upon completing all end of module assessments, learners then undertake assignments set by the awarding body to complete the full course.
                                 </span>
@@ -213,7 +213,7 @@ function Support() {
                     </div>
                     {isclickSection12 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
                                     The interactive activities in the modules include tests, exercises and assessments that provide a guide to a learner’s progress through the module.
                                 </span>
@@ -229,7 +229,7 @@ function Support() {
                     </div>
                     {isclickSection13 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
                                 langford college has a network of overseas banks that will take payment direct or by credit /debit card. Alternatively, we have representatives in many overseas countries, and you can contact them to make payment.
                                 </span>
@@ -245,7 +245,7 @@ function Support() {
                     </div>
                     {isclickSection14 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
                                 langford college cannot act a visa sponsor but your chosen university partner can.
                                 </span>
@@ -261,7 +261,7 @@ function Support() {
                     </div>
                     {isclickSection15 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
                                     No visa is required for online study. If a student chooses to take the university top-up programme on campus in the UK, a student visa will be required. Learners should request this through their chosen university.
                                 </span>
@@ -277,7 +277,7 @@ function Support() {
                     </div>
                     {isclickSection16 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
                                     Yes – as long as you’ve got access to an internet connection. You can do your studies from anywhere in the world.
                                 </span>

@@ -341,3 +341,8 @@ body {
   font-size: 16px;
   line-height: 1.5;
 }
+
+.description2 {
+  font-family: 'BasisGrotesque', sans-serif;
+  line-height: 1.5;
+}

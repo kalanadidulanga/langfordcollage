@@ -47,10 +47,10 @@ function SocialLearning() {
         <div className="w-full flex items-center justify-center pb-5 flex-col lg:h-full">
           <div className="w-full lg:grid lg:grid-cols-2">
             <div className="w-full flex items-start flex-col lg:h-full">
-              <span className="text-[6vw] lg:text-[4vw] font-sans font-bold leading-none">
+              <span className="text-[9vw] lg:text-[4vw] font-sans font-bold leading-none">
               A Unique Social
               </span>
-              <span className="text-[6vw] lg:text-[4vw] font-mono leading-[1.1]">
+              <span className="text-[9vw] lg:text-[4vw] font-mono leading-[1.1]">
               Learning Journey
               </span>
             </div>
@@ -64,20 +64,20 @@ function SocialLearning() {
           <div className="w-full">
             <div className="w-full bg-white pb-5 text-[#2e2e27] flex flex-col">
               <div className="w-full flex flex-col gap-3">
-                <span className="text-[16px]">
+                <span className="description2 text-[14px] lg:text-[16px] lg:description">
                   Online... Anytime... On any device...
                 </span>
-                <span className="text-[16px]">
+                <span className="description2 text-[14px] lg:text-[16px] lg:description">
                   The 100% online undergraduate and postgraduate diploma courses at Langford College provide students an affordable pathway to earning an undergraduate or postgraduate degree from a choice of respected UK universities.
                 </span>
-                <span className="text-[16px]">
+                <span className="description2 text-[14px] lg:text-[16px] lg:description">
                   Whether you pursue a qualification in hotel and hospitality, computing, or business management, the courses offered through Langford College will allow you the option to continue your education and pursue a top up to an undergraduate degree or MBA through one of our partner universities.
                 </span>
               </div>
             </div>
 
             {/* List Section */}
-            <div className="w-full bg-white text-[16px] text-[#2E2E27] pb-16">
+            <div className="w-full bg-white description2 text-[14px] lg:text-[16px] lg:description text-[#2E2E27] pb-16">
               <li>University pathway programmes</li>
               <li>Professional body membership included</li>
               <li>Free professional development resources</li>

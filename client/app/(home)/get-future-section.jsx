@@ -81,13 +81,13 @@ export default function GetFuture() {
 
     return (
         <>
-            <div className="w-full pt-50 pb-50 bg-[#F7FAFF] font-sans text-[#2e2e27] px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center lg:gap-38 gap-5 get-future-section">
+            <div className="w-full pt-20 lg:pt-50 pb-50 bg-[#F7FAFF] font-sans text-[#2e2e27] px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center lg:gap-38 gap-5 get-future-section">
                 {/* Left Side - Text Content */}
                 <div className="w-full lg:w-auto flex items-start lg:items-end justify-start flex-col get-future-left gap-3">
-                    <span className="text-[clamp(3rem,7vw,7rem)] font-sans font-bold leading-none">Get Future</span>
-                    <span className="text-[clamp(3rem,7vw,7rem)] font-mono leading-[1]">Focused</span>
-                    <div className="w-full lg:w-full flex items-start text-lg md:text-[1.5vw] justify-start flex-col get-future-left">
-                        <span className="description">Discover a course that not only prepares you for work, but also fast-tracks you towards a university qualification.</span>
+                    <span className="text-[clamp(3.5rem,7vw,7rem)] font-sans font-bold leading-none">Get Future</span>
+                    <span className="text-[clamp(3.5rem,7vw,7rem)] font-mono leading-[1] self-center lg:self-end">Focused</span>
+                    <div className="w-full lg:w-full flex items-start md:text-[1.5vw] justify-start description2 flex-col get-future-left">
+                        <span className="text-[14px] lg:text-[17px]">Discover a course that not only prepares you for work, but also fast-tracks you towards a university qualification.</span>
                     </div>
                 </div>
 

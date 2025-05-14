@@ -3,7 +3,7 @@ import React from 'react'
 function PartnerUnivercity() {
     return (
         <>
-            <div className='w-full  bg-white pb-20 text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5'>
+            <div className='w-full  bg-white pb-10 pt-10 text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5'>
                 <div className='flex items-start justify-start w-full lg:w-[60%] h-[50vh]  hidden lg:block'>
                     <img
                         src="/Images/PartnerUnivercity.jpg"
@@ -12,10 +12,10 @@ function PartnerUnivercity() {
                     />
                 </div>
                 <div className='w-full flex items-start flex-col lg:h-full'>
-                    <span className='text-[6vw] lg:text-[3.5vw] font-sans leading-none capitalize'>
+                    <span className='text-[8vw] lg:text-[3.5vw] font-sans leading-none capitalize'>
                         Partner university
                     </span>
-                    <span className='text-[6vw] lg:text-[3.5vw] font-mono leading-[1.1] capitalize'>
+                    <span className='text-[8vw] lg:text-[3.5vw] font-mono leading-[1.1] capitalize'>
                         qualifications
                     </span>
 
@@ -29,7 +29,7 @@ function PartnerUnivercity() {
 
                     <div className='w-full bg-white pt-8 pb-8 text-[#2E2E27] flex flex-col'>
                         <div className='w-full flex flex-col gap-1'>
-                            <span className='text-[16px] font-extralight'>
+                            <span className='description2 text-[14px] lg:text-[16px] lg:description'>
                                 On completion of the final assignments, students are awarded a recognised diploma qualification. This diploma can be used to top up to a full undergraduate degree or MBA at a variety of UK universities, either on campus or by distance learning. For more information on university top up options, click the link below.
                             </span>
                         </div>

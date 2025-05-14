@@ -71,7 +71,6 @@ export default function Home() {
         <NSS />
         <WhatsNew />
         {/* <AffordableStudy /> */}
-
         <UniProgession />
         <MostPopular />
         <SocialLearning />

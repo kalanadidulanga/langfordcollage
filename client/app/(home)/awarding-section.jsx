@@ -158,24 +158,24 @@ function Awarding() {
     return (
         <>
             <div
-                className='w-full h-screen font-sans bg-[#2f3029] px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 testimonial-section'>
+                className='w-full lg:h-screen pt-20 pb-20 lg:pt-0 lg:pb-0 font-sans bg-[#2f3029] px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 testimonial-section'>
                 <div className='w-full flex items-center justify-center flex-col lg:h-full'>
-                    <div className="w-full grid grid-cols-2">
+                    <div className="w-full grid grid-cols-2 border-b-2 pb-3 border-gray-400 lg:border-none">
                         <div className="w-full flex items-start flex-col lg:h-full text-white">
-                            <span className="text-[6vw] lg:text-[4vw] leading-none font-sans">
+                            <span className="text-[10vw] lg:text-[4vw] leading-none font-sans">
                             Continue Your
                             </span>
-                            <span className="text-[6vw] lg:text-[4vw] font-mono leading-[1.2]">
+                            <span className="text-[10vw] lg:text-[4vw] font-mono leading-[1.2]">
                             Degree Pathway
                             </span>
                         </div>
                         <div className="w-full h-full p-2">
-                            <div className="border-b-2 h-[90%] border-gray-400 relative">
+                            <div className="lg:border-b-2 h-[90%] lg:border-gray-400 relative">
                                 {/* Left Arrow */}
                                 {showLeftArrow ? (
                                     <button
                                         onClick={() => scroll('left')}
-                                        className="absolute right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-[#ff0000] shadow-lg text-white cursor-pointer outline-none"
+                                        className="absolute right-12 top-5 lg:top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-[#ff0000] shadow-lg text-white cursor-pointer outline-none"
                                         aria-label="Previous slide"
                                     >
                                         <ChevronLeft size={24}/>
@@ -183,7 +183,7 @@ function Awarding() {
                                 ) : (
                                     <button
                                         onClick={() => scroll('left')}
-                                        className="absolute right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-[#ff0000] disabled:bg-[#ff00008c] shadow-lg text-white outline-none"
+                                        className="absolute right-12 top-5 lg:top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-[#ff0000] disabled:bg-[#ff00008c] shadow-lg text-white outline-none"
                                         aria-label="Previous slide"
                                         disabled
                                     >
@@ -194,7 +194,7 @@ function Awarding() {
                                 {showRightArrow ? (
                                     <button
                                         onClick={() => scroll('right')}
-                                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-[#ff0000] shadow-lg text-white cursor-pointer outline-none"
+                                        className="absolute right-0 top-5 lg:top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-[#ff0000] shadow-lg text-white cursor-pointer outline-none"
                                         aria-label="Next slide"
                                     >
                                         <ChevronRight size={24}/>
@@ -202,7 +202,7 @@ function Awarding() {
                                 ) : (
                                     <button
                                         onClick={() => scroll('right')}
-                                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-[#ff0000] disabled:bg-[#ff00008c] shadow-lg text-white outline-none"
+                                        className="absolute right-0 top-5 lg:top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-[#ff0000] disabled:bg-[#ff00008c] shadow-lg text-white outline-none"
                                         aria-label="Next slide"
                                         disabled
                                     >
@@ -239,7 +239,7 @@ function Awarding() {
                                         onClick={() => {
                                             window.location.href = `/university/${logo?.title}`;
                                         }}
-                                        className="w-full lg:w-64 h-64 border rounded-lg p-2 hover:p-1 cursor-pointer bg-white transition-all duration-200 snap-start shrink-0"
+                                        className="w-full h-80 lg:w-64 lg:h-64 border rounded-lg p-2 hover:p-1 cursor-pointer bg-white transition-all duration-200 snap-start shrink-0"
                                     >
                                         <img
                                             src={logo.image_path}

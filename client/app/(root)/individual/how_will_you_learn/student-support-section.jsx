@@ -8,9 +8,9 @@ function StudentSupport() {
     const [isclickSection3, setclickSection3] = useState(false);
     return (
         <>
-            <div className='w-full font-sans lg:pb-10 pt-5 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
+            <div className='w-full font-sans pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
                 <div className='w-full flex items-start font-bold flex-col lg:h-full'>
-                    <span className='text-[6vw] lg:text-[3vw]'>
+                    <span className='text-[9vw] lg:text-[3vw]'>
                         Student Support
                     </span>
 
@@ -23,7 +23,7 @@ function StudentSupport() {
                     </div>
                     {isclickSection1 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex justify-between'>
                                 <span>
                                     You can seek help from dedicated forums or request tutor help. Students can interact and help each other through the course content and share interesting and relevant links with each other. We also have a dedicated tutor support team all specialising in all  langford college modules.
                                 </span>
@@ -39,7 +39,7 @@ function StudentSupport() {
                     </div>
                     {isclickSection2 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex justify-between'>
                                 <span>
                                     All students that have enroled onto a course can communicate with other students via the ‘Buddy Hub’.
                                 </span>
@@ -55,7 +55,7 @@ function StudentSupport() {
                     </div>
                     {isclickSection3 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex justify-between'>
                                 <span>
                                     Learners can use the social learning forums without limitation and talk to fellow learners around the world. Tutors will also present webinars on demand which are available free of charge to all students.
                                 </span>

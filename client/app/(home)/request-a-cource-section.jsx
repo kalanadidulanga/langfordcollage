@@ -484,10 +484,10 @@ a[x-apple-data-detectors],
                 <div className='w-full flex items-center justify-center flex-col lg:h-full'>
                     <div className="w-full lg:grid lg:grid-cols-2">
                         <div className="w-full flex items-start flex-col lg:h-full capitalize">
-                            <span className="text-[6vw] lg:text-[4vw] font-sans font-bold leading-none">
+                            <span className="text-[9vw] lg:text-[4vw] font-sans font-bold leading-none">
                                 Request a Course
                             </span>
-                            <span className="text-[6vw] lg:text-[4vw] font-mono leading-[1.1]">
+                            <span className="text-[9vw] lg:text-[4vw] font-mono leading-[1.1]">
                                 Prospectus
                             </span>
                         </div>
@@ -526,7 +526,7 @@ a[x-apple-data-detectors],
                                     onChange={(e) => setPhone(e.target.value)}
                                     className='w-full rounded-lg outline-0 p-2 border border-[#E5E4E4] bg-white focus:border-2 focus:border-[#E2231A] hover:border-[#E2231A]' />
                             </div>
-                            <div className='w-full flex flex-col gap-2 request-left'>
+                            <div className='w-full flex flex-col gap-2 request-left z-50'>
                                 <span>Country</span>
                                 <Select
                                     value={country ? { value: country, label: country } : null}
@@ -536,7 +536,7 @@ a[x-apple-data-detectors],
                                     styles={customStyles}
                                 />
                             </div>
-                            <div className='w-full flex flex-col gap-2 request-right'>
+                            <div className='w-full flex flex-col gap-2 request-right z-40'>
                                 <span>Course</span>
                                 <Select
                                     value={course ? { value: course, label: course } : null}

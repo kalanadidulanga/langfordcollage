@@ -47,12 +47,12 @@ function WillLearn() {
         {/* Right Side - Text Content */}
         <div className="w-full flex lg:items-end justify-start flex-col lg:h-full">
           <div className="w-full flex items-start pb-5 flex-col lg:h-full">
-            <div className="w-full grid grid-cols-2">
+            <div className="w-full grid lg:grid-cols-2">
               <div className="w-full flex items-start flex-col lg:h-full capitalize">
-                <span className="text-[6vw] lg:text-[4vw] font-sans leading-none">
+                <span className="text-[9vw] lg:text-[4vw] font-sans leading-none">
                   How you will
                 </span>
-                <span className="text-[6vw] lg:text-[4vw] font-mono leading-[1.1]">
+                <span className="text-[9vw] lg:text-[4vw] font-mono leading-[1.1]">
                   Learn
                 </span>
               </div>
@@ -82,7 +82,7 @@ function WillLearn() {
                     <span className="font-sans capitalize">Learner journey</span>
                     <span className="font-sans capitalize text-[20px]">{`->`}</span>
                   </div>
-                  <span className="description">
+                  <span className="description2 text-[14px] lg:text-[18px] lg:description">
                     Start with a personalized learning plan, then engage in workshops, online lessons, and projects to build skills and confidence.
                   </span>
                 </div>
@@ -95,7 +95,7 @@ function WillLearn() {
                     <span className="font-sans capitalize">Assessment</span>
                     <span className="font-sans capitalize text-[20px]">{`->`}</span>
                   </div>
-                  <span className="description">
+                  <span className="description2 text-[14px] lg:text-[18px] lg:description">
                     Low-stakes quizzes and assignments track progress; formal assessments and feedback ensure readiness to advance.
                   </span>
                 </div>
@@ -108,7 +108,7 @@ function WillLearn() {
                     <span className="font-sans capitalize">Levels explained</span>
                     <span className="font-sans capitalize text-[20px]">{`->`}</span>
                   </div>
-                  <span className="description">
+                  <span className="description2 text-[14px] lg:text-[18px] lg:description">
                     Five levels from Foundation to Advanced map your study, achievements, and mastery at each stage.
                   </span>
                 </div>
@@ -121,7 +121,7 @@ function WillLearn() {
                     <span className="font-sans capitalize">Support</span>
                     <span className="font-sans capitalize text-[20px]">{`->`}</span>
                   </div>
-                  <span className="description">
+                  <span className="description2 text-[14px] lg:text-[18px] lg:description">
                     Dedicated tutors offer one-to-one mentoring, weekly study groups, virtual office hours, and 24/7 online resources for success.
                   </span>
                 </div>
@@ -134,7 +134,7 @@ function WillLearn() {
                     <span className="font-sans capitalize">Taster module</span>
                     <span className="font-sans capitalize text-[20px]">{`->`}</span>
                   </div>
-                  <span className="description">
+                  <span className="description2 text-[14px] lg:text-[18px] lg:description">
                     Try our free Taster Module: sample a lesson, meet your instructor, and experience our teaching style before committing.
                   </span>
                 </div>

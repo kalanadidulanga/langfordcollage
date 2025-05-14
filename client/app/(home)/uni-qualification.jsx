@@ -47,30 +47,30 @@ export default function FastTrackingSection() {
       </div>
 
       {/* Right Side - List Items */}
-      <div className="w-full flex items-start lg:text-[1.1vw] gap-6 flex-col fast-tracking-right description">
-        <div className="w-full flex flex-col text-3xl md:text-[2.8vw]">
-          <span className="font-sans leading-none">Why Langford </span>
-        <span className="font-mono leading-[1.5]">College</span>
+      <div className="w-full flex items-start gap-6 flex-col fast-tracking-right">
+        <div className="w-full flex flex-col">
+          <span className="font-sans leading-none text-[9vw] lg:text-[3.5vw]">Why Langford </span>
+        <span className="font-mono leading-[1.5] text-[9vw] lg:text-[3.5vw]">College</span>
         </div>
         <div className="flex">
           <li></li>
-          <span className="hover:underline">Globally Recognised UK Diplomas & Degrees</span>
+          <span className="hover:underline description2 text-[14px] lg:text-[18px] lg:description">Globally Recognised UK Diplomas & Degrees</span>
         </div>
         <div className="flex">
           <li></li>
-          <span className="hover:underline">Progress to Top UK Universities</span>
+          <span className="hover:underline description2 text-[14px] lg:text-[18px] lg:description">Progress to Top UK Universities</span>
         </div>
         <div className="flex">
           <li></li>
-          <span className="hover:underline">Fully Online with Personal Tutor Support</span>
+          <span className="hover:underline description2 text-[14px] lg:text-[18px] lg:description">Fully Online with Personal Tutor Support</span>
         </div>
         <div className="flex">
           <li></li>
-          <span className="hover:underline">Ofqual-Regulated, Qualifi-Accredited Programmes</span>
+          <span className="hover:underline description2 text-[14px] lg:text-[18px] lg:description">Ofqual-Regulated, Qualifi-Accredited Programmes</span>
         </div>
         <div className="flex">
           <li></li>
-          <span className="hover:underline">Start Anytime. Study at Your Pace</span>
+          <span className="hover:underline description2 text-[14px] lg:text-[18px] lg:description">Start Anytime. Study at Your Pace</span>
         </div>
       </div>
     </div>

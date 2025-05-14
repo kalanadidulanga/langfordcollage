@@ -16,8 +16,7 @@ export const Footer = () => {
                         <div className='w-[50%] lg:w-[35%] h-[20vh]'>
                             <img src="/Logo.svg" alt="Langford Collage" className="w-full h-full" />
                         </div>
-                        <p className="text-[15px] mt-3 lg:mt-0">128 City Road, <br /> London, <br /> United
-                            Kingdom, <br /> EC1V 2NX</p>
+                        <p className="description2 text-[14px] lg:text-[15px] lg:description mt-3 lg:mt-0">128 City Road, <br /> London, <br /> United Kingdom, <br /> EC1V 2NX</p>
                         <div className="flex mt-4 space-x-7">
                             <a href={`${FACEBOOK_LIKE}`} target='_blank' className={`hover:scale-125 duration-200`}><FaFacebookF size={25} /></a>
                             <a href={`${INSTAGRAM_LINK}`} target='_blank' className={`hover:scale-125 duration-200`}><FaInstagram size={25} /></a>
@@ -29,7 +28,7 @@ export const Footer = () => {
 
                     <div className='col-span-1 mt-5'>
                         <h4 className="font-semibold mb-3 text-[#2e2e27] text1">Quick Links</h4>
-                        <ul className="space-y-2 text-[15px] capitalize">
+                        <ul className="space-y-2 description2 text-[14px] lg:text-[15px] lg:description capitalize">
                             <li><a href="/individual/how_will_you_learn" className={`hover:underline`}>How will you learn</a></li>
                             <li><a href="/individual/our_hubs" className={`hover:underline`}>our hubs</a></li>
                             <li><a href="/individual/top-up_degree" className={`hover:underline`}>top up degree</a></li>
@@ -41,7 +40,7 @@ export const Footer = () => {
 
                     <div className='col-span-1 mt-5'>
                         <h4 className="font-bold mb-3 text1 text-[#2e2e27]">General Enquiries</h4>
-                        <ul className="space-y-2 text-[15px]">
+                        <ul className="space-y-2 description2 text-[14px] lg:text-[15px] lg:description">
                             <li className='flex gap-3 items-center'>
                                 <img src="/Icon/email.png" alt="email" className='w-4 h-4' />
                                 <a href="mailto:info@langfordcollege.com" target="_blank" className={`hover:underline`}>info@langfordcollege.com</a>
@@ -65,7 +64,7 @@ export const Footer = () => {
                     </div>
                     <div className='col-span-1 w-full lg:mt-5 mb-5'>
                         <h4 className="font-semibold mb-3 text1 text-[#2e2e27]">About Us,</h4>
-                        <span className='text-[15px]'>
+                        <span className='description2 text-[14px] lg:text-[15px] lg:description'>
                             Langford College offers flexible, affordable online learning pathways for students worldwide, helping them fast-track undergraduate and postgraduate qualifications with full support and interactive tools for professional success.
                         </span>
                     </div>

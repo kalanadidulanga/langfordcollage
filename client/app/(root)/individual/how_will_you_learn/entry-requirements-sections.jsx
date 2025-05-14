@@ -67,7 +67,7 @@ function EntryRequirements() {
         <div className='w-full flex items-start font-bold flex-col lg:h-full'>
           <div className="w-full lg:grid lg:grid-cols-1">
             <div className="w-full flex items-start flex-col lg:h-full">
-              <span className="text-[6vw] lg:text-[3vw] font-sans font-bold">
+              <span className="text-[9vw] lg:text-[3vw] font-sans font-bold">
                 Entry Requirements
               </span>
             </div>
@@ -82,7 +82,7 @@ function EntryRequirements() {
               </span>
               {isclickSection1 && (
                 <>
-                  <div className='text-[16px] text-[#2E2E27] description flex flex-col gap-4'>
+                  <div className='description2 text-[14px] lg:text-[16px] lg:description text-[#2E2E27] flex flex-col gap-4'>
                     <span>
                       For entry on the Level 3 qualification learners would generally be aged 16 or above. For learners who have recently been in education or training the entry profile is likely to include one of following:
                     </span>
@@ -105,7 +105,7 @@ function EntryRequirements() {
               </span>
               {isclickSection2 && (
                 <>
-                  <span className='text-[16px] text-[#2E2E27] description entry-left1'>
+                  <span className='description2 text-[14px] lg:text-[16px] lg:description text-[#2E2E27] entry-left1'>
                     To enrol on the Level 6 programme, you must be 21+ years old and have at least 3 years of relevant experience. Learners will be expected to hold a level 4/5 qualification or an equivalent to the first 2 years of a degree. In certain circumstances, students with considerable experience but no formal qualifications may be considered.
                   </span>
                 </>
@@ -118,7 +118,7 @@ function EntryRequirements() {
               </span>
               {isclickSection3 && (
                 <>
-                  <span className='text-[16px] text-[#2E2E27] description entry-left1'>
+                  <span className='description2 text-[14px] lg:text-[16px] lg:description text-[#2E2E27] entry-left1'>
                     To enrol on the Level 7 programme, you must be 21+ years old and have at least 3 years of management experience. Learners will be expected to hold a level 6 qualification or a first degree. In certain circumstances, managers with considerable experience but no formal qualifications may be considered.
                   </span>
                 </>

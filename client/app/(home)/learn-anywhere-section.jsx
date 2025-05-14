@@ -46,10 +46,10 @@ function LearnAnywhere() {
         <div className='w-full flex items-start flex-col lg:h-full '>
           <div className="w-full lg:grid lg:grid-cols-2">
             <div className="w-full flex items-start flex-col lg:h-full capitalize">
-              <span className="text-[6vw] lg:text-[4vw] font-sans font-bold leading-none">
+              <span className="text-[9vw] lg:text-[4vw] font-sans font-bold leading-none">
                 Learn anywhere,
               </span>
-              <span className="text-[6vw] lg:text-[4vw] font-mono leading-[1.3]">
+              <span className="text-[9vw] lg:text-[4vw] font-mono leading-[1.3]">
                 Anytime, any device
               </span>
             </div>
@@ -63,7 +63,7 @@ function LearnAnywhere() {
           <div className='w-full'>
             <div className='w-full bg-white text-[#2E2E27] flex flex-col'>
               <div className='w-full flex flex-col'>
-                <span className='text-[16px] font-extralight'>
+                <span className='description2 text-[14px] lg:text-[16px] lg:description'>
 
                   Our comprehensive web-based modules empower students to take control of their education—learning what they want, when they want, and how they want. These modules have been specifically crafted to deliver a significantly faster, more affordable, and engaging path to knowledge and qualification. Whether you're balancing work, family, or other commitments, Langford College ensures that education fits seamlessly into your lifestyle.
                   <br /><br />

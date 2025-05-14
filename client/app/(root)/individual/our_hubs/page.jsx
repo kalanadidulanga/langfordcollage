@@ -3,6 +3,7 @@ import { Footer } from '@/components/Footer';
 import Header from '@/components/Header';
 import React, { useEffect, useState } from 'react'
 import OurHubsHero from './our-hubs-hero-section';
+import Body from "./body";
 function page() {
   const [isClient, setIsClient] = useState(false);
 
@@ -19,6 +20,7 @@ function page() {
             <OurHubsHero/>
           </div>
         </div>
+        <Body/>
         <Footer />
       </>
     );

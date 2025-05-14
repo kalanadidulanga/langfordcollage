@@ -12,9 +12,9 @@ function Assignments() {
 
     return (
         <>
-            <div className='w-full font-sans lg:pb-10 pt-5 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
+            <div className='w-full font-sans pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
                 <div className='w-full flex items-start font-bold flex-col lg:h-full'>
-                    <span className='text-[6vw] lg:text-[3vw]'>
+                    <span className='text-[9vw] lg:text-[3vw]'>
                         Assignments
                     </span>
 
@@ -27,7 +27,7 @@ function Assignments() {
                     </div>
                     {isclickSection1 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex justify-between'>
                                 <span>
                                     All assignment submissions are free of charge.
                                 </span>
@@ -43,7 +43,7 @@ function Assignments() {
                     </div>
                     {isclickSection2 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex justify-between'>
                                 <span>
                                     Yes – all students are encouraged to arrange an initial 30 minute ‘assignment preparation’ session with one of our tutors. The session will be conducted via Zoom and cover all aspects of assignment writing, particularly key areas that students need to be aware of. <br />
                                     In addition to this, students have access to tutors who work with Langford College. The tutor details are available via the dashboard and will show which areas they specialise in and when they are available. If a student wishes to arrange a session, they can do so directly from the dashboard, specify which topic they need assistance with, or contact our support team at studentsupport@onlinebusinessschool.com. Further information is available in the Student Handbook and the relevant course information packs.
@@ -60,7 +60,7 @@ function Assignments() {
                     </div>
                     {isclickSection3 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex justify-between'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex justify-between'>
                                 <span>
                                     Submissions need to be uploaded to via the dashboard, in the ‘Assignments’ area.
                                 </span>
@@ -76,7 +76,7 @@ function Assignments() {
                     </div>
                     {isclickSection4 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
                                     Depending on the course, we recommend students write between 2,000 – 8,000 words for each assignment. You will not be penalised for going over this word count limit as long as the work is related to the assignment question.
                                 </span>
@@ -92,7 +92,7 @@ function Assignments() {
                     </div>
                     {isclickSection5 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
                                     Assignments are released to students upon enrolment.
                                 </span>
@@ -108,7 +108,7 @@ function Assignments() {
                     </div>
                     {isclickSection6 && (
                         <>
-                            <div className='w-full bg-white pb-8 text-[#2E2E27] description text-[16px] flex flex-col gap-5'>
+                            <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
                                     After an assignment has been submitted, our markers will return the results within 14 working days. Once all assignments have been completed and marked, an Internal Verifier will view the work, which usually takes up to 10 working days. After the internal verification has come back and agrees with the initial marking, all of the assignments are sent to the awarding body for external verification. The awarding body will then check all of the work to ensure it is of the correct standard. This process can take up to 30 working days. In total, once you have completed all assignments and had them marked, it can take up to 40 working days to receive your final result.
                                 </span>

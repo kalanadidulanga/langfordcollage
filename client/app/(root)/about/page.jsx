@@ -14,7 +14,6 @@ function page() {
   const [isClient, setIsClient] = useState(false);
 
     const images = [
-        '/Images/main-bg.jpg',
         '/Images/about-bg.png',
     ];
 
@@ -25,7 +24,7 @@ function page() {
   if (isClient) {
     return (
       <>
-        <div className='relative w-full h-full overflow-hidden'>
+        <div className='relative w-full h-screen overflow-hidden'>
           <BackgroundSlider images={images}/>
           <div className="content">
             <Header />

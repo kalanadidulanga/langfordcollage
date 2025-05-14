@@ -52,7 +52,7 @@ function Body() {
                     </span>
                     <div className='w-full bg-white pt-10 pb-8 text-[#2E2E27] flex flex-col'>
                         <div className='w-full flex flex-col gap-3'>
-                            <span className='text-[16px] font-extralight'>
+                            <span className='description2 text-[14px] lg:text-[16px] lg:description'>
                                 Upon completion of a Level 6 course, you will be eligible for admission onto a Postgraduate Business programme, including an MBA course.
                             </span>
                         </div>

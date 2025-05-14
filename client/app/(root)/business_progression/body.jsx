@@ -22,14 +22,14 @@ export default function Body() {
     return (
         <div className='w-full '>
             <div
-                className='w-full font-sans lg:pt-10 lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
+                className='w-full font-sans pt-10 pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
                 <div className='w-full flex items-start flex-col lg:h-full'>
                     <div className="w-full lg:grid lg:grid-cols-2">
                         <div className="w-full flex items-start flex-col font-sans lg:h-full">
-                            <span className='text-[6vw] lg:text-[3.5vw] font-sans leading-none'>
+                            <span className='text-[8vw] lg:text-[3.5vw] font-sans leading-none'>
                                 Business Progression
                             </span>
-                            <span className='text-[6vw] lg:text-[3.6vw] font-mono leading-[1.1]'>
+                            <span className='text-[8vw] lg:text-[3.6vw] font-mono leading-[1.1]'>
                                 Pathways
                             </span>
                         </div>
@@ -42,9 +42,9 @@ export default function Body() {
                     {/* section 1 */}
                     <div
                         className='w-full bg-white pt-5 mt-5 pb-4 flex flex-col gap-3 justify-between  cursor-default'>
-                        <span className={`text-[16px] description`}>
+                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                             Upon successfully completing your pathway degree with Langford College, you will be granted the opportunity to progress to your degree program at one of our prestigious partner universities in the UK. This seamless transition allows you to experience the renowned academic environment and global recognition that these institutions offer, further enhancing your qualifications and career prospects. With a wide range of options available, you can choose from top-tier universities known for their excellence in various fields, ensuring that your education reaches its full potential.                        </span>
-                        <span className={`text-[2.2vw] font-sans mt-10`}>
+                        <span className={`text-[6vw] lg:text-[2.2vw] font-sans mt-10`}>
                             Level 3 (Foundation)
                         </span>
                         <span className={`text-[18px] font-sans mt-3 border-t pt-2 flex items-center justify-between`} onClick={() => setclickSection1(!isclickSection1)}>
@@ -53,11 +53,11 @@ export default function Body() {
                         </span>
                         {isclickSection1 && (
                             <>
-                                <div className='flex flex-col gap-2'>
-                                    <span className={`text-[17px] description`}>
+                                <div className='flex flex-col gap-2 description2 text-[14px] lg:text-[16px] lg:description'>
+                                    <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                         Upon completing this course, students can progress to a full BA or BSc degree programme at a variety of UK universities, online or on campus.
                                     </span>
-                                    <span className={`text-[17px] description`}>
+                                    <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                         Some examples include:
                                     </span>
                                     <div className='w-full flex pl-5'>
@@ -89,10 +89,10 @@ export default function Body() {
                         </span>
                         {isclickSection2 && (
                             <>
-                                <div className='flex flex-col gap-2'>
-                                    <span className={`text-[17px] description`}>
+                                <div className='flex flex-col gap-2 description2 text-[14px] lg:text-[16px] lg:description'>
+                                    <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                         Upon completing this course, students can progress to a full BA or BSc degree programme at a variety of UK universities, online or on campus.                                    </span>
-                                    <span className={`text-[17px] description`}>
+                                    <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                         Some examples include:
                                     </span>
                                     <div className='w-full flex pl-5'>
@@ -124,10 +124,10 @@ export default function Body() {
                         </span>
                         {isclickSection3 && (
                             <>
-                                <div className='flex flex-col gap-2'>
-                                    <span className={`text-[17px] description`}>
+                                <div className='flex flex-col gap-2 description2 text-[14px] lg:text-[16px] lg:description'>
+                                    <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                         Upon completing this course, students can progress to a full BA or BSc degree programme at a variety of UK universities, online or on campus.                                    </span>
-                                    <span className={`text-[17px] description`}>
+                                    <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                         Some examples include:
                                     </span>
                                     <div className='w-full flex pl-5'>
@@ -159,10 +159,10 @@ export default function Body() {
                         </span>
                         {isclickSection4 && (
                             <>
-                                <div className='flex flex-col gap-2'>
-                                    <span className={`text-[17px] description`}>
+                                <div className='flex flex-col gap-2 description2 text-[14px] lg:text-[16px] lg:description'>
+                                    <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                         Upon completing this course, students can progress to a full BA or BSc degree programme at a variety of UK universities, online or on campus.                                    </span>
-                                    <span className={`text-[17px] description`}>
+                                    <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                         Some examples include:
                                     </span>
                                     <div className='w-full flex pl-5'>
@@ -194,11 +194,11 @@ export default function Body() {
                         </span>
                         {isclickSection5 && (
                             <>
-                                <div className='flex flex-col gap-2'>
-                                    <span className={`text-[17px] description`}>
+                                <div className='flex flex-col gap-2 description2 text-[14px] lg:text-[16px] lg:description'>
+                                    <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                         Upon completing this course, students can progress to a full BA or BSc degree programme at a variety of UK universities, online or on campus.
                                     </span>
-                                    <span className={`text-[17px] description`}>
+                                    <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                         Some examples include:
                                     </span>
                                     <div className='w-full flex pl-5'>
@@ -230,10 +230,10 @@ export default function Body() {
                         </span>
                         {isclickSection6 && (
                             <>
-                                <div className='flex flex-col gap-2'>
-                                    <span className={`text-[17px] description`}>
+                                <div className='flex flex-col gap-2 description2 text-[14px] lg:text-[16px] lg:description'>
+                                    <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                         Upon completing this course, students can progress to a full BA or BSc degree programme at a variety of UK universities, online or on campus.                                    </span>
-                                    <span className={`text-[17px] description`}>
+                                    <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                         Some examples include:
                                     </span>
                                     <div className='w-full flex pl-5'>
@@ -259,7 +259,7 @@ export default function Body() {
                                 </div>
                             </>
                         )}
-                        <span className={`text-[2.2vw] font-sans mt-16`}>
+                        <span className={`text-[6vw] lg:text-[2.2vw] font-sans mt-16`}>
                             Level 4 & 5 (HND)
                         </span>
                         <span className={`text-[18px] font-sans border-t pt-2 flex items-center justify-between`} onClick={() => setclickSection7(!isclickSection7)}>
@@ -268,16 +268,16 @@ export default function Body() {
                         </span>
                         {isclickSection7 && (
                             <>
-                                <div className='flex flex-col gap-2'>
+                                <div className='flex flex-col gap-2 description2 text-[14px] lg:text-[16px] lg:description'>
                                     <div
                                         className='w-full bg-white pb-4 flex flex-col gap-3 justify-between  cursor-default'>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             Once you’ve completed your online Level 4 & 5 Accounting and Finance course you have the opportunity to complete a third-year Accounting and Finance degree programme, known as a ‘BA top up’, from a wide range of UK universities
                                         </span>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             Students can apply to any university offering the BA top up and you can choose to study for your degree either online or in-person on campus.
                                         </span>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             If you decide to top up to a full undergraduate degree through an accredited UK university, the costs are listed below.
                                         </span>
                                         <div className='pl-5'>
@@ -360,19 +360,19 @@ export default function Body() {
                         </span>
                         {isclickSection8 && (
                             <>
-                                <div className='flex flex-col gap-2'>
+                                <div className='flex flex-col gap-2 description2 text-[14px] lg:text-[16px] lg:description'>
                                     <div
                                         className='w-full bg-white pb-4 flex flex-col gap-3 justify-between  cursor-default'>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             Did you know our online Diploma in Business Management provides students with a pathway to a degree in Business Management?
                                         </span>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             Once you’ve completed your online Level 4 & 5 Business Management degree pathway course you have the opportunity to complete a third-year degree in Business Management known as a ‘BA top up’, from a wide range of UK universities.
                                         </span>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             Students can apply to any university offering the BA top up and you can choose to study for your degree either online or in-person on campus.
                                         </span>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             If you decide to top up to a full undergraduate degree through an accredited UK university, the costs are listed below.
                                         </span>
                                         <div className='pl-5'>
@@ -468,16 +468,16 @@ export default function Body() {
                         </span>
                         {isclickSection9 && (
                             <>
-                                <div className='flex flex-col gap-2'>
+                                <div className='flex flex-col gap-2 description2 text-[14px] lg:text-[16px] lg:description'>
                                     <div
                                         className='w-full bg-white pb-4 flex flex-col gap-3 justify-between  cursor-default'>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             Once you’ve completed your online Level 4 & 5 Entrepreneurship course you have the opportunity to complete a third-year top-up degree programme, known as a ‘BA top up’, from a wide range of UK universities.
                                         </span>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             Students can apply to any university offering the BA top up and you can choose to study for your degree either online or in-person on campus.
                                         </span>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             If you decide to top up to a full undergraduate degree through an accredited UK university, the costs are listed below.
                                         </span>
                                         <div className='pl-5'>
@@ -560,16 +560,16 @@ export default function Body() {
                         </span>
                         {isclickSection10 && (
                             <>
-                                <div className='flex flex-col gap-2'>
+                                <div className='flex flex-col gap-2 description2 text-[14px] lg:text-[16px] lg:description'>
                                     <div
                                         className='w-full bg-white pb-4 flex flex-col gap-3 justify-between  cursor-default'>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             Once you’ve completed your online Level 4 & 5 Logistics and Chain Supply Management course you have the opportunity to complete a third-year top-up degree programme, known as a ‘BA top up’, from a wide range of UK universities.
                                         </span>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             Students can apply to any university offering the BA top up and you can choose to study for your degree either online or in-person on campus.
                                         </span>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             If you decide to top up to a full undergraduate degree through an accredited UK university, the costs are listed below.
                                         </span>
                                         <div className='pl-5'>
@@ -652,16 +652,16 @@ export default function Body() {
                         </span>
                         {isclickSection11 && (
                             <>
-                                <div className='flex flex-col gap-2'>
+                                <div className='flex flex-col gap-2 description2 text-[14px] lg:text-[16px] lg:description'>
                                     <div
                                         className='w-full bg-white pb-4 flex flex-col gap-3 justify-between  cursor-default'>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             Once you’ve completed your  Level 4 & 5 Human Resource Management Online course you have the opportunity to complete a third-year top-up degree programme, known as a ‘BA top up’, from a wide range of UK universities.
                                         </span>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             Students can apply to any university offering the BA top up and you can choose to study for your degree either online or in-person on campus.
                                         </span>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             If you decide to top up to a full undergraduate degree through an accredited UK university, the costs are listed below.
                                         </span>
                                         <div className='pl-5'>
@@ -744,16 +744,16 @@ export default function Body() {
                         </span>
                         {isclickSection12 && (
                             <>
-                                <div className='flex flex-col gap-2'>
+                                <div className='flex flex-col gap-2 description2 text-[14px] lg:text-[16px] lg:description'>
                                     <div
                                         className='w-full bg-white pb-4 flex flex-col gap-3 justify-between  cursor-default'>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             Once you’ve completed your online Level 4 & 5 Leadership and Teamwork course you have the opportunity to complete a third-year top-up degree programme, known as a ‘BA top up’, from a wide range of UK universities.
                                         </span>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             Students can apply to any university offering the BA top up and you can choose to study for your degree either online or in-person on campus.
                                         </span>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             If you decide to top up to a full undergraduate degree through an accredited UK university, the costs are listed below.
                                         </span>
                                         <div className='pl-5'>
@@ -836,16 +836,16 @@ export default function Body() {
                         </span>
                         {isclickSection13 && (
                             <>
-                                <div className='flex flex-col gap-2'>
+                                <div className='flex flex-col gap-2 description2 text-[14px] lg:text-[16px] lg:description'>
                                     <div
                                         className='w-full bg-white pb-4 flex flex-col gap-3 justify-between  cursor-default'>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             Once you’ve completed your online Level 4 & 5 Sales and Marketing course you have the opportunity to complete a third-year top-up degree programme, known as a ‘BA top up’, from a wide range of UK universities.
                                         </span>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             Students can apply to any university offering the BA top up and you can choose to study for your degree either online or in-person on campus.
                                         </span>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             If you decide to top up to a full undergraduate degree through an accredited UK university, the costs are listed below.
                                         </span>
                                         <div className='pl-5'>
@@ -922,7 +922,7 @@ export default function Body() {
                                 </div>
                             </>
                         )}
-                        <span className={`text-[2.2vw] font-sans mt-16`}>
+                        <span className={`text-[6vw] lg:text-[2.2vw] font-sans mt-16`}>
                             Level 6 (Top-up)
                         </span>
                         <span className={`text-[18px] font-sans border-t pt-2 flex items-center justify-between`} onClick={() => setclickSection14(!isclickSection14)}>
@@ -931,32 +931,32 @@ export default function Body() {
                         </span>
                         {isclickSection14 && (
                             <>
-                                <div className='flex flex-col gap-2'>
+                                <div className='flex flex-col gap-2 description2 text-[14px] lg:text-[16px] lg:description'>
                                     <div
                                         className='w-full bg-white pb-4 flex flex-col gap-3 justify-between  cursor-default'>
-                                        <span className={`text-[16px] description`}>
-                                            Once you’ve completed your online Level 6 Business Administration course you have the opportunity to complete a <span className='text1'>top-up degree</span> programme, known as an ‘MBA’, from a wide range of UK universities.                                        </span>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
+                                            Once you’ve completed your online Level 6 Business Administration course you have the opportunity to complete a top-up degree programme, known as an ‘MBA’, from a wide range of UK universities.                                        </span>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             Students can apply to any university offering the MBA and you can choose to study for your degree either online or in-person on campus.                                        </span>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             If you decide to top up to a full MBA degree through an accredited UK university, some examples of institutions are listed below:                                        </span>
                                         <div className='pl-5'>
-                                            <li className='description'>Coventry University</li>
+                                            <li className='description2 text-[14px] lg:text-[16px] lg:descriptions'>Coventry University</li>
                                         </div>
                                         <div className='pl-5'>
-                                            <li className='description'>Northampton University</li>
+                                            <li className='description2 text-[14px] lg:text-[16px] lg:description'>Northampton University</li>
                                         </div>
                                         <div className='pl-5'>
-                                            <li className='description'>University of Derby</li>
+                                            <li className='description2 text-[14px] lg:text-[16px] lg:description'>University of Derby</li>
                                         </div>
                                         <div className='pl-5'>
-                                            <li className='description'>Middlesex University</li>
+                                            <li className='description2 text-[14px] lg:text-[16px] lg:description'>Middlesex University</li>
                                         </div>
                                     </div>
                                 </div>
                             </>
                         )}
-                        <span className={`text-[2.2vw] font-sans mt-16`}>
+                        <span className={`text-[6vw] lg:text-[2.2vw] font-sans mt-16`}>
                             Level 7 (MBA)
                         </span>
                         <span className={`text-[18px] font-sans border-t pt-2 flex items-center justify-between`} onClick={() => setclickSection15(!isclickSection15)}>
@@ -965,55 +965,55 @@ export default function Body() {
                         </span>
                         {isclickSection15 && (
                             <>
-                                <div className='flex flex-col gap-2'>
+                                <div className='flex flex-col gap-2 description2 text-[14px] lg:text-[16px] lg:description'>
                                     <div
                                         className='w-full bg-white pb-4 flex flex-col gap-3 justify-between  cursor-default'>
-                                        <span className={`text-[16px] description`}>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
                                             On completion of this course students have the opportunity to complete an MBA programme from a range of UK universities. The top up programme can be studied online or on campus. The MBA top up comprises the final 60 credits which consists of either a dissertation or a dissertation and one module.                                        </span>
-                                        <span className={`text-[16px] description`}>
-                                            Students may top-up <span className='text1'>on campus</span> or by <span className='text1'>distance learning.</span>
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
+                                            Students may top-up on campus or by distance learning.
                                         </span>
-                                        <span className={`text-[16px] description`}>
-                                            Students can apply to any university offering the MBA top up, the following universities run Top Up programmes by <span className='text1'>distance</span> and <span className='text1'>on campus learning</span>:
+                                        <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
+                                            Students can apply to any university offering the MBA top up, the following universities run Top Up programmes by distance and on campus learning:
                                         </span>
                                         <div className='pl-5'>
-                                            <li className='description'>University of Gloucestershire</li>
+                                            <li className='description2 text-[14px] lg:text-[16px] lg:description'>University of Gloucestershire</li>
                                             <div className='pl-5 mt-2'>
                                                 <li>(Top Up) to MBA Business Administration</li>
                                             </div>
                                         </div>
                                         <div className='pl-5'>
-                                            <li className='description'>University of Wolverhampton</li>
+                                            <li className='description2 text-[14px] lg:text-[16px] lg:description'>University of Wolverhampton</li>
                                             <div className='pl-5 mt-2'>
                                                 <li>MBA (Top Up)</li>
                                             </div>
                                         </div>
                                         <div className='pl-5'>
-                                            <li className='description'>University of Central Lancashire</li>
+                                            <li className='description2 text-[14px] lg:text-[16px] lg:description'>University of Central Lancashire</li>
                                             <div className='pl-5 mt-2'>
                                                 <li>MBA (Top Up)</li>
                                             </div>
                                         </div>
                                         <div className='pl-5'>
-                                            <li className='description'>University of Sunderland – On Campus</li>
+                                            <li className='description2 text-[14px] lg:text-[16px] lg:description'>University of Sunderland – On Campus</li>
                                             <div className='pl-5 mt-2'>
                                                 <li>MBA (Top Up)</li>
                                             </div>
                                         </div>
                                         <div className='pl-5'>
-                                            <li className='description'>Anglia Ruskin University </li>
+                                            <li className='description2 text-[14px] lg:text-[16px] lg:description'>Anglia Ruskin University </li>
                                             <div className='pl-5 mt-2'>
                                                 <li>Master of Business Administration MBA (Top-Up)</li>
                                             </div>
                                         </div>
                                         <div className='pl-5'>
-                                            <li className='description'>Buckinghamshire New University </li>
+                                            <li className='description2 text-[14px] lg:text-[16px] lg:description'>Buckinghamshire New University </li>
                                             <div className='pl-5 mt-2'>
                                                 <li>International Master of Business Administration (MBA Top-Up)</li>
                                             </div>
                                         </div>
                                         <div className='pl-5'>
-                                            <li className='description'>Northampton University</li>
+                                            <li className='description2 text-[14px] lg:text-[16px] lg:description'>Northampton University</li>
                                             <div className='pl-5 mt-2'>
                                                 <li>Top up to MBA</li>
                                                 <li>MA in Human Resource Management (Top-Up)</li>
@@ -1022,10 +1022,10 @@ export default function Body() {
                                             </div>
                                         </div>
                                         <div className='pl-5'>
-                                            <li className='description'>University of Chichester</li>
+                                            <li className='description2 text-[14px] lg:text-[16px] lg:description'>University of Chichester</li>
                                         </div>
                                         <div className='pl-5'>
-                                            <li className='description'>Executive Full-Time MBA</li>
+                                            <li className='description2 text-[14px] lg:text-[16px] lg:description'>Executive Full-Time MBA</li>
                                         </div>
                                     </div>
                                 </div>

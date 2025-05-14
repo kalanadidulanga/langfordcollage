@@ -113,12 +113,12 @@ function LeatestTestimonial() {
             <div className='w-full flex items-center justify-center font-bold flex-col lg:h-full'>
               <div className="w-full lg:grid lg:grid-cols-2">
                 <div className="w-full flex items-start flex-col lg:h-full">
-                  <span className="text-[6vw] lg:text-[4vw] font-sans font-bold  pb-5 text-white">
+                  <span className="text-[9vw] lg:text-[4vw] font-sans font-bold  pb-5 text-white">
                     Latest Testimonials
                   </span>
                 </div>
                 <div className="w-full h-full p-2 pr-[10vw] mt-2">
-                  <div className="border-b-2 h-[70%] border-gray-400 relative">
+                  <div className="border-b-2 h-[90%] border-gray-400 relative">
                     {/* Left Arrow */}
                     {showLeftArrow ? (
                       <button

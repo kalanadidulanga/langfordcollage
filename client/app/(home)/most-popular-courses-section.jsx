@@ -86,10 +86,10 @@ function MostPopular() {
             <div className='w-full flex items-center justify-center flex-col lg:h-full'>
               <div className="w-full lg:grid lg:grid-cols-2">
                 <div className="w-full flex items-start flex-col lg:h-full">
-                  <span className="text-[6vw] lg:text-[4vw] font-sans font-bold leading-none">
+                  <span className="text-[9vw] lg:text-[4vw] font-sans font-bold leading-none">
                     Most Popular
                   </span>
-                  <span className="text-[6vw] lg:text-[3.5vw] font-mono leading-[1.1]">
+                  <span className="text-[9vw] lg:text-[4vw] font-mono leading-[1.1]">
                     Courses
                   </span>
                 </div>

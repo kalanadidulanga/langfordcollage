@@ -10,21 +10,21 @@ function UniBody({data}) {
             <div className='w-full pt-20 pb-20 bg-white grid grid-cols-1 gap-10 px-[10vw]'>
                 <div className='w-full flex flex-col'>
                     <div className='w-full flex flex-col'>
-                        <span className='text-[17px] text-black description'>
+                        <span className='text-black description2 text-[14px] lg:text-[16px] lg:description'>
                             Upon successfully completing a pathway program at Langford College, which includes Level 3 (Foundation), Level 4 and 5 (HND), or Level 7 (MBA), you will have the opportunity to complete your final year at the following renowned UK university. This will allow you to graduate with full working rights, further enhancing your academic and professional prospects.
                         </span>
                     </div>
                     ]
                     <div className='w-full flex flex-col'>
-                        <span className='text-[2vw] text-black font-sans'>
+                        <span className='text-[6vw] lg:text-[2vw] text-black font-sans'>
                             {data?.title}
                         </span>
                     </div>
-                    <div className='w-full flex flex-col description text-black mt-3'
+                    <div className='w-full flex flex-col description2 text-[14px] lg:text-[16px] lg:description text-black mt-3'
                          dangerouslySetInnerHTML={{__html: data?.description}}/>
                     <div className='w-full flex items-center gap-3 mt-3'>
-                        <span className={`text-[18px]  font-sans text-black`}>URl -</span>
-                        <a className='text-[18px] text-black font-sans underline' href={data?.link} target={`_blank`}>
+                        <span className={`description2 text-[14px] lg:text-[18px] lg:description  font-sans text-black`}>URl -</span>
+                        <a className='text-[16px] text-black font-sans underline' href={data?.link} target={`_blank`}>
                             {data?.link}
                         </a>
                     </div>

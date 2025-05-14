@@ -13,7 +13,7 @@ const HeroSection = () => {
 
   return (
     <div className="w-[100%] px-5 lg:px-32 fade-in font-sans">
-      <div className="w-full h-[75vh] pt-[15vh] pb-[15vh] flex justify-center items-center flex-col md:px-[7vw] gap-10 ">
+      <div className="w-full h-[60vh] lg:h-[75vh] pt-[15vh] pb-[15vh] flex justify-center items-center flex-col md:px-[7vw] gap-10 ">
         <div className="w-full flex flex-col text-center lg:text-start fade-in">
           <span className="text-5xl md:text-[6.9vw] font-sans font-bold leading-none">A Smarter Route</span>
         </div>
