@@ -751,8 +751,8 @@ const Header = () => {
                 .filter(segment => segment)
                 .map((segment, index, array) => {
                     const resetList = ["course", "individual"];
-                    const label = segment.charAt(0).toUpperCase() + segment.slice(1);
-
+                    const decodedSegment = decodeURIComponent(segment); // ✅ Decode %20 to space
+                    const label = decodedSegment.charAt(0).toUpperCase() + decodedSegment.slice(1);
                     const href = resetList.includes(segment)
                         ? '/'
                         : '/' + array.slice(0, index + 1).join('/');
