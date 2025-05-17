@@ -73,7 +73,7 @@ function CourseSection() {
         <>
             {courses?.length > 0 ? (
                 <>
-                    <div className='w-full  lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 course-section'>
+                    <div className='w-full pt-20 lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 course-section'>
                         <div className='w-full flex items-start flex-col lg:h-full'>
                             <span className='text-[6vw] lg:text-[3vw] course-left font-bold font-sans'>
                                 Choose your course
@@ -93,9 +93,9 @@ function CourseSection() {
                 </>
             ) : (
                 <>
-                    <div className='w-full  lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 course-section'>
+                    <div className='w-full pt-20  lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 course-section'>
                         <div className='w-full flex items-start flex-col lg:h-full'>
-                            <span className='text-[6vw] lg:text-[3vw] course-left font-bold font-sans'>
+                            <span className='text-[6vw] lg:text-[3vw] capitalize course-left font-bold font-sans'>
                                 Choose your course
                             </span>
 

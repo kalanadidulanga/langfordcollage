@@ -73,13 +73,10 @@ function CourseSection() {
     <>
       {courses?.length > 0 ? (
         <>
-          <div className='w-full lg:pb-10  bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 course-section'>
+          <div className='w-full pt-20 lg:pb-10  bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 course-section'>
             <div className='w-full flex items-start flex-col lg:h-full'>
               <span className='text-[6vw] lg:text-[3vw] course-left font-bold font-sans'>
-                Our Level 7
-              </span>
-              <span className='text-[6vw] font-bold lg:text-[3vw] course-left font-mono'>
-                Courses
+                Our Level 7 Courses
               </span>
 
               <div className="w-full bg-white text-[#2E2E27] flex justify-center lg:justify-start course-right">
@@ -96,13 +93,10 @@ function CourseSection() {
         </>
       ) : (
         <>
-          <div className='w-full lg:pb-10  bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 course-section'>
+          <div className='w-full pt-20 lg:pb-10  bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 course-section'>
             <div className='w-full flex items-start flex-col lg:h-full'>
               <span className='text-[6vw] lg:text-[3vw] course-left font-bold font-sans'>
-                Our Level 7
-              </span>
-              <span className='text-[6vw] font-bold lg:text-[3vw] course-left font-mono'>
-                Courses
+                Our Level 7 Courses
               </span>
 
               <div className="w-full bg-white text-[#2E2E27] flex justify-center lg:justify-start course-right">

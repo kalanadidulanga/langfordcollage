@@ -758,10 +758,11 @@ const Header = () => {
                 .filter(segment => segment)
                 .map((segment, index, array) => {
                     const resetList = ["course", "individual", "university"];
-                    const decodedSegment = decodeURIComponent(segment); // Decode %20 to space
+                    const decodedSegment = decodeURIComponent(segment);
                     // Replace underscores with spaces
                     const cleanedSegment = decodedSegment.replace(/_/g, ' ');
-                    const label = cleanedSegment.charAt(0).toUpperCase() + cleanedSegment.slice(1);
+                    const cleanedSegment1 = cleanedSegment.replace(/-/g, ' ');
+                    const label = cleanedSegment1.charAt(0).toUpperCase() + cleanedSegment1.slice(1);
                     const href = resetList.includes(segment)
                         ? '/'
                         : '/' + array.slice(0, index + 1).join('/');
@@ -769,7 +770,7 @@ const Header = () => {
                     return (
                         <span key={index} className="flex items-center">
                     <span className="mx-2">/</span>
-                    <a href={href} className="hover:underline">{label}</a>
+                    <a href={href} className="hover:underline capitalize">{label}</a>
                 </span>
                     );
                 })}
