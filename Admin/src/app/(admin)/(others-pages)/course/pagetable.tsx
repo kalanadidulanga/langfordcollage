@@ -47,12 +47,9 @@ function Pagetable() {
     const [image1, setImage1] = useState("");
     const [courseImage, setCourseImage] = useState("");
     const [courseImage1, setCourseImage1] = useState("");
-    const [ucsa_code, setUcsaCode] = useState("");
-    const [ucsa_point, setUcsaPoint] = useState("");
     const [duration, setDuration] = useState("");
     const [ukFee, setUkFee] = useState("");
     const [internationalFee, setInternationalFee] = useState("");
-    const [courseLeader, setCourseLeader] = useState("");
     const [listingPriority, setListingPriority] = useState("None");
 
     const options = [
@@ -199,16 +196,6 @@ function Pagetable() {
                 return;
             }
 
-            if (!ucsa_code) {
-                setError("Please Enter UCAS Code");
-                setLoading(false);
-                return;
-            }
-            if (!ucsa_point) {
-                setError("Please Enter UCAS Points");
-                setLoading(false);
-                return;
-            }
             if (!ukFee) {
                 setError("Please Enter UK Fee");
                 setLoading(false);
@@ -222,11 +209,6 @@ function Pagetable() {
 
             if (!duration) {
                 setError("Please Enter Duration");
-                setLoading(false);
-                return;
-            }
-            if (!courseLeader) {
-                setError("Please Enter Course Leader");
                 setLoading(false);
                 return;
             }
@@ -321,11 +303,8 @@ function Pagetable() {
                         university_options: univercityOptions,
                         image_path: res?.data?.fileUrl,
                         banner_path : res1?.data?.fileUrl,
-                        ucas_code: ucsa_code,
-                        ucas_points: ucsa_point,
                         duration: duration,
                         fee: ukFee,
-                        course_leader: courseLeader,
                     });
 
                     if (response.data.status) {
@@ -420,16 +399,6 @@ function Pagetable() {
                 return;
             }
 
-            if (!ucsa_code) {
-                setError("Please Enter UCAS Code");
-                setLoading(false);
-                return;
-            }
-            if (!ucsa_point) {
-                setError("Please Enter UCAS Points");
-                setLoading(false);
-                return;
-            }
             if (!ukFee) {
                 setError("Please Enter UK Fee");
                 setLoading(false);
@@ -443,11 +412,6 @@ function Pagetable() {
 
             if (!duration) {
                 setError("Please Enter Duration");
-                setLoading(false);
-                return;
-            }
-            if (!courseLeader) {
-                setError("Please Enter Course Leader");
                 setLoading(false);
                 return;
             }
@@ -531,11 +495,8 @@ function Pagetable() {
                             university_options: univercityOptions,
                             image_path: res?.data?.fileUrl,
                             banner_path: res1?.data?.fileUrl,
-                            ucas_code: ucsa_code,
-                            ucas_points: ucsa_point,
                             duration: duration,
                             fee: ukFee,
-                            course_leader: courseLeader,
                             courseId: courseId
                         });
 
@@ -591,11 +552,8 @@ function Pagetable() {
                             university_options: univercityOptions,
                             image_path: res?.data?.fileUrl,
                             banner_path: image1,
-                            ucas_code: ucsa_code,
-                            ucas_points: ucsa_point,
                             duration: duration,
                             fee: ukFee,
-                            course_leader: courseLeader,
                             courseId: courseId
                         });
 
@@ -656,11 +614,8 @@ function Pagetable() {
                             university_options: univercityOptions,
                             image_path: image,
                             banner_path: res1?.data?.fileUrl,
-                            ucas_code: ucsa_code,
-                            ucas_points: ucsa_point,
                             duration: duration,
                             fee: ukFee,
-                            course_leader: courseLeader,
                             courseId: courseId
                         });
 
@@ -703,11 +658,8 @@ function Pagetable() {
                         university_options: univercityOptions,
                         image_path: image,
                         banner_path: image1,
-                        ucas_code: ucsa_code,
-                        ucas_points: ucsa_point,
                         duration: duration,
                         fee: ukFee,
-                        course_leader: courseLeader,
                         courseId: courseId
                     });
 
@@ -785,12 +737,9 @@ function Pagetable() {
         setImage1("");
         setCourseStartDate("");
         setListingPriority("None");
-        setUcsaCode("");
-        setUcsaPoint("");
         setDuration("");
         setUkFee("");
         setInternationalFee("");
-        setCourseLeader("");
         setCourseStartDate1("");
         setIsdateModalOpen(false);
         setIsEdit(false);
@@ -853,10 +802,7 @@ function Pagetable() {
                                                     setImage(item?.image_path);
                                                     setImage1(item?.banner_path);
                                                     setUkFee(item?.fee);
-                                                    setUcsaCode(item?.ucas_code);
-                                                    setUcsaPoint(item?.ucas_points);
                                                     setDuration(item?.duration);
-                                                    setCourseLeader(item?.course_leader);
                                                     setListingPriority(item?.listingPriority);
                                                     setCourseId(item?.id);
                                                     setIsEdit(true);
@@ -1074,7 +1020,7 @@ function Pagetable() {
                                             <span>£</span>
                                         </div>
                                     </div>
-                                    <div className="col-span-2 lg:col-span-1">
+                                    {/* <div className="col-span-2 lg:col-span-1">
                                         <Label>UCAS Code</Label>
                                         <div
                                             className='flex gap-2 bg-white p-2 h-[40px] rounded border border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'>
@@ -1098,7 +1044,7 @@ function Pagetable() {
                                                 min={0}
                                             />
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <div className="col-span-2 lg:col-span-1">
                                         <Label>Fee</Label>
                                         <div
@@ -1138,7 +1084,7 @@ function Pagetable() {
                                             />
                                         </div>
                                     </div>
-                                    <div className="col-span-2 lg:col-span-1">
+                                    {/* <div className="col-span-2 lg:col-span-1">
                                         <Label>Course Leader</Label>
                                         <div
                                             className='flex gap-2 bg-white p-2 h-[40px] rounded border border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'>
@@ -1149,7 +1095,7 @@ function Pagetable() {
                                                 className='w-full border outline-none border-none h-full'
                                             />
                                         </div>
-                                    </div>
+                                    </div> */}
 
                                     <div className="col-span-2">
                                         <Label>How it works</Label>
