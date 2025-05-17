@@ -276,7 +276,16 @@ function addNewBlog(req, res) {
 }
 
 function addNewuUni(req, res) {
-    const {title, description, image_path, banner_path, link} = req.body;
+    const {
+        title, description,
+        image_path,
+        banner_path,
+        link,
+        location,
+        no_of_students,
+        intake_available,
+        unique_facility
+    } = req.body;
 
     const existSql = "SELECT * FROM `blog` WHERE `title` = ?";
     const existValues = [title];
@@ -291,8 +300,8 @@ function addNewuUni(req, res) {
             });
         }
 
-        const sql = "INSERT INTO `university`(`title`, `description`, `image_path`, `banner_path`,`link`) VALUES (?,?,?,?,?)";
-        const values = [title, description, image_path, banner_path, link];
+        const sql = "INSERT INTO `university`(`title`, `description`, `image_path`, `banner_path`,`link`,`location`,`no_of_students`,`intake_available`,`unique_facility`) VALUES (?,?,?,?,?,?,?,?,?)";
+        const values = [title, description, image_path, banner_path, link, location, no_of_students, intake_available, unique_facility];
 
         db.query(sql, values, (err, results) => {
             if (err) {
@@ -767,10 +776,21 @@ function editBlog(req, res) {
 }
 
 function editUni(req, res) {
-    const {uniId, title, description, image_path, banner_path, link} = req.body;
+    const {
+        uniId,
+        title,
+        description,
+        image_path,
+        banner_path,
+        link,
+        location,
+        no_of_students,
+        intake_available,
+        unique_facility
+    } = req.body;
 
-    const sql = "UPDATE `university` SET `title` = ?, `description` = ?, `image_path` = ? ,`banner_path` = ?, link = ? WHERE `id` = ?";
-    const values = [title, description, image_path, banner_path, link, uniId];
+    const sql = "UPDATE `university` SET `title` = ?, `description` = ?, `image_path` = ? ,`banner_path` = ?, link = ? , location = ? , no_of_students = ?,intake_available = ?,unique_facility = ? WHERE `id` = ?";
+    const values = [title, description, image_path, banner_path, link, location, no_of_students, intake_available, unique_facility, uniId];
 
     db.query(sql, values, (err, results) => {
         if (err) {

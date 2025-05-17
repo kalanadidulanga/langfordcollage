@@ -95,7 +95,7 @@ function CourseBody({ data }) {
         <>
             <div className='w-full pt-20 pb-20 bg-white grid grid-cols-1 lg:grid-cols-2 gap-10 px-[3vw]'>
                 <div className='w-full flex flex-col'>
-                    <div className='w-full bg-[#1E1E1E] p-8 flex flex-col'>
+                    <div className='w-full bg-[#1E1E1E] p-8 flex flex-col text-white'>
                         <span className='text-[1.9vw] font-sans'>Book Your Course</span>
                         <span className='text-[1.2vw] font-sans capitalize'>Book your course now and get a guaranteed scholarship!</span>
                     </div>
@@ -104,14 +104,14 @@ function CourseBody({ data }) {
                             <span className='font-sans'>Level:</span>
                             <span>{data?.course_level ? data?.course_level : "N/A"}</span>
                         </div>
-                        <div className='w-full flex flex-col gap-2'>
-                            <span className='font-sans'>UCAS Code:</span>
-                            <span>{data?.ucas_code ? data?.ucas_code : "N/A"}</span>
-                        </div>
-                        <div className='w-full flex flex-col gap-2'>
-                            <span className='font-sans'>UCAS Points:</span>
-                            <span>{data?.ucas_points ? data?.ucas_points : "N/A"}</span>
-                        </div>
+                        {/*<div className='w-full flex flex-col gap-2'>*/}
+                        {/*    <span className='font-sans'>UCAS Code:</span>*/}
+                        {/*    <span>{data?.ucas_code ? data?.ucas_code : "N/A"}</span>*/}
+                        {/*</div>*/}
+                        {/*<div className='w-full flex flex-col gap-2'>*/}
+                        {/*    <span className='font-sans'>UCAS Points:</span>*/}
+                        {/*    <span>{data?.ucas_points ? data?.ucas_points : "N/A"}</span>*/}
+                        {/*</div>*/}
                         <div className='w-full flex flex-col gap-2'>
                             <span className='font-sans'>Start Date:</span>
                             <span>{data?.course_start_date ? data?.course_start_date : "N/A"}</span>
@@ -132,10 +132,10 @@ function CourseBody({ data }) {
                             <span className='font-sans'>International fees:</span>
                             <span>{data?.international_fee ? data?.international_fee : "N/A"}</span>
                         </div> */}
-                        <div className='w-full flex flex-col gap-2'>
-                            <span className='font-sans'>Course Leader:</span>
-                            <span>{data?.course_leader ? data?.course_leader : "N/A"}</span>
-                        </div>
+                        {/*<div className='w-full flex flex-col gap-2'>*/}
+                        {/*    <span className='font-sans'>Course Leader:</span>*/}
+                        {/*    <span>{data?.course_leader ? data?.course_leader : "N/A"}</span>*/}
+                        {/*</div>*/}
                     </div>
                     <div>
                         <div className='w-full bg-white nss-section flex flex-col pt-10 lg:flex-row justify-center items-center lg:gap-32 '>

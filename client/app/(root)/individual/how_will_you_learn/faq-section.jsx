@@ -76,7 +76,7 @@ function FAQ() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
-                                    Learners should first visit the <a href="/" className='underline'>Langford College Course page</a> to view the range of courses on offer. It’s important you choose a subject you enjoy and will help you reach your goals. Here are some things to consider when choosing the right subject for you:
+                                    Learners should first visit the <a href="/#view_course" className='underline'>Langford College Course page</a> to view the range of courses on offer. It’s important you choose a subject you enjoy and will help you reach your goals. Here are some things to consider when choosing the right subject for you:
                                 </span>
                                 <div className='flex flex-col'>
                                     <li>Review the modules within the course: Do they interest you? Are they relevant to your chosen career path?</li>
@@ -99,7 +99,7 @@ function FAQ() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex flex-col gap-5'>
                                 <span>
-                                    You can choose your course and enrol online via the Langford College <a href="/" className='underline'>course page</a>. Alternatively, you can call the Langford enrolment Team on 0333 772 1158, and they will guide you through the Enrolment process.
+                                    You can choose your course and enrol online via the Langford College <a href="/#view_course" className='underline'>course page</a>. Alternatively, you can call the Langford enrolment Team on +94 77 057 8521, and they will guide you through the Enrolment process.
                                 </span>
                             </div>
                         </>

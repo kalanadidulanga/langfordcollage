@@ -21,69 +21,19 @@ function page() {
 
   useEffect(() => {
     setIsClient(true);
-    const urlParam = new URLSearchParams(window.location.search);
-    const section_name = urlParam.get('section');
 
-    if (section_name === "learner_journey") {
-      const scrollToSection = () => {
-        const element = document.getElementById('learner_journey');
+    const handleHashScroll = () => {
+      if (window.location.hash) {
+        const id = window.location.hash.substring(1);
+        const element = document.getElementById(id);
         if (element) {
-          window.scrollTo({
-            top: element.offsetTop - 20,
-            behavior: 'smooth',
-          });
-        } else {
-          setTimeout(scrollToSection, 100);
+          element.scrollIntoView({ behavior: 'smooth' });
         }
-      };
+      }
+    };
 
-      scrollToSection();
-    }
-    if (section_name === "assessment") {
-      const scrollToSection = () => {
-        const element = document.getElementById('assessment');
-        if (element) {
-          window.scrollTo({
-            top: 1250,
-            behavior: 'smooth',
-          });
-        } else {
-          setTimeout(scrollToSection, 100);
-        }
-      };
-
-      scrollToSection();
-    }
-    if (section_name === "levels_explained") {
-      const scrollToSection = () => {
-        const element = document.getElementById('levels_explained');
-        if (element) {
-          window.scrollTo({
-            top: element.offsetTop - 20,
-            behavior: 'smooth',
-          });
-        } else {
-          setTimeout(scrollToSection, 100);
-        }
-      };
-
-      scrollToSection();
-    }
-    if (section_name === "support") {
-      const scrollToSection = () => {
-        const element = document.getElementById('support');
-        if (element) {
-          window.scrollTo({
-            top: element.offsetTop - 20,
-            behavior: 'smooth',
-          });
-        } else {
-          setTimeout(scrollToSection, 100);
-        }
-      };
-
-      scrollToSection();
-    }
+    // Wait for the page to render before scrolling
+    setTimeout(handleHashScroll, 100);
 
   }, []);
 

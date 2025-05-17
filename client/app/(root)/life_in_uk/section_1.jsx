@@ -6,11 +6,11 @@ function Section1() {
             className='w-full font-sans lg:pt-10 lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
             <div className='w-full flex items-start flex-col lg:h-full'>
                 <div className="w-full lg:grid lg:grid-cols-2">
-                    <div className="w-full flex items-start flex-col font-bold lg:h-full">
-                        <span className='text-[6vw] lg:text-[3vw]'>
+                    <div className="w-full flex items-start flex-col lg:h-full capitalize">
+                        <span className='text-[8vw] lg:text-[3vw] font-sans leading-none'>
                             Discover Your New Chapter
                         </span>
-                        <span className='text-[6vw] lg:text-[3vw]'>
+                        <span className='text-[8vw] lg:text-[3vw] font-mono leading-[1.3]'>
                             with Langford College
                         </span>
                     </div>
@@ -22,7 +22,7 @@ function Section1() {
 
                 {/* section 1 */}
                 <div
-                    className='w-full bg-white pt-5 mt-5 pb-4 flex justify-between  cursor-default'>
+                    className='w-full bg-white pt-5 mt-5 pb-4 flex justify-between description cursor-default'>
                     <span className={`text-[16px]`}>
                         Studying in the UK is more than just a qualification — it’s an experience that opens doors to new cultures, friendships, and opportunities. Whether you’ve just completed your HND or are stepping into the final year of your degree journey, Langford College is here to guide and support you as you transition to on-campus life in the UK.
                     </span>
@@ -33,9 +33,12 @@ function Section1() {
             className='w-full font-sans lg:pt-10 lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
             <div className='w-full flex items-start flex-col lg:h-full'>
                 <div className="w-full lg:grid lg:grid-cols-2">
-                    <div className="w-full flex items-start flex-col font-bold lg:h-full">
-                        <span className='text-[6vw] lg:text-[3vw]'>
-                            A Global Destination for Students
+                    <div className="w-full flex items-start flex-col capitalize lg:h-full">
+                        <span className='text-[8vw] lg:text-[3vw] leading-none font-sans'>
+                            A Global Destination for
+                        </span>
+                        <span className='text-[8vw] lg:text-[3vw] leading-[1.3] font-mono'>
+                           Students
                         </span>
                     </div>
                     <div className="w-full h-full p-2">
@@ -46,7 +49,7 @@ function Section1() {
 
                 {/* section 1 */}
                 <div
-                    className='w-full bg-white pt-5 mt-5 pb-4 flex flex-col gap-3 justify-between  cursor-default'>
+                    className='w-full bg-white pt-5 mt-5 pb-4 flex flex-col gap-3 description justify-between  cursor-default'>
                     <span className={`text-[16px]`}>
                         The UK is one of the most popular destinations in the world for international students — and for good reason. With world-renowned universities, rich history, and a vibrant multicultural society, it offers both academic excellence and a unique cultural experience.
                     </span>
@@ -60,9 +63,12 @@ function Section1() {
             className='w-full font-sans lg:pt-10 lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
             <div className='w-full flex items-start flex-col lg:h-full'>
                 <div className="w-full lg:grid lg:grid-cols-2">
-                    <div className="w-full flex items-start flex-col font-bold lg:h-full">
-                        <span className='text-[6vw] lg:text-[3vw]'>
-                            What to Expect in the UK
+                    <div className="w-full flex items-start flex-col capitalize lg:h-full">
+                        <span className='text-[6vw] lg:text-[3vw] font-sans leading-none'>
+                            What to Expect
+                        </span>
+                        <span className='text-[6vw] lg:text-[3vw] font-mono leading-[1.3]'>
+                            in the UK
                         </span>
                     </div>
                     <div className="w-full h-full p-2">
@@ -78,7 +84,7 @@ function Section1() {
                         <span className={`text-[16px] font-bold`}>
                             1. Diverse Communities
                         </span>
-                        <span className={`text-[16px]`}>
+                        <span className={`text-[16px] description pl-5`}>
                             From bustling cities like London and Manchester to student-friendly towns such as Chester or Coventry, the UK is a melting pot of cultures. Wherever you study, you’ll find inclusive communities, student events, and support networks to help you feel at home.
                         </span>
                     </div>
@@ -86,7 +92,7 @@ function Section1() {
                         <span className={`text-[16px] font-bold`}>
                             2. A New Academic Culture
                         </span>
-                        <span className={`text-[16px]`}>
+                        <span className={`text-[16px] description pl-5`}>
                             UK universities focus on independent learning, critical thinking, and practical application. You’ll be encouraged to participate in seminars, engage with lecturers, and build confidence through self-directed study.
                         </span>
                     </div>
@@ -94,7 +100,7 @@ function Section1() {
                         <span className={`text-[16px] font-bold`}>
                             3. Work While You Study
                         </span>
-                        <span className={`text-[16px]`}>
+                        <span className={`text-[16px] description pl-5`}>
                             With a valid student visa, most international students are allowed to work up to 20 hours per week during term time. This is a great way to gain experience, earn money, and immerse yourself in local life.
                         </span>
                     </div>
@@ -102,7 +108,7 @@ function Section1() {
                         <span className={`text-[16px] font-bold`}>
                             4. A Safe and Welcoming Environment
                         </span>
-                        <span className={`text-[16px]`}>
+                        <span className={`text-[16px] description pl-5`}>
                             The UK is known for being a safe and tolerant place for international students. Campuses and communities provide support through student unions, international offices, and wellbeing services.
                         </span>
                     </div>
@@ -114,9 +120,12 @@ function Section1() {
             className='w-full font-sans lg:pt-10 lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
             <div className='w-full flex items-start flex-col lg:h-full'>
                 <div className="w-full lg:grid lg:grid-cols-2">
-                    <div className="w-full flex items-start flex-col font-bold lg:h-full">
-                        <span className='text-[6vw] lg:text-[3vw]'>
-                            Cost of Living & Student Discounts
+                    <div className="w-full flex items-start flex-col capitalize lg:h-full">
+                        <span className='text-[8vw] lg:text-[3vw] font-sans leading-none'>
+                            Cost of Living & Student
+                        </span>
+                        <span className='text-[8vw] lg:text-[3vw] font-mono leading-[1.3]'>
+                            Discounts
                         </span>
                     </div>
                     <div className="w-full h-full p-2">
@@ -127,7 +136,7 @@ function Section1() {
 
                 {/* section 1 */}
                 <div
-                    className='w-full bg-white pt-5 mt-5 pb-4 flex flex-col gap-3 justify-between  cursor-default'>
+                    className='w-full bg-white pt-5 description mt-5 pb-4 flex flex-col gap-3 justify-between  cursor-default'>
                     <span className={`text-[16px]`}>
                         Living costs vary depending on location, but many cities offer affordable student housing, public transport, and plenty of student discounts on food, fashion, and travel. As a student, you’ll be eligible for:
                     </span>
@@ -146,9 +155,12 @@ function Section1() {
             className='w-full font-sans lg:pt-10 lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
             <div className='w-full flex items-start flex-col lg:h-full'>
                 <div className="w-full lg:grid lg:grid-cols-2">
-                    <div className="w-full flex items-start flex-col font-bold lg:h-full">
-                        <span className='text-[6vw] lg:text-[3vw]'>
-                            Support from Langford College
+                    <div className="w-full flex items-start flex-col capitalize lg:h-full">
+                        <span className='text-[8vw] lg:text-[3vw] font-sans leading-none'>
+                            Support from Langford
+                        </span>
+                        <span className='text-[8vw] lg:text-[3vw] font-mono leading-[1.3]'>
+                            College
                         </span>
                     </div>
                     <div className="w-full h-full p-2">
@@ -159,7 +171,7 @@ function Section1() {
 
                 {/* section 1 */}
                 <div
-                    className='w-full bg-white pt-5 mt-5 pb-4 flex flex-col gap-3 justify-between  cursor-default'>
+                    className='w-full bg-white pt-5 mt-5 description pb-4 flex flex-col gap-3 justify-between  cursor-default'>
                     <span className={`text-[16px]`}>
                         Our commitment doesn’t end with online learning. We’ll support you every step of the way as you prepare for life in the UK, including:
                     </span>
@@ -177,9 +189,12 @@ function Section1() {
             className='w-full font-sans lg:pt-10 lg:pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
             <div className='w-full flex items-start flex-col lg:h-full'>
                 <div className="w-full lg:grid lg:grid-cols-2">
-                    <div className="w-full flex items-start flex-col font-bold lg:h-full">
-                        <span className='text-[6vw] lg:text-[3vw]'>
-                            Begin Your UK Journey with Confidence
+                    <div className="w-full flex items-start flex-col capitalize lg:h-full">
+                        <span className='text-[6vw] lg:text-[3vw] font-sans leading-none'>
+                            Begin Your UK Journey
+                        </span>
+                        <span className='text-[6vw] lg:text-[3vw] font-mono leading-[1.3]'>
+                            with Confidence
                         </span>
                     </div>
                     <div className="w-full h-full p-2">
@@ -190,9 +205,9 @@ function Section1() {
 
                 {/* section 1 */}
                 <div
-                    className='w-full bg-white pt-5 mt-5 pb-4 flex flex-col gap-3 justify-between  cursor-default'>
+                    className='w-full bg-white pt-5 mt-5 pb-4 description flex flex-col gap-3 justify-between  cursor-default'>
                     <span className={`text-[16px]`}>
-                        Whether this is your first time travelling abroad or you're continuing your studies internationally, Langford College is proud to be part of your story. The UK is waiting for you — and your final year is just the beginning.
+                        Whether this is your first time travelling abroad or you're continuing your studies internationally, Langford College is proud to be part of your story. The UK is waiting for you - and your final year is just the beginning.
                     </span>
                     <span className={`text-[16px] font-bold`}>
                         Let’s make it count.

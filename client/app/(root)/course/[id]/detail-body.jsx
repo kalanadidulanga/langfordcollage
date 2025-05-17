@@ -15,7 +15,7 @@ function CourseDetailBody({ data }) {
             <div className='w-full px-[10vw] py-[3vh] grid grid-cols-2 text-[#2e2e27] bg-white border-t border-b border-gray-300'>
                 <div className='w-full flex flex-col lg:flex-row lg:gap-10 items-start lg:items-center'>
                     <span className='font-sans text-[22px]'>You are viewing</span>
-                    <span className='font-sans text-[18px] description'>Course Summery</span>
+                    <span className='font-sans text-[18px] description'>Course Summary</span>
                 </div>
                 <div className='w-full flex flex-col lg:flex-row gap-10 items-center justify-center lg:justify-end'>
                     <span className='font-sans text-[18px] flex items-center justify-center gap-3 cursor-pointer' onClick={() => setClickSection(!isClickedSection)}>Course Contents <span className={`text-[25px] text-red-500 ${isClickedSection ? `duration-100 rotate-0` : `-rotate-90 duration-100`}`}>+</span></span>

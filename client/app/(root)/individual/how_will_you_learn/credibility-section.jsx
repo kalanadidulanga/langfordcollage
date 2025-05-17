@@ -25,7 +25,7 @@ function Credibility() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex justify-between'>
                                 <span>
-                                Awarding bodies are also sometimes referred to as awarding organisations or exam boards, but they all mean the same thing. They are all terms used to describe an organisation that designs, develops, delivers and awards the recognition of learning outcomes. Langford College works together with ATHE, Qualifi and OTHM. These organisations must all be approved by OFQUAL, The UK Governing body for higher education.
+                                Awarding bodies are also sometimes referred to as awarding organisations or exam boards, but they all mean the same thing. They are all terms used to describe an organisation that designs, develops, delivers and awards the recognition of learning outcomes. Langford College works together with ATHE, Qualifi and OTHM. These organisations must all be approved by OFQUAL, The UK Governing body for higher education.
                                 </span>
                             </div>
                         </>
@@ -41,7 +41,7 @@ function Credibility() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex justify-between'>
                                 <span>
-                                Learners who achieve an langford college qualification are automatically mapped against a standard UK higher education qualification framework. This is a universally recognised framework of credits. Universities can therefore award credits against the langford college study to give exemptions from large parts of their formal programmes. langford college has pre agreed arrangements with certain universities to provide credits against programmes either on campus or off campus. This is termed ‘university top-up’.
+                                Learners who achieve an Langford College qualification are automatically mapped against a standard UK higher education qualification framework. This is a universally recognised framework of credits. Universities can therefore award credits against the Langford College study to give exemptions from large parts of their formal programmes. Langford College has pre agreed arrangements with certain universities to provide credits against programmes either on campus or off campus. This is termed ‘university top-up’.
                                 </span>
                             </div>
                         </>

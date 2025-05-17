@@ -75,7 +75,7 @@ function WillLearn() {
               <div className="w-full flex items-start lg:items-end lg:text-[1.2vw] gap-6 lg:gap-0 flex-col">
                 <div className="flex flex-col gap-1 hover:bg-[#f7faff] p-2 cursor-pointer"
                   onClick={() => {
-                    window.location.href = `/individual/how_will_you_learn?section=learner_journey`;
+                    window.location.href = `/individual/how_will_you_learn/#learner_journey`;
                   }}
                 >
                   <div className="flex justify-between items-center">
@@ -88,7 +88,7 @@ function WillLearn() {
                 </div>
                 <div className="flex flex-col gap-1 hover:bg-[#f7faff] p-2 cursor-pointer"
                   onClick={() => {
-                    window.location.href = `/individual/how_will_you_learn?section=assessment`;
+                    window.location.href = `/individual/how_will_you_learn/#assessment`;
                   }}
                 >
                   <div className="flex justify-between items-center">
@@ -101,7 +101,7 @@ function WillLearn() {
                 </div>
                 <div className="flex flex-col gap-1 hover:bg-[#f7faff] p-2 cursor-pointer"
                   onClick={() => {
-                    window.location.href = `/individual/how_will_you_learn?section=levels_explained`;
+                    window.location.href = `/individual/how_will_you_learn/#levels_explained`;
                   }}
                 >
                   <div className="flex justify-between items-center">
@@ -114,7 +114,7 @@ function WillLearn() {
                 </div>
                 <div className="flex flex-col gap-1 hover:bg-[#f7faff] p-2 cursor-pointer"
                   onClick={() => {
-                    window.location.href = `/individual/how_will_you_learn?section=support`;
+                    window.location.href = `/individual/how_will_you_learn/#support`;
                   }}
                 >
                   <div className="flex justify-between items-center">
@@ -127,7 +127,7 @@ function WillLearn() {
                 </div>
                 <div className="flex flex-col gap-1 hover:bg-[#f7faff] p-2 cursor-pointer"
                   onClick={() => {
-                    window.location.href = `/individual/how_will_you_learn`;
+                    window.location.href = `/try_for_free`;
                   }}
                 >
                   <div className="flex justify-between items-center">

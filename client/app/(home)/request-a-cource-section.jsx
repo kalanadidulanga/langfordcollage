@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 import Select from 'react-select';
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -22,21 +22,13 @@ function RequestACource() {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        gsap.fromTo(
-            ".request-left",
-            { opacity: 0, x: -50 },
-            {
-                opacity: 1, x: 0, duration: 1, ease: "power3.out",
-            }
-        );
+        gsap.fromTo(".request-left", {opacity: 0, x: -50}, {
+            opacity: 1, x: 0, duration: 1, ease: "power3.out",
+        });
 
-        gsap.fromTo(
-            ".request-right",
-            { opacity: 0, x: 50 },
-            {
-                opacity: 1, x: 0, duration: 1, ease: "power3.out",
-            }
-        );
+        gsap.fromTo(".request-right", {opacity: 0, x: 50}, {
+            opacity: 1, x: 0, duration: 1, ease: "power3.out",
+        });
 
     }, []);
 
@@ -73,245 +65,274 @@ function RequestACource() {
         }),
     };
 
-    const countries = [
-        { value: 'Afghanistan', label: 'Afghanistan' },
-        { value: 'Albania', label: 'Albania' },
-        { value: 'Algeria', label: 'Algeria' },
-        { value: 'American Samoa', label: 'American Samoa' },
-        { value: 'Andorra', label: 'Andorra' },
-        { value: 'Angola', label: 'Angola' },
-        { value: 'Anguilla', label: 'Anguilla' },
-        { value: 'Antarctica', label: 'Antarctica' },
-        { value: 'Antigua and Barbuda', label: 'Antigua and Barbuda' },
-        { value: 'Argentina', label: 'Argentina' },
-        { value: 'Armenia', label: 'Armenia' },
-        { value: 'Aruba', label: 'Aruba' },
-        { value: 'Australia', label: 'Australia' },
-        { value: 'Austria', label: 'Austria' },
-        { value: 'Azerbaijan', label: 'Azerbaijan' },
-        { value: 'Bahamas', label: 'Bahamas' },
-        { value: 'Bahrain', label: 'Bahrain' },
-        { value: 'Bangladesh', label: 'Bangladesh' },
-        { value: 'Barbados', label: 'Barbados' },
-        { value: 'Belarus', label: 'Belarus' },
-        { value: 'Belgium', label: 'Belgium' },
-        { value: 'Belize', label: 'Belize' },
-        { value: 'Benin', label: 'Benin' },
-        { value: 'Bermuda', label: 'Bermuda' },
-        { value: 'Bhutan', label: 'Bhutan' },
-        { value: 'Bolivia', label: 'Bolivia' },
-        { value: 'Bosnia and Herzegovina', label: 'Bosnia and Herzegovina' },
-        { value: 'Botswana', label: 'Botswana' },
-        { value: 'Bouvet Island', label: 'Bouvet Island' },
-        { value: 'Brazil', label: 'Brazil' },
-        { value: 'British Indian Ocean Territory', label: 'British Indian Ocean Territory' },
-        { value: 'Brunei Darussalam', label: 'Brunei Darussalam' },
-        { value: 'Bulgaria', label: 'Bulgaria' },
-        { value: 'Burkina Faso', label: 'Burkina Faso' },
-        { value: 'Burundi', label: 'Burundi' },
-        { value: 'Cambodia', label: 'Cambodia' },
-        { value: 'Cameroon', label: 'Cameroon' },
-        { value: 'Canada', label: 'Canada' },
-        { value: 'Cape Verde', label: 'Cape Verde' },
-        { value: 'Cayman Islands', label: 'Cayman Islands' },
-        { value: 'Central African Republic', label: 'Central African Republic' },
-        { value: 'Chad', label: 'Chad' },
-        { value: 'Chile', label: 'Chile' },
-        { value: 'China', label: 'China' },
-        { value: 'Christmas Island', label: 'Christmas Island' },
-        { value: 'Cocos (Keeling) Islands', label: 'Cocos (Keeling) Islands' },
-        { value: 'Colombia', label: 'Colombia' },
-        { value: 'Comoros', label: 'Comoros' },
-        { value: 'Congo', label: 'Congo' },
-        { value: 'Congo (Democratic Republic)', label: 'Congo (Democratic Republic)' },
-        { value: 'Cook Islands', label: 'Cook Islands' },
-        { value: 'Costa Rica', label: 'Costa Rica' },
-        { value: 'Croatia', label: 'Croatia' },
-        { value: 'Cuba', label: 'Cuba' },
-        { value: 'Cyprus', label: 'Cyprus' },
-        { value: 'Czech Republic', label: 'Czech Republic' },
-        { value: 'Côte d\'Ivoire', label: 'Côte d\'Ivoire' },
-        { value: 'Denmark', label: 'Denmark' },
-        { value: 'Djibouti', label: 'Djibouti' },
-        { value: 'Dominica', label: 'Dominica' },
-        { value: 'Dominican Republic', label: 'Dominican Republic' },
-        { value: 'Ecuador', label: 'Ecuador' },
-        { value: 'Egypt', label: 'Egypt' },
-        { value: 'El Salvador', label: 'El Salvador' },
-        { value: 'Equatorial Guinea', label: 'Equatorial Guinea' },
-        { value: 'Eritrea', label: 'Eritrea' },
-        { value: 'Estonia', label: 'Estonia' },
-        { value: 'Eswatini', label: 'Eswatini' },
-        { value: 'Ethiopia', label: 'Ethiopia' },
-        { value: 'Falkland Islands', label: 'Falkland Islands' },
-        { value: 'Faroe Islands', label: 'Faroe Islands' },
-        { value: 'Fiji', label: 'Fiji' },
-        { value: 'Finland', label: 'Finland' },
-        { value: 'France', label: 'France' },
-        { value: 'French Guiana', label: 'French Guiana' },
-        { value: 'French Polynesia', label: 'French Polynesia' },
-        { value: 'French Southern Territories', label: 'French Southern Territories' },
-        { value: 'Gabon', label: 'Gabon' },
-        { value: 'Gambia', label: 'Gambia' },
-        { value: 'Georgia', label: 'Georgia' },
-        { value: 'Germany', label: 'Germany' },
-        { value: 'Ghana', label: 'Ghana' },
-        { value: 'Gibraltar', label: 'Gibraltar' },
-        { value: 'Greece', label: 'Greece' },
-        { value: 'Greenland', label: 'Greenland' },
-        { value: 'Grenada', label: 'Grenada' },
-        { value: 'Guadeloupe', label: 'Guadeloupe' },
-        { value: 'Guam', label: 'Guam' },
-        { value: 'Guatemala', label: 'Guatemala' },
-        { value: 'Guernsey', label: 'Guernsey' },
-        { value: 'Guinea', label: 'Guinea' },
-        { value: 'Guinea-Bissau', label: 'Guinea-Bissau' },
-        { value: 'Guyana', label: 'Guyana' },
-        { value: 'Haiti', label: 'Haiti' },
-        { value: 'Heard Island and McDonald Islands', label: 'Heard Island and McDonald Islands' },
-        { value: 'Honduras', label: 'Honduras' },
-        { value: 'Hong Kong', label: 'Hong Kong' },
-        { value: 'Hungary', label: 'Hungary' },
-        { value: 'Iceland', label: 'Iceland' },
-        { value: 'India', label: 'India' },
-        { value: 'Indonesia', label: 'Indonesia' },
-        { value: 'Iran', label: 'Iran' },
-        { value: 'Iraq', label: 'Iraq' },
-        { value: 'Ireland', label: 'Ireland' },
-        { value: 'Israel', label: 'Israel' },
-        { value: 'Italy', label: 'Italy' },
-        { value: 'Jamaica', label: 'Jamaica' },
-        { value: 'Japan', label: 'Japan' },
-        { value: 'Jersey', label: 'Jersey' },
-        { value: 'Jordan', label: 'Jordan' },
-        { value: 'Kazakhstan', label: 'Kazakhstan' },
-        { value: 'Kenya', label: 'Kenya' },
-        { value: 'Kiribati', label: 'Kiribati' },
-        { value: 'Korea (North)', label: 'Korea (North)' },
-        { value: 'Korea (South)', label: 'Korea (South)' },
-        { value: 'Kuwait', label: 'Kuwait' },
-        { value: 'Kyrgyzstan', label: 'Kyrgyzstan' },
-        { value: 'Laos', label: 'Laos' },
-        { value: 'Latvia', label: 'Latvia' },
-        { value: 'Lebanon', label: 'Lebanon' },
-        { value: 'Lesotho', label: 'Lesotho' },
-        { value: 'Liberia', label: 'Liberia' },
-        { value: 'Libya', label: 'Libya' },
-        { value: 'Liechtenstein', label: 'Liechtenstein' },
-        { value: 'Lithuania', label: 'Lithuania' },
-        { value: 'Luxembourg', label: 'Luxembourg' },
-        { value: 'Macau', label: 'Macau' },
-        { value: 'Madagascar', label: 'Madagascar' },
-        { value: 'Malawi', label: 'Malawi' },
-        { value: 'Malaysia', label: 'Malaysia' },
-        { value: 'Maldives', label: 'Maldives' },
-        { value: 'Mali', label: 'Mali' },
-        { value: 'Malta', label: 'Malta' },
-        { value: 'Marshall Islands', label: 'Marshall Islands' },
-        { value: 'Martinique', label: 'Martinique' },
-        { value: 'Mauritania', label: 'Mauritania' },
-        { value: 'Mauritius', label: 'Mauritius' },
-        { value: 'Mayotte', label: 'Mayotte' },
-        { value: 'Mexico', label: 'Mexico' },
-        { value: 'Micronesia', label: 'Micronesia' },
-        { value: 'Moldova', label: 'Moldova' },
-        { value: 'Monaco', label: 'Monaco' },
-        { value: 'Mongolia', label: 'Mongolia' },
-        { value: 'Montenegro', label: 'Montenegro' },
-        { value: 'Montserrat', label: 'Montserrat' },
-        { value: 'Morocco', label: 'Morocco' },
-        { value: 'Mozambique', label: 'Mozambique' },
-        { value: 'Myanmar', label: 'Myanmar' },
-        { value: 'Namibia', label: 'Namibia' },
-        { value: 'Nauru', label: 'Nauru' },
-        { value: 'Nepal', label: 'Nepal' },
-        { value: 'Netherlands', label: 'Netherlands' },
-        { value: 'New Caledonia', label: 'New Caledonia' },
-        { value: 'New Zealand', label: 'New Zealand' },
-        { value: 'Nicaragua', label: 'Nicaragua' },
-        { value: 'Niger', label: 'Niger' },
-        { value: 'Nigeria', label: 'Nigeria' },
-        { value: 'Niue', label: 'Niue' },
-        { value: 'Norfolk Island', label: 'Norfolk Island' },
-        { value: 'Northern Mariana Islands', label: 'Northern Mariana Islands' },
-        { value: 'Norway', label: 'Norway' },
-        { value: 'Oman', label: 'Oman' },
-        { value: 'Pakistan', label: 'Pakistan' },
-        { value: 'Palau', label: 'Palau' },
-        { value: 'Panama', label: 'Panama' },
-        { value: 'Papua New Guinea', label: 'Papua New Guinea' },
-        { value: 'Paraguay', label: 'Paraguay' },
-        { value: 'Peru', label: 'Peru' },
-        { value: 'Philippines', label: 'Philippines' },
-        { value: 'Pitcairn', label: 'Pitcairn' },
-        { value: 'Poland', label: 'Poland' },
-        { value: 'Portugal', label: 'Portugal' },
-        { value: 'Puerto Rico', label: 'Puerto Rico' },
-        { value: 'Qatar', label: 'Qatar' },
-        { value: 'Réunion', label: 'Réunion' },
-        { value: 'Romania', label: 'Romania' },
-        { value: 'Russian Federation', label: 'Russian Federation' },
-        { value: 'Rwanda', label: 'Rwanda' },
-        { value: 'Saint Barthélemy', label: 'Saint Barthélemy' },
-        { value: 'Saint Helena', label: 'Saint Helena' },
-        { value: 'Saint Kitts and Nevis', label: 'Saint Kitts and Nevis' },
-        { value: 'Saint Lucia', label: 'Saint Lucia' },
-        { value: 'Saint Martin', label: 'Saint Martin' },
-        { value: 'Saint Pierre and Miquelon', label: 'Saint Pierre and Miquelon' },
-        { value: 'Saint Vincent and the Grenadines', label: 'Saint Vincent and the Grenadines' },
-        { value: 'Samoa', label: 'Samoa' },
-        { value: 'San Marino', label: 'San Marino' },
-        { value: 'Sao Tome and Principe', label: 'Sao Tome and Principe' },
-        { value: 'Saudi Arabia', label: 'Saudi Arabia' },
-        { value: 'Senegal', label: 'Senegal' },
-        { value: 'Serbia', label: 'Serbia' },
-        { value: 'Seychelles', label: 'Seychelles' },
-        { value: 'Sierra Leone', label: 'Sierra Leone' },
-        { value: 'Singapore', label: 'Singapore' },
-        { value: 'Sint Maarten', label: 'Sint Maarten' },
-        { value: 'Slovakia', label: 'Slovakia' },
-        { value: 'Slovenia', label: 'Slovenia' },
-        { value: 'Solomon Islands', label: 'Solomon Islands' },
-        { value: 'Somalia', label: 'Somalia' },
-        { value: 'South Africa', label: 'South Africa' },
-        { value: 'South Georgia and the South Sandwich Islands', label: 'South Georgia and the South Sandwich Islands' },
-        { value: 'South Sudan', label: 'South Sudan' },
-        { value: 'Spain', label: 'Spain' },
-        { value: 'Sri Lanka', label: 'Sri Lanka' },
-        { value: 'Sudan', label: 'Sudan' },
-        { value: 'Suriname', label: 'Suriname' },
-        { value: 'Svalbard and Jan Mayen', label: 'Svalbard and Jan Mayen' },
-        { value: 'Sweden', label: 'Sweden' },
-        { value: 'Switzerland', label: 'Switzerland' },
-        { value: 'Syrian Arab Republic', label: 'Syrian Arab Republic' },
-        { value: 'Taiwan', label: 'Taiwan' },
-        { value: 'Tajikistan', label: 'Tajikistan' },
-        { value: 'Tanzania (United Republic of)', label: 'Tanzania (United Republic of)' },
-        { value: 'Thailand', label: 'Thailand' },
-        { value: 'Timor-Leste', label: 'Timor-Leste' },
-        { value: 'Togo', label: 'Togo' },
-        { value: 'Tokelau', label: 'Tokelau' },
-        { value: 'Tonga', label: 'Tonga' },
-        { value: 'Trinidad and Tobago', label: 'Trinidad and Tobago' },
-        { value: 'Tunisia', label: 'Tunisia' },
-        { value: 'Turkey', label: 'Turkey' },
-        { value: 'Turkmenistan', label: 'Turkmenistan' },
-        { value: 'Tuvalu', label: 'Tuvalu' },
-        { value: 'Uganda', label: 'Uganda' },
-        { value: 'Ukraine', label: 'Ukraine' },
-        { value: 'United Arab Emirates', label: 'United Arab Emirates' },
-        { value: 'United Kingdom', label: 'United Kingdom' },
-        { value: 'United States of America', label: 'United States of America' },
-        { value: 'Uruguay', label: 'Uruguay' },
-        { value: 'Uzbekistan', label: 'Uzbekistan' },
-        { value: 'Vanuatu', label: 'Vanuatu' },
-        { value: 'Venezuela (Bolivarian Republic of)', label: 'Venezuela (Bolivarian Republic of)' },
-        { value: 'Viet Nam', label: 'Viet Nam' },
-        { value: 'Western Sahara', label: 'Western Sahara' },
-        { value: 'Yemen', label: 'Yemen' },
-        { value: 'Zambia', label: 'Zambia' },
-        { value: 'Zimbabwe', label: 'Zimbabwe' },
-    ];
+    const countries = [{value: 'Afghanistan', label: 'Afghanistan'}, {
+        value: 'Albania',
+        label: 'Albania'
+    }, {value: 'Algeria', label: 'Algeria'}, {value: 'American Samoa', label: 'American Samoa'}, {
+        value: 'Andorra',
+        label: 'Andorra'
+    }, {value: 'Angola', label: 'Angola'}, {value: 'Anguilla', label: 'Anguilla'}, {
+        value: 'Antarctica',
+        label: 'Antarctica'
+    }, {value: 'Antigua and Barbuda', label: 'Antigua and Barbuda'}, {
+        value: 'Argentina',
+        label: 'Argentina'
+    }, {value: 'Armenia', label: 'Armenia'}, {value: 'Aruba', label: 'Aruba'}, {
+        value: 'Australia',
+        label: 'Australia'
+    }, {value: 'Austria', label: 'Austria'}, {value: 'Azerbaijan', label: 'Azerbaijan'}, {
+        value: 'Bahamas',
+        label: 'Bahamas'
+    }, {value: 'Bahrain', label: 'Bahrain'}, {value: 'Bangladesh', label: 'Bangladesh'}, {
+        value: 'Barbados',
+        label: 'Barbados'
+    }, {value: 'Belarus', label: 'Belarus'}, {value: 'Belgium', label: 'Belgium'}, {
+        value: 'Belize',
+        label: 'Belize'
+    }, {value: 'Benin', label: 'Benin'}, {value: 'Bermuda', label: 'Bermuda'}, {
+        value: 'Bhutan',
+        label: 'Bhutan'
+    }, {value: 'Bolivia', label: 'Bolivia'}, {
+        value: 'Bosnia and Herzegovina',
+        label: 'Bosnia and Herzegovina'
+    }, {value: 'Botswana', label: 'Botswana'}, {value: 'Bouvet Island', label: 'Bouvet Island'}, {
+        value: 'Brazil',
+        label: 'Brazil'
+    }, {value: 'British Indian Ocean Territory', label: 'British Indian Ocean Territory'}, {
+        value: 'Brunei Darussalam',
+        label: 'Brunei Darussalam'
+    }, {value: 'Bulgaria', label: 'Bulgaria'}, {value: 'Burkina Faso', label: 'Burkina Faso'}, {
+        value: 'Burundi',
+        label: 'Burundi'
+    }, {value: 'Cambodia', label: 'Cambodia'}, {value: 'Cameroon', label: 'Cameroon'}, {
+        value: 'Canada',
+        label: 'Canada'
+    }, {value: 'Cape Verde', label: 'Cape Verde'}, {
+        value: 'Cayman Islands',
+        label: 'Cayman Islands'
+    }, {value: 'Central African Republic', label: 'Central African Republic'}, {
+        value: 'Chad',
+        label: 'Chad'
+    }, {value: 'Chile', label: 'Chile'}, {value: 'China', label: 'China'}, {
+        value: 'Christmas Island',
+        label: 'Christmas Island'
+    }, {value: 'Cocos (Keeling) Islands', label: 'Cocos (Keeling) Islands'}, {
+        value: 'Colombia',
+        label: 'Colombia'
+    }, {value: 'Comoros', label: 'Comoros'}, {value: 'Congo', label: 'Congo'}, {
+        value: 'Congo (Democratic Republic)',
+        label: 'Congo (Democratic Republic)'
+    }, {value: 'Cook Islands', label: 'Cook Islands'}, {value: 'Costa Rica', label: 'Costa Rica'}, {
+        value: 'Croatia',
+        label: 'Croatia'
+    }, {value: 'Cuba', label: 'Cuba'}, {value: 'Cyprus', label: 'Cyprus'}, {
+        value: 'Czech Republic',
+        label: 'Czech Republic'
+    }, {value: 'Côte d\'Ivoire', label: 'Côte d\'Ivoire'}, {value: 'Denmark', label: 'Denmark'}, {
+        value: 'Djibouti',
+        label: 'Djibouti'
+    }, {value: 'Dominica', label: 'Dominica'}, {
+        value: 'Dominican Republic',
+        label: 'Dominican Republic'
+    }, {value: 'Ecuador', label: 'Ecuador'}, {value: 'Egypt', label: 'Egypt'}, {
+        value: 'El Salvador',
+        label: 'El Salvador'
+    }, {value: 'Equatorial Guinea', label: 'Equatorial Guinea'}, {
+        value: 'Eritrea',
+        label: 'Eritrea'
+    }, {value: 'Estonia', label: 'Estonia'}, {value: 'Eswatini', label: 'Eswatini'}, {
+        value: 'Ethiopia',
+        label: 'Ethiopia'
+    }, {value: 'Falkland Islands', label: 'Falkland Islands'}, {
+        value: 'Faroe Islands',
+        label: 'Faroe Islands'
+    }, {value: 'Fiji', label: 'Fiji'}, {value: 'Finland', label: 'Finland'}, {
+        value: 'France',
+        label: 'France'
+    }, {value: 'French Guiana', label: 'French Guiana'}, {
+        value: 'French Polynesia',
+        label: 'French Polynesia'
+    }, {value: 'French Southern Territories', label: 'French Southern Territories'}, {
+        value: 'Gabon',
+        label: 'Gabon'
+    }, {value: 'Gambia', label: 'Gambia'}, {value: 'Georgia', label: 'Georgia'}, {
+        value: 'Germany',
+        label: 'Germany'
+    }, {value: 'Ghana', label: 'Ghana'}, {value: 'Gibraltar', label: 'Gibraltar'}, {
+        value: 'Greece',
+        label: 'Greece'
+    }, {value: 'Greenland', label: 'Greenland'}, {value: 'Grenada', label: 'Grenada'}, {
+        value: 'Guadeloupe',
+        label: 'Guadeloupe'
+    }, {value: 'Guam', label: 'Guam'}, {value: 'Guatemala', label: 'Guatemala'}, {
+        value: 'Guernsey',
+        label: 'Guernsey'
+    }, {value: 'Guinea', label: 'Guinea'}, {value: 'Guinea-Bissau', label: 'Guinea-Bissau'}, {
+        value: 'Guyana',
+        label: 'Guyana'
+    }, {value: 'Haiti', label: 'Haiti'}, {
+        value: 'Heard Island and McDonald Islands',
+        label: 'Heard Island and McDonald Islands'
+    }, {value: 'Honduras', label: 'Honduras'}, {value: 'Hong Kong', label: 'Hong Kong'}, {
+        value: 'Hungary',
+        label: 'Hungary'
+    }, {value: 'Iceland', label: 'Iceland'}, {value: 'India', label: 'India'}, {
+        value: 'Indonesia',
+        label: 'Indonesia'
+    }, {value: 'Iran', label: 'Iran'}, {value: 'Iraq', label: 'Iraq'}, {
+        value: 'Ireland',
+        label: 'Ireland'
+    }, {value: 'Israel', label: 'Israel'}, {value: 'Italy', label: 'Italy'}, {
+        value: 'Jamaica',
+        label: 'Jamaica'
+    }, {value: 'Japan', label: 'Japan'}, {value: 'Jersey', label: 'Jersey'}, {
+        value: 'Jordan',
+        label: 'Jordan'
+    }, {value: 'Kazakhstan', label: 'Kazakhstan'}, {value: 'Kenya', label: 'Kenya'}, {
+        value: 'Kiribati',
+        label: 'Kiribati'
+    }, {value: 'Korea (North)', label: 'Korea (North)'}, {
+        value: 'Korea (South)',
+        label: 'Korea (South)'
+    }, {value: 'Kuwait', label: 'Kuwait'}, {value: 'Kyrgyzstan', label: 'Kyrgyzstan'}, {
+        value: 'Laos',
+        label: 'Laos'
+    }, {value: 'Latvia', label: 'Latvia'}, {value: 'Lebanon', label: 'Lebanon'}, {
+        value: 'Lesotho',
+        label: 'Lesotho'
+    }, {value: 'Liberia', label: 'Liberia'}, {value: 'Libya', label: 'Libya'}, {
+        value: 'Liechtenstein',
+        label: 'Liechtenstein'
+    }, {value: 'Lithuania', label: 'Lithuania'}, {value: 'Luxembourg', label: 'Luxembourg'}, {
+        value: 'Macau',
+        label: 'Macau'
+    }, {value: 'Madagascar', label: 'Madagascar'}, {value: 'Malawi', label: 'Malawi'}, {
+        value: 'Malaysia',
+        label: 'Malaysia'
+    }, {value: 'Maldives', label: 'Maldives'}, {value: 'Mali', label: 'Mali'}, {
+        value: 'Malta',
+        label: 'Malta'
+    }, {value: 'Marshall Islands', label: 'Marshall Islands'}, {
+        value: 'Martinique',
+        label: 'Martinique'
+    }, {value: 'Mauritania', label: 'Mauritania'}, {value: 'Mauritius', label: 'Mauritius'}, {
+        value: 'Mayotte',
+        label: 'Mayotte'
+    }, {value: 'Mexico', label: 'Mexico'}, {value: 'Micronesia', label: 'Micronesia'}, {
+        value: 'Moldova',
+        label: 'Moldova'
+    }, {value: 'Monaco', label: 'Monaco'}, {value: 'Mongolia', label: 'Mongolia'}, {
+        value: 'Montenegro',
+        label: 'Montenegro'
+    }, {value: 'Montserrat', label: 'Montserrat'}, {value: 'Morocco', label: 'Morocco'}, {
+        value: 'Mozambique',
+        label: 'Mozambique'
+    }, {value: 'Myanmar', label: 'Myanmar'}, {value: 'Namibia', label: 'Namibia'}, {
+        value: 'Nauru',
+        label: 'Nauru'
+    }, {value: 'Nepal', label: 'Nepal'}, {value: 'Netherlands', label: 'Netherlands'}, {
+        value: 'New Caledonia',
+        label: 'New Caledonia'
+    }, {value: 'New Zealand', label: 'New Zealand'}, {value: 'Nicaragua', label: 'Nicaragua'}, {
+        value: 'Niger',
+        label: 'Niger'
+    }, {value: 'Nigeria', label: 'Nigeria'}, {value: 'Niue', label: 'Niue'}, {
+        value: 'Norfolk Island',
+        label: 'Norfolk Island'
+    }, {value: 'Northern Mariana Islands', label: 'Northern Mariana Islands'}, {
+        value: 'Norway',
+        label: 'Norway'
+    }, {value: 'Oman', label: 'Oman'}, {value: 'Pakistan', label: 'Pakistan'}, {
+        value: 'Palau',
+        label: 'Palau'
+    }, {value: 'Panama', label: 'Panama'}, {value: 'Papua New Guinea', label: 'Papua New Guinea'}, {
+        value: 'Paraguay',
+        label: 'Paraguay'
+    }, {value: 'Peru', label: 'Peru'}, {value: 'Philippines', label: 'Philippines'}, {
+        value: 'Pitcairn',
+        label: 'Pitcairn'
+    }, {value: 'Poland', label: 'Poland'}, {value: 'Portugal', label: 'Portugal'}, {
+        value: 'Puerto Rico',
+        label: 'Puerto Rico'
+    }, {value: 'Qatar', label: 'Qatar'}, {value: 'Réunion', label: 'Réunion'}, {
+        value: 'Romania',
+        label: 'Romania'
+    }, {value: 'Russian Federation', label: 'Russian Federation'}, {
+        value: 'Rwanda',
+        label: 'Rwanda'
+    }, {value: 'Saint Barthélemy', label: 'Saint Barthélemy'}, {
+        value: 'Saint Helena',
+        label: 'Saint Helena'
+    }, {value: 'Saint Kitts and Nevis', label: 'Saint Kitts and Nevis'}, {
+        value: 'Saint Lucia',
+        label: 'Saint Lucia'
+    }, {value: 'Saint Martin', label: 'Saint Martin'}, {
+        value: 'Saint Pierre and Miquelon',
+        label: 'Saint Pierre and Miquelon'
+    }, {value: 'Saint Vincent and the Grenadines', label: 'Saint Vincent and the Grenadines'}, {
+        value: 'Samoa',
+        label: 'Samoa'
+    }, {value: 'San Marino', label: 'San Marino'}, {
+        value: 'Sao Tome and Principe',
+        label: 'Sao Tome and Principe'
+    }, {value: 'Saudi Arabia', label: 'Saudi Arabia'}, {value: 'Senegal', label: 'Senegal'}, {
+        value: 'Serbia',
+        label: 'Serbia'
+    }, {value: 'Seychelles', label: 'Seychelles'}, {value: 'Sierra Leone', label: 'Sierra Leone'}, {
+        value: 'Singapore',
+        label: 'Singapore'
+    }, {value: 'Sint Maarten', label: 'Sint Maarten'}, {value: 'Slovakia', label: 'Slovakia'}, {
+        value: 'Slovenia',
+        label: 'Slovenia'
+    }, {value: 'Solomon Islands', label: 'Solomon Islands'}, {
+        value: 'Somalia',
+        label: 'Somalia'
+    }, {value: 'South Africa', label: 'South Africa'}, {
+        value: 'South Georgia and the South Sandwich Islands',
+        label: 'South Georgia and the South Sandwich Islands'
+    }, {value: 'South Sudan', label: 'South Sudan'}, {value: 'Spain', label: 'Spain'}, {
+        value: 'Sri Lanka',
+        label: 'Sri Lanka'
+    }, {value: 'Sudan', label: 'Sudan'}, {value: 'Suriname', label: 'Suriname'}, {
+        value: 'Svalbard and Jan Mayen',
+        label: 'Svalbard and Jan Mayen'
+    }, {value: 'Sweden', label: 'Sweden'}, {value: 'Switzerland', label: 'Switzerland'}, {
+        value: 'Syrian Arab Republic',
+        label: 'Syrian Arab Republic'
+    }, {value: 'Taiwan', label: 'Taiwan'}, {
+        value: 'Tajikistan',
+        label: 'Tajikistan'
+    }, {value: 'Tanzania (United Republic of)', label: 'Tanzania (United Republic of)'}, {
+        value: 'Thailand',
+        label: 'Thailand'
+    }, {value: 'Timor-Leste', label: 'Timor-Leste'}, {value: 'Togo', label: 'Togo'}, {
+        value: 'Tokelau',
+        label: 'Tokelau'
+    }, {value: 'Tonga', label: 'Tonga'}, {
+        value: 'Trinidad and Tobago',
+        label: 'Trinidad and Tobago'
+    }, {value: 'Tunisia', label: 'Tunisia'}, {value: 'Turkey', label: 'Turkey'}, {
+        value: 'Turkmenistan',
+        label: 'Turkmenistan'
+    }, {value: 'Tuvalu', label: 'Tuvalu'}, {value: 'Uganda', label: 'Uganda'}, {
+        value: 'Ukraine',
+        label: 'Ukraine'
+    }, {value: 'United Arab Emirates', label: 'United Arab Emirates'}, {
+        value: 'United Kingdom',
+        label: 'United Kingdom'
+    }, {value: 'United States of America', label: 'United States of America'}, {
+        value: 'Uruguay',
+        label: 'Uruguay'
+    }, {value: 'Uzbekistan', label: 'Uzbekistan'}, {
+        value: 'Vanuatu',
+        label: 'Vanuatu'
+    }, {value: 'Venezuela (Bolivarian Republic of)', label: 'Venezuela (Bolivarian Republic of)'}, {
+        value: 'Viet Nam',
+        label: 'Viet Nam'
+    }, {value: 'Western Sahara', label: 'Western Sahara'}, {value: 'Yemen', label: 'Yemen'}, {
+        value: 'Zambia',
+        label: 'Zambia'
+    }, {value: 'Zimbabwe', label: 'Zimbabwe'},];
 
     const handleChange = (selectedOption) => {
         setCountry(selectedOption?.value);
@@ -322,6 +343,38 @@ function RequestACource() {
 
     const handleRequest = async () => {
         setLoading(true);
+
+        if (!fname) {
+            setLoading(false);
+            toast.error("Please Enter First Name");
+            return;
+        }
+        if (!lname) {
+            setLoading(false);
+            toast.error("Please Enter Last Name");
+            return;
+        }
+        if (!email) {
+            setLoading(false);
+            toast.error("Please Enter Email Address");
+            return;
+        }
+        if (!phone) {
+            setLoading(false);
+            toast.error("Please Enter Phone Number");
+            return;
+        }
+        if (!country) {
+            setLoading(false);
+            toast.error("Please Select Country");
+            return;
+        }
+        if (!course) {
+            setLoading(false);
+            toast.error("Please Select Course");
+            return;
+        }
+
         try {
 
             const mailcontent = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -449,9 +502,7 @@ a[x-apple-data-detectors],
 </html>`;
 
             const res = await axios.post(`${BASE_URL}/api/sendEmail`, {
-                to: BASE_EMAIL,
-                subject: "Course Request",
-                html: mailcontent
+                to: BASE_EMAIL, subject: "Course Request", html: mailcontent
             });
 
             if (res?.data?.status) {
@@ -478,9 +529,10 @@ a[x-apple-data-detectors],
         setCourse("");
     }
 
-    return (
-        <>
-            <div className='w-full pb-10 lg:h-screen pt-10 bg-[#F7FAFF] text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 request-section ' id="enroll_now">
+    return (<>
+            <div
+                className='w-full pb-10 lg:h-screen pt-10 bg-[#F7FAFF] text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 request-section '
+                id="enroll_now">
                 <div className='w-full flex items-center justify-center flex-col lg:h-full'>
                     <div className="w-full lg:grid lg:grid-cols-2">
                         <div className="w-full flex items-start flex-col lg:h-full capitalize">
@@ -497,39 +549,41 @@ a[x-apple-data-detectors],
                         </div>
                     </div>
                     <div className='w-full flex justify-center font-sans z-10'>
-                        <div className='w-full  pt-10 pb-8 grid grid-cols-1 lg:grid-cols-2 gap-5 font-normal text-[16px]'>
+                        <div
+                            className='w-full  pt-10 pb-8 grid grid-cols-1 lg:grid-cols-2 gap-5 font-normal text-[16px]'>
                             <div className='w-full flex flex-col gap-2 request-left'>
                                 <span>First Name</span>
-                                <input type="text" className='w-full rounded-lg outline-0 p-2 border border-[#E5E4E4] bg-white focus:border-2 focus:border-[#E2231A] hover:border-[#E2231A]'
-                                    value={fname}
-                                    onChange={(e) => setFname(e.target.value)}
+                                <input type="text"
+                                       className='w-full rounded-lg outline-0 p-2 border border-[#E5E4E4] bg-white focus:border-2 focus:border-[#E2231A] hover:border-[#E2231A]'
+                                       value={fname}
+                                       onChange={(e) => setFname(e.target.value)}
                                 />
                             </div>
                             <div className='w-full flex flex-col gap-2 request-right'>
                                 <span>Last Name</span>
                                 <input type="text"
-                                    value={lname}
-                                    onChange={(e) => setLname(e.target.value)}
-                                    className='w-full rounded-lg outline-0 p-2 border border-[#E5E4E4] bg-white focus:border-2 focus:border-[#E2231A] hover:border-[#E2231A]' />
+                                       value={lname}
+                                       onChange={(e) => setLname(e.target.value)}
+                                       className='w-full rounded-lg outline-0 p-2 border border-[#E5E4E4] bg-white focus:border-2 focus:border-[#E2231A] hover:border-[#E2231A]'/>
                             </div>
                             <div className='w-full flex flex-col gap-2 request-left'>
                                 <span>Email Address</span>
                                 <input type="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    className='w-full rounded-lg outline-0 p-2 border border-[#E5E4E4] bg-white focus:border-2 focus:border-[#E2231A] hover:border-[#E2231A]' />
+                                       value={email}
+                                       onChange={(e) => setEmail(e.target.value)}
+                                       className='w-full rounded-lg outline-0 p-2 border border-[#E5E4E4] bg-white focus:border-2 focus:border-[#E2231A] hover:border-[#E2231A]'/>
                             </div>
                             <div className='w-full flex flex-col gap-2 request-right'>
                                 <span>Phone Number</span>
                                 <input type="tel"
-                                    value={phone}
-                                    onChange={(e) => setPhone(e.target.value)}
-                                    className='w-full rounded-lg outline-0 p-2 border border-[#E5E4E4] bg-white focus:border-2 focus:border-[#E2231A] hover:border-[#E2231A]' />
+                                       value={phone}
+                                       onChange={(e) => setPhone(e.target.value)}
+                                       className='w-full rounded-lg outline-0 p-2 border border-[#E5E4E4] bg-white focus:border-2 focus:border-[#E2231A] hover:border-[#E2231A]'/>
                             </div>
                             <div className='w-full flex flex-col gap-2 request-left z-50'>
                                 <span>Country</span>
                                 <Select
-                                    value={country ? { value: country, label: country } : null}
+                                    value={country ? {value: country, label: country} : null}
                                     options={countries}
                                     onChange={handleChange}
                                     placeholder="Select Country"
@@ -539,8 +593,10 @@ a[x-apple-data-detectors],
                             <div className='w-full flex flex-col gap-2 request-right z-40'>
                                 <span>Course</span>
                                 <Select
-                                    value={course ? { value: course, label: course } : null}
-                                    options={courses?.map((course) => ({ value: course?.course_name, label: `${course?.course_name}` }))}
+                                    value={course ? {value: course, label: course} : null}
+                                    options={courses?.map((course) => ({
+                                        value: course?.course_name, label: `${course?.course_name}`
+                                    }))}
                                     onChange={handleChange1}
                                     placeholder="Select Course"
                                     styles={customStyles}
@@ -549,20 +605,19 @@ a[x-apple-data-detectors],
                         </div>
                     </div>
                     <div className='flex items-start justify-end w-full'>
-                        <button className='btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] text-white request-right flex gap-3 items-center disabled:bg-[#be4b4b] disabled:cursor-not-allowed'
+                        <button
+                            className='btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] text-white request-right flex gap-3 items-center disabled:bg-[#be4b4b] disabled:cursor-not-allowed'
                             onClick={handleRequest}
                             disabled={loading}
                         >
                             Send me my prospectus
                             {loading && (
-                                <div className="animate-spin rounded-full h-4 w-4 border-b-3 border-white"></div>
-                            )}
+                                <div className="animate-spin rounded-full h-4 w-4 border-b-3 border-white"></div>)}
                         </button>
                     </div>
                 </div>
             </div>
-        </>
-    )
+        </>)
 };
 
 export default RequestACource;

@@ -28,6 +28,10 @@ function Pagetable() {
     const [title, settitle] = useState("");
     const [description, setDescription] = useState("");
     const [link, setLink] = useState("");
+    const [location, setLocation] = useState("");
+    const [noOfStudents, setNoOfStudents] = useState("");
+    const [intake, setIntake] = useState("");
+    const [uniqeFasility, setUniqeFasility] = useState("");
 
     useEffect(() => {
         loadUniversitys();
@@ -70,6 +74,36 @@ function Pagetable() {
                 return;
             }
 
+            if (!link) {
+                setError("Please Enter Link");
+                setLoading(false);
+                return;
+            }
+
+            if (!location) {
+                setError("Please Enter Location");
+                setLoading(false);
+                return;
+            }
+
+            if (!noOfStudents) {
+                setError("Please Enter Number Of Students");
+                setLoading(false);
+                return;
+            }
+
+            if (!intake) {
+                setError("Please Enter Inakes Available");
+                setLoading(false);
+                return;
+            }
+
+            if (!uniqeFasility) {
+                setError("Please Enter Unique Facility");
+                setLoading(false);
+                return;
+            }
+
             const form = new FormData();
             form.append("file", Universityimage);
 
@@ -105,6 +139,10 @@ function Pagetable() {
                         image_path: res1?.data?.fileUrl,
                         banner_path: res.data?.fileUrl,
                         link: link,
+                        location:location,
+                        no_of_students : noOfStudents,
+                        intake_available : intake,
+                        unique_facility : uniqeFasility,
                     });
 
                     // console.log(response);
@@ -141,6 +179,10 @@ function Pagetable() {
         setLink("");
         setIsEdit(false);
         setError("");
+        setLocation("");
+        setIntake("");
+        setNoOfStudents("");
+        setUniqeFasility("");
     }
 
     const handleImageChange = (event: any) => {
@@ -188,6 +230,36 @@ function Pagetable() {
                 return;
             }
 
+            if (!link) {
+                setError("Please Enter Link");
+                setLoading(false);
+                return;
+            }
+
+            if (!location) {
+                setError("Please Enter Location");
+                setLoading(false);
+                return;
+            }
+
+            if (!noOfStudents) {
+                setError("Please Enter Number Of Students");
+                setLoading(false);
+                return;
+            }
+
+            if (!intake) {
+                setError("Please Enter Inakes Available");
+                setLoading(false);
+                return;
+            }
+
+            if (!uniqeFasility) {
+                setError("Please Enter Unique Facility");
+                setLoading(false);
+                return;
+            }
+
             if (Universityimage) {
                 if (Universityimage2) {
                     const form = new FormData();
@@ -225,6 +297,10 @@ function Pagetable() {
                             image_path: res1?.data?.fileUrl,
                             banner_path: res.data?.fileUrl,
                             link: link,
+                            location:location,
+                            no_of_students : noOfStudents,
+                            intake_available : intake,
+                            unique_facility : uniqeFasility,
                         });
 
                         console.log(response);
@@ -264,6 +340,10 @@ function Pagetable() {
                             image_path: image2,
                             banner_path: res?.data?.fileUrl,
                             link: link,
+                            location:location,
+                            no_of_students : noOfStudents,
+                            intake_available : intake,
+                            unique_facility : uniqeFasility,
                         });
 
                         console.log(response);
@@ -305,6 +385,10 @@ function Pagetable() {
                             image_path: res1.data?.fileUrl,
                             banner_path: image,
                             link: link,
+                            location:location,
+                            no_of_students : noOfStudents,
+                            intake_available : intake,
+                            unique_facility : uniqeFasility,
                         });
 
                         console.log(response);
@@ -328,6 +412,10 @@ function Pagetable() {
                         image_path: image2,
                         banner_path: image,
                         link: link,
+                        location:location,
+                        no_of_students : noOfStudents,
+                        intake_available : intake,
+                        unique_facility : uniqeFasility,
                     });
 
                     console.log(response);
@@ -397,6 +485,10 @@ function Pagetable() {
                                                     setImage2(data?.image_path)
                                                     openModal();
                                                     setLink(data?.link);
+                                                    setLocation(data?.location);
+                                                    setNoOfStudents(data?.no_of_students);
+                                                    setIntake(data?.intake_available);
+                                                    setUniqeFasility(data?.unique_facility);
                                                     setIsEdit(true);
 
                                                 }}>Edit
@@ -572,6 +664,40 @@ function Pagetable() {
                                                    onChange={(e) => setLink(e.target.value)}
                                                    value={link}
                                             />
+                                        </div>
+                                    </div>
+                                    <div className="grid col-span-8 grid-cols-2 gap-x-6 gap-y-5">
+                                        <div className="col-span-1">
+                                            <Label>Locations</Label>
+                                            <input type="text"
+                                                   className='w-full bg-white border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
+                                                   onChange={(e) => setLocation(e.target.value)}
+                                                   value={location}
+                                            />
+                                        </div>
+                                        <div className="col-span-1">
+                                            <Label>Number Of Students</Label>
+                                            <input type="text"
+                                                   className='w-full bg-white border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
+                                                   onChange={(e) => setNoOfStudents(e.target.value)}
+                                                   value={noOfStudents}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="grid col-span-8 grid-cols-1 gap-x-6 gap-y-5">
+                                        <div className="col-span-1">
+                                            <Label>Intake Available</Label>
+                                            <input type="text"
+                                                   className='w-full bg-white border p-2 h-[40px] rounded border-gray-300 font-normal outline-none focus:border-2 focus:border-blue-500 focus:shadow-lg'
+                                                   onChange={(e) => setIntake(e.target.value)}
+                                                   value={intake}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="grid col-span-8 grid-cols-1 gap-x-6 gap-y-5">
+                                        <div className="col-span-1">
+                                            <Label>Unique Facility</Label>
+                                            <RichTextEditor setHtmlContent={setUniqeFasility} htmlContent={uniqeFasility}/>
                                         </div>
                                     </div>
                                 </div>

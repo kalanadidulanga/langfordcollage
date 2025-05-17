@@ -20,7 +20,7 @@ function PersonalDetails() {
                     {/* section 1 */}
                     <div className='w-full capitalize bg-white pt-5 mt-10 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection1(!isclickSection1)}>
                         <span>
-                            How do I change my personal contact details once I have given them to langford college?
+                            How do I change my personal contact details once I have given them to Langford College?
                         </span>
                         <img src="/Icon/arrow.png" alt="arrow" className={`w-6 h-7 cursor-pointer ${isclickSection1 ? `duration-100 rotate-0` : `-rotate-90 duration-100`}`} onClick={() => setclickSection1(!isclickSection1)} />
                     </div>
@@ -28,7 +28,7 @@ function PersonalDetails() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex justify-between'>
                                 <span>
-                                    You can request this by emailing student support at <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
+                                    You can request this by emailing student support at <a href="mailto:support@langfordcollege.com" className={`underline`}>support@langfordcollege.com</a>.
                                 </span>
                             </div>
                         </>
@@ -44,7 +44,7 @@ function PersonalDetails() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex justify-between'>
                                 <span>
-                                    Access to the  langford college Dashboard is for a maximum of 5 years from date of enrolment. This can be extended if a request is made in writing to  langford college student admin.
+                                    Access to the  Langford College Dashboard is for a maximum of 5 years from date of enrolment. This can be extended if a request is made in writing to  Langford College student admin.
                                 </span>
                             </div>
                         </>

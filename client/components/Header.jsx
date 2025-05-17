@@ -133,7 +133,7 @@ const Header = () => {
           </nav>
         ) : ( */}
             <nav
-                className='rounded-full w-20 h-20 md:w-28 md:h-28 bg-contain bg-center flex flex-col justify-center items-center'>
+                className='rounded-full w-20 h-20 md:w-30 md:h-30 bg-contain bg-center flex flex-col justify-center items-center'>
                 <img
                     src="/Icon/LOGO.svg"
                     alt="logo"
@@ -428,9 +428,9 @@ const Header = () => {
                         className="btn bg-[#E2231A] text-white px-4 py-2 hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] hover:scale-105 transition-all duration-200"
                         onClick={() => {
                             if (window.location.pathname === "/") {
-                                window.scrollTo({top: 8950, behavior: "smooth"});
+                                window.location.replace('#enroll_now');
                             } else {
-                                window.location.href = "/?section=enroll_now";
+                                window.location.replace('/#enroll_now');
                             }
                         }}
                     >
@@ -722,9 +722,9 @@ const Header = () => {
                             className="btn bg-[#E2231A] text-white px-4 py-2 hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] hover:scale-105 transition-all duration-200"
                             onClick={() => {
                                 if (window.location.pathname === "/") {
-                                    window.scrollTo({top: 500, behavior: "smooth"});
+                                    window.location.replace('#enroll_now');
                                 } else {
-                                    window.location.href = "/";
+                                    window.location.replace('/#enroll_now');
                                 }
                             }}
                         >
@@ -758,8 +758,10 @@ const Header = () => {
                 .filter(segment => segment)
                 .map((segment, index, array) => {
                     const resetList = ["course", "individual", "university"];
-                    const decodedSegment = decodeURIComponent(segment); // ✅ Decode %20 to space
-                    const label = decodedSegment.charAt(0).toUpperCase() + decodedSegment.slice(1);
+                    const decodedSegment = decodeURIComponent(segment); // Decode %20 to space
+                    // Replace underscores with spaces
+                    const cleanedSegment = decodedSegment.replace(/_/g, ' ');
+                    const label = cleanedSegment.charAt(0).toUpperCase() + cleanedSegment.slice(1);
                     const href = resetList.includes(segment)
                         ? '/'
                         : '/' + array.slice(0, index + 1).join('/');

@@ -8,7 +8,7 @@ function StudentSupport() {
     const [isclickSection3, setclickSection3] = useState(false);
     return (
         <>
-            <div className='w-full font-sans pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
+            <div className='w-full font-sans pb-10 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 ' id="support">
                 <div className='w-full flex items-start font-bold flex-col lg:h-full'>
                     <span className='text-[9vw] lg:text-[3vw]'>
                         Student Support
@@ -25,7 +25,7 @@ function StudentSupport() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex justify-between'>
                                 <span>
-                                    You can seek help from dedicated forums or request tutor help. Students can interact and help each other through the course content and share interesting and relevant links with each other. We also have a dedicated tutor support team all specialising in all  langford college modules.
+                                    You can seek help from dedicated forums or request tutor help. Students can interact and help each other through the course content and share interesting and relevant links with each other. We also have a dedicated tutor support team all specialising in all  Langford College modules.
                                 </span>
                             </div>
                         </>

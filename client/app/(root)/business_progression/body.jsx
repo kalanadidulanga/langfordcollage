@@ -153,41 +153,41 @@ export default function Body() {
                                 </div>
                             </>
                         )}
-                        <span className={`text-[18px] font-sans border-t pt-2 flex items-center justify-between`} onClick={() => setclickSection4(!isclickSection4)}>
-                            Introduction to Management
-                            <img src="/Icon/arrow.png" alt="arrow" className={`w-6 h-6 ${isclickSection4 ? `rotate-0 duration-200` : `-rotate-90 duration-200`} transition-all`} />
-                        </span>
-                        {isclickSection4 && (
-                            <>
-                                <div className='flex flex-col gap-2 description2 text-[14px] lg:text-[16px] lg:description'>
-                                    <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
-                                        Upon completing this course, students can progress to a full BA or BSc degree programme at a variety of UK universities, online or on campus.                                    </span>
-                                    <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>
-                                        Some examples include:
-                                    </span>
-                                    <div className='w-full flex pl-5'>
-                                        <li></li>
-                                        <span>Coventry University</span>
-                                    </div>
-                                    <div className='w-full flex pl-5'>
-                                        <li></li>
-                                        <span>Anglia Ruskin University</span>
-                                    </div>
-                                    <div className='w-full flex pl-5'>
-                                        <li></li>
-                                        <span>London Metropolitan University</span>
-                                    </div>
-                                    <div className='w-full flex pl-5'>
-                                        <li></li>
-                                        <span>University of Derby</span>
-                                    </div>
-                                    <div className='w-full flex pl-5'>
-                                        <li></li>
-                                        <span>Middlesex University</span>
-                                    </div>
-                                </div>
-                            </>
-                        )}
+                        {/*<span className={`text-[18px] font-sans border-t pt-2 flex items-center justify-between`} onClick={() => setclickSection4(!isclickSection4)}>*/}
+                        {/*    Introduction to Management*/}
+                        {/*    <img src="/Icon/arrow.png" alt="arrow" className={`w-6 h-6 ${isclickSection4 ? `rotate-0 duration-200` : `-rotate-90 duration-200`} transition-all`} />*/}
+                        {/*</span>*/}
+                        {/*{isclickSection4 && (*/}
+                        {/*    <>*/}
+                        {/*        <div className='flex flex-col gap-2 description2 text-[14px] lg:text-[16px] lg:description'>*/}
+                        {/*            <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>*/}
+                        {/*                Upon completing this course, students can progress to a full BA or BSc degree programme at a variety of UK universities, online or on campus.                                    </span>*/}
+                        {/*            <span className={`description2 text-[14px] lg:text-[16px] lg:description`}>*/}
+                        {/*                Some examples include:*/}
+                        {/*            </span>*/}
+                        {/*            <div className='w-full flex pl-5'>*/}
+                        {/*                <li></li>*/}
+                        {/*                <span>Coventry University</span>*/}
+                        {/*            </div>*/}
+                        {/*            <div className='w-full flex pl-5'>*/}
+                        {/*                <li></li>*/}
+                        {/*                <span>Anglia Ruskin University</span>*/}
+                        {/*            </div>*/}
+                        {/*            <div className='w-full flex pl-5'>*/}
+                        {/*                <li></li>*/}
+                        {/*                <span>London Metropolitan University</span>*/}
+                        {/*            </div>*/}
+                        {/*            <div className='w-full flex pl-5'>*/}
+                        {/*                <li></li>*/}
+                        {/*                <span>University of Derby</span>*/}
+                        {/*            </div>*/}
+                        {/*            <div className='w-full flex pl-5'>*/}
+                        {/*                <li></li>*/}
+                        {/*                <span>Middlesex University</span>*/}
+                        {/*            </div>*/}
+                        {/*        </div>*/}
+                        {/*    </>*/}
+                        {/*)}*/}
                         <span className={`text-[18px] font-sans border-t pt-2 flex items-center justify-between`} onClick={() => setclickSection5(!isclickSection5)}>
                             Introduction to Management
                             <img src="/Icon/arrow.png" alt="arrow" className={`w-6 h-6 ${isclickSection5 ? `rotate-0 duration-200` : `-rotate-90 duration-200`} transition-all`} />

@@ -81,7 +81,7 @@ export default function GetFuture() {
 
     return (
         <>
-            <div className="w-full pt-20 lg:pt-50 pb-50 bg-[#F7FAFF] font-sans text-[#2e2e27] px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center lg:gap-38 gap-5 get-future-section">
+            <div className="w-full pt-20 lg:pt-50 pb-50 bg-[#F7FAFF] font-sans text-[#2e2e27] px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center lg:gap-38 gap-5 get-future-section" id="view_course">
                 {/* Left Side - Text Content */}
                 <div className="w-full lg:w-auto flex items-start lg:items-end justify-start flex-col get-future-left gap-3">
                     <span className="text-[clamp(3.5rem,7vw,7rem)] font-sans font-bold leading-none">Get Future</span>

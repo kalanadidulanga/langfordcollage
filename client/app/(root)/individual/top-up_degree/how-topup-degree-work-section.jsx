@@ -48,11 +48,11 @@ function HowTopupDegreeWork() {
                     <img src="/Images/degree.png" alt="" className='w-full h-[400px] md:h-[70vh] object-cover'/>
                 </div>
                 <div
-                    className='w-full lg:h-[60vh] gap-5 capitalize lg:gap-0 flex items-start text-[7vw] lg:text-[3.5vw] font-medium flex-col howtopup-right'>
-          <span className="font-sans font-bold">
+                    className='w-full lg:h-[60vh] gap-5 capitalize lg:gap-0 flex items-start text-[7vw] lg:text-[3.5vw] flex-col howtopup-right'>
+          <span className="font-sans">
             How top-up <br/> degrees work.
           </span>
-                    <span className="font-mono">
+                    <span className="font-sans">
             Complete A Langford College <br/> course and university <br/> top up
           </span>
                 </div>

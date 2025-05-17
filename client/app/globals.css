@@ -41,6 +41,10 @@ body {
   font-size: 16px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .main-bg {
   background-image: url("../public/Images/main-bg.jpg");
   width: 100%;

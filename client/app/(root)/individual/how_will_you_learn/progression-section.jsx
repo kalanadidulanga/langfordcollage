@@ -16,7 +16,7 @@ function Progression() {
                     {/* section 1 */}
                     <div className='w-full capitalize bg-white pt-5 mt-10 pb-4 text-black flex justify-between border-t-[1px] border-[#2E2E27] cursor-default' onClick={() => setclickSection1(!isclickSection1)}>
                         <span>
-                        Will I be able to get through to higher education through  langford college?
+                        Will I be able to get through to higher education through  Langford College?
                         </span>
                         <img src="/Icon/arrow.png" alt="arrow" className={`w-6 h-7 cursor-pointer ${isclickSection1 ? `duration-100 rotate-0` : `-rotate-90 duration-100`}`} onClick={() => setclickSection1(!isclickSection1)} />
                     </div>
@@ -24,7 +24,7 @@ function Progression() {
                         <>
                             <div className='w-full bg-white pb-8 text-[#2E2E27] description2 text-[14px] lg:text-[16px] lg:description flex justify-between'>
                                 <span>
-                                The  langford college programmes are mapped against UK higher education qualifications which are fully transferable to a range of other higher education routes and professional qualifications. On completion of the  langford college level 4/5 programme students will be awarded 240 credits (The first 2 years of a undergraduate degree) . They can then top up to their final year at one of our university partners who recognise the qualification. Similarly at level 7 students gain 120 credits from a total of 180 credits for an MBA. Again they can top up at an  langford college university partner.
+                                The  Langford College programmes are mapped against UK higher education qualifications which are fully transferable to a range of other higher education routes and professional qualifications. On completion of the  Langford College level 4/5 programme students will be awarded 240 credits (The first 2 years of a undergraduate degree) . They can then top up to their final year at one of our university partners who recognise the qualification. Similarly at level 7 students gain 120 credits from a total of 180 credits for an MBA. Again they can top up at an  Langford College university partner.
                                 </span>
                             </div>
                         </>
