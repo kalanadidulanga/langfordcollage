@@ -1,9 +1,9 @@
 "use client";
 import axios from 'axios';
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import toast from 'react-hot-toast';
 
-function CourseBody({ data }) {
+function CourseBody({data}) {
     const BASE_MOBILE = process.env.NEXT_PUBLIC_BASE_MOBILE;
     const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
     const [fname, setFname] = useState("");
@@ -138,13 +138,31 @@ function CourseBody({ data }) {
                         {/*</div>*/}
                     </div>
                     <div>
-                        <div className='w-full bg-white nss-section flex flex-col pt-10 lg:flex-row justify-center items-center lg:gap-32 '>
-                            <div className='w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 nss-left bg-white rounded-md gap-2 lg:gap-5 pt-5 text-center'>
-                                <img src="/logos/outhm.png" alt="logo" className='w-full lg:h-58 object-contain object-center lg:mb-0 border border-gray-400 p-2 rounded-lg' />
-                                <img src="/logos/iab.png" alt="logo" className='w-full lg:h-58 object-contain object-center border border-gray-400 p-2 rounded-lg' />
-                                <img src="/logos/CWChamber.png" alt="logo" className='w-full lg:h-58 object-contain object-center border border-gray-400 p-2 rounded-lg' />
-                                <img src="/logos/qualifi.png" alt="logo" className='w-full lg:h-58 object-contain object-center border border-gray-400 p-2 rounded-lg' />
-                                <img src="/logos/council.png" alt="logo" className='w-full lg:h-58 object-contain object-center border border-gray-400 p-2 rounded-lg' />
+                        <div
+                            className='w-full bg-white nss-section flex flex-col pt-10 lg:flex-row justify-center items-center lg:gap-32 '>
+                            <div className="flex flex-col items-center gap-4">
+
+                                <div className="grid grid-cols-3 gap-4">
+                                    <div className="bg-white border rounded-lg p-4">
+                                        <img src="/logos/outhm.png" alt="OTHM Logo" className="w-full h-[20vh] lg:h-58 object-contain" />
+                                    </div>
+                                    <div className="bg-white border rounded-lg p-4">
+                                        <img src="/logos/iab.png" alt="IAB Logo" className="w-full h-[20vh] lg:h-58 object-contain" />
+                                    </div>
+                                    <div className="bg-white border rounded-lg p-4">
+                                        <img src="/logos/CWChamber.png" alt="CW Chamber Logo" className="w-full h-[20vh] lg:h-58 object-contain" />
+                                    </div>
+                                </div>
+
+
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="bg-white border rounded-lg p-4">
+                                        <img src="/logos/qualifi.png" alt="Qualifi Logo" className="w-full h-[20vh] lg:h-58 object-contain" />
+                                    </div>
+                                    <div className="bg-white border rounded-lg p-4">
+                                        <img src="/logos/council.png" alt="British Council Logo" className="w-full h-[20vh] lg:h-58 object-contain" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -154,70 +172,75 @@ function CourseBody({ data }) {
                     <div className='w-full flex flex-col gap-2 mt-5'>
                         <span className='text-[16px] font-semibold'>First Name</span>
                         <input type="text"
-                            value={fname}
-                            onChange={(e) => setFname(e.target.value)}
-                            className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
+                               value={fname}
+                               onChange={(e) => setFname(e.target.value)}
+                               className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]'/>
                     </div>
                     <div className='w-full flex flex-col gap-2'>
                         <span className='text-[16px] font-semibold'>Last Name</span>
                         <input type="text"
-                            value={lname}
-                            onChange={(e) => setLname(e.target.value)}
-                            className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
+                               value={lname}
+                               onChange={(e) => setLname(e.target.value)}
+                               className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]'/>
                     </div>
                     <div className='w-full flex flex-col gap-2'>
                         <span className='text-[16px] font-semibold'>Your Email (required)</span>
                         <input type="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
+                               value={email}
+                               onChange={(e) => setEmail(e.target.value)}
+                               className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]'/>
                     </div>
                     <div className='w-full flex flex-col gap-2'>
                         <span className='text-[16px] font-semibold'>Phone</span>
                         <input type="tel"
-                            value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
-                            className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
+                               value={phone}
+                               onChange={(e) => setPhone(e.target.value)}
+                               className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]'/>
                     </div>
                     <div className='w-full flex flex-col gap-2'>
                         <span className='text-[16px] font-semibold'>Your Course</span>
-                        <input type="text" className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' disabled value={data?.course_name ? data?.course_name : ''} />
+                        <input type="text"
+                               className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]'
+                               disabled value={data?.course_name ? data?.course_name : ''}/>
                     </div>
                     <div className='w-full flex flex-col gap-2'>
                         <span className='text-[16px] font-semibold'>Study Qualification</span>
                         <input type="text"
-                            value={studyQualification}
-                            onChange={(e) => setStudyQualification(e.target.value)}
-                            className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
+                               value={studyQualification}
+                               onChange={(e) => setStudyQualification(e.target.value)}
+                               className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]'/>
                     </div>
                     <div className='w-full flex flex-col gap-2'>
                         <span className='text-[16px] font-semibold'>Job Title</span>
                         <input type="text"
-                            value={jobTitle}
-                            onChange={(e) => setJobTitle(e.target.value)}
-                            className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]' />
+                               value={jobTitle}
+                               onChange={(e) => setJobTitle(e.target.value)}
+                               className='w-full text-[16px] rounded outline-none p-2 border border-[#E5E4E4] bg-white focus:border focus:border-[#E2231A] hover:border-[#E2231A]'/>
                     </div>
                     <div className='w-full flex flex-col gap-2'>
                         <span className='text-[16px] font-semibold'>Payment Options</span>
                         <div className='flex gap-3 items-center'>
                             <input type="radio" name='payment'
-                                value="Annual"
-                                defaultChecked={paymentOption === 'Annual' ? true : false}
-                                onChange={(e) => setPaymentOption(e.target.checked ? e.target.value : '')}
-                                className='w-4 h-4 border-[1px] border-[#E5E4E4] p-2 outline-none bg-white font-extralight text-[16px]' />
-                            <span className='text-[16px]'>One-Time Payment ({data?.annual_payment ? data?.annual_payment : '0'}£)</span>
+                                   value="Annual"
+                                   defaultChecked={paymentOption === 'Annual' ? true : false}
+                                   onChange={(e) => setPaymentOption(e.target.checked ? e.target.value : '')}
+                                   className='w-4 h-4 border-[1px] border-[#E5E4E4] p-2 outline-none bg-white font-extralight text-[16px]'/>
+                            <span
+                                className='text-[16px]'>One-Time Payment ({data?.annual_payment ? data?.annual_payment : '0'}£)</span>
                         </div>
                         <div className='flex gap-3 items-center'>
                             <input type="radio" name='payment'
-                                value="Monthly"
-                                defaultChecked={paymentOption === 'Monthly' ? true : false}
-                                onChange={(e) => setPaymentOption(e.target.checked ? e.target.value : '')}
-                                className='w-4 h-4 border-[1px] border-[#E5E4E4] p-2 outline-none bg-white font-extralight text-[16px]' />
-                            <span className='text-[16px]'>Installment Payment ({data?.monthly_payment ? data?.monthly_payment : '0'}£ per month)</span>
+                                   value="Monthly"
+                                   defaultChecked={paymentOption === 'Monthly' ? true : false}
+                                   onChange={(e) => setPaymentOption(e.target.checked ? e.target.value : '')}
+                                   className='w-4 h-4 border-[1px] border-[#E5E4E4] p-2 outline-none bg-white font-extralight text-[16px]'/>
+                            <span
+                                className='text-[16px]'>Installment Payment ({data?.monthly_payment ? data?.monthly_payment : '0'}£ per month)</span>
                         </div>
                     </div>
                     <div className='w-full flex gap-4'>
-                        <button className="btn bg-[#E2231A] text-white px-4 py-2 hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] hover:scale-105 transition-all duration-200 flex items-center gap-3 disabled:bg-[#e2241aab] disabled:text-white disabled:cursor-not-allowed"
+                        <button
+                            className="btn bg-[#E2231A] text-white px-4 py-2 hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] hover:scale-105 transition-all duration-200 flex items-center gap-3 disabled:bg-[#e2241aab] disabled:text-white disabled:cursor-not-allowed"
                             disabled={loading}
                             onClick={handleEnroll}
                         >
@@ -226,7 +249,8 @@ function CourseBody({ data }) {
                                 <div className="animate-spin rounded-full h-4 w-4 border-b-3 border-white"></div>
                             )}
                         </button>
-                        <button className="btn bg-[#E2231A] text-white px-4 py-2 hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] hover:scale-105 transition-all duration-200"
+                        <button
+                            className="btn bg-[#E2231A] text-white px-4 py-2 hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] hover:scale-105 transition-all duration-200"
                             onClick={() => {
                                 window.open(`tel:${BASE_MOBILE}`);
                             }}>
