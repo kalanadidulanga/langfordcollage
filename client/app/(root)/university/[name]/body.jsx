@@ -14,20 +14,41 @@ function UniBody({data}) {
                             Upon successfully completing a pathway program at Langford College, which includes Level 3 (Foundation), Level 4 and 5 (HND), or Level 7 (MBA), you will have the opportunity to complete your final year at the following renowned UK university. This will allow you to graduate with full working rights, further enhancing your academic and professional prospects.
                         </span>
                     </div>
-                    ]
-                    <div className='w-full flex flex-col'>
+                    <div className='w-full flex flex-col mt-10'>
                         <span className='text-[6vw] lg:text-[2vw] text-black font-sans'>
                             {data?.title}
                         </span>
                     </div>
-                    <div className='w-full flex flex-col description2 text-[14px] lg:text-[16px] lg:description text-black mt-3'
-                         dangerouslySetInnerHTML={{__html: data?.description}}/>
+                    <div className='w-full grid grid-cols-1 lg:grid-cols-3 text-[16px] text-black mt-5 pt-5 pb-5 mb-5 gap-8 bg-[#ecf0ff] px-2'>
+                        <div className='w-full flex flex-col gap-2 pb-3 border-b'>
+                            <span className='font-sans'>Location:</span>
+                            <span>{data?.location ? data?.location : "N/A"}</span>
+                        </div>
+                        <div className='w-full flex flex-col gap-2 pb-3 border-b'>
+                            <span className='font-sans'>Number Of Students:</span>
+                            <span>{data?.no_of_students ? data?.no_of_students : "N/A"}</span>
+                        </div>
+                        <div className='w-full flex flex-col gap-2 pb-3 border-b'>
+                            <span className='font-sans'>Intake Available :</span>
+                            <span>{data?.intake_available ? data?.intake_available : "N/A"}</span>
+                        </div>
+                        <div className='w-full lg:col-span-3 flex flex-col gap-2 pb-3 border-b'>
+                            <span className='font-sans'>Unique Facilities:</span>
+                            <div
+                                className='w-full flex flex-col description2 text-[14px] lg:text-[16px] lg:description text-black mt-3'
+                                dangerouslySetInnerHTML={{__html: data?.unique_facility}}/>
+                        </div>
+                    </div>
+                    <div
+                        className='w-full flex flex-col description2 text-[14px] lg:text-[16px] lg:description text-black mt-3'
+                        dangerouslySetInnerHTML={{__html: data?.description}}/>
                     <div className='w-full flex items-center justify-start gap-3 mt-5'>
                         {/*<span className={`description2 text-[14px] lg:text-[18px] lg:description  font-sans text-black w-[10%] lg:w-[4%]`}>URl -</span>*/}
                         {/*<a className='text-[16px] text-blue-500 underline w-full hidden lg:block' href={data?.link} target={`_blank`}>*/}
                         {/*    {data?.link}*/}
                         {/*</a>*/}
-                        <a className='description2 text-[14px] lg:text-[16px] lg:description text-blue-500 underline w-full' href={data?.link} target={`_blank`}>
+                        <a className='description2 text-[14px] lg:text-[16px] lg:description text-blue-500 underline w-full'
+                           href={data?.link} target={`_blank`}>
                             Visit University
                         </a>
                     </div>
