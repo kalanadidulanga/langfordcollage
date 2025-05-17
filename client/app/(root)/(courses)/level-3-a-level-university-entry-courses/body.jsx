@@ -50,7 +50,7 @@ function Body() {
                                 <span className={`description2`}>
                                    Once you’ve completed your Level 3 studies, we offer full support to help you progress to the next stage. You’ll have two main options:
                                 </span>
-                                <div className={`w-full flex flex-col gap-3`}>
+                                <div className={`w-full flex flex-col gap-3 pl-5`}>
                                     <div className={`w-full flex gap-3`}>
                                         <span>1.</span>
                                         <div className={`w-full flex flex-col`}>

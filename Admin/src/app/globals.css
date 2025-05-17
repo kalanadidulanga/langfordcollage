@@ -10,6 +10,18 @@
   margin-top: 20px;
 }
 
+.ProseMirror span[style*="font-size"] {
+  display: inline-block;
+}
+
+.ProseMirror ul {
+  @apply list-disc pl-5;
+}
+
+.ProseMirror ol {
+  @apply list-decimal pl-5;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {
