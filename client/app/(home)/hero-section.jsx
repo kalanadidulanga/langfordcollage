@@ -14,7 +14,7 @@ const HeroSection = () => {
     return (
         <div className="w-[100%] px-5 lg:px-32 fade-in font-sans">
             <div
-                className="w-full h-[60vh] lg:h-[75vh] pt-[15vh] pb-[15vh] flex justify-center items-center flex-col md:px-[7vw] gap-10 ">
+                className="w-full h-[55vh] lg:h-[75vh] pt-[15vh] pb-[15vh] flex justify-center items-center flex-col md:px-[7vw] gap-10 ">
                 <div className="w-full flex flex-col text-center lg:text-start fade-in">
                     <span className="text-5xl md:text-[6.9vw] font-sans font-bold leading-none">A Smarter Route</span>
                 </div>
@@ -22,19 +22,19 @@ const HeroSection = () => {
                     <span className="text-5xl md:text-[6.9vw] font-mono leading-[0.5]">To a British Degree</span>
                 </div>
             </div>
-            <div className="w-full flex flex-col bottom-3 pb-10 justify-center items-start gap-3 fade-in">
+            <div className="w-full flex flex-col bottom-3 pb-14 lg:pb-10 justify-center items-start gap-3 fade-in">
         <span className="text-[13px] ">
-          Considering studying with us in 2025? Discover how <br/> to earn UK-recognised qualifications from anywhere <br/>in the world—affordably and flexibly.
+          Considering studying with us in 2025? Discover how to earn <br/> UK-recognised qualifications from anywhere in the  <br/> world—affordably and flexibly.
         </span>
                 <div className="w-full flex flex-col gap-4">
                     <div className="flex gap-4">
                         {/* <button className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] fade-in hover:scale-105 transition-all duration-200"
-              onClick={() => {
-                window.scrollTo({ top: 700, behavior: "smooth" });
-              }}
-            >
-              Explore Courses
-            </button> */}
+                            onClick={() => {
+                                window.scrollTo({ top: 700, behavior: "smooth" });
+                            }}
+                            >
+                                Explore Courses
+                            </button> */}
                         <button
                             className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] fade-in hover:scale-105 transition-all duration-200"
                             onClick={() => {

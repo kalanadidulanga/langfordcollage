@@ -63,9 +63,8 @@ export default function Home() {
                 <GetFuture/>
                 <Awarding/>
                 <UniQualification/>
-                <NSS/>
+                {/*<NSS/>*/}
                 <WhatsNew/>
-                {/* <AffordableStudy /> */}
                 <UniProgession/>
                 <MostPopular/>
                 <SocialLearning/>
