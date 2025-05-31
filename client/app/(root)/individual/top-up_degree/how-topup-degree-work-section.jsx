@@ -50,10 +50,10 @@ function HowTopupDegreeWork() {
                 <div
                     className='w-full lg:h-[60vh] gap-5 capitalize lg:gap-0 flex items-start text-[7vw] lg:text-[3.5vw] flex-col howtopup-right'>
           <span className="font-sans">
-            How top-up <br/> degrees work.
+            Complete A Langford College
           </span>
-                    <span className="font-sans">
-            Complete A Langford College <br/> course and university <br/> top up
+                    <span className="font-mono">
+             course and university <br/> top up
           </span>
                 </div>
             </div>

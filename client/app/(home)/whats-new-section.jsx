@@ -48,10 +48,10 @@ function WhatsNew() {
             <div className="w-[100%] h-screen px-5 lg:px-32 whats-section font-sans whats-new-bg">
                 <div className="w-full h-full flex justify-center items-center flex-col md:px-[15vw] gap-3  text-white">
                     <div className="w-full flex flex-col text-center lg:text-start whats-left">
-                        <span className="text-5xl md:text-[5vw] font-sans font-bold">Affordable Fast-Track</span>
+                        <span className="text-5xl md:text-[5vw] font-sans font-bold z-50">Affordable Fast-Track</span>
                     </div>
                     <div className="w-full flex flex-col text-center lg:text-end whats-right">
-                        <span className="text-5xl md:text-[5vw] font-mono">University Programs</span>
+                        <span className="text-5xl md:text-[5vw] font-mono z-50">University Programs</span>
                     </div>
                 </div>
             </div>

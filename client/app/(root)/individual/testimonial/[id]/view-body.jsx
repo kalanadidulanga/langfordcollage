@@ -1,9 +1,10 @@
 "use client";
-import { useEffect } from "react";
+import {useEffect} from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import HtmlViewer from "@/components/HtmlViewer";
 
-function ViewBody({ data }) {
+function ViewBody({data}) {
 
     // useEffect(() => {
     //     gsap.registerPlugin(ScrollTrigger);
@@ -55,20 +56,24 @@ function ViewBody({ data }) {
     return (
         <>
             <div className='w-full font-sans lg:pb-20 pt-20 bg-white text-black flex flex-col gap-10'>
-                <div className='w-full grid grid-cols-1 lg:grid-cols-2 px-[10vw] items-start font-bold lg:h-full testi-section'>
-                    <img src={data?.image_path || "/Images/user.png"} alt="user" className='h-[400px] object-contain testi-left' />
+                <div
+                    className='w-full grid grid-cols-1 lg:grid-cols-2 px-[10vw] items-start font-bold lg:h-full testi-section'>
+                    <img src={data?.image_path || "/Images/user.png"} alt="user"
+                         className='h-[400px] object-contain testi-left'/>
                     <div className='w-full h-full flex items-center testi-right'>
                         <span className='text-[6vw] lg:text-[3.4vw]'>
                             {data?.title ? data?.title : "N/A"}
                         </span>
                     </div>
                 </div>
-                <div className='w-full bg-[#F7FAFF] p-10 flex flex-col justify-center items-center px-[15vw] testi-section1'>
+                <div
+                    className='w-full bg-[#F7FAFF] p-10 flex flex-col justify-center items-center px-[15vw] testi-section1'>
                     <div className='w-full text-[18px] gap-5 flex flex-col testi-left1'>
                         <div
-                            className="text-[18px] text-[#2E2E27] font-light h-full w-full"
-                            dangerouslySetInnerHTML={{ __html: data?.description ? data?.description : "" }}
-                        />
+                            className="text-[#2E2E27] h-full w-full"
+                        >
+                            <HtmlViewer htmlContent={data?.description}/>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -42,7 +42,7 @@ function Support() {
 
     return (
         <>
-            <div className='w-full bg-white lg:h-screen text-black px-[10vw] pt-[5vh] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5'>
+            <div className='w-full bg-white lg:h-screen text-black px-[10vw] pb-10 pt-[5vh] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5'>
                 <div className='w-full flex items-start flex-col lg:h-full'>
                     <div className="w-full lg:grid lg:grid-cols-2">
                         <div className="w-full flex items-start flex-col lg:h-full capitalize">

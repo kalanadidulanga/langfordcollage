@@ -42,7 +42,7 @@ function WillLearn() {
   return (
     <>
       {/* Main Section */}
-      <div className="w-full bg-white text-black px-[10vw] lg:pb-10 flex flex-col lg:flex-row items-start justify-start lg:justify-center lg:gap-32 gap-5">
+      <div className="w-full bg-white text-black px-[10vw] pb-10 flex flex-col lg:flex-row items-start justify-start lg:justify-center lg:gap-32 gap-5">
 
         {/* Right Side - Text Content */}
         <div className="w-full flex lg:items-end justify-start flex-col lg:h-full">

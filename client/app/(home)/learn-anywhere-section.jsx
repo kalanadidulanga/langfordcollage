@@ -42,7 +42,7 @@ function LearnAnywhere() {
 
   return (
     <>
-      <div className='w-full lg:pb-30 pb-10 bg-white text-black px-[10vw] flex flex-col items-start justify-start gap-5'>
+      <div className='w-full lg:pb-30 pb-20 bg-white text-black px-[10vw] flex flex-col items-start justify-start gap-5'>
         <div className='w-full flex items-start flex-col lg:h-full '>
           <div className="w-full lg:grid lg:grid-cols-2">
             <div className="w-full flex items-start flex-col lg:h-full capitalize">

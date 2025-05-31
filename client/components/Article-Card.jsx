@@ -14,7 +14,7 @@ export const ArticleCard = ({ image, title, description, slug, action }) => {
             <div
                 className="text-[16px] text-black font-light line-clamp-2 lg:line-clamp-5 h-full"
                 dangerouslySetInnerHTML={{ __html: truncateHTML(description, 250) }}
-            />
+            ></div>
             <div className="flex items-start justify-start w-full text-white">
                 <button
                     className="btn bg-[#E2231A] hover:bg-[#ff0000] hover:shadow-md font-sans font-normal shadow-[#e2241aa6] transition-all duration-200 hover:scale-105"

@@ -2,6 +2,7 @@
 import axios from 'axios';
 import React, {useState} from 'react'
 import toast from 'react-hot-toast';
+import HtmlViewer from "@/components/HtmlViewer";
 
 function UniBody({data}) {
 
@@ -35,18 +36,18 @@ function UniBody({data}) {
                         <div className='w-full lg:col-span-3 flex flex-col gap-2 pb-3 border-b'>
                             <span className='font-sans'>Unique Facilities:</span>
                             <div
-                                className='w-full flex flex-col description2 text-[14px] lg:text-[16px] lg:description text-black mt-3'
-                                dangerouslySetInnerHTML={{__html: data?.unique_facility}}/>
+                                className='w-fulltext-black mt-3'
+                                >
+                                <HtmlViewer htmlContent={data?.unique_facility}/>
+                            </div>
                         </div>
                     </div>
                     <div
-                        className='w-full flex flex-col description2 text-[14px] lg:text-[16px] lg:description text-black mt-3'
-                        dangerouslySetInnerHTML={{__html: data?.description}}/>
+                        className='w-full text-black mt-3'
+                        >
+                        <HtmlViewer htmlContent={data?.description}/>
+                    </div>
                     <div className='w-full flex items-center justify-start gap-3 mt-5'>
-                        {/*<span className={`description2 text-[14px] lg:text-[18px] lg:description  font-sans text-black w-[10%] lg:w-[4%]`}>URl -</span>*/}
-                        {/*<a className='text-[16px] text-blue-500 underline w-full hidden lg:block' href={data?.link} target={`_blank`}>*/}
-                        {/*    {data?.link}*/}
-                        {/*</a>*/}
                         <a className='description2 text-[14px] lg:text-[16px] lg:description text-blue-500 underline w-full'
                            href={data?.link} target={`_blank`}>
                             Visit University

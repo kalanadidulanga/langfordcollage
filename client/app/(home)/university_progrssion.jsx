@@ -2,7 +2,7 @@ export default function UniProgession() {
 
     return (
         <div
-            className="w-full pt-20 pb-10 lg:pb-30 bg-white text-[#2e2e27] px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between lg:gap-32 gap-5">
+            className="w-full pt-20 pb-20 lg:pb-30 bg-white text-[#2e2e27] px-[10vw] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between lg:gap-32 gap-5">
             {/* Left Side - Text Content */}
             <div className="flex items-start justify-start flex-col gap-3 w-full">
                 <img src="/Images/uni_progession.jpg" alt="langford" className="w-full h-full"/>
