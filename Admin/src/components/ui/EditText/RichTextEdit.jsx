@@ -170,24 +170,33 @@ const RichTextEditor = ({ htmlContent, setHtmlContent }) => {
 
             {/* Editor Content */}
             <style jsx global>{`
-            .ProseMirror {
-        outline: none !important;
-        box-shadow: none !important;
-        border: none !important;
-        height: 100%;
-        }
-        .ProseMirror h1 {
-          font-size: 1.875rem;
-          font-weight: bold;
-        }
-        .ProseMirror h2 {
-          font-size: 1.5rem;
-          font-weight: bold;
-        }
-        .ProseMirror p {
-          font-size: 1rem;
-        }
-      `}</style>
+                .ProseMirror {
+                    outline: none !important;
+                    box-shadow: none !important;
+                    border: none !important;
+                    height: 100%;
+                }
+
+                .ProseMirror h1 {
+                    font-size: 1.875rem;
+                    font-weight: bold;
+                }
+
+                .ProseMirror h2 {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+
+                .ProseMirror p {
+                    font-size: 1rem;
+                }
+
+                .ProseMirror a {
+                    color: #0366d6; /* Blue color */
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            `}</style>
 
             <div className="prose max-w-none border grid grid-cols-1 p-4 rounded-lg bg-white min-h-[200px] max-h-[300px] overflow-auto relative">
                 <EditorContent editor={editor} />

@@ -29,7 +29,7 @@
 @font-face {
   font-family: 'BasisGrotesque';
   src: url('./fonts/Satoshi-Variable.ttf') format('truetype');
-  font-weight: 500;
+  /*font-weight: 500;*/
   font-style: normal;
 }
 
@@ -43,6 +43,18 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+.ProseMirror span[style*="font-size"] {
+  display: inline-block;
+}
+
+.ProseMirror ul {
+  @apply list-disc pl-5;
+}
+
+.ProseMirror ol {
+  @apply list-decimal pl-5;
 }
 
 .main-bg {
