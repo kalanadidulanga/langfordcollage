@@ -61,10 +61,10 @@ function HowTopupDegreeWork() {
                     </span>
                 </div>
 
-                <div className='w-full bg-white pt-3 lg:pt-10 pb-8 text-[#2E2E27] flex flex-col'>
+                <div className='w-full bg-white pt-3 lg:pt-5 pb-8 text-[#2E2E27] flex flex-col'>
                     <div className='w-full flex flex-col gap-3 lg:pr-36'>
                             <span className='description2 text-[14px] lg:text-[16px] lg:description font-sans '>
-                                At Langford College, we specialize in bridging the gap between your current qualifications and the final stages of your degree journey. Whether you aim to enter directly into the third year of your bachelor’s programme or progress seamlessly into a master’s, our OFQUAL-regulated pathways give you the accreditation and confidence universities need to admit you at the advanced stage.
+                                At Langford College, we specialize in bridging the gap between your current qualifications and the final stages of your degree journey. <br/> <br/> Whether you aim to enter directly into the third year of your bachelor’s programme or progress seamlessly into a master degree, Our OFQUAL-regulated pathways give you the accreditation and confidence universities need to admit you at the advanced stage.
                             </span>
                     </div>
                 </div>
