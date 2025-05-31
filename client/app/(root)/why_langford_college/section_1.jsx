@@ -3,7 +3,7 @@ import React from 'react'
 function Section1() {
     return (<>
         <div
-            className='w-full font-sans lg:pb-20 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
+            className='w-full font-sans pb-30 bg-white text-black px-[10vw] flex flex-col lg:flex-row items-start justify-start lg:justify-between lg:gap-32 gap-5 '>
             <div className='w-full flex items-start flex-col lg:h-full'>
                 <div className="w-full grid grid-cols-2">
                     <div className="w-full flex items-start flex-col lg:h-full capitalize">
