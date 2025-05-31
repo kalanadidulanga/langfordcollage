@@ -24,10 +24,10 @@ const BackgroundSlider = ({images}) => {
                 style={{
                     backgroundImage: `url(${images[currentImageIndex]})`,
                     height: '100%',
-                    objectFit:'contain',
+                    objectFit:'cover',
                 }}
             ></div>
-            <div className="absolute inset-0 bg-black/40 z-0"></div>
+            <div className="absolute inset-0 h-[100vh] bg-black/40 z-0"></div>
         </>
     );
 };

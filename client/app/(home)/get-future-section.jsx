@@ -11,40 +11,40 @@ export default function GetFuture() {
     const [suggestions, setSuggestions] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
 
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.fromTo(
-            ".get-future-left",
-            { opacity: 0, x: -50 },
-            {
-                opacity: 1, x: 0, duration: 1, ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".get-future-section",
-                    start: "top 80%",
-                    end: "bottom 20%",
-                    toggleActions: "play reverse play reverse", // Works when scrolling up and down
-                    once: false,
-                }
-            }
-        );
-
-        gsap.fromTo(
-            ".get-future-right",
-            { opacity: 0, x: 50 },
-            {
-                opacity: 1, x: 0, duration: 1, ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".get-future-section",
-                    start: "top 80%",
-                    end: "bottom 20%",
-                    toggleActions: "play reverse play reverse",
-                    once: false,
-                }
-            }
-        );
-
-    }, []);
+    // useEffect(() => {
+    //     gsap.registerPlugin(ScrollTrigger);
+    //
+    //     gsap.fromTo(
+    //         ".get-future-left",
+    //         { opacity: 0, x: -50 },
+    //         {
+    //             opacity: 1, x: 0, duration: 1, ease: "power3.out",
+    //             scrollTrigger: {
+    //                 trigger: ".get-future-section",
+    //                 start: "top 80%",
+    //                 end: "bottom 20%",
+    //                 toggleActions: "play reverse play reverse", // Works when scrolling up and down
+    //                 once: false,
+    //             }
+    //         }
+    //     );
+    //
+    //     gsap.fromTo(
+    //         ".get-future-right",
+    //         { opacity: 0, x: 50 },
+    //         {
+    //             opacity: 1, x: 0, duration: 1, ease: "power3.out",
+    //             scrollTrigger: {
+    //                 trigger: ".get-future-section",
+    //                 start: "top 80%",
+    //                 end: "bottom 20%",
+    //                 toggleActions: "play reverse play reverse",
+    //                 once: false,
+    //             }
+    //         }
+    //     );
+    //
+    // }, []);
 
     const handleInputChange = async (e) => {
         const value = e.target.value;

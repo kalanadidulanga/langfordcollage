@@ -91,13 +91,12 @@ function CourseBody({data}) {
             toast.error(error?.response?.data?.error);
         }
     }
-    return (
-        <>
+    return (<>
             <div className='w-full pt-20 pb-20 bg-white grid grid-cols-1 lg:grid-cols-2 gap-10 px-[3vw]'>
                 <div className='w-full flex flex-col'>
                     <div className='w-full bg-[#1E1E1E] p-8 flex flex-col text-white'>
-                        <span className='text-[1.9vw] font-sans'>Book Your Course</span>
-                        <span className='text-[1.2vw] font-sans capitalize'>Book your course now and get a guaranteed scholarship!</span>
+                        <span className='text-[5vw] lg:text-[1.9vw] font-sans'>Book Your Course</span>
+                        <span className='text-[3vw] lg:text-[1.2vw] font-sans capitalize'>Book your course now and get a guaranteed scholarship!</span>
                     </div>
                     <div className='w-full grid grid-cols-1 lg:grid-cols-3 text-[16px] text-black pt-10 gap-8'>
                         <div className='w-full flex flex-col gap-2'>
@@ -137,30 +136,35 @@ function CourseBody({data}) {
                         {/*    <span>{data?.course_leader ? data?.course_leader : "N/A"}</span>*/}
                         {/*</div>*/}
                     </div>
-                    <div>
+                    <div className={`hidden`}>
                         <div
                             className='w-full bg-white nss-section flex flex-col pt-10 lg:flex-row justify-center items-center lg:gap-32 '>
                             <div className="flex flex-col items-center gap-4">
 
                                 <div className="grid grid-cols-3 gap-4">
                                     <div className="bg-white border rounded-lg p-4">
-                                        <img src="/logos/outhm.png" alt="OTHM Logo" className="w-full h-[20vh] lg:h-58 object-contain" />
+                                        <img src="/logos/outhm.png" alt="OTHM Logo"
+                                             className="w-full h-[20vh] lg:h-58 object-contain"/>
                                     </div>
                                     <div className="bg-white border rounded-lg p-4">
-                                        <img src="/logos/iab.png" alt="IAB Logo" className="w-full h-[20vh] lg:h-58 object-contain" />
+                                        <img src="/logos/iab.png" alt="IAB Logo"
+                                             className="w-full h-[20vh] lg:h-58 object-contain"/>
                                     </div>
                                     <div className="bg-white border rounded-lg p-4">
-                                        <img src="/logos/CWChamber.png" alt="CW Chamber Logo" className="w-full h-[20vh] lg:h-58 object-contain" />
+                                        <img src="/logos/CWChamber.png" alt="CW Chamber Logo"
+                                             className="w-full h-[20vh] lg:h-58 object-contain"/>
                                     </div>
                                 </div>
 
 
                                 <div className="grid grid-cols-2 gap-4">
                                     <div className="bg-white border rounded-lg p-4">
-                                        <img src="/logos/qualifi.png" alt="Qualifi Logo" className="w-full h-[20vh] lg:h-58 object-contain" />
+                                        <img src="/logos/qualifi.png" alt="Qualifi Logo"
+                                             className="w-full h-[20vh] lg:h-58 object-contain"/>
                                     </div>
                                     <div className="bg-white border rounded-lg p-4">
-                                        <img src="/logos/council.png" alt="British Council Logo" className="w-full h-[20vh] lg:h-58 object-contain" />
+                                        <img src="/logos/council.png" alt="British Council Logo"
+                                             className="w-full h-[20vh] lg:h-58 object-contain"/>
                                     </div>
                                 </div>
                             </div>
@@ -246,8 +250,7 @@ function CourseBody({data}) {
                         >
                             Enroll Now
                             {loading && (
-                                <div className="animate-spin rounded-full h-4 w-4 border-b-3 border-white"></div>
-                            )}
+                                <div className="animate-spin rounded-full h-4 w-4 border-b-3 border-white"></div>)}
                         </button>
                         <button
                             className="btn bg-[#E2231A] text-white px-4 py-2 hover:bg-[#ff0000] hover:shadow-md shadow-[#e2241aa6] hover:scale-105 transition-all duration-200"
@@ -259,8 +262,7 @@ function CourseBody({data}) {
                     </div>
                 </div>
             </div>
-        </>
-    )
+        </>)
 }
 
 export default CourseBody

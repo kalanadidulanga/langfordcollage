@@ -4,40 +4,40 @@ import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 export default function FastTrackingSection() {
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.fromTo(
-            ".fast-tracking-left",
-            {opacity: 0, x: -50},
-            {
-                opacity: 1, x: 0, duration: 1, ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".fast-tracking-section",
-                    start: "top 80%",
-                    end: "bottom 20%",
-                    toggleActions: "play reverse play reverse", // Works when scrolling up and down
-                    once: false,
-                }
-            }
-        );
-
-        gsap.fromTo(
-            ".fast-tracking-right",
-            {opacity: 0, x: 50},
-            {
-                opacity: 1, x: 0, duration: 1, ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".fast-tracking-section",
-                    start: "top 80%",
-                    end: "bottom 20%",
-                    toggleActions: "play reverse play reverse",
-                    once: false,
-                }
-            }
-        );
-
-    }, []);
+    // useEffect(() => {
+    //     gsap.registerPlugin(ScrollTrigger);
+    //
+    //     gsap.fromTo(
+    //         ".fast-tracking-left",
+    //         {opacity: 0, x: -50},
+    //         {
+    //             opacity: 1, x: 0, duration: 1, ease: "power3.out",
+    //             scrollTrigger: {
+    //                 trigger: ".fast-tracking-section",
+    //                 start: "top 80%",
+    //                 end: "bottom 20%",
+    //                 toggleActions: "play reverse play reverse", // Works when scrolling up and down
+    //                 once: false,
+    //             }
+    //         }
+    //     );
+    //
+    //     gsap.fromTo(
+    //         ".fast-tracking-right",
+    //         {opacity: 0, x: 50},
+    //         {
+    //             opacity: 1, x: 0, duration: 1, ease: "power3.out",
+    //             scrollTrigger: {
+    //                 trigger: ".fast-tracking-section",
+    //                 start: "top 80%",
+    //                 end: "bottom 20%",
+    //                 toggleActions: "play reverse play reverse",
+    //                 once: false,
+    //             }
+    //         }
+    //     );
+    //
+    // }, []);
 
     return (
         <div
