@@ -66,7 +66,7 @@ function WayToGraduate() {
 
                 <div className='flex items-end justify-end w-full lg:w-[50%] h-[55vh] way-right'>
                     <img
-                        src="/Images/graduate-man.jpg"
+                        src="/Images/graduate-man.png"
                         alt=""
                         className='h-full w-full object-cover object-top'
                     />

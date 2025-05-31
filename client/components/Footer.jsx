@@ -47,7 +47,7 @@ export const Footer = () => {
                             </li>
                             <li className='flex gap-3 items-center'>
                                 <img src="/Icon/call.png" alt="call" className='w-4 h-4' />
-                                <a href="tel:+447849537739" target="_blank" className={`hover:underline`}>(+44) 7849 537739</a>
+                                <a href="tel:+448001026133" target="_blank" className={`hover:underline`}>+ (44) 800 1026133</a>
                             </li>
                         </ul>
                         {/* <h4 className="font-semibold mb-3 text-[18px] mt-5 text-[#2e2e27]">Press Office</h4>
@@ -69,7 +69,7 @@ export const Footer = () => {
                         </span>
                     </div>
                 </div>
-                <div className="bg-black text-white text-center py-4 text-sm mt-auto">
+                <div className="bg-black text-white text-center py-4 px-3 text-sm mt-auto">
                     <span>Copyright © {new Date().getFullYear()} All Rights Reserved &nbsp;|&nbsp; Developed by KayD Solutions</span>
                 </div>
             </footer>
