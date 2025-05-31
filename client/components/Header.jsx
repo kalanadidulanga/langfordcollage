@@ -525,7 +525,7 @@ const Header = () => {
                                     <h3 className="font-bold mb-2">IGCSE and short courses</h3>
                                     <div className="flex flex-col pl-2">
                                         {level1?.map((item, index) => (<a href={`/course/${item?.slug}`} key={index}
-                                                                          className="py-1 text-gray-800 hover:text-red-600">
+                                                                          className="py-1 text-gray-800 description hover:text-red-600">
                                             {item?.course_name}
                                         </a>))}
                                     </div>
@@ -535,7 +535,7 @@ const Header = () => {
                                     <h3 className="font-bold mb-2">Level 3 (A level) - University entry courses</h3>
                                     <div className="flex flex-col pl-2">
                                         {level2?.map((item, index) => (<a href={`/course/${item?.slug}`} key={index}
-                                                                          className="py-1 text-gray-800 hover:text-red-600">
+                                                                          className="py-1 text-gray-800 description hover:text-red-600">
                                             {item?.course_name}
                                         </a>))}
                                     </div>
@@ -546,7 +546,7 @@ const Header = () => {
                                         courses</h3>
                                     <div className="flex flex-col pl-2">
                                         {level3?.map((item, index) => (<a href={`/course/${item?.slug}`} key={index}
-                                                                          className="py-1 text-gray-800 hover:text-red-600">
+                                                                          className="py-1 text-gray-800 description hover:text-red-600">
                                             {item?.course_name}
                                         </a>))}
                                     </div>
@@ -556,7 +556,7 @@ const Header = () => {
                                     <h3 className="font-bold mb-2">Level 6 Undergraduate / Final year</h3>
                                     <div className="flex flex-col pl-2">
                                         {level4?.map((item, index) => (<a href={`/course/${item?.slug}`} key={index}
-                                                                          className="py-1 text-gray-800 hover:text-red-600">
+                                                                          className="py-1 text-gray-800 description hover:text-red-600">
                                             {item?.course_name}
                                         </a>))}
                                     </div>
@@ -566,7 +566,7 @@ const Header = () => {
                                     <h3 className="font-bold mb-2">Level 7 Diploma, Masters / MBA Advance Entry</h3>
                                     <div className="flex flex-col pl-2">
                                         {level5?.map((item, index) => (<a href={`/course/${item?.slug}`} key={index}
-                                                                          className="py-1 text-gray-800 hover:text-red-600">
+                                                                          className="py-1 text-gray-800 description hover:text-red-600">
                                             {item?.course_name}
                                         </a>))}
                                     </div>

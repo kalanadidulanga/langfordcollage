@@ -52,7 +52,7 @@ function CourseDetailBody({data}) {
                                 </div>
                             )}
                             <span
-                                className={`${isClickedSection2 ? `pl-3 underline text-[28px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
+                                className={`${isClickedSection2 ? `pl-3 underline text-[28px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center font-sans`}
                                 onClick={() => {
                                     setClickSection1(false);
                                     setClickSection2(!isClickedSection2);
@@ -70,11 +70,11 @@ function CourseDetailBody({data}) {
                                 </div>
                             )}
                             <span
-                                className={`${isClickedSection3 ? `pl-3 underline text-[28px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
+                                className={`${isClickedSection3 ? `pl-3 underline text-[28px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center font-sans`}
                                 onClick={() => {
                                     setClickSection1(false);
                                     setClickSection2(false);
-                                    setClickSection3(true);
+                                    setClickSection3(!isClickedSection3);
                                     setClickSection4(false);
                                     setClickSection5(false);
                                     setClickSection6(false);
@@ -82,45 +82,65 @@ function CourseDetailBody({data}) {
                             >
                                 Entry Requirements
                             </span>
+                            {isClickedSection3 && (
+                                <div className="lg:hidden bg-[#cfd2d9] p-2 rounded-lg">
+                                    <HtmlViewer htmlContent={data?.entry_requirements} />
+                                </div>
+                            )}
                             <span
-                                className={`${isClickedSection4 ? `pl-3 underline text-[28px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
+                                className={`${isClickedSection4 ? `pl-3 underline text-[28px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center font-sans`}
                                 onClick={() => {
                                     setClickSection1(false);
                                     setClickSection2(false);
                                     setClickSection3(false);
-                                    setClickSection4(true);
+                                    setClickSection4(!isClickedSection4);
                                     setClickSection5(false);
                                     setClickSection6(false);
                                 }}
                             >
                                 Cost & Payment
                             </span>
+                            {isClickedSection4 && (
+                                <div className="lg:hidden bg-[#cfd2d9] p-2 rounded-lg">
+                                    <HtmlViewer htmlContent={data?.cost_and_payment} />
+                                </div>
+                            )}
                             <span
-                                className={`${isClickedSection5 ? `pl-3 underline text-[28px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
+                                className={`${isClickedSection5 ? `pl-3 underline text-[28px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center font-sans`}
                                 onClick={() => {
                                     setClickSection1(false);
                                     setClickSection2(false);
                                     setClickSection3(false);
                                     setClickSection4(false);
-                                    setClickSection5(true);
+                                    setClickSection5(!isClickedSection5);
                                     setClickSection6(false);
                                 }}
                             >
                                 Career Progression
                             </span>
+                            {isClickedSection5 && (
+                                <div className="lg:hidden bg-[#cfd2d9] p-2 rounded-lg">
+                                    <HtmlViewer htmlContent={data?.career_progression} />
+                                </div>
+                            )}
                             <span
-                                className={`${isClickedSection6 ? `pl-3 underline text-[28px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center`}
+                                className={`${isClickedSection6 ? `pl-3 underline text-[28px]` : `text-black pl-0`} px-2 py-1 cursor-pointer text-center font-sans`}
                                 onClick={() => {
                                     setClickSection1(false);
                                     setClickSection2(false);
                                     setClickSection3(false);
                                     setClickSection4(false);
                                     setClickSection5(false);
-                                    setClickSection6(true);
+                                    setClickSection6(!isClickedSection6);
                                 }}
                             >
                                 University Options
                             </span>
+                            {isClickedSection6 && (
+                                <div className="lg:hidden bg-[#cfd2d9] p-2 rounded-lg">
+                                    <HtmlViewer htmlContent={data?.university_options} />
+                                </div>
+                            )}
                         </div>
                         <div
                             className='w-full flex flex-col items-start text-[17px] justify-start text-black gap-3 px-[10vw] lg:px-0 border-t lg:border-0 mt-5 lg:mt-0 pt-5 lg:pt-0'>

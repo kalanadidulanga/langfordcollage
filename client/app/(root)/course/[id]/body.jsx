@@ -171,7 +171,7 @@ function CourseBody({data}) {
                         </div>
                     </div>
                 </div>
-                <div className='w-full bg-[#F7FAFF] flex flex-col gap-5 text-black p-6 pr-20'>
+                <div className='w-full bg-[#F7FAFF] flex flex-col gap-5 text-black p-6 lg:pr-20'>
                     <span className='font-sans text-3xl '>Start your journey today</span>
                     <div className='w-full flex flex-col gap-2 mt-5'>
                         <span className='text-[16px] font-semibold'>First Name</span>

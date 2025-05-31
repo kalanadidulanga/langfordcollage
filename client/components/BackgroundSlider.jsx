@@ -27,7 +27,7 @@ const BackgroundSlider = ({images}) => {
                     objectFit:'cover',
                 }}
             ></div>
-            <div className="absolute inset-0 h-[100vh] bg-black/40 z-0"></div>
+            <div className="absolute inset-0 min-h-[100vh] bg-black/40 z-0"></div>
         </>
     );
 };
