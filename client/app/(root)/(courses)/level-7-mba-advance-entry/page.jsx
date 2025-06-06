@@ -6,6 +6,7 @@ import Hero from './hero-section';
 import CourseSection from './course-section';
 import FAQ from '../../individual/how_will_you_learn/faq-section';
 import Body from './body';
+import Head from "next/head";
 
 
 function page() {
@@ -18,6 +19,17 @@ function page() {
     if (isClient) {
         return (
             <>
+                <Head>
+                    <title>Langford College</title>
+                    <meta name="description" content="A Smarter Route To a British Degree"/>
+                    <meta name="keywords"
+                          content="langfordcollege, langford college, Langford College, Uk Campus , uk campus , uk , ukcampus , campus , digree, langford , Langford , British Degree, British , Digree, level-7-mba-advance-entry , level 7 mba advance entry , MBA"/>
+                    <meta property="og:title" content="Langford College"/>
+                    <meta property="og:description" content="A Smarter Route To a British Degree"/>
+                    <meta property="og:image" content="https://api.langfordcollege.com/uploads/university/1749200734166.jpg"/>
+                    <meta property="og:url" content="https://langfordcollege.com/level-7-mba-advance-entry"/>
+                    <link rel="canonical" href="https://langfordcollege.com/level-7-mba-advance-entry"/>
+                </Head>
                 <div className='try-for-free'>
                     <div className="content">
                         <Header/>

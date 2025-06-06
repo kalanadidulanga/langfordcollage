@@ -15,6 +15,7 @@ import PersonalDetails from './personal-details-section';
 import Progression from './progression-section';
 import StudentSupport from './student-support-section';
 import Support from './support';
+import Head from "next/head";
 
 function page() {
   const [isClient, setIsClient] = useState(false);
@@ -40,6 +41,18 @@ function page() {
   if (isClient) {
     return (
       <>
+          <Head>
+              <title>Langford College | How Will You Learn</title>
+              <meta name="description" content="A Smarter Route To a British Degree"/>
+              <meta name="keywords"
+                    content="langfordcollege, langford college, Langford College, Uk Campus , uk campus , uk , ukcampus , campus , digree, langford , Langford , British Degree, British , Digree"/>
+              <meta property="og:title" content="Langford College | How Will You Learn"/>
+              <meta property="og:description" content="A Smarter Route To a British Degree"/>
+              <meta property="og:image" content="https://api.langfordcollege.com/uploads/university/1749200734166.jpg"/>
+              <meta property="og:url" content="https://langfordcollege.com/individual/how_will_you_learn"/>
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+              <link rel="canonical" href="https://langfordcollege.com/individual/how_will_you_learn"/>
+          </Head>
         <div className='willLearn-bg'>
           <div className="content">
             <Header />

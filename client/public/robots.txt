@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://langfordcollege.com
+
+# Sitemaps
+Sitemap: https://langfordcollege.com/sitemap.xml

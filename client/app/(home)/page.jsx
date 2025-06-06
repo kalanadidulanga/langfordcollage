@@ -19,6 +19,7 @@ import Awarding from "./awarding-section";
 import WhatsNew from "./whats-new-section";
 import UniProgession from "./university_progrssion";
 import BackgroundSlider from "@/components/BackgroundSlider";
+import Head from "next/head";
 
 export default function Home() {
 
@@ -39,7 +40,7 @@ export default function Home() {
                 const id = window.location.hash.substring(1);
                 const element = document.getElementById(id);
                 if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
+                    element.scrollIntoView({behavior: 'smooth'});
                 }
             }
         };
@@ -53,6 +54,18 @@ export default function Home() {
     if (isClient) {
         return (
             <>
+                <Head>
+                    <title>Langford College</title>
+                    <meta name="description" content="A Smarter Route To a British Degree"/>
+                    <meta name="keywords"
+                          content="langfordcollege, langford college, Langford College, Uk Campus , uk campus , uk , ukcampus , campus , digree, langford , Langford , British Degree, British , Digree"/>
+                    <meta property="og:title" content="Langford College"/>
+                    <meta property="og:description" content="A Smarter Route To a British Degree"/>
+                    <meta property="og:image" content="https://api.langfordcollege.com/uploads/university/1749200734166.jpg"/>
+                    <meta property="og:url" content="https://langfordcollege.com/"/>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                    <link rel="canonical" href="https://langfordcollege.com/"/>
+                </Head>
                 <div className='relative w-full h-full overflow-hidden'>
                     <BackgroundSlider images={images}/>
                     <div className="content">

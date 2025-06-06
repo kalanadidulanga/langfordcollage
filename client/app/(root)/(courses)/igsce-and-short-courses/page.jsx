@@ -6,6 +6,7 @@ import Hero from './hero-section';
 import CourseSection from './course-section';
 import Body from './body';
 import FAQ from '../../individual/how_will_you_learn/faq-section';
+import Head from "next/head";
 
 
 function page() {
@@ -18,6 +19,17 @@ function page() {
     if (isClient) {
         return (
             <>
+                <Head>
+                    <title>Langford College</title>
+                    <meta name="description" content="A Smarter Route To a British Degree"/>
+                    <meta name="keywords"
+                          content="langfordcollege, langford college, Langford College, Uk Campus , uk campus , uk , ukcampus , campus , digree, langford , Langford , British Degree, British , Digree , igsce-and-short-courses , igsce and short courses , IGSCE , short-courses"/>
+                    <meta property="og:title" content="Langford College"/>
+                    <meta property="og:description" content="A Smarter Route To a British Degree"/>
+                    <meta property="og:image" content="https://api.langfordcollege.com/uploads/university/1749200734166.jpg"/>
+                    <meta property="og:url" content="https://langfordcollege.com/igsce-and-short-courses"/>
+                    <link rel="canonical" href="https://langfordcollege.com/igsce-and-short-courses"/>
+                </Head>
                 <div className='try-for-free'>
                     <div className="content">
                         <Header/>
